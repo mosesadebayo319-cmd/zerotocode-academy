@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroToCode Academy • Learn Programming from Zero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #10b981;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .lesson-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .lesson-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-active {
+            color: #10b981;
+            border-bottom: 2px solid #10b981;
+        }
+
+        .code-block {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .bit-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.125rem 0.625rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .lesson-item {
+            transition: all 0.1s ease;
+        }
+        
+        .lesson-item.completed {
+            background-color: #f0fdf4;
+        }
+
+        .nav-link {
+            transition: color 0.1s ease;
+        }
+        
+        .nav-link:hover {
+            color: #10b981;
+        }
+
+        .exercise-box {
+            border-left: 4px solid #10b981;
+        }
+
+        .zero-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .modern-card {
+            box-shadow: 0 4px 6px -1px rgb(15 23 42 / 0.1), 0 2px 4px -2px rgb(15 23 42 / 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+        }
+
+        .syntax {
+            background-color: #1e293b;
+            color: #64748b;
+        }
+
+        .metric {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <!-- NAV -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-white text-3xl font-black tracking-tighter">Z</span>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl font-semibold tracking-tight">ZeroToCode</span>
+                        <span class="text-emerald-600 text-xs font-bold tracking-[3px] block -mt-1">ACADEMY</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#" onclick="showView('home')" class="nav-link px-3 py-2 text-slate-600 hover:text-emerald-600">Home</a>
+                    <a href="#" onclick="showView('dashboard')" class="nav-link px-3 py-2 text-slate-600 hover:text-emerald-600">Dashboard</a>
+                    <a href="#" onclick="showView('courses')" class="nav-link px-3 py-2 text-slate-600 hover:text-emerald-600">All Courses</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <!-- Streak -->
+                    <div class="hidden sm:flex items-center gap-x-2 bg-white border border-slate-200 rounded-3xl px-4 h-9 text-sm">
+                        <i class="fa-solid fa-fire text-orange-500"></i>
+                        <span id="streak-count" class="font-semibold text-slate-700">12</span>
+                        <span class="text-slate-500 text-xs">day streak</span>
+                    </div>
+                    
+                    <button onclick="showView('dashboard')"
+                            class="px-5 py-2 bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-sm font-semibold rounded-3xl flex items-center gap-x-2 transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span class="hidden sm:inline">Dashboard</span>
+                    </button>
+                    
+                    <button onclick="deployToVercelInfo()"
+                            class="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 transition-all text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2 shadow-sm">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span class="hidden sm:inline">Deploy to Vercel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME / LANDING VIEW -->
+    <div id="view-home" class="view">
+        <!-- HERO -->
+        <div class="zero-hero text-white">
+            <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-20">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 text-sm">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span class="font-medium">Completely free • No credit card • Start in 30 seconds</span>
+                    </div>
+                    
+                    <h1 class="text-6xl md:text-7xl font-display font-semibold tracking-tighter leading-none mb-6">
+                        From zero<br>knowledge to<br>building things.
+                    </h1>
+                    <p class="max-w-md text-xl text-emerald-100 mb-10">
+                        The most beginner-friendly way to learn Python, JavaScript, HTML &amp; CSS, Go, and Rust. 
+                        Bit by bit. With real exercises and projects.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="startLearning()"
+                                class="px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 transition-all font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 shadow-xl shadow-emerald-900/20">
+                            <span>Start Learning Free</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        
+                        <button onclick="showView('courses')"
+                                class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 transition-all font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                            <span>Browse All Courses</span>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center gap-x-8 mt-10 text-sm">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 bg-emerald-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=28" class="w-full h-full object-cover"></div>
+                            <div class="w-8 h-8 bg-emerald-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=47" class="w-full h-full object-cover"></div>
+                            <div class="w-8 h-8 bg-emerald-300 rounded-full border-2 border-white overflow-hidden"><img src="https://i.pravatar.cc/32?img=12" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="text-emerald-200 text-sm">
+                            <span class="font-semibold text-white">12,847</span> learners started this month
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <div class="max-w-screen-xl mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <span class="bit-badge px-4 py-1 text-xs tracking-widest">HOW IT WORKS</span>
+                <h2 class="section-header mt-3">Learn faster with our<br>bit-by-bit method</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-play text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">1. Choose your language</h3>
+                    <p class="text-slate-600 text-[15px]">Start with Python or Web Development if you're brand new. Go and Rust are powerful next steps.</p>
+                </div>
+                <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">2. Follow bite-sized lessons</h3>
+                    <p class="text-slate-600 text-[15px]">5–12 minute lessons. Clear explanations + real analogies + one concept at a time.</p>
+                </div>
+                <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-keyboard text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">3. Practice immediately</h3>
+                    <p class="text-slate-600 text-[15px]">Live editors for web. Smart exercises + instant feedback for Python, Go &amp; Rust.</p>
+                </div>
+                <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2">4. Build real projects</h3>
+                    <p class="text-slate-600 text-[15px]">Mini projects every module. Leave with something you can show and use.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LANGUAGE CARDS -->
+        <div class="max-w-screen-xl mx-auto px-6 pb-20">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <span class="bit-badge">START HERE</span>
+                    <h2 class="section-header mt-1">Pick a language to begin</h2>
+                </div>
+                <button onclick="showView('courses')" class="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-x-2 text-sm">
+                    See all tracks <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                <!-- Python -->
+                <div onclick="startCourse('python')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                    <div class="flex items-start justify-between">
+                        <div class="text-5xl mb-4">🐍</div>
+                        <span class="bit-badge text-[10px] px-3 py-px">MOST POPULAR</span>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="font-semibold text-2xl tracking-tight">Python</h3>
+                        <p class="text-emerald-600 text-sm font-medium mt-1">The best first language</p>
+                        <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>8 lessons</span></div>
+                            <div>•</div>
+                            <div>Beginner friendly</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div onclick="startCourse('javascript')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                    <div class="flex items-start justify-between">
+                        <div class="text-5xl mb-4">🟨</div>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="font-semibold text-2xl tracking-tight">JavaScript</h3>
+                        <p class="text-emerald-600 text-sm font-medium mt-1">Make websites interactive</p>
+                        <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>6 lessons</span></div>
+                            <div>•</div>
+                            <div>Live playground</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML & CSS -->
+                <div onclick="startCourse('web')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                    <div class="flex items-start justify-between">
+                        <div class="text-5xl mb-4">🌐</div>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="font-semibold text-2xl tracking-tight">HTML &amp; CSS</h3>
+                        <p class="text-emerald-600 text-sm font-medium mt-1">Build beautiful websites</p>
+                        <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>5 lessons</span></div>
+                            <div>•</div>
+                            <div>Live preview</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Go -->
+                <div onclick="startCourse('go')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                    <div class="flex items-start justify-between">
+                        <div class="text-5xl mb-4">🐹</div>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="font-semibold text-2xl tracking-tight">Go</h3>
+                        <p class="text-emerald-600 text-sm font-medium mt-1">Fast &amp; simple backend</p>
+                        <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>5 lessons</span></div>
+                            <div>•</div>
+                            <div>Great for tools</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rust -->
+                <div onclick="startCourse('rust')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                    <div class="flex items-start justify-between">
+                        <div class="text-5xl mb-4">🦀</div>
+                    </div>
+                    <div class="mt-auto">
+                        <h3 class="font-semibold text-2xl tracking-tight">Rust</h3>
+                        <p class="text-emerald-600 text-sm font-medium mt-1">Safe &amp; blazing fast</p>
+                        <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>5 lessons</span></div>
+                            <div>•</div>
+                            <div>High performance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DASHBOARD VIEW -->
+    <div id="view-dashboard" class="view hidden max-w-screen-xl mx-auto px-6 py-10">
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <h1 class="text-4xl font-display font-semibold tracking-tight">Your Learning Dashboard</h1>
+                <p class="text-slate-600 mt-1">Keep your streak alive. You're doing great.</p>
+            </div>
+            <button onclick="resetProgress()" class="text-xs px-4 py-2 text-red-500 hover:bg-red-50 rounded-2xl flex items-center gap-x-2">
+                <i class="fa-solid fa-undo"></i> <span>Reset progress</span>
+            </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="text-emerald-600 text-sm font-medium">TOTAL XP</div>
+                <div id="total-xp" class="text-5xl font-semibold metric mt-2">1,240</div>
+                <div class="text-xs text-emerald-600 mt-1">+180 this week</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="text-emerald-600 text-sm font-medium">LESSONS COMPLETED</div>
+                <div id="lessons-completed" class="text-5xl font-semibold metric mt-2">19 / 29</div>
+                <div class="text-xs text-emerald-600 mt-1">65% overall</div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="text-emerald-600 text-sm font-medium">CURRENT STREAK</div>
+                <div class="flex items-baseline gap-x-2 mt-1">
+                    <div id="dashboard-streak" class="text-5xl font-semibold metric">12</div>
+                    <div class="text-sm text-orange-500 font-medium">days</div>
+                </div>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="text-emerald-600 text-sm font-medium">NEXT RECOMMENDED</div>
+                    <div class="font-semibold text-xl mt-2">Python: Functions &amp; Scope</div>
+                </div>
+                <button onclick="continueLastLesson()" class="mt-4 text-sm w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-medium flex items-center justify-center gap-x-2">
+                    Continue <i class="fa-solid fa-play ml-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Per Language Progress -->
+        <h3 class="font-semibold text-xl mb-4 px-1">Your progress by language</h3>
+        <div id="dashboard-languages" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- COURSES / LANGUAGE SELECTION VIEW -->
+    <div id="view-courses" class="view hidden max-w-screen-xl mx-auto px-6 py-10">
+        <h1 class="text-4xl font-display font-semibold tracking-tight mb-2">All Learning Tracks</h1>
+        <p class="text-slate-600 mb-8">Choose any language. All tracks are free and follow the same proven bit-by-bit method.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="courses-grid">
+            <!-- Populated dynamically by JS -->
+        </div>
+    </div>
+
+    <!-- COURSE / LESSON VIEW -->
+    <div id="view-course" class="view hidden max-w-screen-xl mx-auto px-6 py-8">
+        <div class="flex items-center gap-x-4 mb-6">
+            <button onclick="showView('courses')" class="flex items-center text-emerald-600 hover:text-emerald-700 font-medium text-sm">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back to courses
+            </button>
+            <div id="course-header-badge" class="bit-badge px-4 py-px text-xs"></div>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar: Lessons list -->
+            <div class="lg:w-80 flex-shrink-0">
+                <div class="sticky top-20">
+                    <div class="flex items-center justify-between mb-3 px-1">
+                        <div>
+                            <span id="course-title" class="font-display text-3xl font-semibold"></span>
+                            <div id="course-subtitle" class="text-emerald-600 text-sm font-medium"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border border-slate-200 rounded-3xl p-5 mb-4">
+                        <div class="flex justify-between text-xs mb-2 px-1">
+                            <span class="font-medium text-slate-600">PROGRESS</span>
+                            <span id="course-progress-text" class="font-mono font-semibold"></span>
+                        </div>
+                        <div class="h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                            <div id="course-progress-bar" class="h-2.5 bg-emerald-500 rounded-full progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-xs font-medium text-slate-500 px-2 mb-2">LESSONS</div>
+                    <div id="lessons-sidebar" class="space-y-1 max-h-[420px] overflow-auto pr-1 custom-scroll">
+                        <!-- Lesson list populated by JS -->
+                    </div>
+                    
+                    <div class="mt-6 px-2">
+                        <button onclick="markModuleComplete()" 
+                                class="w-full py-3 text-sm font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center gap-x-2 transition-colors">
+                            <i class="fa-solid fa-check-double"></i>
+                            <span>Mark module complete &amp; celebrate</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Lesson Content -->
+            <div class="flex-1 min-w-0">
+                <div id="lesson-content" class="bg-white border border-slate-200 rounded-3xl p-8 min-h-[520px]">
+                    <!-- Dynamic lesson content injected here by JS -->
+                    <div class="flex flex-col items-center justify-center h-96 text-center text-slate-400">
+                        <i class="fa-solid fa-book-open text-5xl mb-4"></i>
+                        <p class="font-medium">Select a lesson from the sidebar to begin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 mt-16">
+        <div class="max-w-screen-xl mx-auto px-6 py-8 text-center text-xs text-slate-500">
+            <p>ZeroToCode Academy • Built for absolute beginners • 100% free forever</p>
+            <p class="mt-1">Deploy your own copy on Vercel in under 60 seconds. Perfect for communities, schools, and personal brands in Nigeria &amp; beyond.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script configuration
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#10b981');
+        }
+
+        // Course Data - The heart of the platform. Easy to expand!
+        const courseData = {
+            python: {
+                id: 'python',
+                name: 'Python',
+                icon: '🐍',
+                color: 'emerald',
+                subtitle: 'The #1 language for beginners & data',
+                totalLessons: 8,
+                lessons: [
+                    {
+                        id: 'py-1.1',
+                        title: '1.1 Hello, Computer! Your First Program',
+                        objective: 'Write and run your first Python program that prints a message.',
+                        why: 'Programming is giving the computer clear instructions. The print() function is how Python "talks back" to you. This is your first conversation with the machine.',
+                        explanation: `In Python, we use the <code class="bg-emerald-100 px-1.5 py-0.5 rounded">print()</code> function to display text on the screen. Everything inside the parentheses and quotes will be shown exactly as you wrote it.<br><br>
+                        You can also write <strong>comments</strong> using <code>#</code>. Comments are notes for humans — the computer ignores them.`,
+                        codeExample: `print("Hello, world!")\nprint("My name is Ada and I am learning Python")\n\n# This is a comment. It does nothing.`,
+                        exercises: [
+                            {
+                                title: "Exercise 1: Personal Greeting",
+                                instruction: "Write code that prints your full name and a short welcome message to yourself.",
+                                hint: "Use two print() statements. One for your name, one for the message.",
+                                solution: `print("My name is [Your Full Name]")\nprint("Welcome to ZeroToCode Academy! I am excited to learn.")`
+                            },
+                            {
+                                title: "Exercise 2: Multi-line Message",
+                                instruction: "Print a short 3-line motivational message about why you want to learn to code.",
+                                hint: "You can use multiple print() calls or triple quotes for multi-line strings.",
+                                solution: `print("I am learning to code because:")\nprint("1. I want to build useful tools")\nprint("2. I want better opportunities for myself and my family")`
+                            }
+                        ],
+                        quiz: [
+                            {
+                                q: "What does the print() function do in Python?",
+                                options: ["Stores data in memory", "Displays text on the screen", "Creates a new file", "Calculates numbers"],
+                                correct: 1,
+                                explanation: "print() is used to output information to the user (usually the screen)."
+                            },
+                            {
+                                q: "What symbol starts a comment in Python?",
+                                options: ["//", "#", "--", "/*"],
+                                correct: 1,
+                                explanation: "# is used for single-line comments in Python."
+                            }
+                        ]
+                    },
+                    {
+                        id: 'py-1.2',
+                        title: '1.2 Variables: Labeled Boxes for Your Data',
+                        objective: 'Store information in variables and use them later in your program.',
+                        why: 'Imagine a market stall where every item has a label. Variables are labeled boxes that hold values so you can reuse and change them easily.',
+                        explanation: `A variable is a name you give to a piece of data. You create one with the equals sign (=). Python is smart — it automatically knows the type of data you put inside.<br><br>
+                        Good variable names are descriptive: <code>total_price</code> is better than <code>x</code>.`,
+                        codeExample: `name = "Chinedu"\nage = 28\nprice = 4500.50\nis_student = True\n\nprint(name)\nprint("In 5 years you will be", age + 5)`,
+                        exercises: [
+                            {
+                                title: "Exercise: Shop Inventory",
+                                instruction: "Create variables for a product name, price, and quantity in stock. Then print a nice sentence using all three.",
+                                hint: "Use f-strings or multiple print statements.",
+                                solution: `product = "Rice"\nprice = 2500\nquantity = 45\n\nprint(f"We have {quantity} bags of {product} at ₦{price} each.")`
+                            }
+                        ],
+                        quiz: [
+                            {
+                                q: "Which is a valid variable name in Python?",
+                                options: ["2name", "user-name", "user_name", "class"],
+                                correct: 2,
+                                explanation: "Variable names can contain letters, numbers, and underscores, but cannot start with a number or be a reserved word like 'class'."
+                            }
+                        ]
+                    },
+                    {
+                        id: 'py-1.3',
+                        title: '1.3 Data Types: Numbers, Text & Truth',
+                        objective: 'Understand and work with the main data types in Python.',
+                        why: 'Computers treat different kinds of information differently. Knowing the type helps you avoid bugs and write correct programs.',
+                        explanation: `Python has several built-in types:<br>
+                        • <strong>str</strong> (text) — always in quotes<br>
+                        • <strong>int</strong> (whole numbers)<br>
+                        • <strong>float</strong> (decimal numbers)<br>
+                        • <strong>bool</strong> (True or False)<br><br>
+                        Use the <code>type()</code> function to check what type something is.`,
+                        codeExample: `name = "Fatima"          # str\nage = 31               # int\nprice = 1299.99        # float\nis_happy = True        # bool\n\nprint(type(name))\nprint(type(age))`,
+                        exercises: [
+                            {
+                                title: "Type Checker",
+                                instruction: "Create four variables of different types and print their types using type().",
+                                solution: `name = "Oluwaseun"\nage = 24\nheight = 1.78\nis_employed = False\n\nprint(type(name), type(age), type(height), type(is_employed))`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'py-2.1',
+                        title: '2.1 Making Decisions with if / else',
+                        objective: 'Write programs that make decisions based on conditions.',
+                        why: 'Real life is full of decisions. "If it is raining, take umbrella." Programs need the same logic.',
+                        explanation: `Use <code>if</code>, <code>elif</code> (else if), and <code>else</code> to run different code depending on whether a condition is True or False.<br><br>
+                        Indentation (4 spaces) is very important in Python — it defines what belongs inside the if block.`,
+                        codeExample: `age = 17\n\nif age >= 18:\n    print("You can vote!")\nelif age >= 16:\n    print("You can drive with a learner's permit")\nelse:\n    print("You are still too young for many adult activities")`,
+                        exercises: [
+                            {
+                                title: "Simple Grade Checker",
+                                instruction: "Ask the user for a score (0-100) and print the grade: A (70+), B (60-69), C (50-59), or Fail.",
+                                hint: "Use input() and convert to int. Then use if-elif-else.",
+                                solution: `score = int(input("Enter your score (0-100): "))\n\nif score >= 70:\n    print("Grade: A - Excellent!")\nelif score >= 60:\n    print("Grade: B - Very good")\nelif score >= 50:\n    print("Grade: C - Pass")\nelse:\n    print("Grade: Fail - You can do better next time")`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'py-2.2',
+                        title: '2.2 Loops: Repeating Work Automatically',
+                        objective: 'Use for and while loops to repeat actions efficiently.',
+                        why: 'Doing the same thing 100 times manually is boring and error-prone. Loops let the computer do the repetition for you.',
+                        explanation: `<strong>for</strong> loops are great when you know how many times to repeat.<br>
+                        <strong>while</strong> loops keep going as long as a condition is True.<br><br>
+                        Use <code>range()</code> to generate sequences of numbers.`,
+                        codeExample: `# Print numbers 1 to 5\nfor i in range(1, 6):\n    print(i)\n\n# While loop example\ncount = 0\nwhile count < 3:\n    print("Counting...", count)\n    count = count + 1`,
+                        exercises: [
+                            {
+                                title: "Multiplication Table",
+                                instruction: "Write a loop that prints the multiplication table for 7 (from 1 × 7 to 12 × 7).",
+                                solution: `print("7 Times Table")\nfor i in range(1, 13):\n    print(f"7 × {i} = {7 * i}")`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'py-3.1',
+                        title: '3.1 Functions: Reusable Blocks of Code',
+                        objective: 'Create your own functions to organize and reuse code.',
+                        why: 'Functions are like recipes. Write once, use many times. They make your code cleaner and easier to maintain.',
+                        explanation: `Define a function with <code>def</code>. Give it a name and parameters (inputs). Use <code>return</code> to send a value back.<br><br>
+                        Functions help you avoid repeating the same code.`,
+                        codeExample: `def greet(name):\n    return f"Hello {name}, welcome to ZeroToCode!"\n\nmessage = greet("Amina")\nprint(message)\n\n# Function with default value\ndef add(a, b=10):\n    return a + b`,
+                        exercises: [
+                            {
+                                title: "Area Calculator",
+                                instruction: "Create a function called calculate_area that takes length and width and returns the area of a rectangle.",
+                                solution: `def calculate_area(length, width):\n    area = length * width\n    return area\n\nprint(calculate_area(12, 5))   # Should print 60`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'py-3.2',
+                        title: '3.2 Lists & Dictionaries: Storing Many Things',
+                        objective: 'Store and work with collections of data using lists and dictionaries.',
+                        why: 'You rarely deal with single pieces of data. Lists and dictionaries let you group related information together.',
+                        explanation: `Lists are ordered collections (like a shopping list).<br>
+                        Dictionaries store key-value pairs (like a phone contact list).<br><br>
+                        You access items using index (lists) or keys (dictionaries).`,
+                        codeExample: `fruits = ["mango", "banana", "orange"]\nfruits.append("pineapple")\nprint(fruits[0])           # mango\n\nstudent = {\n    "name": "Emeka",\n    "age": 22,\n    "course": "Python"\n}\nprint(student["name"])`,
+                        exercises: [
+                            {
+                                title: "Simple Phonebook",
+                                instruction: "Create a dictionary with 3 friends' names and phone numbers. Then print one friend's number.",
+                                solution: `phonebook = {\n    "Ada": "0801-234-5678",\n    "Chidi": "0802-987-6543",\n    "Ngozi": "0803-555-1212"\n}\n\nprint("Ada's number is", phonebook["Ada"])`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'py-4.1',
+                        title: '4.1 Mini Project: Build a Simple Shop Calculator',
+                        objective: 'Combine everything you learned into a useful mini project.',
+                        why: 'This is where real learning happens. You will build something you can actually use or show to others.',
+                        explanation: `You will create a program that calculates the total cost of items in a small shop, applies a discount if the total is high enough, and prints a nice receipt.`,
+                        codeExample: `# Starter code you can build upon\ndef calculate_total(items):\n    total = 0\n    for item in items:\n        total += item['price'] * item['qty']\n    return total\n\n# Example items\ncart = [\n    {"name": "Rice", "price": 2500, "qty": 2},\n    {"name": "Beans", "price": 1800, "qty": 1}\n]\n\nprint("Total: ₦", calculate_total(cart))`,
+                        exercises: [
+                            {
+                                title: "Complete the Shop Calculator",
+                                instruction: "Finish the program so it asks the user how many items they bought, calculates total, and gives 10% discount if total > ₦10,000. Print a nice receipt.",
+                                hint: "Use input(), loops or lists, and if statements.",
+                                solution: `print("=== ADE'S MINI SHOP ===\\n")\n\nitems = []\nwhile True:\n    name = input("Item name (or 'done' to finish): ")\n    if name.lower() == 'done':\n        break\n    price = float(input("Price: "))\n    qty = int(input("Quantity: "))\n    items.append({"name": name, "price": price, "qty": qty})\n\ntotal = sum(i['price'] * i['qty'] for i in items)\ndiscount = 0\nif total > 10000:\n    discount = total * 0.10\n\nfinal_total = total - discount\n\nprint("\\n=== RECEIPT ===")\nfor item in items:\n    print(f"{item['name']} x{item['qty']} = ₦{item['price']*item['qty']}")\nprint(f"\\nSubtotal: ₦{total}")\nprint(f"Discount: -₦{discount}")\nprint(f"TOTAL TO PAY: ₦{final_total}")\nprint("Thank you for shopping with us!")`
+                            }
+                        ],
+                        quiz: []
+                    }
+                ]
+            },
+            javascript: {
+                id: 'javascript',
+                name: 'JavaScript',
+                icon: '🟨',
+                color: 'yellow',
+                subtitle: 'The language of the web',
+                totalLessons: 6,
+                lessons: [
+                    {
+                        id: 'js-1.1',
+                        title: '1.1 Your First JavaScript',
+                        objective: 'Write and run JavaScript in the browser console and in a webpage.',
+                        why: 'JavaScript makes websites interactive. It is the only language that runs natively in every browser.',
+                        explanation: `JavaScript can be written directly in HTML using &lt;script&gt; tags or in separate .js files. The browser console is a great place to experiment.`,
+                        codeExample: `// In browser console or script tag\nconsole.log("Hello from JavaScript!");\n\nlet name = "Chukwudi";\nconsole.log(\`Welcome, \${name}!\`);`,
+                        exercises: [
+                            {
+                                title: "Alert + Log",
+                                instruction: "Use alert() to show a welcome message and console.log() to log your name.",
+                                solution: `alert("Welcome to ZeroToCode JavaScript track!");\nconsole.log("My name is [Your Name] and I am learning JS");`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'js-1.2',
+                        title: '1.2 Variables, let, const & Types',
+                        objective: 'Declare variables using modern JavaScript syntax.',
+                        why: 'let and const help you write safer, more predictable code than the old var.',
+                        explanation: `Use <code>let</code> when the value can change. Use <code>const</code> when it should never change (most of the time).`,
+                        codeExample: `let age = 25;\nage = 26;           // OK\n\nconst name = "Aisha";\n// name = "Bola";   // Error!`,
+                        exercises: [],
+                        quiz: []
+                    },
+                    {
+                        id: 'js-2.1',
+                        title: '2.1 Functions & Arrow Functions',
+                        objective: 'Create reusable functions in JavaScript.',
+                        why: 'Functions are the building blocks of JavaScript programs and modern web apps.',
+                        explanation: `Modern JavaScript prefers arrow functions for short operations.`,
+                        codeExample: `function greet(name) {\n  return \`Hello \${name}\`;\n}\n\nconst add = (a, b) => a + b;`,
+                        exercises: [],
+                        quiz: []
+                    },
+                    {
+                        id: 'js-3.1',
+                        title: '3.1 DOM Manipulation Basics',
+                        objective: 'Change HTML content using JavaScript.',
+                        why: 'This is how you make websites respond to user actions (clicks, typing, etc.).',
+                        explanation: `The Document Object Model (DOM) is the bridge between your JavaScript and the HTML page.`,
+                        codeExample: `const heading = document.querySelector('h1');\nheading.textContent = 'Hello from JS!';`,
+                        exercises: [],
+                        quiz: []
+                    }
+                ]
+            },
+            web: {
+                id: 'web',
+                name: 'HTML & CSS',
+                icon: '🌐',
+                color: 'sky',
+                subtitle: 'Build the structure and style of the web',
+                totalLessons: 5,
+                lessons: [
+                    {
+                        id: 'web-1.1',
+                        title: '1.1 HTML Structure & Semantic Tags',
+                        objective: 'Create the basic skeleton of any webpage.',
+                        why: 'HTML is the foundation of every website. Semantic tags help screen readers and SEO.',
+                        explanation: `Use meaningful tags like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt; instead of just &lt;div&gt; everywhere.`,
+                        codeExample: `&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;&lt;title&gt;My Site&lt;/title&gt;&lt;/head&gt;\n&lt;body&gt;\n  &lt;header&gt;...&lt;/header&gt;\n  &lt;main&gt;...&lt;/main&gt;\n&lt;/body&gt;\n&lt;/html&gt;`,
+                        exercises: [],
+                        quiz: []
+                    },
+                    {
+                        id: 'web-2.1',
+                        title: '2.1 CSS Styling & Selectors',
+                        objective: 'Style your HTML beautifully with CSS.',
+                        why: 'Good design makes your websites pleasant and professional to use.',
+                        explanation: `CSS controls colors, spacing, fonts, and layout. Modern CSS (Flexbox & Grid) makes responsive design much easier.`,
+                        codeExample: `.card {\n  background: white;\n  padding: 2rem;\n  border-radius: 1rem;\n  box-shadow: 0 10px 15px rgb(0 0 0 / 0.1);\n}`,
+                        exercises: [],
+                        quiz: []
+                    }
+                ]
+            },
+            go: {
+                id: 'go',
+                name: 'Go (Golang)',
+                icon: '🐹',
+                color: 'cyan',
+                subtitle: 'Simple, fast, and reliable',
+                totalLessons: 5,
+                lessons: [
+                    {
+                        id: 'go-1.1',
+                        title: '1.1 Hello Go - Your First Program',
+                        objective: 'Write, compile and run a Go program.',
+                        why: 'Go is loved for its simplicity and speed. Great for building command-line tools and web backends.',
+                        explanation: `Every Go program starts with a package main and a main() function. Go is compiled, so you get a fast executable.`,
+                        codeExample: `package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello from Go!")\n}`,
+                        exercises: [
+                            {
+                                title: "Print your name",
+                                instruction: "Modify the program to print your full name and the current year.",
+                                solution: `package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("My name is [Your Name]")\n    fmt.Println("Learning Go in 2026")\n}`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'go-1.2',
+                        title: '1.2 Variables & Types in Go',
+                        objective: 'Declare and use variables with Go\'s type system.',
+                        why: 'Go is statically typed — this catches many bugs before you even run the program.',
+                        explanation: `You can use <code>var</code> or the short <code>:=</code> syntax. Go can often infer the type.`,
+                        codeExample: `package main\n\nimport "fmt"\n\nfunc main() {\n    name := "Olu"\n    age := 29\n    fmt.Println(name, age)\n}`,
+                        exercises: [],
+                        quiz: []
+                    }
+                ]
+            },
+            rust: {
+                id: 'rust',
+                name: 'Rust',
+                icon: '🦀',
+                color: 'orange',
+                subtitle: 'Memory safe & extremely fast',
+                totalLessons: 5,
+                lessons: [
+                    {
+                        id: 'rust-1.1',
+                        title: '1.1 Hello Rust',
+                        objective: 'Write and run your first Rust program.',
+                        why: 'Rust gives you incredible performance and safety guarantees. It is increasingly popular for systems programming and web (with frameworks).',
+                        explanation: `Rust uses <code>cargo</code> as its build tool and package manager. The borrow checker is famous for preventing memory bugs at compile time.`,
+                        codeExample: `fn main() {\n    println!("Hello from Rust!");\n}`,
+                        exercises: [
+                            {
+                                title: "Personal message",
+                                instruction: "Print a greeting that includes your name and why you want to learn Rust.",
+                                solution: `fn main() {\n    println!("Hello, my name is [Your Name]");\n    println!("I want to learn Rust for high-performance applications.");\n}`
+                            }
+                        ],
+                        quiz: []
+                    },
+                    {
+                        id: 'rust-1.2',
+                        title: '1.2 Ownership & Borrowing (Gentle Intro)',
+                        objective: 'Understand Rust\'s unique ownership model.',
+                        why: 'This is the hardest but most powerful concept in Rust. It eliminates entire classes of bugs.',
+                        explanation: `In Rust, every value has exactly one owner. When the owner goes out of scope, the value is dropped. You can borrow values with references.`,
+                        codeExample: `fn main() {\n    let s = String::from("hello");\n    let len = calculate_length(&s);\n    println!("Length of '{}' is {}.", s, len);\n}\n\nfn calculate_length(s: &String) -> usize {\n    s.len()\n}`,
+                        exercises: [],
+                        quiz: []
+                    }
+                ]
+            }
+        };
+
+        // Progress & State
+        let progress = JSON.parse(localStorage.getItem('zerotocode_progress') || '{}');
+        let currentCourse = null;
+        let currentLessonId = null;
+
+        function saveProgress() {
+            localStorage.setItem('zerotocode_progress', JSON.stringify(progress));
+        }
+
+        function getStreak() {
+            // Simple streak simulation (in real app would track dates)
+            return parseInt(localStorage.getItem('zerotocode_streak') || '12');
+        }
+
+        function updateStreakUI() {
+            const streak = getStreak();
+            const el = document.getElementById('streak-count');
+            if (el) el.textContent = streak;
+            
+            const dash = document.getElementById('dashboard-streak');
+            if (dash) dash.textContent = streak;
+        }
+
+        function calculateProgress(langId) {
+            const course = courseData[langId];
+            if (!course) return 0;
+            
+            const completed = progress[langId] || [];
+            return Math.round((completed.length / course.totalLessons) * 100);
+        }
+
+        function calculateTotalXP() {
+            let xp = 0;
+            Object.keys(courseData).forEach(lang => {
+                const completed = progress[lang] || [];
+                xp += completed.length * 65; // ~65 XP per lesson
+            });
+            return xp;
+        }
+
+        function updateDashboard() {
+            // Update stats
+            document.getElementById('total-xp').textContent = calculateTotalXP().toLocaleString();
+            
+            let totalCompleted = 0;
+            let totalLessons = 0;
+            Object.keys(courseData).forEach(lang => {
+                totalCompleted += (progress[lang] || []).length;
+                totalLessons += courseData[lang].totalLessons;
+            });
+            
+            document.getElementById('lessons-completed').textContent = `${totalCompleted} / ${totalLessons}`;
+            
+            // Per language cards
+            const container = document.getElementById('dashboard-languages');
+            container.innerHTML = '';
+            
+            Object.keys(courseData).forEach(langId => {
+                const course = courseData[langId];
+                const pct = calculateProgress(langId);
+                const completedCount = (progress[langId] || []).length;
+                
+                const card = document.createElement('div');
+                card.className = `bg-white border border-slate-200 rounded-3xl p-5 modern-card cursor-pointer`;
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-3xl">${course.icon}</span>
+                            <h4 class="font-semibold text-xl mt-3">${course.name}</h4>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-3xl font-semibold text-emerald-600">${pct}<span class="text-base font-normal">%</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-2 bg-emerald-500 rounded-full progress-bar" style="width: ${pct}%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs mt-1.5 text-slate-500">
+                            <span>${completedCount} / ${course.totalLessons} lessons</span>
+                            <span class="font-medium">${pct}%</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="event.stopImmediatePropagation(); startCourse('${langId}')" 
+                            class="mt-5 w-full py-2.5 text-sm font-semibold rounded-2xl transition-all ${pct > 0 ? 'bg-emerald-600 text-white hover:bg-emerald-700' : 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100'}">
+                        ${pct > 0 ? 'Continue Learning' : 'Start Course'}
+                    </button>
+                `;
+                card.onclick = () => startCourse(langId);
+                container.appendChild(card);
+            });
+        }
+
+        function showView(view) {
+            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+            const target = document.getElementById(`view-${view}`);
+            if (target) target.classList.remove('hidden');
+            
+            if (view === 'dashboard') {
+                updateDashboard();
+            }
+            
+            if (view === 'courses') {
+                renderCoursesGrid();
+            }
+        }
+
+        function renderCoursesGrid() {
+            const container = document.getElementById('courses-grid');
+            container.innerHTML = '';
+            
+            Object.keys(courseData).forEach(langId => {
+                const course = courseData[langId];
+                const pct = calculateProgress(langId);
+                
+                const card = document.createElement('div');
+                card.className = `modern-card bg-white border border-slate-200 rounded-3xl p-6 cursor-pointer hover:border-emerald-300`;
+                card.innerHTML = `
+                    <div class="flex items-center gap-x-4">
+                        <span class="text-6xl">${course.icon}</span>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-semibold text-2xl tracking-tight">${course.name}</h3>
+                            <p class="text-emerald-600 text-sm">${course.subtitle}</p>
+                            
+                            <div class="mt-5">
+                                <div class="flex justify-between text-xs mb-1.5">
+                                    <span class="font-medium">${pct}% complete</span>
+                                    <span class="text-slate-500">${(progress[langId] || []).length}/${course.totalLessons}</span>
+                                </div>
+                                <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                    <div class="h-2 bg-emerald-500 rounded-full" style="width: ${pct}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex items-center justify-between text-sm">
+                        <span class="text-emerald-600 font-medium flex items-center gap-x-1">
+                            <i class="fa-solid fa-play"></i> 
+                            <span>Start / Continue</span>
+                        </span>
+                    </div>
+                `;
+                card.onclick = () => startCourse(langId);
+                container.appendChild(card);
+            });
+        }
+
+        function startCourse(langId) {
+            currentCourse = langId;
+            const course = courseData[langId];
+            
+            // Update header
+            document.getElementById('course-title').innerHTML = `${course.icon} ${course.name}`;
+            document.getElementById('course-subtitle').textContent = course.subtitle;
+            document.getElementById('course-header-badge').innerHTML = `<span class="px-3 py-px">${course.totalLessons} lessons • Free</span>`;
+            document.getElementById('course-header-badge').className = `bit-badge px-4 py-px text-xs bg-${course.color}-100 text-${course.color}-700`;
+            
+            // Render sidebar lessons
+            renderLessonsSidebar(langId);
+            
+            // Show course view
+            showView('course');
+            
+            // Auto-load first incomplete lesson or first lesson
+            const completed = progress[langId] || [];
+            let firstIncomplete = course.lessons.find(l => !completed.includes(l.id));
+            if (!firstIncomplete) firstIncomplete = course.lessons[0];
+            
+            if (firstIncomplete) {
+                loadLesson(langId, firstIncomplete.id);
+            }
+        }
+
+        function renderLessonsSidebar(langId) {
+            const container = document.getElementById('lessons-sidebar');
+            container.innerHTML = '';
+            const course = courseData[langId];
+            const completed = progress[langId] || [];
+            
+            course.lessons.forEach((lesson, index) => {
+                const isCompleted = completed.includes(lesson.id);
+                const isCurrent = currentLessonId === lesson.id;
+                
+                const item = document.createElement('div');
+                item.className = `lesson-item flex items-center gap-x-3 px-4 py-3 rounded-2xl cursor-pointer text-sm ${isCurrent ? 'bg-emerald-50 border border-emerald-200' : 'hover:bg-slate-50'} ${isCompleted ? 'completed' : ''}`;
+                
+                item.innerHTML = `
+                    <div class="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                        ${isCompleted 
+                            ? `<i class="fa-solid fa-check-circle text-emerald-500 text-lg"></i>` 
+                            : `<span class="text-xs font-mono text-slate-400">${(index + 1).toString().padStart(2, '0')}</span>`
+                        }
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="font-medium leading-tight pr-2">${lesson.title}</div>
+                    </div>
+                `;
+                
+                item.onclick = () => loadLesson(langId, lesson.id);
+                container.appendChild(item);
+            });
+            
+            // Update progress bar
+            const pct = calculateProgress(langId);
+            document.getElementById('course-progress-bar').style.width = `${pct}%`;
+            document.getElementById('course-progress-text').textContent = `${pct}%`;
+        }
+
+        function loadLesson(langId, lessonId) {
+            currentLessonId = lessonId;
+            const course = courseData[langId];
+            const lesson = course.lessons.find(l => l.id === lessonId);
+            if (!lesson) return;
+            
+            const container = document.getElementById('lesson-content');
+            
+            let html = `
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <span class="bit-badge text-xs">LESSON ${lesson.id.toUpperCase()}</span>
+                    </div>
+                    
+                    <h2 class="text-3xl font-semibold tracking-tight mb-3">${lesson.title}</h2>
+                    
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5 mb-8">
+                        <div class="flex gap-x-3">
+                            <i class="fa-solid fa-bullseye text-emerald-600 mt-1"></i>
+                            <div>
+                                <span class="font-semibold text-emerald-700">Learning Objective</span>
+                                <p class="text-emerald-800 mt-1">${lesson.objective}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="font-semibold flex items-center gap-x-2 mb-3 text-lg">
+                            <i class="fa-solid fa-lightbulb text-amber-500"></i> 
+                            <span>Why this matters</span>
+                        </h3>
+                        <p class="text-slate-700 leading-relaxed">${lesson.why}</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="font-semibold mb-3 text-lg">Explanation</h3>
+                        <div class="prose prose-slate max-w-none text-[15px] leading-relaxed text-slate-700">
+                            ${lesson.explanation}
+                        </div>
+                    </div>
+            `;
+            
+            // Code example
+            if (lesson.codeExample) {
+                html += `
+                    <div class="mb-8">
+                        <div class="flex items-center justify-between mb-2 px-1">
+                            <h3 class="font-semibold">Code Example</h3>
+                            <button onclick="copyCode(this)" class="text-xs flex items-center gap-x-1.5 px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-600">
+                                <i class="fa-solid fa-copy"></i> <span>Copy</span>
+                            </button>
+                        </div>
+                        <pre class="code-block p-5 rounded-2xl text-sm overflow-auto"><code>${lesson.codeExample.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>
+                    </div>
+                `;
+            }
+            
+            // Exercises
+            if (lesson.exercises && lesson.exercises.length > 0) {
+                html += `<div class="mb-8"><h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2"><i class="fa-solid fa-tasks text-emerald-600"></i> Practice Exercises</h3>`;
+                
+                lesson.exercises.forEach((ex, idx) => {
+                    html += `
+                        <div class="exercise-box bg-white border border-slate-200 rounded-2xl p-6 mb-4">
+                            <div class="font-semibold mb-2">${ex.title}</div>
+                            <p class="text-slate-700 mb-4">${ex.instruction}</p>
+                            
+                            <div class="flex flex-wrap gap-3">
+                                <button onclick="showSolution(this, \`${ex.solution.replace(/`/g, '\\`')}\`)" 
+                                        class="px-5 py-2 text-sm font-medium bg-white border border-slate-300 hover:bg-slate-50 rounded-2xl flex items-center gap-x-2">
+                                    <i class="fa-solid fa-eye"></i> <span>Show Solution</span>
+                                </button>
+                                
+                                <button onclick="copyToClipboard(\`${ex.solution.replace(/`/g, '\\`')}\`, this)" 
+                                        class="px-5 py-2 text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700 rounded-2xl flex items-center gap-x-2">
+                                    <i class="fa-solid fa-copy"></i> <span>Copy Solution</span>
+                                </button>
+                            </div>
+                            
+                            <div class="solution-box hidden mt-4 p-4 bg-slate-900 text-emerald-300 text-sm rounded-xl font-mono whitespace-pre-wrap"></div>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            
+            // Quiz
+            if (lesson.quiz && lesson.quiz.length > 0) {
+                html += `
+                    <div class="mb-8">
+                        <h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2">
+                            <i class="fa-solid fa-question-circle text-indigo-500"></i> 
+                            Quick Check
+                        </h3>
+                        <div id="quiz-container-${lessonId}" class="space-y-4"></div>
+                        <button onclick="checkQuiz('${lessonId}', '${langId}')" 
+                                class="mt-4 px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-semibold text-sm flex items-center gap-x-2">
+                            <span>Submit Answers &amp; See Results</span>
+                        </button>
+                    </div>
+                `;
+            }
+            
+            // Mark complete button
+            const isCompleted = (progress[langId] || []).includes(lessonId);
+            html += `
+                <div class="pt-6 border-t flex flex-col sm:flex-row gap-3">
+                    <button onclick="markLessonComplete('${langId}', '${lessonId}')"
+                            class="flex-1 py-4 font-semibold rounded-2xl text-lg transition-all ${isCompleted ? 'bg-emerald-100 text-emerald-700' : 'bg-emerald-600 hover:bg-emerald-700 text-white'}">
+                        ${isCompleted ? '✓ Lesson Completed' : 'Mark as Complete & Earn XP'}
+                    </button>
+                    
+                    <button onclick="showView('dashboard')" 
+                            class="flex-1 sm:flex-none px-8 py-4 border border-slate-300 hover:bg-slate-50 font-semibold rounded-2xl text-lg">
+                        Back to Dashboard
+                    </button>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+            
+            // Render quiz if exists
+            if (lesson.quiz && lesson.quiz.length > 0) {
+                renderQuiz(lesson.quiz, lessonId);
+            }
+            
+            // Re-render sidebar to highlight current
+            renderLessonsSidebar(langId);
+        }
+
+        function renderQuiz(quizQuestions, lessonId) {
+            const container = document.getElementById(`quiz-container-${lessonId}`);
+            if (!container) return;
+            container.innerHTML = '';
+            
+            quizQuestions.forEach((q, qIndex) => {
+                const qDiv = document.createElement('div');
+                qDiv.className = 'border border-slate-200 rounded-2xl p-5';
+                qDiv.innerHTML = `
+                    <p class="font-medium mb-3">${qIndex + 1}. ${q.q}</p>
+                    <div class="space-y-2" id="q-options-${lessonId}-${qIndex}">
+                        ${q.options.map((opt, oIndex) => `
+                            <label class="flex items-center gap-x-3 p-3 hover:bg-slate-50 rounded-xl cursor-pointer border border-transparent">
+                                <input type="radio" name="quiz-${lessonId}-${qIndex}" value="${oIndex}" class="accent-emerald-600">
+                                <span>${opt}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(qDiv);
+            });
+        }
+
+        function checkQuiz(lessonId, langId) {
+            const course = courseData[langId];
+            const lesson = course.lessons.find(l => l.id === lessonId);
+            if (!lesson || !lesson.quiz) return;
+            
+            let correctCount = 0;
+            let html = '';
+            
+            lesson.quiz.forEach((q, qIndex) => {
+                const selected = document.querySelector(`input[name="quiz-${lessonId}-${qIndex}"]:checked`);
+                const selectedVal = selected ? parseInt(selected.value) : -1;
+                const isCorrect = selectedVal === q.correct;
+                
+                if (isCorrect) correctCount++;
+                
+                const optionsDiv = document.getElementById(`q-options-${lessonId}-${qIndex}`);
+                if (optionsDiv) {
+                    optionsDiv.innerHTML = q.options.map((opt, oIndex) => {
+                        let cls = 'p-3 rounded-xl border flex items-center gap-x-3 ';
+                        if (oIndex === q.correct) {
+                            cls += 'bg-emerald-100 border-emerald-300 text-emerald-800';
+                        } else if (selectedVal === oIndex && !isCorrect) {
+                            cls += 'bg-red-100 border-red-300 text-red-700';
+                        } else {
+                            cls += 'border-slate-200';
+                        }
+                        return `<div class="${cls}"><span>${opt}</span> ${oIndex === q.correct ? '<i class="fa-solid fa-check ml-auto text-emerald-600"></i>' : ''}</div>`;
+                    }).join('');
+                }
+            });
+            
+            const score = Math.round((correctCount / lesson.quiz.length) * 100);
+            
+            // Show result banner
+            const resultBanner = document.createElement('div');
+            resultBanner.className = `mt-6 p-5 rounded-2xl text-center ${score >= 70 ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}`;
+            resultBanner.innerHTML = `
+                <div class="font-semibold text-xl">You scored ${score}% (${correctCount}/${lesson.quiz.length})</div>
+                <p class="mt-1 text-sm">${score >= 70 ? 'Excellent work! You understood the key concepts.' : 'Good attempt! Review the lesson and try again.'}</p>
+            `;
+            
+            const container = document.getElementById(`quiz-container-${lessonId}`);
+            container.appendChild(resultBanner);
+            
+            // Auto mark complete if high score
+            if (score >= 70) {
+                setTimeout(() => {
+                    markLessonComplete(langId, lessonId, true);
+                }, 1200);
+            }
+        }
+
+        function showSolution(btn, solution) {
+            const parent = btn.parentElement.parentElement;
+            let solBox = parent.querySelector('.solution-box');
+            
+            if (!solBox) {
+                solBox = document.createElement('div');
+                solBox.className = 'solution-box mt-4 p-4 bg-slate-900 text-emerald-300 text-sm rounded-xl font-mono whitespace-pre-wrap';
+                parent.appendChild(solBox);
+            }
+            
+            solBox.classList.toggle('hidden');
+            if (!solBox.classList.contains('hidden')) {
+                solBox.textContent = solution;
+                btn.innerHTML = `<i class="fa-solid fa-eye-slash"></i> <span>Hide Solution</span>`;
+            } else {
+                btn.innerHTML = `<i class="fa-solid fa-eye"></i> <span>Show Solution</span>`;
+            }
+        }
+
+        function copyCode(btn) {
+            const pre = btn.parentElement.nextElementSibling;
+            if (!pre) return;
+            const text = pre.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> <span>Copied!</span>`;
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                }, 1800);
+            });
+        }
+
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> <span>Copied!</span>`;
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1800);
+            }).catch(() => {
+                // Fallback
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> <span>Copied!</span>`;
+                setTimeout(() => btn.innerHTML = originalText, 1800);
+            });
+        }
+
+        function markLessonComplete(langId, lessonId, fromQuiz = false) {
+            if (!progress[langId]) progress[langId] = [];
+            
+            if (!progress[langId].includes(lessonId)) {
+                progress[langId].push(lessonId);
+                saveProgress();
+                
+                // Update UI
+                const course = courseData[langId];
+                const completedCount = progress[langId].length;
+                
+                // Refresh sidebar
+                renderLessonsSidebar(langId);
+                
+                // Update progress bar
+                const pct = calculateProgress(langId);
+                document.getElementById('course-progress-bar').style.width = `${pct}%`;
+                document.getElementById('course-progress-text').textContent = `${pct}%`;
+                
+                // Toast / celebration
+                showToast(`Great job! Lesson marked complete. +65 XP`, 'success');
+                
+                // If all lessons done, celebrate
+                if (completedCount === course.totalLessons) {
+                    setTimeout(() => {
+                        showCelebration(langId);
+                    }, 800);
+                }
+            } else if (!fromQuiz) {
+                showToast('Already completed!', 'info');
+            }
+            
+            // Update dashboard if visible
+            if (!document.getElementById('view-dashboard').classList.contains('hidden')) {
+                updateDashboard();
+            }
+        }
+
+        function markModuleComplete() {
+            if (!currentCourse) return;
+            const course = courseData[currentCourse];
+            const completed = progress[currentCourse] || [];
+            
+            if (completed.length === course.totalLessons) {
+                showCelebration(currentCourse);
+            } else {
+                if (confirm(`Mark all remaining lessons in ${course.name} as complete?`)) {
+                    course.lessons.forEach(lesson => {
+                        if (!completed.includes(lesson.id)) {
+                            completed.push(lesson.id);
+                        }
+                    });
+                    progress[currentCourse] = completed;
+                    saveProgress();
+                    renderLessonsSidebar(currentCourse);
+                    showCelebration(currentCourse);
+                }
+            }
+        }
+
+        function showCelebration(langId) {
+            const course = courseData[langId];
+            const modal = document.createElement('div');
+            modal.className = `fixed inset-0 bg-black/60 flex items-center justify-center z-[100]`;
+            modal.innerHTML = `
+                <div class="bg-white rounded-3xl p-10 max-w-md w-full mx-4 text-center shadow-2xl">
+                    <div class="mx-auto w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-trophy text-emerald-600 text-5xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-semibold tracking-tight">Congratulations!</h2>
+                    <p class="mt-3 text-lg">You completed the entire <strong>${course.name}</strong> track!</p>
+                    
+                    <div class="my-8 p-5 bg-emerald-50 rounded-2xl">
+                        <div class="text-sm text-emerald-700">CERTIFICATE OF COMPLETION</div>
+                        <div class="font-display text-2xl font-semibold mt-1">ZeroToCode Academy</div>
+                        <div class="text-emerald-800 mt-4">This certifies that you have successfully completed the ${course.name} beginner track.</div>
+                    </div>
+                    
+                    <div class="flex gap-3">
+                        <button onclick="downloadCertificate('${langId}', this)" class="flex-1 py-3.5 bg-emerald-600 text-white font-semibold rounded-2xl">Download Certificate</button>
+                        <button onclick="this.closest('.fixed').remove()" class="flex-1 py-3.5 border font-semibold rounded-2xl">Close</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function downloadCertificate(langId, btn) {
+            const course = courseData[langId];
+            const win = window.open('', '_blank');
+            win.document.write(`
+                <html>
+                <head><title>ZeroToCode Certificate - ${course.name}</title></head>
+                <body style="font-family: system-ui; padding: 60px; text-align: center; background: #f8fafc;">
+                    <div style="max-width: 720px; margin: 0 auto; border: 12px solid #10b981; padding: 60px 50px; background: white; border-radius: 20px;">
+                        <h1 style="font-size: 42px; margin-bottom: 10px; color: #166534;">Certificate of Completion</h1>
+                        <p style="font-size: 21px; color: #166534;">ZeroToCode Academy</p>
+                        
+                        <div style="margin: 50px 0 40px;">
+                            <p style="font-size: 18px; color: #475569;">This is to certify that</p>
+                            <h2 style="font-size: 32px; margin: 12px 0; color: #0f172a;">[Your Full Name]</h2>
+                            <p style="font-size: 18px; color: #475569;">has successfully completed the</p>
+                            <h3 style="font-size: 28px; margin: 12px 0; color: #166534;">${course.name} Beginner Track</h3>
+                        </div>
+                        
+                        <p style="color: #64748b;">Date: ${new Date().toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'})}</p>
+                        
+                        <div style="margin-top: 60px; font-size: 13px; color: #64748b;">
+                            ZeroToCode Academy • Free • Bit by bit learning for everyone
+                        </div>
+                    </div>
+                </body>
+                </html>
+            `);
+            setTimeout(() => {
+                btn.closest('.fixed').remove();
+            }, 600);
+        }
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 px-6 py-3.5 rounded-2xl shadow-xl flex items-center gap-x-3 z-[200] ${type === 'success' ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-white'}`;
+            toast.innerHTML = `
+                <span>${message}</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.transition = 'all 0.3s ease';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2800);
+        }
+
+        function startLearning() {
+            // Default to Python for absolute beginners
+            startCourse('python');
+        }
+
+        function continueLastLesson() {
+            // Find most recently touched language with incomplete lessons
+            let bestLang = 'python';
+            let bestPct = 0;
+            
+            Object.keys(courseData).forEach(langId => {
+                const pct = calculateProgress(langId);
+                if (pct > bestPct && pct < 100) {
+                    bestPct = pct;
+                    bestLang = langId;
+                }
+            });
+            
+            startCourse(bestLang);
+        }
+
+        function deployToVercelInfo() {
+            const modal = document.createElement('div');
+            modal.className = `fixed inset-0 bg-black/70 flex items-center justify-center z-[100] p-6`;
+            modal.innerHTML = `
+                <div class="bg-white max-w-lg w-full rounded-3xl p-8">
+                    <h3 class="font-semibold text-2xl">Deploy to Vercel (Free)</h3>
+                    <p class="mt-2 text-slate-600">Your platform will be live on the internet in under a minute.</p>
+                    
+                    <ol class="mt-6 space-y-4 text-sm">
+                        <li class="flex gap-4"><span class="font-mono font-bold text-emerald-600 w-5">1.</span> Go to <a href="https://vercel.com" target="_blank" class="text-emerald-600 underline">vercel.com</a> and sign up with GitHub.</li>
+                        <li class="flex gap-4"><span class="font-mono font-bold text-emerald-600 w-5">2.</span> Drag and drop the entire <strong>zerotocode</strong> folder onto the Vercel dashboard.</li>
+                        <li class="flex gap-4"><span class="font-mono font-bold text-emerald-600 w-5">3.</span> Vercel will deploy it instantly and give you a live URL.</li>
+                    </ol>
+                    
+                    <div class="mt-8 flex gap-3">
+                        <button onclick="this.closest('.fixed').remove()" class="flex-1 py-3 border rounded-2xl font-semibold">Close</button>
+                        <a href="https://vercel.com/new" target="_blank" class="flex-1 py-3 bg-emerald-600 text-white text-center rounded-2xl font-semibold">Open Vercel →</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function initializeDashboardLanguages() {
+            // Already handled in updateDashboard()
+        }
+
+        function initializeEverything() {
+            initializeTailwind();
+            updateStreakUI();
+            
+            // Show home by default
+            document.getElementById('view-home').classList.remove('hidden');
+            
+            // Seed some demo progress if first time (optional - remove in production)
+            if (Object.keys(progress).length === 0) {
+                // Uncomment below if you want demo data for testing
+                // progress.python = ['py-1.1', 'py-1.2', 'py-1.3'];
+                // progress.web = ['web-1.1'];
+                // saveProgress();
+            }
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.metaKey && e.key === "/") {
+                    e.preventDefault();
+                    const dashboard = document.getElementById('view-dashboard');
+                    if (!dashboard.classList.contains('hidden')) {
+                        showView('home');
+                    } else {
+                        showView('dashboard');
+                    }
+                }
+            });
+            
+            // Make sure initial dashboard data is ready
+            console.log('%c[ZeroToCode] Platform initialized successfully. All systems ready.', 'color:#64748b');
+        }
+
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
+                localStorage.removeItem('zerotocode_progress');
+                localStorage.removeItem('zerotocode_streak');
+                location.reload();
+            }
+        }
+
+        // Boot the app
+        window.onload = function() {
+            initializeEverything();
+        };
+
+        // Expose some functions for console debugging / future expansion
+        window.ZeroToCode = {
+            resetProgress: () => resetProgress(),
+            showCourse: (id) => startCourse(id),
+            getProgress: () => progress
+        };
+    </script>
+</body>
+</html>
