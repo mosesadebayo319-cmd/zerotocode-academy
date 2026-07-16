@@ -375,9 +375,9 @@
           <h3 class="font-semibold flex items-center gap-x-2 mb-3 text-lg"><i class="fa-solid fa-lightbulb text-amber-500"></i> Why this matters</h3>
           <p class="text-slate-700 leading-relaxed">${lesson.why}</p>
         </div>
-        <div class="mb-6">
-          <h3 class="font-semibold mb-3 text-lg">Explanation</h3>
-          <div class="prose prose-slate max-w-none text-[15px] leading-relaxed text-slate-700">${lesson.explanation}</div>
+        <div class="mb-8">
+          <h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2"><i class="fa-solid fa-book-open text-emerald-600"></i> Full explanation</h3>
+          <div class="explanation-body max-w-none text-[15px] leading-7 text-slate-700 space-y-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 md:p-6">${lesson.explanation}</div>
         </div>
         ${
           lesson.pitfalls
