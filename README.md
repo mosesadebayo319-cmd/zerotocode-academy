@@ -4,6 +4,8 @@
 
 A modern, scaffolded, interactive learning platform designed specifically for absolute beginners (zero prior knowledge) in Python, JavaScript, HTML & CSS, Go, and Rust.
 
+**Python track:** 141 lessons covering basics → OOP → files → NumPy/Pandas/SciPy/Django → Matplotlib → Machine Learning → DSA → MySQL → MongoDB, each with real-life scenarios (shops, banking, delivery, school systems).
+
 ## Why ZeroToCode is Better
 
 After analyzing CodeCademy (great interactivity but can feel shallow/paywalled), W3Schools (excellent examples & Try-It editors but more reference than guided path), and Alison (structured but less hands-on coding), we built something superior for true beginners:
@@ -22,7 +24,8 @@ After analyzing CodeCademy (great interactivity but can feel shallow/paywalled),
 
 ```
 zerotocode/
-├── index.html          # The complete single-file SPA (beautiful, fully functional)
+├── index.html          # The SPA shell (UI + multi-language courses)
+├── python-course.js    # Full Python curriculum (141 lessons)
 ├── README.md           # This file
 └── (expandable: you can split into /css, /js, multiple HTML later)
 ```

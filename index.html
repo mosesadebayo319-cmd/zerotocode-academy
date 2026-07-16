@@ -261,9 +261,9 @@
                         <h3 class="font-semibold text-2xl tracking-tight">Python</h3>
                         <p class="text-emerald-600 text-sm font-medium mt-1">The best first language</p>
                         <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
-                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span>8 lessons</span></div>
+                            <div class="flex items-center"><i class="fa-solid fa-clock mr-1.5"></i> <span id="python-lesson-count">140+ lessons</span></div>
                             <div>•</div>
-                            <div>Beginner friendly</div>
+                            <div>Beginner → Pro</div>
                         </div>
                     </div>
                 </div>
@@ -425,7 +425,7 @@
                     </div>
                     
                     <div class="text-xs font-medium text-slate-500 px-2 mb-2">LESSONS</div>
-                    <div id="lessons-sidebar" class="space-y-1 max-h-[420px] overflow-auto pr-1 custom-scroll">
+                    <div id="lessons-sidebar" class="space-y-1 max-h-[520px] overflow-auto pr-1 custom-scroll">
                         <!-- Lesson list populated by JS -->
                     </div>
                     
@@ -460,6 +460,7 @@
         </div>
     </footer>
 
+    <script src="python-course.js"></script>
     <script>
         // Tailwind script configuration
         function initializeTailwind() {
@@ -468,187 +469,15 @@
 
         // Course Data - The heart of the platform. Easy to expand!
         const courseData = {
-            python: {
+            python: (window.PYTHON_COURSE || {
                 id: 'python',
                 name: 'Python',
                 icon: '🐍',
                 color: 'emerald',
-                subtitle: 'The #1 language for beginners & data',
-                totalLessons: 8,
-                lessons: [
-                    {
-                        id: 'py-1.1',
-                        title: '1.1 Hello, Computer! Your First Program',
-                        objective: 'Write and run your first Python program that prints a message.',
-                        why: 'Programming is giving the computer clear instructions. The print() function is how Python "talks back" to you. This is your first conversation with the machine.',
-                        explanation: `In Python, we use the <code class="bg-emerald-100 px-1.5 py-0.5 rounded">print()</code> function to display text on the screen. Everything inside the parentheses and quotes will be shown exactly as you wrote it.<br><br>
-                        You can also write <strong>comments</strong> using <code>#</code>. Comments are notes for humans — the computer ignores them.`,
-                        codeExample: `print("Hello, world!")\nprint("My name is Ada and I am learning Python")\n\n# This is a comment. It does nothing.`,
-                        exercises: [
-                            {
-                                title: "Exercise 1: Personal Greeting",
-                                instruction: "Write code that prints your full name and a short welcome message to yourself.",
-                                hint: "Use two print() statements. One for your name, one for the message.",
-                                solution: `print("My name is [Your Full Name]")\nprint("Welcome to ZeroToCode Academy! I am excited to learn.")`
-                            },
-                            {
-                                title: "Exercise 2: Multi-line Message",
-                                instruction: "Print a short 3-line motivational message about why you want to learn to code.",
-                                hint: "You can use multiple print() calls or triple quotes for multi-line strings.",
-                                solution: `print("I am learning to code because:")\nprint("1. I want to build useful tools")\nprint("2. I want better opportunities for myself and my family")`
-                            }
-                        ],
-                        quiz: [
-                            {
-                                q: "What does the print() function do in Python?",
-                                options: ["Stores data in memory", "Displays text on the screen", "Creates a new file", "Calculates numbers"],
-                                correct: 1,
-                                explanation: "print() is used to output information to the user (usually the screen)."
-                            },
-                            {
-                                q: "What symbol starts a comment in Python?",
-                                options: ["//", "#", "--", "/*"],
-                                correct: 1,
-                                explanation: "# is used for single-line comments in Python."
-                            }
-                        ]
-                    },
-                    {
-                        id: 'py-1.2',
-                        title: '1.2 Variables: Labeled Boxes for Your Data',
-                        objective: 'Store information in variables and use them later in your program.',
-                        why: 'Imagine a market stall where every item has a label. Variables are labeled boxes that hold values so you can reuse and change them easily.',
-                        explanation: `A variable is a name you give to a piece of data. You create one with the equals sign (=). Python is smart — it automatically knows the type of data you put inside.<br><br>
-                        Good variable names are descriptive: <code>total_price</code> is better than <code>x</code>.`,
-                        codeExample: `name = "Chinedu"\nage = 28\nprice = 4500.50\nis_student = True\n\nprint(name)\nprint("In 5 years you will be", age + 5)`,
-                        exercises: [
-                            {
-                                title: "Exercise: Shop Inventory",
-                                instruction: "Create variables for a product name, price, and quantity in stock. Then print a nice sentence using all three.",
-                                hint: "Use f-strings or multiple print statements.",
-                                solution: `product = "Rice"\nprice = 2500\nquantity = 45\n\nprint(f"We have {quantity} bags of {product} at ₦{price} each.")`
-                            }
-                        ],
-                        quiz: [
-                            {
-                                q: "Which is a valid variable name in Python?",
-                                options: ["2name", "user-name", "user_name", "class"],
-                                correct: 2,
-                                explanation: "Variable names can contain letters, numbers, and underscores, but cannot start with a number or be a reserved word like 'class'."
-                            }
-                        ]
-                    },
-                    {
-                        id: 'py-1.3',
-                        title: '1.3 Data Types: Numbers, Text & Truth',
-                        objective: 'Understand and work with the main data types in Python.',
-                        why: 'Computers treat different kinds of information differently. Knowing the type helps you avoid bugs and write correct programs.',
-                        explanation: `Python has several built-in types:<br>
-                        • <strong>str</strong> (text) — always in quotes<br>
-                        • <strong>int</strong> (whole numbers)<br>
-                        • <strong>float</strong> (decimal numbers)<br>
-                        • <strong>bool</strong> (True or False)<br><br>
-                        Use the <code>type()</code> function to check what type something is.`,
-                        codeExample: `name = "Fatima"          # str\nage = 31               # int\nprice = 1299.99        # float\nis_happy = True        # bool\n\nprint(type(name))\nprint(type(age))`,
-                        exercises: [
-                            {
-                                title: "Type Checker",
-                                instruction: "Create four variables of different types and print their types using type().",
-                                solution: `name = "Oluwaseun"\nage = 24\nheight = 1.78\nis_employed = False\n\nprint(type(name), type(age), type(height), type(is_employed))`
-                            }
-                        ],
-                        quiz: []
-                    },
-                    {
-                        id: 'py-2.1',
-                        title: '2.1 Making Decisions with if / else',
-                        objective: 'Write programs that make decisions based on conditions.',
-                        why: 'Real life is full of decisions. "If it is raining, take umbrella." Programs need the same logic.',
-                        explanation: `Use <code>if</code>, <code>elif</code> (else if), and <code>else</code> to run different code depending on whether a condition is True or False.<br><br>
-                        Indentation (4 spaces) is very important in Python — it defines what belongs inside the if block.`,
-                        codeExample: `age = 17\n\nif age >= 18:\n    print("You can vote!")\nelif age >= 16:\n    print("You can drive with a learner's permit")\nelse:\n    print("You are still too young for many adult activities")`,
-                        exercises: [
-                            {
-                                title: "Simple Grade Checker",
-                                instruction: "Ask the user for a score (0-100) and print the grade: A (70+), B (60-69), C (50-59), or Fail.",
-                                hint: "Use input() and convert to int. Then use if-elif-else.",
-                                solution: `score = int(input("Enter your score (0-100): "))\n\nif score >= 70:\n    print("Grade: A - Excellent!")\nelif score >= 60:\n    print("Grade: B - Very good")\nelif score >= 50:\n    print("Grade: C - Pass")\nelse:\n    print("Grade: Fail - You can do better next time")`
-                            }
-                        ],
-                        quiz: []
-                    },
-                    {
-                        id: 'py-2.2',
-                        title: '2.2 Loops: Repeating Work Automatically',
-                        objective: 'Use for and while loops to repeat actions efficiently.',
-                        why: 'Doing the same thing 100 times manually is boring and error-prone. Loops let the computer do the repetition for you.',
-                        explanation: `<strong>for</strong> loops are great when you know how many times to repeat.<br>
-                        <strong>while</strong> loops keep going as long as a condition is True.<br><br>
-                        Use <code>range()</code> to generate sequences of numbers.`,
-                        codeExample: `# Print numbers 1 to 5\nfor i in range(1, 6):\n    print(i)\n\n# While loop example\ncount = 0\nwhile count < 3:\n    print("Counting...", count)\n    count = count + 1`,
-                        exercises: [
-                            {
-                                title: "Multiplication Table",
-                                instruction: "Write a loop that prints the multiplication table for 7 (from 1 × 7 to 12 × 7).",
-                                solution: `print("7 Times Table")\nfor i in range(1, 13):\n    print(f"7 × {i} = {7 * i}")`
-                            }
-                        ],
-                        quiz: []
-                    },
-                    {
-                        id: 'py-3.1',
-                        title: '3.1 Functions: Reusable Blocks of Code',
-                        objective: 'Create your own functions to organize and reuse code.',
-                        why: 'Functions are like recipes. Write once, use many times. They make your code cleaner and easier to maintain.',
-                        explanation: `Define a function with <code>def</code>. Give it a name and parameters (inputs). Use <code>return</code> to send a value back.<br><br>
-                        Functions help you avoid repeating the same code.`,
-                        codeExample: `def greet(name):\n    return f"Hello {name}, welcome to ZeroToCode!"\n\nmessage = greet("Amina")\nprint(message)\n\n# Function with default value\ndef add(a, b=10):\n    return a + b`,
-                        exercises: [
-                            {
-                                title: "Area Calculator",
-                                instruction: "Create a function called calculate_area that takes length and width and returns the area of a rectangle.",
-                                solution: `def calculate_area(length, width):\n    area = length * width\n    return area\n\nprint(calculate_area(12, 5))   # Should print 60`
-                            }
-                        ],
-                        quiz: []
-                    },
-                    {
-                        id: 'py-3.2',
-                        title: '3.2 Lists & Dictionaries: Storing Many Things',
-                        objective: 'Store and work with collections of data using lists and dictionaries.',
-                        why: 'You rarely deal with single pieces of data. Lists and dictionaries let you group related information together.',
-                        explanation: `Lists are ordered collections (like a shopping list).<br>
-                        Dictionaries store key-value pairs (like a phone contact list).<br><br>
-                        You access items using index (lists) or keys (dictionaries).`,
-                        codeExample: `fruits = ["mango", "banana", "orange"]\nfruits.append("pineapple")\nprint(fruits[0])           # mango\n\nstudent = {\n    "name": "Emeka",\n    "age": 22,\n    "course": "Python"\n}\nprint(student["name"])`,
-                        exercises: [
-                            {
-                                title: "Simple Phonebook",
-                                instruction: "Create a dictionary with 3 friends' names and phone numbers. Then print one friend's number.",
-                                solution: `phonebook = {\n    "Ada": "0801-234-5678",\n    "Chidi": "0802-987-6543",\n    "Ngozi": "0803-555-1212"\n}\n\nprint("Ada's number is", phonebook["Ada"])`
-                            }
-                        ],
-                        quiz: []
-                    },
-                    {
-                        id: 'py-4.1',
-                        title: '4.1 Mini Project: Build a Simple Shop Calculator',
-                        objective: 'Combine everything you learned into a useful mini project.',
-                        why: 'This is where real learning happens. You will build something you can actually use or show to others.',
-                        explanation: `You will create a program that calculates the total cost of items in a small shop, applies a discount if the total is high enough, and prints a nice receipt.`,
-                        codeExample: `# Starter code you can build upon\ndef calculate_total(items):\n    total = 0\n    for item in items:\n        total += item['price'] * item['qty']\n    return total\n\n# Example items\ncart = [\n    {"name": "Rice", "price": 2500, "qty": 2},\n    {"name": "Beans", "price": 1800, "qty": 1}\n]\n\nprint("Total: ₦", calculate_total(cart))`,
-                        exercises: [
-                            {
-                                title: "Complete the Shop Calculator",
-                                instruction: "Finish the program so it asks the user how many items they bought, calculates total, and gives 10% discount if total > ₦10,000. Print a nice receipt.",
-                                hint: "Use input(), loops or lists, and if statements.",
-                                solution: `print("=== ADE'S MINI SHOP ===\\n")\n\nitems = []\nwhile True:\n    name = input("Item name (or 'done' to finish): ")\n    if name.lower() == 'done':\n        break\n    price = float(input("Price: "))\n    qty = int(input("Quantity: "))\n    items.append({"name": name, "price": price, "qty": qty})\n\ntotal = sum(i['price'] * i['qty'] for i in items)\ndiscount = 0\nif total > 10000:\n    discount = total * 0.10\n\nfinal_total = total - discount\n\nprint("\\n=== RECEIPT ===")\nfor item in items:\n    print(f"{item['name']} x{item['qty']} = ₦{item['price']*item['qty']}")\nprint(f"\\nSubtotal: ₦{total}")\nprint(f"Discount: -₦{discount}")\nprint(f"TOTAL TO PAY: ₦{final_total}")\nprint("Thank you for shopping with us!")`
-                            }
-                        ],
-                        quiz: []
-                    }
-                ]
-            },
+                subtitle: 'Load python-course.js to enable full curriculum',
+                totalLessons: 0,
+                lessons: []
+            }),
             javascript: {
                 id: 'javascript',
                 name: 'JavaScript',
@@ -990,8 +819,16 @@
             container.innerHTML = '';
             const course = courseData[langId];
             const completed = progress[langId] || [];
+            let lastModule = null;
             
             course.lessons.forEach((lesson, index) => {
+                if (lesson.module && lesson.module !== lastModule) {
+                    lastModule = lesson.module;
+                    const header = document.createElement('div');
+                    header.className = 'px-3 pt-3 pb-1 text-[10px] font-bold tracking-wider text-slate-400 uppercase';
+                    header.textContent = lesson.module;
+                    container.appendChild(header);
+                }
                 const isCompleted = completed.includes(lesson.id);
                 const isCurrent = currentLessonId === lesson.id;
                 
@@ -1006,7 +843,7 @@
                         }
                     </div>
                     <div class="flex-1 min-w-0">
-                        <div class="font-medium leading-tight pr-2">${lesson.title}</div>
+                        <div class="font-medium leading-tight pr-2 truncate" title="${lesson.title.replace(/"/g, '&quot;')}">${lesson.title}</div>
                     </div>
                 `;
                 
@@ -1030,8 +867,9 @@
             
             let html = `
                 <div class="max-w-3xl">
-                    <div class="flex items-center gap-x-3 mb-4">
+                    <div class="flex items-center gap-x-3 mb-4 flex-wrap gap-y-2">
                         <span class="bit-badge text-xs">LESSON ${lesson.id.toUpperCase()}</span>
+                        ${lesson.module ? `<span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-600">${lesson.module}</span>` : ''}
                     </div>
                     
                     <h2 class="text-3xl font-semibold tracking-tight mb-3">${lesson.title}</h2>
@@ -1082,18 +920,23 @@
                 html += `<div class="mb-8"><h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2"><i class="fa-solid fa-tasks text-emerald-600"></i> Practice Exercises</h3>`;
                 
                 lesson.exercises.forEach((ex, idx) => {
+                    const solId = `sol-${lessonId}-${idx}`;
+                    // Store solution safely outside of HTML attribute quotes
+                    window.__solutions = window.__solutions || {};
+                    window.__solutions[solId] = ex.solution || '';
                     html += `
                         <div class="exercise-box bg-white border border-slate-200 rounded-2xl p-6 mb-4">
                             <div class="font-semibold mb-2">${ex.title}</div>
                             <p class="text-slate-700 mb-4">${ex.instruction}</p>
+                            ${ex.hint ? `<p class="text-sm text-slate-500 mb-3"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i>${ex.hint}</p>` : ''}
                             
                             <div class="flex flex-wrap gap-3">
-                                <button onclick="showSolution(this, \`${ex.solution.replace(/`/g, '\\`')}\`)" 
+                                <button onclick="showSolution(this, window.__solutions['${solId}'])" 
                                         class="px-5 py-2 text-sm font-medium bg-white border border-slate-300 hover:bg-slate-50 rounded-2xl flex items-center gap-x-2">
                                     <i class="fa-solid fa-eye"></i> <span>Show Solution</span>
                                 </button>
                                 
-                                <button onclick="copyToClipboard(\`${ex.solution.replace(/`/g, '\\`')}\`, this)" 
+                                <button onclick="copyToClipboard(window.__solutions['${solId}'], this)" 
                                         class="px-5 py-2 text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700 rounded-2xl flex items-center gap-x-2">
                                     <i class="fa-solid fa-copy"></i> <span>Copy Solution</span>
                                 </button>
