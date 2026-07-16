@@ -1,12 +1,11 @@
-// Auto-generated comprehensive Python curriculum for ZeroToCode Academy
-// 141 lessons with real-life applicable scenarios
+// ZeroToCode Academy — Python curriculum (144 lessons, paths + projects)
 window.PYTHON_COURSE = {
   "id": "python",
   "name": "Python",
   "icon": "🐍",
   "color": "emerald",
-  "subtitle": "From zero to data, web, ML & databases — with real-life scenarios",
-  "totalLessons": 141,
+  "subtitle": "Paths: Beginner → Data → Backend → DSA • Real-life projects • Run code in browser",
+  "totalLessons": 144,
   "lessons": [
     {
       "id": "py-01",
@@ -20,7 +19,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Where will YOU use Python?",
           "instruction": "Write 3 print() lines: (1) your name, (2) one problem you want to solve with code, (3) one career or business goal.",
-          "solution": "print(\"My name is Adaora\")\nprint(\"I want to automate my shop's daily sales summary\")\nprint(\"I want to become a data analyst or freelancing developer\")"
+          "solution": "print(\"My name is Adaora\")\nprint(\"I want to automate my shop's daily sales summary\")\nprint(\"I want to become a data analyst or freelancing developer\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -34,8 +35,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Python is free, open source, and designed to be readable for beginners."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-02",
@@ -49,7 +64,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Verify your environment",
           "instruction": "Write a script that prints \"Python is ready!\" and the result of 15 * 3. Save mentally as first_run.py.",
-          "solution": "print(\"Python is ready!\")\nprint(15 * 3)  # 45"
+          "solution": "print(\"Python is ready!\")\nprint(15 * 3)  # 45",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -63,8 +80,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "In the terminal: python3 shop.py (or python shop.py on some systems)."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-03",
@@ -78,7 +109,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Fix the structure",
           "instruction": "Write an if/else that prints \"Open shop\" if hour is between 8 and 20, else \"Closed\". Use proper indentation.",
-          "solution": "hour = 14\nif hour >= 8 and hour <= 20:\n    print(\"Open shop\")\nelse:\n    print(\"Closed\")"
+          "solution": "hour = 14\nif hour >= 8 and hour <= 20:\n    print(\"Open shop\")\nelse:\n    print(\"Closed\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -92,8 +125,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Indentation defines code blocks (if, loops, functions)."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-04",
@@ -107,7 +154,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Daily sales line",
           "instruction": "Print a one-line summary: business name, number of customers, and total sales (use variables).",
-          "solution": "business = \"City Buka\"\ncustomers = 48\ntotal = 87500\nprint(business, \"| customers:\", customers, \"| sales: ₦\", total)"
+          "solution": "business = \"City Buka\"\ncustomers = 48\ntotal = 87500\nprint(business, \"| customers:\", customers, \"| sales: ₦\", total)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -121,8 +170,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "end=\"\" replaces the default newline so the next print continues on the same line."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-05",
@@ -136,7 +199,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Document a price rule",
           "instruction": "Write a short script with comments explaining a 5% VAT calculation on a product price.",
-          "solution": "# Product price before tax\nprice = 10000\n# VAT rate in many businesses is 7.5% or 5% for practice\nvat_rate = 0.05  # 5%\nvat = price * vat_rate\ntotal = price + vat\nprint(\"Total with VAT:\", total)"
+          "solution": "# Product price before tax\nprice = 10000\n# VAT rate in many businesses is 7.5% or 5% for practice\nvat_rate = 0.05  # 5%\nvat = price * vat_rate\ntotal = price + vat\nprint(\"Total with VAT:\", total)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -150,8 +215,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "Python uses # for single-line comments."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-06",
@@ -165,7 +244,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Mini bank account",
           "instruction": "Create variables for account_name, balance. Simulate a 2000 withdrawal and print remaining balance.",
-          "solution": "account_name = \"Chidi Okeke\"\nbalance = 15000\nwithdrawal = 2000\nbalance = balance - withdrawal\nprint(account_name, \"balance left:\", balance)"
+          "solution": "account_name = \"Chidi Okeke\"\nbalance = 15000\nwithdrawal = 2000\nbalance = balance - withdrawal\nprint(account_name, \"balance left:\", balance)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -179,8 +260,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "Use letters/numbers/underscores; no hyphens; avoid reserved words like class."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-07",
@@ -194,7 +289,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Type audit for a product",
           "instruction": "Create variables for product name, price, quantity, and in_stock (True/False). Print each type().",
-          "solution": "product = \"Peak Milk 400g\"\nprice = 1850.50\nqty = 24\nin_stock = True\nprint(type(product), type(price), type(qty), type(in_stock))"
+          "solution": "product = \"Peak Milk 400g\"\nprice = 1850.50\nqty = 24\nin_stock = True\nprint(type(product), type(price), type(qty), type(in_stock))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -208,8 +305,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "Numbers with decimals are float."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-08",
@@ -223,7 +334,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Fuel cost calculator",
           "instruction": "A car uses 12 litres/100km. Diesel is ₦1200/L. Distance = 80km. Print estimated fuel cost.",
-          "solution": "litres_per_100 = 12\nprice_per_litre = 1200\ndistance = 80\nlitres_needed = (litres_per_100 / 100) * distance\ncost = litres_needed * price_per_litre\nprint(\"Fuel needed (L):\", litres_needed)\nprint(\"Estimated cost: ₦\", cost)"
+          "solution": "litres_per_100 = 12\nprice_per_litre = 1200\ndistance = 80\nlitres_needed = (litres_per_100 / 100) * distance\ncost = litres_needed * price_per_litre\nprint(\"Fuel needed (L):\", litres_needed)\nprint(\"Estimated cost: ₦\", cost)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -237,8 +350,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "// is floor division: 10//3 = 3."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-09",
@@ -252,7 +379,9 @@ window.PYTHON_COURSE = {
         {
           "title": "String math fix",
           "instruction": "Variables a=\"40\" and b=\"12.5\". Convert them and print their sum as a float.",
-          "solution": "a = \"40\"\nb = \"12.5\"\nprint(int(a) + float(b))  # 52.5"
+          "solution": "a = \"40\"\nb = \"12.5\"\nprint(int(a) + float(b))  # 52.5",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -266,8 +395,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "int() converts a numeric string to an integer."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-10",
@@ -281,7 +424,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Business SMS",
           "instruction": "Create a multi-line string thanking a customer by name and print its length.",
-          "solution": "name = \"Tunde\"\nsms = f\"\"\"Hello {name},\nThanks for buying from us today!\n— MoTechy Store\"\"\"\nprint(sms)\nprint(\"Characters:\", len(sms))"
+          "solution": "name = \"Tunde\"\nsms = f\"\"\"Hello {name},\nThanks for buying from us today!\n— MoTechy Store\"\"\"\nprint(sms)\nprint(\"Characters:\", len(sms))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -295,8 +440,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "H and i — two characters."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-11",
@@ -310,7 +469,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Extract order year",
           "instruction": "order_id = \"ORD-2026-LAG-778\". Print the year portion using slicing.",
-          "solution": "order_id = \"ORD-2026-LAG-778\"\nyear = order_id[4:8]\nprint(year)  # 2026"
+          "solution": "order_id = \"ORD-2026-LAG-778\"\nyear = order_id[4:8]\nprint(year)  # 2026",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -324,8 +485,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Indexes 1,2,3 → y,t,h → \"yth\"."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-12",
@@ -339,7 +514,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Clean form input",
           "instruction": "raw = \"  CHINEDU OKAFOR \". Strip spaces and convert to title case.",
-          "solution": "raw = \"  CHINEDU OKAFOR \"\nclean = raw.strip().title()\nprint(clean)  # Chinedu Okafor"
+          "solution": "raw = \"  CHINEDU OKAFOR \"\nclean = raw.strip().title()\nprint(clean)  # Chinedu Okafor",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -353,8 +530,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "strip() removes leading and trailing whitespace."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-13",
@@ -368,7 +559,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Full receipt header",
           "instruction": "Join shop_name, branch, and date into one header string separated by \" | \".",
-          "solution": "shop_name = \"FreshMart\"\nbranch = \"Yaba\"\ndate = \"2026-07-16\"\nheader = \" | \".join([shop_name, branch, date])\nprint(header)"
+          "solution": "shop_name = \"FreshMart\"\nbranch = \"Yaba\"\ndate = \"2026-07-16\"\nheader = \" | \".join([shop_name, branch, date])\nprint(header)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -382,8 +575,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "str.join() is the idiomatic way to combine a list of strings."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-14",
@@ -397,7 +604,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Invoice line",
           "instruction": "item=\"Bread\", qty=4, price=800. Print: \"4 x Bread = ₦3200\" using an f-string.",
-          "solution": "item = \"Bread\"\nqty = 4\nprice = 800\nprint(f\"{qty} x {item} = ₦{qty * price}\")"
+          "solution": "item = \"Bread\"\nqty = 4\nprice = 800\nprint(f\"{qty} x {item} = ₦{qty * price}\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -411,8 +620,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 0,
           "explanation": "Prefix the string with f and put expressions in {}."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-15",
@@ -426,7 +649,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Pretty receipt",
           "instruction": "Print three lines using one string with \\n: shop name, dashed line, thank you.",
-          "solution": "print(\"City Mart\\n-----------\\nThank you for shopping!\")"
+          "solution": "print(\"City Mart\\n-----------\\nThank you for shopping!\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -440,8 +665,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "\\n inserts a newline character."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-16",
@@ -455,7 +694,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Parse sales CSV line",
           "instruction": "line = \"Beans,1800,5\". Split and print product name and total value (price*qty).",
-          "solution": "line = \"Beans,1800,5\"\nname, price, qty = line.split(\",\")\ntotal = int(price) * int(qty)\nprint(name, \"total ₦\", total)"
+          "solution": "line = \"Beans,1800,5\"\nname, price, qty = line.split(\",\")\ntotal = int(price) * int(qty)\nprint(name, \"total ₦\", total)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -469,8 +710,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "split returns a list of pieces."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-17",
@@ -484,7 +739,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Username from email",
           "instruction": "email = \"chidi.okeke@gmail.com\". Extract the part before @ as username (lowercase).",
-          "solution": "email = \"chidi.okeke@gmail.com\"\nusername = email.split(\"@\")[0].lower()\nprint(username)"
+          "solution": "email = \"chidi.okeke@gmail.com\"\nusername = email.split(\"@\")[0].lower()\nprint(username)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -498,8 +755,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "split() without args splits on whitespace."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-18",
@@ -513,10 +784,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Your turn",
           "instruction": "Change the variables to a pharmacy order (drugs/item of your choice) and print a similar message with status \"ready for pickup\".",
-          "solution": "customer = \"Mr. Bello\"\nitem = \"Paracetamol pack\"\nqty = 3\nprice = 500\nstatus = \"ready for pickup\"\ntotal = qty * price\nprint(f\"\"\"Hello {customer},\nYour order of {qty} x {item} (₦{total:,}) is {status}.\n— City Pharmacy\"\"\")"
+          "solution": "customer = \"Mr. Bello\"\nitem = \"Paracetamol pack\"\nqty = 3\nprice = 500\nstatus = \"ready for pickup\"\ntotal = qty * price\nprint(f\"\"\"Hello {customer},\nYour order of {qty} x {item} (₦{total:,}) is {status}.\n— City Pharmacy\"\"\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Code Challenge — Customer Message Builder”?",
+          "options": [
+            "Build a complete customer notification string from variables.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-19",
@@ -530,7 +829,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Shop open logic",
           "instruction": "Variables: has_power=True, staff_present=True. Print whether the shop can open (both must be True).",
-          "solution": "has_power = True\nstaff_present = True\ncan_open = has_power and staff_present\nprint(\"Can open?\", can_open)"
+          "solution": "has_power = True\nstaff_present = True\ncan_open = has_power and staff_present\nprint(\"Can open?\", can_open)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -544,8 +845,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Empty list is falsy → False."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-20",
@@ -559,7 +874,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Discount rule",
           "instruction": "Give 10% off if total > 10000 OR customer is_vip. Compute final price for total=9000, is_vip=True.",
-          "solution": "total = 9000\nis_vip = True\nif total > 10000 or is_vip:\n    final = total * 0.9\nelse:\n    final = total\nprint(\"Final:\", final)"
+          "solution": "total = 9000\nis_vip = True\nif total > 10000 or is_vip:\n    final = total * 0.9\nelse:\n    final = total\nprint(\"Final:\", final)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -573,8 +890,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "and requires both sides True."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-21",
@@ -588,7 +919,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Todo for the day",
           "instruction": "Create a list of 4 tasks. Add one more, remove the first, print remaining.",
-          "solution": "tasks = [\"buy data\", \"call supplier\", \"update prices\", \"close books\"]\ntasks.append(\"backup sales file\")\ntasks.pop(0)\nprint(tasks)"
+          "solution": "tasks = [\"buy data\", \"call supplier\", \"update prices\", \"close books\"]\ntasks.append(\"backup sales file\")\ntasks.pop(0)\nprint(tasks)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -602,8 +935,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "append adds to the end of the list."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-22",
@@ -617,7 +964,9 @@ window.PYTHON_COURSE = {
         {
           "title": "RGB brand color",
           "instruction": "Store your brand color as an RGB tuple and print each component with labels.",
-          "solution": "brand = (16, 185, 129)  # emerald-ish\nr, g, b = brand\nprint(\"R:\", r, \"G:\", g, \"B:\", b)"
+          "solution": "brand = (16, 185, 129)  # emerald-ish\nr, g, b = brand\nprint(\"R:\", r, \"G:\", g, \"B:\", b)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -631,8 +980,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Tuples cannot be modified after creation."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-23",
@@ -646,7 +1009,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Unique tags",
           "instruction": "tags list has duplicates. Convert to a set and print how many unique tags.",
-          "solution": "tags = [\"python\", \"data\", \"python\", \"web\", \"data\", \"ai\"]\nunique = set(tags)\nprint(unique)\nprint(\"Unique count:\", len(unique))"
+          "solution": "tags = [\"python\", \"data\", \"python\", \"web\", \"data\", \"ai\"]\nunique = set(tags)\nprint(unique)\nprint(\"Unique count:\", len(unique))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -660,8 +1025,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Sets automatically store each unique value once."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-24",
@@ -675,7 +1054,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Product record",
           "instruction": "Create a dict for a phone: brand, model, price, in_stock. Print a sales sentence using the values.",
-          "solution": "phone = {\"brand\": \"Tecno\", \"model\": \"Camon\", \"price\": 185000, \"in_stock\": True}\nprint(f\"{phone['brand']} {phone['model']} costs ₦{phone['price']:,}. In stock: {phone['in_stock']}\")"
+          "solution": "phone = {\"brand\": \"Tecno\", \"model\": \"Camon\", \"price\": 185000, \"in_stock\": True}\nprint(f\"{phone['brand']} {phone['model']} costs ₦{phone['price']:,}. In stock: {phone['in_stock']}\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -689,6 +1070,62 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "get() returns default instead of crashing if key is missing."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
+    },
+    {
+      "id": "py-mp-01",
+      "title": "5.5 Mini Project — Contact Book",
+      "module": "Collections",
+      "path": "beginner",
+      "project": true,
+      "difficulty": "beginner",
+      "objective": "Build an in-memory contact book with dicts and lists.",
+      "why": "Every business keeps customer names and phones — this is CRUD in miniature.",
+      "explanation": "Store contacts as a list of dicts with name and phone. Support add, list, and find by name. This glues lists, dicts, loops, and functions.",
+      "codeExample": "contacts = []\n\ndef add_contact(name, phone):\n    contacts.append({\"name\": name, \"phone\": phone})\n\ndef find_contact(name):\n    for c in contacts:\n        if c[\"name\"].lower() == name.lower():\n            return c\n    return None\n\nadd_contact(\"Ada\", \"0803...\")\nadd_contact(\"Bola\", \"0901...\")\nprint(find_contact(\"ada\"))\nprint(len(contacts), \"contacts saved\")",
+      "pitfalls": "Searching without .lower() misses case differences.",
+      "exercises": [
+        {
+          "title": "Delete contact",
+          "instruction": "Write remove_contact(name) that removes the first match.",
+          "hint": "Rebuild list with a comprehension or use index",
+          "level": "medium",
+          "solution": "def remove_contact(name):\n    global contacts\n    contacts = [c for c in contacts if c[\"name\"].lower() != name.lower()]\n\nremove_contact(\"Bola\")\nprint(contacts)"
+        },
+        {
+          "title": "List all",
+          "instruction": "Print each contact as \"Name — phone\".",
+          "hint": "for loop",
+          "level": "easy",
+          "solution": "for c in contacts:\n    print(f\"{c['name']} — {c['phone']}\")"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why list of dicts?",
+          "options": [
+            "Faster than CPU always",
+            "Models many records with fields",
+            "Required by Python syntax",
+            "Only works offline"
+          ],
+          "correct": 1,
+          "explanation": "Each dict is one contact with fields."
         }
       ]
     },
@@ -704,7 +1141,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Exam grade",
           "instruction": "score 0-100 → A(70+), B(60-69), C(50-59), else Fail. Print the grade for score=63.",
-          "solution": "score = 63\nif score >= 70:\n    grade = \"A\"\nelif score >= 60:\n    grade = \"B\"\nelif score >= 50:\n    grade = \"C\"\nelse:\n    grade = \"Fail\"\nprint(\"Grade:\", grade)"
+          "solution": "score = 63\nif score >= 70:\n    grade = \"A\"\nelif score >= 60:\n    grade = \"B\"\nelif score >= 50:\n    grade = \"C\"\nelse:\n    grade = \"Fail\"\nprint(\"Grade:\", grade)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -718,8 +1157,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Python uses elif."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-26",
@@ -733,7 +1186,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Payment method",
           "instruction": "Match method \"card\"/\"transfer\"/\"cash\" and print processing instructions. Default: invalid.",
-          "solution": "method = \"transfer\"\nmatch method:\n    case \"card\":\n        print(\"Swipe or insert card\")\n    case \"transfer\":\n        print(\"Send to account 0123456789\")\n    case \"cash\":\n        print(\"Pay the cashier\")\n    case _:\n        print(\"Invalid payment method\")"
+          "solution": "method = \"transfer\"\nmatch method:\n    case \"card\":\n        print(\"Swipe or insert card\")\n    case \"transfer\":\n        print(\"Send to account 0123456789\")\n    case \"cash\":\n        print(\"Pay the cashier\")\n    case _:\n        print(\"Invalid payment method\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -747,8 +1202,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "case _ catches everything else."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-27",
@@ -762,7 +1231,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Countdown",
           "instruction": "Use while to count from 5 down to 1, then print \"Go!\".",
-          "solution": "n = 5\nwhile n > 0:\n    print(n)\n    n -= 1\nprint(\"Go!\")"
+          "solution": "n = 5\nwhile n > 0:\n    print(n)\n    n -= 1\nprint(\"Go!\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -776,8 +1247,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "break jumps out of the nearest loop."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-28",
@@ -791,7 +1276,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Name badges",
           "instruction": "names = [\"Ada\", \"Bola\", \"Chika\"]. Print \"Hello, <name>!\" for each.",
-          "solution": "names = [\"Ada\", \"Bola\", \"Chika\"]\nfor name in names:\n    print(f\"Hello, {name}!\")"
+          "solution": "names = [\"Ada\", \"Bola\", \"Chika\"]\nfor name in names:\n    print(f\"Hello, {name}!\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -805,8 +1292,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "One iteration per character: H, i."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-29",
@@ -820,7 +1321,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Even seats",
           "instruction": "Print even seat numbers from 2 to 20 inclusive using range.",
-          "solution": "for seat in range(2, 21, 2):\n    print(\"Seat\", seat)"
+          "solution": "for seat in range(2, 21, 2):\n    print(\"Seat\", seat)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -834,8 +1337,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "range(3) yields 0,1,2."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-30",
@@ -849,7 +1366,9 @@ window.PYTHON_COURSE = {
         {
           "title": "VAT function",
           "instruction": "Write add_vat(amount, rate=0.075) that returns amount including VAT.",
-          "solution": "def add_vat(amount, rate=0.075):\n    return amount * (1 + rate)\n\nprint(add_vat(10000))\nprint(add_vat(10000, 0.05))"
+          "solution": "def add_vat(amount, rate=0.075):\n    return amount * (1 + rate)\n\nprint(add_vat(10000))\nprint(add_vat(10000, 0.05))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -863,8 +1382,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "return provides the function result."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-31",
@@ -878,7 +1411,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Sensor average",
           "instruction": "Use a list (or array) of 5 temperature readings and print the average.",
-          "solution": "readings = [28.5, 29.0, 30.2, 27.8, 29.5]\navg = sum(readings) / len(readings)\nprint(\"Average °C:\", round(avg, 2))"
+          "solution": "readings = [28.5, 29.0, 30.2, 27.8, 29.5]\navg = sum(readings) / len(readings)\nprint(\"Average °C:\", round(avg, 2))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -892,8 +1427,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "lists hold any mix of types easily."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-32",
@@ -907,7 +1456,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Manual next",
           "instruction": "Create an iterator over [\"a\",\"b\"] and print both values with next().",
-          "solution": "it = iter([\"a\", \"b\"])\nprint(next(it))\nprint(next(it))"
+          "solution": "it = iter([\"a\", \"b\"])\nprint(next(it))\nprint(next(it))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -921,8 +1472,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "StopIteration signals no more items."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-33",
@@ -936,7 +1501,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Circle area",
           "instruction": "Import math and compute area of circle radius 7 (pi * r^2).",
-          "solution": "import math\nr = 7\narea = math.pi * r ** 2\nprint(round(area, 2))"
+          "solution": "import math\nr = 7\narea = math.pi * r ** 2\nprint(round(area, 2))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -950,8 +1517,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "from math import sqrt"
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-34",
@@ -965,7 +1546,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Membership expiry",
           "instruction": "Today + 30 days as expiry date. Print it as YYYY-MM-DD.",
-          "solution": "from datetime import datetime, timedelta\nexpiry = datetime.now() + timedelta(days=30)\nprint(expiry.strftime(\"%Y-%m-%d\"))"
+          "solution": "from datetime import datetime, timedelta\nexpiry = datetime.now() + timedelta(days=30)\nprint(expiry.strftime(\"%Y-%m-%d\"))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -979,8 +1562,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "datetime is in the standard library."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-35",
@@ -994,7 +1591,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Hypotenuse",
           "instruction": "A right triangle has legs 9 and 12. Print hypotenuse with math.hypot.",
-          "solution": "import math\nprint(math.hypot(9, 12))  # 15.0"
+          "solution": "import math\nprint(math.hypot(9, 12))  # 15.0",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1008,8 +1607,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "ceil rounds up to 3."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-36",
@@ -1023,7 +1636,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Serialize a user",
           "instruction": "Create a dict user with name and city. Convert to JSON string and print it.",
-          "solution": "import json\nuser = {\"name\": \"Kemi\", \"city\": \"Ibadan\"}\nprint(json.dumps(user))"
+          "solution": "import json\nuser = {\"name\": \"Kemi\", \"city\": \"Ibadan\"}\nprint(json.dumps(user))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1037,8 +1652,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "loads parses a JSON string into Python."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-37",
@@ -1052,7 +1681,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Find hashtags",
           "instruction": "text = \"Love #Python and #DataScience\". Find all hashtags with re.findall.",
-          "solution": "import re\ntext = \"Love #Python and #DataScience\"\nprint(re.findall(r\"#\\w+\", text))"
+          "solution": "import re\ntext = \"Love #Python and #DataScience\"\nprint(re.findall(r\"#\\w+\", text))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1066,8 +1697,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "The standard module is re."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-38",
@@ -1081,7 +1726,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Requirements mindset",
           "instruction": "Write a requirements.txt content (as a multi-line string) listing requests and python-dateutil.",
-          "solution": "requirements = \"\"\"requests\npython-dateutil\n\"\"\"\nprint(requirements)\nprint(\"Save that text as requirements.txt and run: pip install -r requirements.txt\")"
+          "solution": "requirements = \"\"\"requests\npython-dateutil\n\"\"\"\nprint(requirements)\nprint(\"Save that text as requirements.txt and run: pip install -r requirements.txt\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1095,8 +1742,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "python3 -m pip ensures you use the right Python."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-39",
@@ -1110,7 +1771,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Safe divide",
           "instruction": "Write try/except that divides 100 by user-provided divisor; handle ZeroDivisionError and ValueError (use divisor=\"0\" then \"2\" as tests in comments).",
-          "solution": "def safe_divide(a, b_text):\n    try:\n        b = float(b_text)\n        return a / b\n    except ValueError:\n        return \"Not a number\"\n    except ZeroDivisionError:\n        return \"Cannot divide by zero\"\n\nprint(safe_divide(100, \"0\"))\nprint(safe_divide(100, \"4\"))"
+          "solution": "def safe_divide(a, b_text):\n    try:\n        b = float(b_text)\n        return a / b\n    except ValueError:\n        return \"Not a number\"\n    except ZeroDivisionError:\n        return \"Cannot divide by zero\"\n\nprint(safe_divide(100, \"0\"))\nprint(safe_divide(100, \"4\"))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1124,8 +1787,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "finally runs whether or not an error occurred."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-40",
@@ -1139,7 +1816,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Table row",
           "instruction": "Print product \"Sugar\" left-aligned 15 chars and price 4500 as currency with 2 decimals.",
-          "solution": "product = \"Sugar\"\nprice = 4500\nprint(f\"{product:<15}₦{price:,.2f}\")"
+          "solution": "product = \"Sugar\"\nprice = 4500\nprint(f\"{product:<15}₦{price:,.2f}\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1153,8 +1832,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Percentage format multiplies by 100 and adds %."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-41",
@@ -1168,7 +1861,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Default city",
           "instruction": "city = None. If None, use \"Lagos\". Print the city to use.",
-          "solution": "city = None\ndisplay = \"Lagos\" if city is None else city\nprint(display)"
+          "solution": "city = None\ndisplay = \"Lagos\" if city is None else city\nprint(display)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1182,8 +1877,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "PEP 8 recommends is None."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-42",
@@ -1197,7 +1906,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Simulated checkout",
           "instruction": "Pretend inputs: item=\"Soap\", price_text=\"350\", qty_text=\"2\". Compute and print total.",
-          "solution": "item = \"Soap\"\nprice = float(\"350\")\nqty = int(\"2\")\nprint(f\"{qty} x {item} = ₦{price * qty}\")"
+          "solution": "item = \"Soap\"\nprice = float(\"350\")\nqty = int(\"2\")\nprint(f\"{qty} x {item} = ₦{price * qty}\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1211,8 +1922,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "Always str — cast if you need numbers."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-43",
@@ -1226,7 +1951,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Remember the steps",
           "instruction": "Print a numbered checklist of: create venv, activate, install packages, freeze requirements.",
-          "solution": "steps = [\n    \"1. python3 -m venv .venv\",\n    \"2. source .venv/bin/activate\",\n    \"3. pip install <packages>\",\n    \"4. pip freeze > requirements.txt\",\n]\nfor s in steps:\n    print(s)"
+          "solution": "steps = [\n    \"1. python3 -m venv .venv\",\n    \"2. source .venv/bin/activate\",\n    \"3. pip install <packages>\",\n    \"4. pip freeze > requirements.txt\",\n]\nfor s in steps:\n    print(s)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1240,8 +1967,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Isolation avoids version conflicts between projects."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-44",
@@ -1255,7 +1996,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Name three objects",
           "instruction": "Print 3 real-world things you could model as classes for a school system.",
-          "solution": "print(\"Student\")\nprint(\"Course\")\nprint(\"Teacher\")\n# or Classroom, Grade, Attendance"
+          "solution": "print(\"Student\")\nprint(\"Course\")\nprint(\"Teacher\")\n# or Classroom, Grade, Attendance",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1269,8 +2012,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Classes describe structure and behavior; objects are concrete instances."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-45",
@@ -1284,10 +2041,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Student object",
           "instruction": "Create a Student class, instance with name and score attributes, print them.",
-          "solution": "class Student:\n    pass\n\ns = Student()\ns.name = \"Yusuf\"\ns.score = 77\nprint(s.name, s.score)"
+          "solution": "class Student:\n    pass\n\ns = Student()\ns.name = \"Yusuf\"\ns.score = 77\nprint(s.name, s.score)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Classes & Objects — Build Your First Class”?",
+          "options": [
+            "Define a class and create objects with attributes.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-46",
@@ -1301,7 +2086,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Book class",
           "instruction": "Class Book with __init__(self, title, author). Create one book and print title by author.",
-          "solution": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n\nb = Book(\"Things Fall Apart\", \"Chinua Achebe\")\nprint(f\"{b.title} by {b.author}\")"
+          "solution": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n\nb = Book(\"Things Fall Apart\", \"Chinua Achebe\")\nprint(f\"{b.title} by {b.author}\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1315,8 +2102,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "It initializes a new instance."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-47",
@@ -1330,7 +2131,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Greeter",
           "instruction": "Class Greeter with __init__(self, name) and method hello(self) printing Hello, name.",
-          "solution": "class Greeter:\n    def __init__(self, name):\n        self.name = name\n    def hello(self):\n        print(f\"Hello, {self.name}\")\n\nGreeter(\"Amaka\").hello()"
+          "solution": "class Greeter:\n    def __init__(self, name):\n        self.name = name\n    def hello(self):\n        print(f\"Hello, {self.name}\")\n\nGreeter(\"Amaka\").hello()",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1344,8 +2147,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Python passes the instance as self automatically."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-48",
@@ -1359,10 +2176,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Temperature",
           "instruction": "Class with _celsius. Property celsius returns it. Create Temp(36.5) and print.",
-          "solution": "class Temp:\n    def __init__(self, celsius):\n        self._celsius = celsius\n    @property\n    def celsius(self):\n        return self._celsius\n\nprint(Temp(36.5).celsius)"
+          "solution": "class Temp:\n    def __init__(self, celsius):\n        self._celsius = celsius\n    @property\n    def celsius(self):\n        return self._celsius\n\nprint(Temp(36.5).celsius)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Class Properties — Attributes & Encapsulation Basics”?",
+          "options": [
+            "Use instance attributes and simple property-style access.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-49",
@@ -1376,10 +2221,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Wallet",
           "instruction": "Class Wallet with balance, methods credit(amount) and debit(amount). Demo both.",
-          "solution": "class Wallet:\n    def __init__(self, balance=0):\n        self.balance = balance\n    def credit(self, amount):\n        self.balance += amount\n    def debit(self, amount):\n        if amount <= self.balance:\n            self.balance -= amount\n        else:\n            print(\"Insufficient\")\n\nw = Wallet(1000)\nw.credit(500)\nw.debit(200)\nprint(w.balance)  # 1300"
+          "solution": "class Wallet:\n    def __init__(self, balance=0):\n        self.balance = balance\n    def credit(self, amount):\n        self.balance += amount\n    def debit(self, amount):\n        if amount <= self.balance:\n            self.balance -= amount\n        else:\n            print(\"Insufficient\")\n\nw = Wallet(1000)\nw.credit(500)\nw.debit(200)\nprint(w.balance)  # 1300",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Class Methods — Behavior on Objects”?",
+          "options": [
+            "Write instance methods that use and update object state.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-50",
@@ -1393,7 +2266,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Animal → Dog",
           "instruction": "Animal has speak() returning \"...\". Dog inherits and overrides speak to \"Woof\". Print Dog().speak().",
-          "solution": "class Animal:\n    def speak(self):\n        return \"...\"\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof\"\nprint(Dog().speak())"
+          "solution": "class Animal:\n    def speak(self):\n        return \"...\"\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof\"\nprint(Dog().speak())",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1407,8 +2282,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "super() accesses the parent class implementation."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-51",
@@ -1422,10 +2311,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Shapes area",
           "instruction": "Classes Square(side) and Circle(r) both have area(). Print both areas. (use 3.14 for pi)",
-          "solution": "class Square:\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nclass Circle:\n    def __init__(self, r):\n        self.r = r\n    def area(self):\n        return 3.14 * self.r ** 2\nfor shape in (Square(4), Circle(3)):\n    print(shape.area())"
+          "solution": "class Square:\n    def __init__(self, side):\n        self.side = side\n    def area(self):\n        return self.side ** 2\nclass Circle:\n    def __init__(self, r):\n        self.r = r\n    def area(self):\n        return 3.14 * self.r ** 2\nfor shape in (Square(4), Circle(3)):\n    print(shape.area())",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Polymorphism — One Interface, Many Forms”?",
+          "options": [
+            "Call the same method on different objects to get type-specific behavior.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-52",
@@ -1439,10 +2356,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Why encapsulation?",
           "instruction": "Print two sentences: one risk of public balance attribute, one benefit of deposit() method.",
-          "solution": "print(\"Risk: anyone could set balance to any number\")\nprint(\"Benefit: deposit() can validate amount and log the transaction\")"
+          "solution": "print(\"Risk: anyone could set balance to any number\")\nprint(\"Benefit: deposit() can validate amount and log the transaction\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Encapsulation — Protect Internal State”?",
+          "options": [
+            "Hide internal details and expose safe methods.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-53",
@@ -1456,10 +2401,38 @@ window.PYTHON_COURSE = {
         {
           "title": "House.Room",
           "instruction": "Create House with nested Room(name). Instantiate a Kitchen room and print its name.",
-          "solution": "class House:\n    class Room:\n        def __init__(self, name):\n            self.name = name\nkitchen = House.Room(\"Kitchen\")\nprint(kitchen.name)"
+          "solution": "class House:\n    class Room:\n        def __init__(self, name):\n            self.name = name\nkitchen = House.Room(\"Kitchen\")\nprint(kitchen.name)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Inner Classes — Classes Inside Classes”?",
+          "options": [
+            "Define nested classes when a helper type belongs only to one outer class.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-54",
@@ -1473,7 +2446,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Mode quiz in code",
           "instruction": "Print which mode you use to add lines to an existing log without erasing it.",
-          "solution": "print(\"a  # append mode\")"
+          "solution": "print(\"a  # append mode\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1487,8 +2462,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 2,
           "explanation": "a = append."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-55",
@@ -1502,10 +2491,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Parse sample log",
           "instruction": "data = \"Mon,100\\nTue,150\". Split lines and print each day total.",
-          "solution": "data = \"Mon,100\\nTue,150\"\nfor line in data.splitlines():\n    day, total = line.split(\",\")\n    print(day, total)"
+          "solution": "data = \"Mon,100\\nTue,150\"\nfor line in data.splitlines():\n    day, total = line.split(\",\")\n    print(day, total)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Read Files — load Data from Disk”?",
+          "options": [
+            "Read whole files, lines, and iterate efficiently.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-56",
@@ -1519,10 +2536,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Build report string",
           "instruction": "Create a multi-line report for shop \"GoodFood\" with total 88000 and print it (simulate file content).",
-          "solution": "report = \"\"\"Shop: GoodFood\nTotal sales: ₦88000\nStatus: CLOSED OUT\n\"\"\"\nprint(report)"
+          "solution": "report = \"\"\"Shop: GoodFood\nTotal sales: ₦88000\nStatus: CLOSED OUT\n\"\"\"\nprint(report)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Write & Create Files”?",
+          "options": [
+            "Create files and write text reports.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-57",
@@ -1536,10 +2581,79 @@ window.PYTHON_COURSE = {
         {
           "title": "Safe delete helper",
           "instruction": "Write a function safe_delete(path) that prints Deleted or Missing (use os.path.exists logic; you may simulate with a variable exists=False).",
-          "solution": "def safe_delete(path, exists=False):\n    if exists:\n        print(\"Deleted\", path)\n    else:\n        print(\"Missing\", path)\n\nsafe_delete(\"old.csv\", exists=False)"
+          "solution": "def safe_delete(path, exists=False):\n    if exists:\n        print(\"Deleted\", path)\n    else:\n        print(\"Missing\", path)\n\nsafe_delete(\"old.csv\", exists=False)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Delete Files — os.remove”?",
+          "options": [
+            "Delete files safely with os and check existence first.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
+    },
+    {
+      "id": "py-mp-02",
+      "title": "10.5 Mini Project — Daily Sales Log",
+      "module": "File Handling",
+      "path": "beginner",
+      "project": true,
+      "objective": "Append sales lines and compute a total from text data.",
+      "why": "Shops close the day by totaling a log file — automation saves hours.",
+      "explanation": "Simulate a log with multiple lines \"item,amount\". Parse, sum amounts, and print a report. In real life you write to sales.txt with open(..., \"a\").",
+      "codeExample": "log = \"\"\"rice,45000\nbeans,9000\noil,12000\"\"\"\n\ntotal = 0\nfor line in log.splitlines():\n    item, amount = line.split(\",\")\n    total += float(amount)\n    print(f\"- {item}: ₦{float(amount):,.0f}\")\nprint(f\"TOTAL: ₦{total:,.0f}\")",
+      "pitfalls": "Forgetting to convert amount to float leaves you concatenating strings.",
+      "exercises": [
+        {
+          "title": "Count lines",
+          "instruction": "Print how many sales entries are in the log.",
+          "hint": "splitlines length",
+          "level": "easy",
+          "solution": "log = \"rice,45000\\nbeans,9000\\noil,12000\"\nprint(len(log.splitlines()))"
+        },
+        {
+          "title": "Filter big sales",
+          "instruction": "Print only items with amount >= 10000.",
+          "hint": "if float(amount) >= 10000",
+          "level": "medium",
+          "solution": "log = \"rice,45000\\nbeans,9000\\noil,12000\"\nfor line in log.splitlines():\n    item, amount = line.split(\",\")\n    if float(amount) >= 10000:\n        print(item, amount)"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Append mode for files is?",
+          "options": [
+            "w",
+            "a",
+            "r",
+            "x only"
+          ],
+          "correct": 1,
+          "explanation": "a appends without wiping."
+        }
+      ]
     },
     {
       "id": "py-58",
@@ -1553,7 +2667,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Weekly average",
           "instruction": "np.array of 7 daily customers counts. Print mean and sum.",
-          "solution": "import numpy as np\ncustomers = np.array([40, 55, 38, 60, 72, 90, 85])\nprint(\"Average:\", customers.mean())\nprint(\"Total:\", customers.sum())"
+          "solution": "import numpy as np\ncustomers = np.array([40, 55, 38, 60, 72, 90, 85])\nprint(\"Average:\", customers.mean())\nprint(\"Total:\", customers.sum())",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1567,8 +2683,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "ndarray is the core NumPy array type."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-59",
@@ -1582,7 +2712,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Filter high qty",
           "instruction": "From a small DataFrame of products/qty, print rows where qty >= 10.",
-          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"A\", \"B\", \"C\"], \"qty\": [12, 4, 20]})\nprint(df[df[\"qty\"] >= 10])"
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"A\", \"B\", \"C\"], \"qty\": [12, 4, 20]})\nprint(df[df[\"qty\"] >= 10])",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1596,8 +2728,22 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "read_csv loads tabular CSV data."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-60",
@@ -1611,10 +2757,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Quick stat",
           "instruction": "Using scipy.stats or pure Python, print mean of [2,4,6,8].",
-          "solution": "import numpy as np\nprint(np.mean([2, 4, 6, 8]))  # 5.0\n# or from scipy import stats; stats.tmean([2,4,6,8])"
+          "solution": "import numpy as np\nprint(np.mean([2, 4, 6, 8]))  # 5.0\n# or from scipy import stats; stats.tmean([2,4,6,8])",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “SciPy — Scientific Computing Toolkit”?",
+          "options": [
+            "Know when to use SciPy for stats, optimization, and signal tools.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-61",
@@ -1628,7 +2802,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Name three Django use cases",
           "instruction": "Print 3 web apps you could build with Django for a local business.",
-          "solution": "print(\"1. Online store with orders\")\nprint(\"2. School results portal\")\nprint(\"3. Clinic appointment booking\")"
+          "solution": "print(\"1. Online store with orders\")\nprint(\"2. School results portal\")\nprint(\"3. Clinic appointment booking\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -1642,6 +2818,54 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "Django is a high-level Python web framework."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
+    },
+    {
+      "id": "py-mp-03",
+      "title": "11.5 Mini Project — Pandas Sales Summary",
+      "module": "Data Libraries",
+      "path": "data",
+      "project": true,
+      "objective": "Summarize a small sales table with Pandas.",
+      "why": "Managers ask: total by product and city — Pandas answers in seconds.",
+      "explanation": "Create a DataFrame, filter, groupby sum. This is the core of business analytics.",
+      "codeExample": "import pandas as pd\ndf = pd.DataFrame({\n    \"product\": [\"Rice\", \"Beans\", \"Rice\", \"Oil\"],\n    \"city\": [\"Lagos\", \"Lagos\", \"Abuja\", \"Lagos\"],\n    \"amount\": [45000, 9000, 40000, 12000]\n})\nprint(df.groupby(\"product\")[\"amount\"].sum())\nprint(\"Lagos total:\", df[df.city==\"Lagos\"][\"amount\"].sum())",
+      "pitfalls": "Column name typos cause KeyError.",
+      "exercises": [
+        {
+          "title": "City summary",
+          "instruction": "groupby city sum amount.",
+          "hint": "groupby(\"city\")",
+          "level": "medium",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\":[\"Rice\",\"Beans\",\"Rice\"],\"city\":[\"Lagos\",\"Lagos\",\"Abuja\"],\"amount\":[45000,9000,40000]})\nprint(df.groupby(\"city\")[\"amount\"].sum())"
+        }
+      ],
+      "quiz": [
+        {
+          "q": "groupby is for?",
+          "options": [
+            "Plot only",
+            "Split-apply-combine aggregations",
+            "Deleting CSV",
+            "Installing pip"
+          ],
+          "correct": 1,
+          "explanation": "Classic aggregate pattern."
         }
       ]
     },
@@ -1657,10 +2881,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nprint(\"plt.plot / scatter / bar / hist / pie\")\nprint(\"plt.show() displays the figure\")"
+          "solution": "import matplotlib.pyplot as plt\nprint(\"plt.plot / scatter / bar / hist / pie\")\nprint(\"plt.show() displays the figure\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Matplotlib Intro”?",
+          "options": [
+            "Know what Matplotlib is and when to use it.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-63",
@@ -1674,10 +2926,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\ndays = [1, 2, 3, 4, 5]\nsales = [20, 35, 30, 50, 45]\nplt.plot(days, sales)\nplt.title(\"Sales This Week\")\nplt.xlabel(\"Day\")\nplt.ylabel(\"Units\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\ndays = [1, 2, 3, 4, 5]\nsales = [20, 35, 30, 50, 45]\nplt.plot(days, sales)\nplt.title(\"Sales This Week\")\nplt.xlabel(\"Day\")\nplt.ylabel(\"Units\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Get Started — First Plot”?",
+          "options": [
+            "Create and display a simple line plot.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-64",
@@ -1691,10 +2971,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.figure(figsize=(6, 4))\nplt.plot([1, 2, 3], [3, 1, 4], label=\"A\")\nplt.legend()\nplt.grid(True)\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.figure(figsize=(6, 4))\nplt.plot([1, 2, 3], [3, 1, 4], label=\"A\")\nplt.legend()\nplt.grid(True)\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Pyplot Basics”?",
+          "options": [
+            "Use plt state-machine style plotting.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-65",
@@ -1708,10 +3016,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nx = [1, 2, 3, 4]\nplt.plot(x, [10, 12, 11, 15], label=\"June\")\nplt.plot(x, [9, 10, 13, 14], label=\"July\")\nplt.legend()\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nx = [1, 2, 3, 4]\nplt.plot(x, [10, 12, 11, 15], label=\"June\")\nplt.plot(x, [9, 10, 13, 14], label=\"July\")\nplt.legend()\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Plotting Multiple Lines”?",
+          "options": [
+            "Plot multiple datasets together.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-66",
@@ -1725,10 +3061,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [2, 5, 3], marker=\"o\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [2, 5, 3], marker=\"o\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Markers”?",
+          "options": [
+            "Customize point markers on plots.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-67",
@@ -1742,10 +3106,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [1, 4, 2], linestyle=\"--\", linewidth=2, color=\"green\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [1, 4, 2], linestyle=\"--\", linewidth=2, color=\"green\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Line Styles”?",
+          "options": [
+            "Change line style and width.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-68",
@@ -1759,10 +3151,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [3, 5, 4])\nplt.title(\"Weekly Revenue\")\nplt.xlabel(\"Week\")\nplt.ylabel(\"₦ thousands\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [3, 5, 4])\nplt.title(\"Weekly Revenue\")\nplt.xlabel(\"Week\")\nplt.ylabel(\"₦ thousands\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Labels & Titles”?",
+          "options": [
+            "Add title, xlabel, ylabel, legend.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-69",
@@ -1776,10 +3196,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.plot([0, 1, 2], [0, 1, 4])\nplt.grid(True, linestyle=\":\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.plot([0, 1, 2], [0, 1, 4])\nplt.grid(True, linestyle=\":\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Grid”?",
+          "options": [
+            "Toggle and style grid lines.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-70",
@@ -1793,10 +3241,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nplt.subplot(1, 2, 1)\nplt.plot([1, 2, 3], [3, 2, 5])\nplt.title(\"Sales\")\nplt.subplot(1, 2, 2)\nplt.bar([1, 2, 3], [2, 4, 3])\nplt.title(\"Expenses\")\nplt.tight_layout()\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nplt.subplot(1, 2, 1)\nplt.plot([1, 2, 3], [3, 2, 5])\nplt.title(\"Sales\")\nplt.subplot(1, 2, 2)\nplt.bar([1, 2, 3], [2, 4, 3])\nplt.title(\"Expenses\")\nplt.tight_layout()\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Subplots”?",
+          "options": [
+            "Create multi-panel figures with subplot.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-71",
@@ -1810,10 +3286,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nad = [1, 2, 3, 4, 5]\ncustomers = [20, 28, 30, 45, 50]\nplt.scatter(ad, customers)\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nad = [1, 2, 3, 4, 5]\ncustomers = [20, 28, 30, 45, 50]\nplt.scatter(ad, customers)\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Scatter Plots”?",
+          "options": [
+            "Use scatter for correlation-style views.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-72",
@@ -1827,10 +3331,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nproducts = [\"Rice\", \"Beans\", \"Oil\"]\nqty = [50, 30, 20]\nplt.bar(products, qty, color=\"teal\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nproducts = [\"Rice\", \"Beans\", \"Oil\"]\nqty = [50, 30, 20]\nplt.bar(products, qty, color=\"teal\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Bar Charts”?",
+          "options": [
+            "Create vertical bar charts.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-73",
@@ -1844,10 +3376,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nscores = [55, 60, 61, 70, 72, 72, 75, 80, 90, 95]\nplt.hist(scores, bins=5)\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nscores = [55, 60, 61, 70, 72, 72, 75, 80, 90, 95]\nplt.hist(scores, bins=5)\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Histograms”?",
+          "options": [
+            "Plot frequency distributions with hist.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-74",
@@ -1861,10 +3421,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Try it",
           "instruction": "Reproduce the idea of the code example with your own 4 data points and a clear title.",
-          "solution": "import matplotlib.pyplot as plt\nlabels = [\"Rent\", \"Salaries\", \"Ads\", \"Other\"]\nsizes = [40, 35, 15, 10]\nplt.pie(sizes, labels=labels, autopct=\"%1.1f%%\")\n# plt.show()  # uncomment locally"
+          "solution": "import matplotlib.pyplot as plt\nlabels = [\"Rent\", \"Salaries\", \"Ads\", \"Other\"]\nsizes = [40, 35, 15, 10]\nplt.pie(sizes, labels=labels, autopct=\"%1.1f%%\")\n# plt.show()  # uncomment locally",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Pie Charts”?",
+          "options": [
+            "Create pie charts with labels and autopct.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-75",
@@ -1878,10 +3466,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "print(\"Supervised: labeled data (price prediction)\")\nprint(\"Unsupervised: find groups (customer segments)\")\nprint(\"Pipeline: data → model → metrics → improve\")"
+          "solution": "print(\"Supervised: labeled data (price prediction)\")\nprint(\"Unsupervised: find groups (customer segments)\")\nprint(\"Pipeline: data → model → metrics → improve\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “ML Getting Started”?",
+          "options": [
+            "Define ML, supervised vs unsupervised, and the workflow.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-76",
@@ -1895,10 +3511,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import numpy as np\nfrom statistics import mode\nx = [3, 5, 5, 7, 9]\nprint(np.mean(x), np.median(x), mode(x))"
+          "solution": "import numpy as np\nfrom statistics import mode\nx = [3, 5, 5, 7, 9]\nprint(np.mean(x), np.median(x), mode(x))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Mean, Median, Mode”?",
+          "options": [
+            "Compute central tendency measures.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-77",
@@ -1912,10 +3556,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import numpy as np\ntimes = [30, 32, 31, 90, 29]\nprint(np.std(times))"
+          "solution": "import numpy as np\ntimes = [30, 32, 31, 90, 29]\nprint(np.std(times))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Standard Deviation”?",
+          "options": [
+            "Measure spread with standard deviation.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-78",
@@ -1929,10 +3601,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import numpy as np\ndata = [10, 20, 30, 40, 50, 60, 70]\nprint(np.percentile(data, 90))"
+          "solution": "import numpy as np\ndata = [10, 20, 30, 40, 50, 60, 70]\nprint(np.percentile(data, 90))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Percentile”?",
+          "options": [
+            "Compute percentiles with NumPy.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-79",
@@ -1946,10 +3646,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import numpy as np\nuniform = np.random.uniform(0, 1, 5)\nprint(uniform)"
+          "solution": "import numpy as np\nuniform = np.random.uniform(0, 1, 5)\nprint(uniform)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Data Distribution”?",
+          "options": [
+            "Describe uniform vs skewed distributions conceptually.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-80",
@@ -1963,10 +3691,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import numpy as np\nsample = np.random.normal(100, 15, 5)\nprint(sample)"
+          "solution": "import numpy as np\nsample = np.random.normal(100, 15, 5)\nprint(sample)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Normal Distribution”?",
+          "options": [
+            "Generate and recognize normal data.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-81",
@@ -1980,10 +3736,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import matplotlib.pyplot as plt\nx = [1, 2, 3, 4, 5]\ny = [2, 4, 5, 4, 5]\nplt.scatter(x, y)\n# plt.show()"
+          "solution": "import matplotlib.pyplot as plt\nx = [1, 2, 3, 4, 5]\ny = [2, 4, 5, 4, 5]\nplt.scatter(x, y)\n# plt.show()",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Scatter Plot for ML”?",
+          "options": [
+            "Plot feature vs target as scatter.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-82",
@@ -1997,10 +3781,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([2, 4, 6, 8])\nmodel = LinearRegression().fit(X, y)\nprint(model.predict([[5]]))"
+          "solution": "from sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([2, 4, 6, 8])\nmodel = LinearRegression().fit(X, y)\nprint(model.predict([[5]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Linear Regression”?",
+          "options": [
+            "Fit a simple linear regression with scikit-learn.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-83",
@@ -2014,10 +3826,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([1, 4, 9, 16])\nZ = PolynomialFeatures(2).fit_transform(X)\nmodel = LinearRegression().fit(Z, y)\nprint(model.coef_)"
+          "solution": "from sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([1, 4, 9, 16])\nZ = PolynomialFeatures(2).fit_transform(X)\nmodel = LinearRegression().fit(Z, y)\nprint(model.coef_)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Polynomial Regression”?",
+          "options": [
+            "Use polynomial features for curved relationships.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-84",
@@ -2031,10 +3871,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1, 10], [2, 12], [3, 14], [4, 15]])\ny = np.array([20, 25, 30, 32])\nprint(LinearRegression().fit(X, y).predict([[5, 16]]))"
+          "solution": "from sklearn.linear_model import LinearRegression\nimport numpy as np\nX = np.array([[1, 10], [2, 12], [3, 14], [4, 15]])\ny = np.array([20, 25, 30, 32])\nprint(LinearRegression().fit(X, y).predict([[5, 16]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Multiple Regression”?",
+          "options": [
+            "Regress with multiple input features.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-85",
@@ -2048,10 +3916,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.preprocessing import StandardScaler\nimport numpy as np\nX = np.array([[1., 1000.], [2., 2000.], [3., 3000.]])\nprint(StandardScaler().fit_transform(X))"
+          "solution": "from sklearn.preprocessing import StandardScaler\nimport numpy as np\nX = np.array([[1., 1000.], [2., 2000.], [3., 3000.]])\nprint(StandardScaler().fit_transform(X))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Feature Scaling”?",
+          "options": [
+            "Apply StandardScaler or MinMaxScaler.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-86",
@@ -2065,10 +3961,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.model_selection import train_test_split\nimport numpy as np\nX = np.arange(20).reshape(10, 2)\ny = np.arange(10)\nXtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.3, random_state=42)\nprint(len(Xtr), len(Xte))"
+          "solution": "from sklearn.model_selection import train_test_split\nimport numpy as np\nX = np.arange(20).reshape(10, 2)\ny = np.arange(10)\nXtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.3, random_state=42)\nprint(len(Xtr), len(Xte))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Train / Test Split”?",
+          "options": [
+            "Split data to evaluate generalization.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-87",
@@ -2082,10 +4006,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = [[0], [1], [2], [3]]\ny = [0, 0, 1, 1]\nclf = DecisionTreeClassifier().fit(X, y)\nprint(clf.predict([[1.5]]))"
+          "solution": "from sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = [[0], [1], [2], [3]]\ny = [0, 0, 1, 1]\nclf = DecisionTreeClassifier().fit(X, y)\nprint(clf.predict([[1.5]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Decision Tree”?",
+          "options": [
+            "Train a DecisionTreeClassifier on simple data.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-88",
@@ -2099,10 +4051,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.metrics import confusion_matrix\ny_true = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 0, 1, 0]\nprint(confusion_matrix(y_true, y_pred))"
+          "solution": "from sklearn.metrics import confusion_matrix\ny_true = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 0, 1, 0]\nprint(confusion_matrix(y_true, y_pred))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Confusion Matrix”?",
+          "options": [
+            "Evaluate classification with a confusion matrix.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-89",
@@ -2116,10 +4096,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.cluster import AgglomerativeClustering\nimport numpy as np\nX = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])\nprint(AgglomerativeClustering(n_clusters=2).fit_predict(X))"
+          "solution": "from sklearn.cluster import AgglomerativeClustering\nimport numpy as np\nX = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])\nprint(AgglomerativeClustering(n_clusters=2).fit_predict(X))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Hierarchical Clustering”?",
+          "options": [
+            "Introduce agglomerative clustering concept.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-90",
@@ -2133,10 +4141,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.linear_model import LogisticRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([0, 0, 1, 1])\nprint(LogisticRegression().fit(X, y).predict([[3.5]]))"
+          "solution": "from sklearn.linear_model import LogisticRegression\nimport numpy as np\nX = np.array([[1], [2], [3], [4]])\ny = np.array([0, 0, 1, 1])\nprint(LogisticRegression().fit(X, y).predict([[3.5]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Logistic Regression”?",
+          "options": [
+            "Use LogisticRegression for classification.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-91",
@@ -2150,10 +4186,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5]])\ny = np.array([0, 0, 0, 1, 1, 1])\ngrid = GridSearchCV(DecisionTreeClassifier(), {\"max_depth\": [1, 2, 3]}, cv=2)\ngrid.fit(X, y)\nprint(grid.best_params_)"
+          "solution": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5]])\ny = np.array([0, 0, 0, 1, 1, 1])\ngrid = GridSearchCV(DecisionTreeClassifier(), {\"max_depth\": [1, 2, 3]}, cv=2)\ngrid.fit(X, y)\nprint(grid.best_params_)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Grid Search”?",
+          "options": [
+            "Use GridSearchCV to tune models.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-92",
@@ -2167,10 +4231,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "import pandas as pd\ndf = pd.DataFrame({\"city\": [\"Lagos\", \"Abuja\", \"Lagos\"]})\nprint(pd.get_dummies(df))"
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"city\": [\"Lagos\", \"Abuja\", \"Lagos\"]})\nprint(pd.get_dummies(df))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Categorical Data”?",
+          "options": [
+            "Encode categories with OneHotEncoder or get_dummies.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-93",
@@ -2184,10 +4276,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.cluster import KMeans\nimport numpy as np\nX = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])\nprint(KMeans(n_clusters=2, n_init=10).fit_predict(X))"
+          "solution": "from sklearn.cluster import KMeans\nimport numpy as np\nX = np.array([[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]])\nprint(KMeans(n_clusters=2, n_init=10).fit_predict(X))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “K-Means Clustering”?",
+          "options": [
+            "Run KMeans to find clusters.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-94",
@@ -2201,10 +4321,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.ensemble import BaggingClassifier\nfrom sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5]])\ny = np.array([0, 0, 0, 1, 1, 1])\nclf = BaggingClassifier(DecisionTreeClassifier(), n_estimators=5, random_state=0)\nprint(clf.fit(X, y).predict([[2.5]]))"
+          "solution": "from sklearn.ensemble import BaggingClassifier\nfrom sklearn.tree import DecisionTreeClassifier\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5]])\ny = np.array([0, 0, 0, 1, 1, 1])\nclf = BaggingClassifier(DecisionTreeClassifier(), n_estimators=5, random_state=0)\nprint(clf.fit(X, y).predict([[2.5]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Bootstrap Aggregation (Bagging)”?",
+          "options": [
+            "Understand bagging and RandomForest as example.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-95",
@@ -2218,10 +4366,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.model_selection import cross_val_score\nfrom sklearn.linear_model import LogisticRegression\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5], [6], [7]])\ny = np.array([0, 0, 0, 0, 1, 1, 1, 1])\nprint(cross_val_score(LogisticRegression(), X, y, cv=2))"
+          "solution": "from sklearn.model_selection import cross_val_score\nfrom sklearn.linear_model import LogisticRegression\nimport numpy as np\nX = np.array([[0], [1], [2], [3], [4], [5], [6], [7]])\ny = np.array([0, 0, 0, 0, 1, 1, 1, 1])\nprint(cross_val_score(LogisticRegression(), X, y, cv=2))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Cross Validation”?",
+          "options": [
+            "Use cross_val_score for robust evaluation.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-96",
@@ -2235,10 +4411,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.metrics import roc_auc_score\ny_true = [0, 0, 1, 1]\ny_score = [0.1, 0.4, 0.35, 0.8]\nprint(roc_auc_score(y_true, y_score))"
+          "solution": "from sklearn.metrics import roc_auc_score\ny_true = [0, 0, 1, 1]\ny_score = [0.1, 0.4, 0.35, 0.8]\nprint(roc_auc_score(y_true, y_score))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “AUC - ROC Curve”?",
+          "options": [
+            "Compute ROC AUC score.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-97",
@@ -2252,10 +4456,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Apply the idea",
           "instruction": "In your own words + code, adapt the example to a tiny real scenario (shop, school, or health).",
-          "solution": "from sklearn.neighbors import KNeighborsClassifier\nX = [[0], [1], [2], [3]]\ny = [0, 0, 1, 1]\nprint(KNeighborsClassifier(n_neighbors=3).fit(X, y).predict([[1.1]]))"
+          "solution": "from sklearn.neighbors import KNeighborsClassifier\nX = [[0], [1], [2], [3]]\ny = [0, 0, 1, 1]\nprint(KNeighborsClassifier(n_neighbors=3).fit(X, y).predict([[1.1]]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “K-Nearest Neighbors”?",
+          "options": [
+            "Train a KNN classifier.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "data",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-98",
@@ -2269,10 +4501,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "print(\"O(1) constant  O(n) linear  O(n log n) sort-like  O(n^2) nested loops\")\nprint(\"Right structure = faster apps at scale\")"
+          "solution": "print(\"O(1) constant  O(n) linear  O(n log n) sort-like  O(n^2) nested loops\")\nprint(\"Right structure = faster apps at scale\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “DSA Intro”?",
+          "options": [
+            "Know why DSA matters and Big-O at a glance.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-99",
@@ -2286,10 +4546,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "orders = [101, 102, 103]\norders.append(104)      # end\norders.insert(0, 100)   # front slower\nprint(orders[2])"
+          "solution": "orders = [101, 102, 103]\norders.append(104)      # end\norders.insert(0, 100)   # front slower\nprint(orders[2])",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Lists & Arrays in DSA”?",
+          "options": [
+            "Use list operations with complexity awareness.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-100",
@@ -2303,10 +4591,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "stack = []\nstack.append(\"page1\")\nstack.append(\"page2\")\nprint(stack.pop())  # page2\nprint(stack[-1])    # page1"
+          "solution": "stack = []\nstack.append(\"page1\")\nstack.append(\"page2\")\nprint(stack.pop())  # page2\nprint(stack[-1])    # page1",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Stacks — LIFO”?",
+          "options": [
+            "Implement a stack with a list.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-101",
@@ -2320,10 +4636,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "from collections import deque\nq = deque()\nq.append(\"customer A\")\nq.append(\"customer B\")\nprint(q.popleft())  # A first"
+          "solution": "from collections import deque\nq = deque()\nq.append(\"customer A\")\nq.append(\"customer B\")\nprint(q.popleft())  # A first",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Queues — FIFO”?",
+          "options": [
+            "Implement a queue with collections.deque.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-102",
@@ -2337,10 +4681,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\nhead = Node(1)\nhead.next = Node(2)\nhead.next.next = Node(3)\ncur = head\nwhile cur:\n    print(cur.value)\n    cur = cur.next"
+          "solution": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\nhead = Node(1)\nhead.next = Node(2)\nhead.next.next = Node(3)\ncur = head\nwhile cur:\n    print(cur.value)\n    cur = cur.next",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Linked Lists”?",
+          "options": [
+            "Build a simple singly linked list node.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-103",
@@ -2354,10 +4726,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}\nprint(phonebook.get(\"Ada\"))\nphonebook[\"Chidi\"] = \"0701...\""
+          "solution": "phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}\nprint(phonebook.get(\"Ada\"))\nphonebook[\"Chidi\"] = \"0701...\"",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Hash Tables — dict”?",
+          "options": [
+            "Use dict as a hash map for O(1) average lookups.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-104",
@@ -2371,10 +4771,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.children = []\nroot = TreeNode(\"CEO\")\nroot.children.append(TreeNode(\"CTO\"))\nprint(root.val, [c.val for c in root.children])"
+          "solution": "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.children = []\nroot = TreeNode(\"CEO\")\nroot.children.append(TreeNode(\"CTO\"))\nprint(root.val, [c.val for c in root.children])",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Trees Intro”?",
+          "options": [
+            "Understand root, parent, child, leaf.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-105",
@@ -2388,10 +4816,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class BNode:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\nroot = BNode(10)\nroot.left = BNode(5)\nroot.right = BNode(15)"
+          "solution": "class BNode:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\nroot = BNode(10)\nroot.left = BNode(5)\nroot.right = BNode(15)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Binary Trees”?",
+          "options": [
+            "Create a binary tree node with left/right.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-106",
@@ -2405,10 +4861,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class BST:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n    def insert(self, val):\n        if val < self.val:\n            if self.left: self.left.insert(val)\n            else: self.left = BST(val)\n        elif val > self.val:\n            if self.right: self.right.insert(val)\n            else: self.right = BST(val)\nroot = BST(10)\nfor v in [5, 15, 2, 7]:\n    root.insert(v)\nprint(root.left.val, root.right.val)"
+          "solution": "class BST:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n    def insert(self, val):\n        if val < self.val:\n            if self.left: self.left.insert(val)\n            else: self.left = BST(val)\n        elif val > self.val:\n            if self.right: self.right.insert(val)\n            else: self.right = BST(val)\nroot = BST(10)\nfor v in [5, 15, 2, 7]:\n    root.insert(v)\nprint(root.left.val, root.right.val)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Binary Search Trees”?",
+          "options": [
+            "Insert into a BST preserving left < node < right.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-107",
@@ -2422,10 +4906,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "print(\"AVL = BST + balance factor check + rotations\")\nprint(\"Use case: in-memory indexes needing predictable speed\")"
+          "solution": "print(\"AVL = BST + balance factor check + rotations\")\nprint(\"Use case: in-memory indexes needing predictable speed\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “AVL Trees”?",
+          "options": [
+            "Know why AVL balances and what rotations achieve.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-108",
@@ -2439,10 +4951,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "graph = {\n  \"Lagos\": [\"Ibadan\", \"Abeokuta\"],\n  \"Ibadan\": [\"Lagos\", \"Ife\"],\n  \"Abeokuta\": [\"Lagos\"],\n  \"Ife\": [\"Ibadan\"],\n}\nprint(graph[\"Lagos\"])"
+          "solution": "graph = {\n  \"Lagos\": [\"Ibadan\", \"Abeokuta\"],\n  \"Ibadan\": [\"Lagos\", \"Ife\"],\n  \"Abeokuta\": [\"Lagos\"],\n  \"Ife\": [\"Ibadan\"],\n}\nprint(graph[\"Lagos\"])",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Graphs”?",
+          "options": [
+            "Represent a graph with an adjacency list.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-109",
@@ -2456,10 +4996,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def linear_search(items, target):\n    for i, x in enumerate(items):\n        if x == target:\n            return i\n    return -1\nprint(linear_search([4, 2, 9, 1], 9))"
+          "solution": "def linear_search(items, target):\n    for i, x in enumerate(items):\n        if x == target:\n            return i\n    return -1\nprint(linear_search([4, 2, 9, 1], 9))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Linear Search”?",
+          "options": [
+            "Implement linear search.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-110",
@@ -2473,10 +5041,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def binary_search(arr, target):\n    lo, hi = 0, len(arr) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == target: return mid\n        if arr[mid] < target: lo = mid + 1\n        else: hi = mid - 1\n    return -1\nprint(binary_search([1, 3, 5, 7, 9], 7))"
+          "solution": "def binary_search(arr, target):\n    lo, hi = 0, len(arr) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if arr[mid] == target: return mid\n        if arr[mid] < target: lo = mid + 1\n        else: hi = mid - 1\n    return -1\nprint(binary_search([1, 3, 5, 7, 9], 7))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Binary Search”?",
+          "options": [
+            "Binary search on a sorted list.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-111",
@@ -2490,10 +5086,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def bubble(arr):\n    a = arr[:]\n    n = len(a)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n    return a\nprint(bubble([5, 1, 4, 2]))"
+          "solution": "def bubble(arr):\n    a = arr[:]\n    n = len(a)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n    return a\nprint(bubble([5, 1, 4, 2]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Bubble Sort”?",
+          "options": [
+            "Implement bubble sort for learning (not production).",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-112",
@@ -2507,10 +5131,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def selection(arr):\n    a = arr[:]\n    for i in range(len(a)):\n        m = i\n        for j in range(i + 1, len(a)):\n            if a[j] < a[m]: m = j\n        a[i], a[m] = a[m], a[i]\n    return a\nprint(selection([64, 25, 12, 22]))"
+          "solution": "def selection(arr):\n    a = arr[:]\n    for i in range(len(a)):\n        m = i\n        for j in range(i + 1, len(a)):\n            if a[j] < a[m]: m = j\n        a[i], a[m] = a[m], a[i]\n    return a\nprint(selection([64, 25, 12, 22]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Selection Sort”?",
+          "options": [
+            "Implement selection sort.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-113",
@@ -2524,10 +5176,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def insertion(arr):\n    a = arr[:]\n    for i in range(1, len(a)):\n        key = a[i]\n        j = i - 1\n        while j >= 0 and a[j] > key:\n            a[j + 1] = a[j]\n            j -= 1\n        a[j + 1] = key\n    return a\nprint(insertion([12, 11, 13, 5, 6]))"
+          "solution": "def insertion(arr):\n    a = arr[:]\n    for i in range(1, len(a)):\n        key = a[i]\n        j = i - 1\n        while j >= 0 and a[j] > key:\n            a[j + 1] = a[j]\n            j -= 1\n        a[j + 1] = key\n    return a\nprint(insertion([12, 11, 13, 5, 6]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Insertion Sort”?",
+          "options": [
+            "Implement insertion sort.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-114",
@@ -2541,10 +5221,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def quicksort(arr):\n    if len(arr) <= 1: return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + mid + quicksort(right)\nprint(quicksort([3, 6, 8, 10, 1, 2, 1]))"
+          "solution": "def quicksort(arr):\n    if len(arr) <= 1: return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    mid = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + mid + quicksort(right)\nprint(quicksort([3, 6, 8, 10, 1, 2, 1]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Quick Sort”?",
+          "options": [
+            "Implement a simple recursive quicksort.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-115",
@@ -2558,10 +5266,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def counting_sort(arr):\n    if not arr: return []\n    m = max(arr)\n    count = [0] * (m + 1)\n    for x in arr: count[x] += 1\n    out = []\n    for val, c in enumerate(count):\n        out.extend([val] * c)\n    return out\nprint(counting_sort([4, 2, 2, 8, 3, 3, 1]))"
+          "solution": "def counting_sort(arr):\n    if not arr: return []\n    m = max(arr)\n    count = [0] * (m + 1)\n    for x in arr: count[x] += 1\n    out = []\n    for val, c in enumerate(count):\n        out.extend([val] * c)\n    return out\nprint(counting_sort([4, 2, 2, 8, 3, 3, 1]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Counting Sort”?",
+          "options": [
+            "Implement counting sort for non-negative ints.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-116",
@@ -2575,10 +5311,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "print(\"Radix sort: process digits from least to most significant\")\nprint(\"Useful for fixed-length IDs and large integer keys\")\nnums = [170, 45, 75, 90, 802, 24, 2, 66]\nprint(sorted(nums))  # practical stand-in; implement full radix as challenge"
+          "solution": "print(\"Radix sort: process digits from least to most significant\")\nprint(\"Useful for fixed-length IDs and large integer keys\")\nnums = [170, 45, 75, 90, 802, 24, 2, 66]\nprint(sorted(nums))  # practical stand-in; implement full radix as challenge",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Radix Sort”?",
+          "options": [
+            "Understand radix sort idea (LSD).",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-117",
@@ -2592,10 +5356,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Practice",
           "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "def merge_sort(arr):\n    if len(arr) <= 1: return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\n\ndef merge(a, b):\n    i = j = 0\n    out = []\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            out.append(a[i]); i += 1\n        else:\n            out.append(b[j]); j += 1\n    out.extend(a[i:]); out.extend(b[j:])\n    return out\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))"
+          "solution": "def merge_sort(arr):\n    if len(arr) <= 1: return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\n\ndef merge(a, b):\n    i = j = 0\n    out = []\n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            out.append(a[i]); i += 1\n        else:\n            out.append(b[j]); j += 1\n    out.extend(a[i:]); out.extend(b[j:])\n    return out\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Merge Sort”?",
+          "options": [
+            "Implement merge sort by divide and conquer.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "dsa",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-118",
@@ -2609,10 +5401,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "# pip install mysql-connector-python\nimport mysql.connector\n# conn = mysql.connector.connect(host=\"localhost\", user=\"root\", password=\"secret\")\nprint(\"Connected pattern: connect → cursor → execute → commit → close\")"
+          "solution": "# pip install mysql-connector-python\nimport mysql.connector\n# conn = mysql.connector.connect(host=\"localhost\", user=\"root\", password=\"secret\")\nprint(\"Connected pattern: connect → cursor → execute → commit → close\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “MySQL Get Started”?",
+          "options": [
+            "Connect Python to MySQL conceptually and install drivers.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-119",
@@ -2626,10 +5446,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"CREATE DATABASE IF NOT EXISTS shop_db\"\nprint(sql)\n# cursor.execute(sql)"
+          "solution": "sql = \"CREATE DATABASE IF NOT EXISTS shop_db\"\nprint(sql)\n# cursor.execute(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Create Database”?",
+          "options": [
+            "Create a database with SQL via Python.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-120",
@@ -2643,10 +5491,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"\"\"\nCREATE TABLE IF NOT EXISTS products (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  name VARCHAR(100),\n  price DECIMAL(10,2),\n  qty INT\n)\n\"\"\"\nprint(sql)"
+          "solution": "sql = \"\"\"\nCREATE TABLE IF NOT EXISTS products (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  name VARCHAR(100),\n  price DECIMAL(10,2),\n  qty INT\n)\n\"\"\"\nprint(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Create Table”?",
+          "options": [
+            "Define a table schema with CREATE TABLE.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-121",
@@ -2660,10 +5536,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"INSERT INTO products (name, price, qty) VALUES (%s, %s, %s)\"\ndata = (\"Rice 50kg\", 45000, 20)\nprint(sql, data)\n# cursor.execute(sql, data); conn.commit()"
+          "solution": "sql = \"INSERT INTO products (name, price, qty) VALUES (%s, %s, %s)\"\ndata = (\"Rice 50kg\", 45000, 20)\nprint(sql, data)\n# cursor.execute(sql, data); conn.commit()",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Insert Rows”?",
+          "options": [
+            "INSERT INTO table VALUES / parameterized queries.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-122",
@@ -2677,10 +5581,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"SELECT id, name, price FROM products\"\nprint(sql)\n# cursor.execute(sql)\n# for row in cursor.fetchall(): print(row)"
+          "solution": "sql = \"SELECT id, name, price FROM products\"\nprint(sql)\n# cursor.execute(sql)\n# for row in cursor.fetchall(): print(row)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Select Data”?",
+          "options": [
+            "SELECT columns FROM table.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-123",
@@ -2694,10 +5626,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"SELECT * FROM products WHERE price < %s AND qty > 0\"\nprint(sql, (5000,))"
+          "solution": "sql = \"SELECT * FROM products WHERE price < %s AND qty > 0\"\nprint(sql, (5000,))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “WHERE Filters”?",
+          "options": [
+            "Filter with WHERE and comparisons.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-124",
@@ -2711,10 +5671,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"SELECT name, price FROM products ORDER BY price DESC\"\nprint(sql)"
+          "solution": "sql = \"SELECT name, price FROM products ORDER BY price DESC\"\nprint(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “ORDER BY”?",
+          "options": [
+            "Order results ascending/descending.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-125",
@@ -2728,10 +5716,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"DELETE FROM products WHERE id = %s\"\nprint(sql, (42,))\nprint(\"WARNING: always include WHERE in production deletes\")"
+          "solution": "sql = \"DELETE FROM products WHERE id = %s\"\nprint(sql, (42,))\nprint(\"WARNING: always include WHERE in production deletes\")",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “DELETE Rows”?",
+          "options": [
+            "DELETE FROM with WHERE (never forget WHERE!).",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-126",
@@ -2745,10 +5761,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"DROP TABLE IF EXISTS old_temp_products\"\nprint(sql)"
+          "solution": "sql = \"DROP TABLE IF EXISTS old_temp_products\"\nprint(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “DROP Table”?",
+          "options": [
+            "DROP TABLE statement awareness.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-127",
@@ -2762,10 +5806,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"UPDATE products SET price = %s WHERE id = %s\"\nprint(sql, (39999, 7))"
+          "solution": "sql = \"UPDATE products SET price = %s WHERE id = %s\"\nprint(sql, (39999, 7))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “UPDATE Rows”?",
+          "options": [
+            "UPDATE SET ... WHERE ...",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-128",
@@ -2779,10 +5851,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"SELECT * FROM products ORDER BY id LIMIT 10 OFFSET 0\"\nprint(sql)"
+          "solution": "sql = \"SELECT * FROM products ORDER BY id LIMIT 10 OFFSET 0\"\nprint(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “LIMIT”?",
+          "options": [
+            "LIMIT and OFFSET for paging.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-129",
@@ -2796,10 +5896,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Write the SQL idea",
           "instruction": "Adapt the sample SQL to a students/courses school scenario and print it.",
-          "solution": "sql = \"\"\"\nSELECT o.id, c.name, o.total\nFROM orders o\nINNER JOIN customers c ON o.customer_id = c.id\n\"\"\"\nprint(sql)"
+          "solution": "sql = \"\"\"\nSELECT o.id, c.name, o.total\nFROM orders o\nINNER JOIN customers c ON o.customer_id = c.id\n\"\"\"\nprint(sql)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “JOIN Tables”?",
+          "options": [
+            "INNER JOIN related tables on keys.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-130",
@@ -2813,10 +5941,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “MongoDB Get Started”?",
+          "options": [
+            "Connect to MongoDB from Python with PyMongo.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-131",
@@ -2830,10 +5986,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Create Database”?",
+          "options": [
+            "Access a database handle via client.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-132",
@@ -2847,10 +6031,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Collections”?",
+          "options": [
+            "Get a collection reference.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-133",
@@ -2864,10 +6076,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Insert Documents”?",
+          "options": [
+            "insert_one / insert_many",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-134",
@@ -2881,10 +6121,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Find Documents”?",
+          "options": [
+            "find, find_one",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-135",
@@ -2898,10 +6166,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Query Filters”?",
+          "options": [
+            "Use query operators like $lt, $gt, $in.",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-136",
@@ -2915,10 +6211,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Sort”?",
+          "options": [
+            "sort([(field, 1|-1)])",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-137",
@@ -2932,10 +6256,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Delete Documents”?",
+          "options": [
+            "delete_one / delete_many",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-138",
@@ -2949,10 +6301,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Drop Collection”?",
+          "options": [
+            "collection.drop()",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-139",
@@ -2966,10 +6346,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Update Documents”?",
+          "options": [
+            "update_one with $set",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-140",
@@ -2983,10 +6391,38 @@ window.PYTHON_COURSE = {
         {
           "title": "Document design",
           "instruction": "Design a dict for a \"student\" document with name, courses (list), and active (bool). Print it.",
-          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)"
+          "solution": "student = {\"name\": \"Aisha\", \"courses\": [\"Python\", \"Math\"], \"active\": True}\nprint(student)",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
-      "quiz": []
+      "quiz": [
+        {
+          "q": "What is the main focus of “Limit Results”?",
+          "options": [
+            "limit(n) on cursor",
+            "Only deleting files permanently",
+            "Only designing CSS layouts",
+            "Only configuring DNS records"
+          ],
+          "correct": 0,
+          "explanation": "Match the learning objective for this lesson."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
+        }
+      ],
+      "path": "backend",
+      "difficulty": "intermediate",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example."
     },
     {
       "id": "py-141",
@@ -3000,7 +6436,9 @@ window.PYTHON_COURSE = {
         {
           "title": "Extend it",
           "instruction": "Add Saturday and Sunday, recompute total and best day, print average daily sales.",
-          "solution": "sales = [\n    {\"day\": \"Mon\", \"amount\": 12000},\n    {\"day\": \"Tue\", \"amount\": 15000},\n    {\"day\": \"Wed\", \"amount\": 9000},\n    {\"day\": \"Thu\", \"amount\": 18000},\n    {\"day\": \"Fri\", \"amount\": 21000},\n    {\"day\": \"Sat\", \"amount\": 25000},\n    {\"day\": \"Sun\", \"amount\": 16000},\n]\ntotal = sum(s[\"amount\"] for s in sales)\nbest = max(sales, key=lambda s: s[\"amount\"])\navg = total / len(sales)\nprint(\"Total:\", total)\nprint(\"Best:\", best)\nprint(\"Average:\", round(avg, 2))"
+          "solution": "sales = [\n    {\"day\": \"Mon\", \"amount\": 12000},\n    {\"day\": \"Tue\", \"amount\": 15000},\n    {\"day\": \"Wed\", \"amount\": 9000},\n    {\"day\": \"Thu\", \"amount\": 18000},\n    {\"day\": \"Fri\", \"amount\": 21000},\n    {\"day\": \"Sat\", \"amount\": 25000},\n    {\"day\": \"Sun\", \"amount\": 16000},\n]\ntotal = sum(s[\"amount\"] for s in sales)\nbest = max(sales, key=lambda s: s[\"amount\"])\navg = total / len(sales)\nprint(\"Total:\", total)\nprint(\"Best:\", best)\nprint(\"Average:\", round(avg, 2))",
+          "level": "easy",
+          "hint": "Re-read the code example, change one piece at a time, then re-check."
         }
       ],
       "quiz": [
@@ -3014,8 +6452,55 @@ window.PYTHON_COURSE = {
           ],
           "correct": 1,
           "explanation": "List of dicts (or pandas DataFrame) models tabular daily sales well."
+        },
+        {
+          "q": "Best way to learn this lesson?",
+          "options": [
+            "Only read without typing",
+            "Run/type the example, then do the exercise",
+            "Skip to ML immediately",
+            "Memorize without understanding why"
+          ],
+          "correct": 1,
+          "explanation": "Practice + why + code beats passive reading."
         }
-      ]
+      ],
+      "path": "beginner",
+      "difficulty": "beginner",
+      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example.",
+      "project": true
     }
-  ]
+  ],
+  "paths": {
+    "beginner": {
+      "id": "beginner",
+      "name": "Beginner Builder",
+      "desc": "Zero → scripts, files, OOP basics, shop projects",
+      "modules": null
+    },
+    "data": {
+      "id": "data",
+      "name": "Data & ML",
+      "desc": "NumPy, Pandas, charts, machine learning",
+      "modules": null
+    },
+    "backend": {
+      "id": "backend",
+      "name": "Backend Data",
+      "desc": "MySQL & MongoDB for apps",
+      "modules": null
+    },
+    "dsa": {
+      "id": "dsa",
+      "name": "CS & DSA",
+      "desc": "Structures, search, sort — optional deep dive",
+      "modules": null
+    },
+    "all": {
+      "id": "all",
+      "name": "Full Catalog",
+      "desc": "Every Python lesson in order",
+      "modules": null
+    }
+  }
 };
