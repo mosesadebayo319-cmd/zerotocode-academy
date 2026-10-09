@@ -4,121 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeroToCode Academy • Learn Programming from Zero</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
-        body { font-family: 'Inter', system-ui, sans-serif; }
-        .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 600; }
-        .lesson-card:hover { transform: translateY(-2px); }
-        .code-block {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            background-color: #0f172a;
-            color: #e2e8f0;
-        }
-        .section-header { font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; letter-spacing: -0.025em; }
-        .bit-badge {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white; font-size: 0.75rem; padding: 0.125rem 0.625rem;
-            border-radius: 9999px; font-weight: 600;
-        }
-        .progress-bar { transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
-        .lesson-item.completed { background-color: #f0fdf4; }
-        .nav-link:hover { color: #10b981; }
-        .exercise-box { border-left: 4px solid #10b981; }
-        .zero-hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .modern-card {
-            box-shadow: 0 4px 6px -1px rgb(15 23 42 / 0.1), 0 2px 4px -2px rgb(15 23 42 / 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .modern-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
-        }
-        .metric { font-variant-numeric: tabular-nums; }
-        .custom-scroll::-webkit-scrollbar { width: 6px; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
+    <meta name="description" content="Learn to code from zero with free, self-paced lessons, browser practice, and practical projects.">
+    <link rel="stylesheet" href="assets/styles.css">
 
-        .explanation-body p { margin-bottom: 0.85rem; }
-        .explanation-body p:last-child { margin-bottom: 0; }
-        .explanation-body strong { color: #0f172a; }
-        .explanation-body code {
-            background: #e2e8f0; padding: 0.1rem 0.35rem; border-radius: 0.35rem;
-            font-size: 0.9em; color: #0f172a;
-        }
-        .explanation-body em { color: #334155; }
-
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
-    <!-- NAV -->
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-screen-xl mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-x-3 cursor-pointer" onclick="showView('home')">
-                    <div class="w-10 h-10 bg-emerald-600 rounded-2xl flex items-center justify-center shadow-inner">
-                        <span class="text-white text-3xl font-black tracking-tighter">Z</span>
-                    </div>
-                    <div>
-                        <span class="font-display text-2xl font-semibold tracking-tight">ZeroToCode</span>
-                        <span class="text-emerald-600 text-xs font-bold tracking-[3px] block -mt-1">ACADEMY</span>
-                    </div>
+    <a class="skip-link" href="#main-content" onclick="document.getElementById('main-content').focus(); return false;">Skip to learning content</a>
+    <nav aria-label="Main navigation" class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16 gap-3">
+                <a href="#home" class="flex items-center gap-2" aria-label="ZeroToCode Academy home">
+                    <span class="w-9 h-9 bg-emerald-700 text-white rounded-xl flex items-center justify-center font-display text-2xl">Z</span>
+                    <span class="font-display text-xl tracking-tight">ZeroToCode<span class="text-emerald-700 text-[10px] font-bold tracking-[3px] block -mt-1">ACADEMY</span></span>
+                </a>
+                <div class="hidden lg:flex items-center gap-5 text-sm font-medium">
+                    <a href="#home" data-nav="home" class="nav-link px-2 py-3 text-slate-600">Home</a>
+                    <a href="#dashboard" data-nav="dashboard" class="nav-link px-2 py-3 text-slate-600">My learning</a>
+                    <a href="#courses" data-nav="courses" class="nav-link px-2 py-3 text-slate-600">Courses</a>
+                    <a href="#paths" data-nav="paths" class="nav-link px-2 py-3 text-slate-600">Python paths</a>
                 </div>
-                <div class="hidden md:flex items-center gap-x-6 text-sm font-medium">
-                    <a href="#" onclick="showView('home'); return false;" class="nav-link px-2 py-2 text-slate-600">Home</a>
-                    <a href="#" onclick="showView('dashboard'); return false;" class="nav-link px-2 py-2 text-slate-600">Dashboard</a>
-                    <a href="#" onclick="showView('courses'); return false;" class="nav-link px-2 py-2 text-slate-600">Courses</a>
-                    <a href="#" onclick="showView('paths'); return false;" class="nav-link px-2 py-2 text-slate-600">Python Paths</a>
+                <div class="flex items-center gap-3">
+                    <span class="hidden sm:flex items-center gap-2 text-sm text-slate-500"><span aria-hidden="true">🔥</span><span id="streak-count" class="font-semibold text-slate-700">0</span> day streak</span>
+                    <button onclick="window.ZeroToCode.resumeLearning()" class="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-xl">Keep learning <span aria-hidden="true">→</span></button>
                 </div>
-                <div class="flex items-center gap-x-3">
-                    <div class="hidden sm:flex items-center gap-x-2 bg-white border border-slate-200 rounded-3xl px-4 h-9 text-sm">
-                        <i class="fa-solid fa-fire text-orange-500"></i>
-                        <span id="streak-count" class="font-semibold text-slate-700">0</span>
-                        <span class="text-slate-500 text-xs">day streak</span>
-                    </div>
-                    <button onclick="showView('dashboard')"
-                            class="px-4 py-2 bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-sm font-semibold rounded-3xl">
-                        Dashboard
-                    </button>
-                    <button onclick="deployToVercelInfo()"
-                            class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2">
-                        <i class="fa-solid fa-rocket"></i>
-                        <span class="hidden sm:inline">Live Site</span>
-                    </button>
-                </div>
+            </div>
+            <div class="lg:hidden flex justify-between gap-1 text-xs sm:text-sm border-t border-slate-100">
+                <a href="#home" data-nav="home" class="nav-link px-2 py-3">Home</a>
+                <a href="#dashboard" data-nav="dashboard" class="nav-link px-2 py-3">My learning</a>
+                <a href="#courses" data-nav="courses" class="nav-link px-2 py-3">Courses</a>
+                <a href="#paths" data-nav="paths" class="nav-link px-2 py-3">Python paths</a>
             </div>
         </div>
     </nav>
-
+    <div id="storage-warning" role="alert" class="hidden max-w-screen-xl mx-auto my-4 px-6 py-4 rounded-xl bg-amber-50 text-amber-900 text-sm"></div>
+    <noscript><p class="p-6">Enable JavaScript to open lessons, practise code, and save your progress.</p></noscript>
+    <main id="main-content" tabindex="-1">
     <!-- HOME -->
     <div id="view-home" class="view">
         <div class="zero-hero text-white">
-            <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-20">
+            <div class="max-w-screen-xl mx-auto px-6 pt-14 pb-16 lg:py-20 grid lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-20 items-center">
                 <div class="max-w-3xl">
                     <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 text-sm">
                         <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                        <span class="font-medium">Free • Live code runners • Mastery quizzes • Real projects</span>
+                        <span class="font-medium">Free to learn · Built for complete beginners</span>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-display font-semibold tracking-tighter leading-none mb-6">
-                        From zero<br>knowledge to<br>building things.
+                        Your first line.<br>Your next skill.<br><span class="text-emerald-300">Your own pace.</span>
                     </h1>
                     <p class="max-w-lg text-xl text-emerald-100 mb-10">
-                        Python, JavaScript, HTML &amp; CSS, Go, and Rust — taught with real-life scenarios,
-                        in-browser practice, and paths that match your goals.
+                        Learn to code one small step at a time. Start with Python, practise in your browser, and turn what you learn into useful projects. No experience needed.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <button onclick="startLearning()"
                                 class="px-8 py-4 bg-white text-emerald-700 hover:bg-emerald-50 font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 shadow-xl">
-                            <span>Start Python Beginner Path</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <span>Start with Python</span>
+                            <span aria-hidden="true" class="fa-solid fa-arrow-right">→</span>
                         </button>
                         <button onclick="showView('courses')"
                                 class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 font-semibold text-lg rounded-3xl">
                             Browse All Courses
                         </button>
                     </div>
+                </div>
+                <div class="rounded-3xl border border-white/20 overflow-hidden shadow-2xl bg-slate-950" aria-label="Example of your first Python program">
+                    <div class="px-6 py-4 border-b border-white/10 flex justify-between items-center text-sm text-slate-300"><span>your-first-program.py</span><span class="text-emerald-300 text-xs">Python / 01</span></div>
+                    <div class="px-6 py-8 font-mono text-base sm:text-lg leading-9"><span class="text-slate-500"># A small beginning</span><br><span class="text-sky-300">print</span>(<span class="text-emerald-200">"I can learn to code."</span>)</div>
+                    <div class="px-6 py-6 bg-emerald-950/60 border-t border-emerald-300/20"><p class="text-emerald-300 text-[10px] tracking-widest font-semibold mb-3">WHAT YOU’LL SEE</p><p class="font-mono text-emerald-100 text-sm">I can learn to code.</p></div>
+                    <p class="px-6 py-5 text-slate-400 text-xs leading-5">Read it. Run it. Make it yours.<br>Your first lesson starts with one line like this.</p>
                 </div>
             </div>
         </div>
@@ -130,24 +82,24 @@
             </div>
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-route text-xl"></i></div>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mb-5"><span aria-hidden="true" class="fa-solid fa-route text-xl">1</span></div>
                     <h3 class="font-semibold text-xl mb-2">1. Pick a path</h3>
-                    <p class="text-slate-600 text-[15px]">Beginner Builder, Data &amp; ML, Backend, or DSA — don’t force everything at once.</p>
+                    <p class="text-slate-600 text-[15px]">New to coding? Start with Python Beginner Builder. Explore other paths as your confidence grows.</p>
                 </div>
                 <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-book text-xl"></i></div>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mb-5"><span aria-hidden="true" class="fa-solid fa-book text-xl">2</span></div>
                     <h3 class="font-semibold text-xl mb-2">2. Bite-sized lessons</h3>
                     <p class="text-slate-600 text-[15px]">Why it matters + clear explanation + common mistakes for every topic.</p>
                 </div>
                 <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-keyboard text-xl"></i></div>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mb-5"><span aria-hidden="true" class="fa-solid fa-keyboard text-xl">3</span></div>
                     <h3 class="font-semibold text-xl mb-2">3. Run code live</h3>
                     <p class="text-slate-600 text-[15px]">Python playground (Pyodide) and HTML/JS preview in the browser.</p>
                 </div>
                 <div class="modern-card bg-white p-7 rounded-3xl border border-slate-100">
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-5"><i class="fa-solid fa-certificate text-xl"></i></div>
-                    <h3 class="font-semibold text-xl mb-2">4. Prove mastery</h3>
-                    <p class="text-slate-600 text-[15px]">Pass quizzes (≥70%) to complete lessons. Earn a beginner certificate.</p>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center mb-5"><span aria-hidden="true" class="fa-solid fa-certificate text-xl">4</span></div>
+                    <h3 class="font-semibold text-xl mb-2">4. Check your understanding</h3>
+                    <p class="text-slate-600 text-[15px]">Get feedback, retry questions, and apply what you learn in small projects.</p>
                 </div>
             </div>
         </div>
@@ -158,53 +110,53 @@
                     <span class="bit-badge">START HERE</span>
                     <h2 class="section-header mt-1">Pick a language</h2>
                 </div>
-                <button onclick="showView('courses')" class="text-emerald-600 font-semibold text-sm">See all tracks →</button>
+                <button onclick="showView('courses')" class="text-emerald-700 font-semibold text-sm">See all tracks →</button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-                <div onclick="window.ZeroToCode.startPythonPath('beginner')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="window.ZeroToCode.startPythonPath('beginner')" class="group modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
                     <div class="flex items-start justify-between">
                         <div class="text-5xl mb-4">🐍</div>
-                        <span class="bit-badge text-[10px] px-3 py-px">MOST POPULAR</span>
+                        <span class="bit-badge text-[10px] px-3 py-px">START HERE</span>
                     </div>
                     <div class="mt-auto">
                         <h3 class="font-semibold text-2xl tracking-tight">Python</h3>
-                        <p class="text-emerald-600 text-sm font-medium mt-1">Paths + live runner</p>
+                        <p class="text-emerald-700 text-sm font-medium mt-1">Paths + live runner</p>
                         <div class="flex items-center gap-x-2 mt-4 text-xs text-slate-500">
                             <span id="count-python">… lessons</span>
                             <span>•</span>
-                            <span>Beginner → Pro</span>
+                            <span>Start from zero</span>
                         </div>
                     </div>
                 </div>
-                <div onclick="startCourse('javascript')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="startCourse('javascript')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
                     <div class="text-5xl mb-4">🟨</div>
                     <div class="mt-auto">
                         <h3 class="font-semibold text-2xl">JavaScript</h3>
-                        <p class="text-emerald-600 text-sm font-medium mt-1">DOM, events, APIs</p>
+                        <p class="text-emerald-700 text-sm font-medium mt-1">DOM, events, APIs</p>
                         <div class="mt-4 text-xs text-slate-500"><span id="count-javascript">…</span> • Live playground</div>
                     </div>
                 </div>
-                <div onclick="startCourse('web')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="startCourse('web')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
                     <div class="text-5xl mb-4">🌐</div>
                     <div class="mt-auto">
                         <h3 class="font-semibold text-2xl">HTML &amp; CSS</h3>
-                        <p class="text-emerald-600 text-sm font-medium mt-1">Responsive sites</p>
+                        <p class="text-emerald-700 text-sm font-medium mt-1">Responsive sites</p>
                         <div class="mt-4 text-xs text-slate-500"><span id="count-web">…</span> • Live preview</div>
                     </div>
                 </div>
-                <div onclick="startCourse('go')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="startCourse('go')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
                     <div class="text-5xl mb-4">🐹</div>
                     <div class="mt-auto">
                         <h3 class="font-semibold text-2xl">Go</h3>
-                        <p class="text-emerald-600 text-sm font-medium mt-1">CLIs &amp; backends</p>
+                        <p class="text-emerald-700 text-sm font-medium mt-1">CLIs &amp; backends</p>
                         <div class="mt-4 text-xs text-slate-500"><span id="count-go">…</span> • Practical</div>
                     </div>
                 </div>
-                <div onclick="startCourse('rust')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
+                <div role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); this.click(); }" onclick="startCourse('rust')" class="modern-card bg-white border border-slate-200 hover:border-emerald-300 rounded-3xl p-6 cursor-pointer flex flex-col">
                     <div class="text-5xl mb-4">🦀</div>
                     <div class="mt-auto">
                         <h3 class="font-semibold text-2xl">Rust</h3>
-                        <p class="text-emerald-600 text-sm font-medium mt-1">Ownership step-by-step</p>
+                        <p class="text-emerald-700 text-sm font-medium mt-1">Ownership step-by-step</p>
                         <div class="mt-4 text-xs text-slate-500"><span id="count-rust">…</span> • Safe systems</div>
                     </div>
                 </div>
@@ -215,51 +167,64 @@
     <!-- DASHBOARD -->
     <div id="view-dashboard" class="view hidden max-w-screen-xl mx-auto px-6 py-10">
         <h2 class="section-header mb-2">Your Dashboard</h2>
-        <p class="text-slate-600 mb-8">Track XP, streaks, certificates, and course progress.</p>
+        <p class="text-slate-600 mb-8">A little practice today is another step forward.</p>
+        <div id="dashboard-resume" class="rounded-3xl bg-emerald-800 text-white p-6 md:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8"></div>
         <div class="grid md:grid-cols-3 gap-5 mb-8">
             <div class="bg-white border border-slate-200 rounded-3xl p-6">
-                <div class="text-emerald-600 text-sm font-medium">TOTAL XP</div>
+                <div class="text-emerald-700 text-sm font-medium">TOTAL XP</div>
                 <div id="total-xp" class="text-5xl font-semibold metric mt-2">0</div>
             </div>
             <div class="bg-white border border-slate-200 rounded-3xl p-6">
-                <div class="text-emerald-600 text-sm font-medium">LESSONS COMPLETED</div>
+                <div class="text-emerald-700 text-sm font-medium">LESSONS COMPLETED</div>
                 <div id="lessons-completed" class="text-5xl font-semibold metric mt-2">0 / 0</div>
             </div>
             <div class="bg-white border border-slate-200 rounded-3xl p-6">
-                <div class="text-emerald-600 text-sm font-medium">DAY STREAK</div>
+                <div class="text-emerald-700 text-sm font-medium">DAY STREAK</div>
                 <div class="flex items-end gap-2 mt-2">
                     <div id="dashboard-streak" class="text-5xl font-semibold metric">0</div>
-                    <i class="fa-solid fa-fire text-orange-500 text-2xl mb-2"></i>
+                    <span aria-hidden="true" class="fa-solid fa-fire text-orange-500 text-2xl mb-2">🔥</span>
                 </div>
             </div>
         </div>
         <div id="certificate-panel" class="mb-8"></div>
         <h3 class="font-semibold text-xl mb-4">Courses</h3>
         <div id="dashboard-languages" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-        <button onclick="window.ZeroToCode.resetProgress()" class="mt-10 text-sm text-slate-400 hover:text-red-500">Reset all progress</button>
+        <section aria-labelledby="backup-heading" class="mt-10 bg-white border border-slate-200 rounded-3xl p-6">
+            <h3 id="backup-heading" class="font-semibold text-lg">Keep your learning safe</h3>
+            <p class="text-sm text-slate-600 mt-2 max-w-2xl">Progress and code drafts are saved only in this browser. Clearing browser data removes them. Download a backup to keep a copy or move to another device. No account is needed.</p>
+            <div class="flex flex-wrap gap-3 mt-4">
+                <button onclick="window.ZeroToCode.exportProgress()" class="px-4 py-3 rounded-xl bg-emerald-50 text-emerald-800 text-sm font-semibold">Download backup</button>
+                <button onclick="document.getElementById('backup-file').click()" class="px-4 py-3 rounded-xl border border-slate-300 text-sm font-semibold">Restore backup</button>
+                <input type="file" id="backup-file" accept=".json,application/json" class="hidden" aria-label="Choose a learning backup" onchange="window.ZeroToCode.importProgress(event)">
+            </div>
+            <p id="backup-status" role="status" class="mt-3 text-sm text-slate-600"></p>
+            <details class="mt-6"><summary class="text-sm text-slate-500 cursor-pointer">Manage saved data</summary><button onclick="window.ZeroToCode.resetProgress()" class="mt-3 text-sm text-red-700 underline py-2">Reset all learning data</button></details>
+        </section>
     </div>
 
     <!-- COURSES -->
     <div id="view-courses" class="view hidden max-w-screen-xl mx-auto px-6 py-10">
         <h2 class="section-header mb-2">All Courses</h2>
-        <p class="text-slate-600 mb-8">Honest lesson counts. Every track has exercises and quizzes.</p>
+        <p class="text-slate-600 mb-8">Choose what you want to build. Python and web basics are good places to begin; Go and Rust need a local setup.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="courses-grid"></div>
     </div>
 
     <!-- PYTHON PATHS -->
     <div id="view-paths" class="view hidden max-w-screen-xl mx-auto px-6 py-10">
         <h2 class="section-header mb-2">Python Learning Paths</h2>
-        <p class="text-slate-600 mb-8">Choose a focused path instead of drowning in the full catalog.</p>
+        <p class="text-slate-600 mb-8">Start with Beginner Builder. Data, backend, and algorithms paths build on Python fundamentals.</p>
         <div id="paths-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
     </div>
 
     <!-- COURSE / LESSON -->
     <div id="view-course" class="view hidden max-w-screen-xl mx-auto px-6 py-8">
-        <button onclick="showView('courses')" class="flex items-center text-emerald-600 hover:text-emerald-700 font-medium text-sm mb-6">
-            <i class="fa-solid fa-arrow-left mr-2"></i> Back to courses
+        <button onclick="showView('courses')" class="flex items-center text-emerald-700 hover:text-emerald-700 font-medium text-sm mb-6">
+            <span aria-hidden="true" class="fa-solid fa-arrow-left mr-2">←</span> Back to courses
         </button>
         <div class="flex flex-col lg:flex-row gap-8">
-            <aside class="lg:w-80 flex-shrink-0">
+            <aside class="lg:w-80 flex-shrink-0" aria-label="Course outline">
+                <button id="outline-toggle" aria-expanded="false" aria-controls="course-outline" onclick="const outline=document.getElementById('course-outline'); outline.classList.toggle('hidden'); this.setAttribute('aria-expanded', String(!outline.classList.contains('hidden')));" class="lg:hidden w-full text-left bg-white border border-slate-200 rounded-2xl p-4 font-semibold">Course outline <span aria-hidden="true">⌄</span></button>
+                <div id="course-outline" class="hidden lg:block mt-3 lg:mt-0">
                 <div class="bg-white border border-slate-200 rounded-3xl p-5 sticky top-24">
                     <div class="flex items-start gap-3 mb-3">
                         <div>
@@ -281,21 +246,23 @@
                     <div class="text-xs font-medium text-slate-500 px-1 mb-2">LESSONS</div>
                     <div id="lessons-sidebar" class="space-y-1 max-h-[520px] overflow-auto pr-1 custom-scroll"></div>
                 </div>
+                </div>
             </aside>
-            <main class="flex-1 min-w-0">
+            <section class="flex-1 min-w-0" aria-label="Current lesson">
                 <div id="lesson-content" class="bg-white border border-slate-200 rounded-3xl p-6 md:p-10">
                     <p class="text-slate-500">Select a lesson to begin.</p>
                 </div>
-            </main>
+            </section>
         </div>
     </div>
 
+    </main>
     <footer class="border-t border-slate-200 mt-16 py-10">
         <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-500">
             <div>© 2026 ZeroToCode Academy — free, practical coding education.</div>
             <div class="flex gap-4">
-                <a href="https://github.com/mosesadebayo319-cmd/zerotocode-academy" class="hover:text-emerald-600" target="_blank">GitHub</a>
-                <a href="https://zerotocode-teal.vercel.app" class="hover:text-emerald-600" target="_blank">Live site</a>
+                <a href="https://github.com/mosesadebayo319-cmd/zerotocode-academy" class="hover:text-emerald-700" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://zerotocode-teal.vercel.app" class="hover:text-emerald-700" target="_blank" rel="noopener noreferrer">Live site</a>
             </div>
         </div>
     </footer>
@@ -306,6 +273,8 @@
     <script src="web-course.js"></script>
     <script src="go-course.js"></script>
     <script src="rust-course.js"></script>
+    <script src="learning-state.js"></script>
+    <script src="runners.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
