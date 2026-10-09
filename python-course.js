@@ -1,5 +1,5 @@
-// ZeroToCode Academy — Python curriculum (144 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — Python curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.PYTHON_COURSE = {
   "id": "python",
   "name": "Python",
@@ -10,228 +10,836 @@ window.PYTHON_COURSE = {
   "lessons": [
     {
       "id": "py-01",
-      "title": "1.1 Python Intro — Why Python Wins",
+      "title": "1.1 Your First Line of Python",
       "module": "Getting Started",
-      "objective": "Understand what Python is and where it is used in real life.",
-      "why": "Banks, hospitals, online shops, and AI tools all run Python behind the scenes. Learning it opens doors to automation, data, and web apps.",
-      "explanation": "<p><strong>What you will learn.</strong> Understand what Python is and where it is used in real life. By the end you should explain <em>Why Python Wins</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Banks, hospitals, online shops, and AI tools all run Python behind the scenes. Learning it opens doors to automation, data, and web apps. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Every program is a set of clear instructions a computer can follow. Your job is to write those instructions so they match the real-world job you care about.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Python is a <strong>high-level, readable programming language</strong>. You write instructions in plain English-like syntax; the computer runs them.</p><p><strong>Real uses:</strong> automate WhatsApp business reports, analyse sales data, build websites (Django), train AI models, control robots.</p><p>It is free, has huge community support, and is the #1 first language for beginners.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Understand what Python is and where it is used in real life.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Welcome to ZeroToCode Academy\")</code> — shows output so you can verify the result.</li><li><code>print(\"Python powers Netflix recommendations, Instagram, and local ba…</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Why Python Wins</em> solve?</li><li>Which line in the example most directly achieves: “Understand what Python is and where it is used in real life.”?</li><li>If you change one value in <code>print(\"Welcome to ZeroToCode Academy\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Python is readable — almost like English\nprint(\"Welcome to ZeroToCode Academy\")\nprint(\"Python powers Netflix recommendations, Instagram, and local bank apps\")",
+      "objective": "Run a Python instruction, change its message, and explain the output.",
+      "why": "Programs follow instructions. Showing a message is a small, useful first step toward receipts, reminders, and tools you can build yourself.",
+      "explanation": "<h4>What a program is</h4><p>A <strong>program</strong> is a set of instructions a computer can carry out. A recipe is a useful comparison: each instruction tells someone what to do. Unlike a person reading a recipe, a computer does not reliably infer a missing instruction or guess what an unfamiliar word means. You must use rules the language understands.</p>\n<p><strong>Python</strong> is the programming language we will use to write those instructions. The text you write is called <strong>source code</strong>. A Python runtime is the software that reads and executes it. Here the runtime runs inside your browser. Later, you can install a Python runtime on your own computer and run the same basic instructions there.</p>\n<h4>Read one instruction from the outside inward</h4><p>Our example is <code>print(\"Hello, world!\")</code>. The name <code>print</code> identifies a built-in function: a named operation Python already provides. A function can perform a task when you call it. You do not need to create this function yourself.</p>\n<p>The opening <code>(</code> and closing <code>)</code> mark the function call and surround the information we give it. That information is called an <strong>argument</strong>. Here there is one argument: the message <code>\"Hello, world!\"</code>. Read the whole instruction as “call print with this message.”</p>\n<h4>Understand the quotation marks</h4><p>The double quotation marks tell Python that the characters between them are <strong>text</strong>, also called a <strong>string</strong>. The comma, space, and exclamation mark inside the quotes are part of that text. The quotes themselves mark the string boundary; print does not normally display those surrounding quotes.</p>\n<p>You can also use matching single quotes, such as <code>print('Hello!')</code>. Open and close a string with the same kind of straight quote. Smart quotes copied from a word processor are different characters. For now, keep using straight double quotes so you can focus on the idea.</p>\n<h4>Connect code, execution, and output</h4><p>The editor contains your instructions. The output panel contains the result of the most recent run. These are separate things: changing the editor does not change old output until you run the program again. Press <strong>Run Python</strong> to execute the current code.</p>\n<p>Before you run the example, predict exactly what you will see. Afterward, compare the output with the expected output below. Replace <code>world</code> with your name, keeping the quotes and parentheses. Run again. The message changes because you changed the argument, not because print learned a new operation.</p>\n<h4>When to use this and what it does not do</h4><p>Displaying text is useful for a greeting, a receipt, a result, or a temporary message that helps you inspect a program. In this playground, print writes to the output panel. In a terminal, it writes to the terminal. It does not create a website heading or send a document to a physical printer.</p>\n<p>The first browser run downloads Python and needs an internet connection. Loading is an environment step, not a Python statement. Once output appears, your job is to connect each result to the code that produced it. If you get an error, inspect the message and fix one detail at a time. Making and repairing a mistake is part of learning the rules.</p>",
+      "codeExample": "print(\"Hello, world!\")",
       "exercises": [
         {
-          "title": "Where will YOU use Python?",
-          "instruction": "Write 3 print() lines: (1) your name, (2) one problem you want to solve with code, (3) one career or business goal.",
-          "solution": "print(\"My name is Adaora\")\nprint(\"I want to automate my shop's daily sales summary\")\nprint(\"I want to become a data analyst or freelancing developer\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write 3 print() lines: (1) your name, (2) one problem you want to solve with code, (3) one career or business goal. Change names/values first; only then restructure."
+          "title": "Guided: introduce yourself",
+          "instruction": "Display a greeting with your name, then display one thing you want to build on a second line.",
+          "hint": "Use one print() call for each line. Change only the text inside the quotes to begin.",
+          "solution": "print(\"Hello, I am Ada!\")\nprint(\"I want to build a study planner.\")",
+          "expectedOutput": "Hello, I am Ada!\nI want to build a study planner.",
+          "solutionExplanation": "Each message is a string argument to its own print call. Python runs the calls in order, and each call ends its output line. Your own name and goal can replace the sample wording.",
+          "successCriteria": [
+            "The output has two lines.",
+            "Both lines contain the messages you chose.",
+            "No quotation marks appear around the displayed messages."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: a missing boundary",
+          "instruction": "Repair print(\"Learning starts here\" so it displays the message successfully. Identify the missing character before running.",
+          "hint": "Match every opening parenthesis with a closing parenthesis.",
+          "solution": "print(\"Learning starts here\")",
+          "expectedOutput": "Learning starts here",
+          "solutionExplanation": "The string already had its closing quote. The missing character was the closing parenthesis for the function call. Adding another quote would not fix that problem.",
+          "successCriteria": [
+            "The program runs without a syntax error.",
+            "You can explain which pair was incomplete."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a notice for a real place",
+          "instruction": "Write two lines for a school, shop, or club notice. The first should name the place; the second should give a useful message. Use your own wording.",
+          "hint": "You know everything needed: two print calls, each receiving one string.",
+          "solution": "print(\"Riverside Library\")\nprint(\"Please return borrowed books on Friday.\")",
+          "expectedOutput": "Riverside Library\nPlease return borrowed books on Friday.",
+          "solutionExplanation": "The technique is the same as a greeting, but it now serves a different purpose: communicating a useful notice. Two complete instructions keep the lines separate. Many other places and messages are valid.",
+          "successCriteria": [
+            "The place and message make sense together.",
+            "The program uses two complete print calls.",
+            "You predicted the output before running."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Which statement about Python is TRUE?",
+          "q": "What does print(\"Hello!\") display?",
           "options": [
-            "It only runs on Windows",
-            "It is free and beginner-friendly",
-            "It cannot work with data",
-            "You must pay for a license"
+            "print(\"Hello!\")",
+            "Hello!",
+            "Hello without the exclamation mark",
+            "\"Hello!\" including the quotation marks"
           ],
           "correct": 1,
-          "explanation": "Python is free, open source, and designed to be readable for beginners."
+          "explanation": "print displays the text inside the quotes; the quote marks are part of the code, not the output."
         },
         {
-          "q": "When would you use “Why Python Wins” in a real project?",
+          "q": "You change \"Hello!\" to \"Welcome!\" and run again. What changes?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Understand what Python is and where it is used in real life.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "The output message becomes Welcome!",
+            "Both the old and new message print from this one instruction",
+            "The message stays Hello! because the function name did not change",
+            "Python displays the quotation marks instead of their contents"
           ],
-          "correct": 1,
-          "explanation": "This lesson’s skill is practical: Understand what Python is and where it is used in real life."
+          "correct": 0,
+          "explanation": "The text you give to print determines the displayed message."
+        },
+        {
+          "q": "Which instruction correctly displays Ada?",
+          "options": [
+            "print(\"Ada)",
+            "Print(\"Ada\")",
+            "print(\"Ada\")",
+            "print(Ada)"
+          ],
+          "correct": 2,
+          "explanation": "Python uses lowercase print, a pair of parentheses, and quotes around text."
+        },
+        {
+          "q": "After editing a working print instruction, Python reports a syntax error. What should you do first?",
+          "options": [
+            "Change the message text before inspecting the instruction",
+            "Reinstall Python immediately",
+            "Add more print instructions to get past the error",
+            "Read the reported location and check the quotes and parentheses"
+          ],
+          "correct": 3,
+          "explanation": "A syntax error means Python could not read the source correctly. Inspect the reported location and nearby delimiters before changing unrelated text or reinstalling tools."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Keep both quotation marks and the closing parenthesis. Use lowercase print. Your message can be anything you like.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "No previous programming knowledge is required.",
+          "Use a browser with JavaScript enabled and an internet connection for the first Python run."
+        ],
+        "outcomes": [
+          "Explain the difference between source code and output.",
+          "Identify the function name, parentheses, and string argument in a print call.",
+          "Change a message and predict the new output."
+        ],
+        "expectedOutput": "Hello, world!",
+        "walkthrough": [
+          {
+            "code": "print(\"Hello, world!\")",
+            "explanation": "Python finds the built-in print function. It evaluates the quoted text as one string argument, writes its characters to the output panel, and ends the output line. The quotation marks and parentheses are syntax, so they do not appear in this output."
+          }
+        ],
+        "variations": [
+          {
+            "title": "One instruction can be followed by another",
+            "code": "print(\"Hello, Ada!\")\nprint(\"Today I wrote my first program.\")",
+            "expectedOutput": "Hello, Ada!\nToday I wrote my first program.",
+            "explanation": "The first call displays the greeting. The second call displays a different message on a new line because print ends each line by default. The computer follows these two instructions from top to bottom; it does not combine the messages into one string."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "NameError after removing the quotes",
+            "cause": "In print(Ada), Python treats Ada as a name to look up, not as literal text.",
+            "fix": "Use print(\"Ada\") when you intend to display the name as text."
+          },
+          {
+            "symptom": "SyntaxError after typing the instruction",
+            "cause": "A quote or parenthesis is missing, mismatched, or replaced by a smart quote.",
+            "fix": "Check the pair of parentheses and the pair of straight quotes. The error wording can vary with Python version."
+          },
+          {
+            "symptom": "The output still shows the old message",
+            "cause": "You edited the code but have not run the new version.",
+            "fix": "Press Run Python again and compare the new output with your prediction."
+          }
+        ],
+        "summary": [
+          "A program contains instructions written in a language.",
+          "print() displays the value supplied to it; quoted characters form a string.",
+          "Edit, predict, run, and compare. The next lesson uses several instructions to make a small welcome sign."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python documentation: string literals",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals"
+          }
+        ]
+      }
     },
     {
       "id": "py-02",
-      "title": "1.2 Get Started — Install & First Run",
+      "title": "1.2 Build a Welcome Sign",
       "module": "Getting Started",
-      "objective": "Set up Python and run your first script on your computer.",
-      "why": "Like installing a POS machine before selling, you need Python installed before you can build programs.",
-      "explanation": "<p><strong>What you will learn.</strong> Set up Python and run your first script on your computer. By the end you should explain <em>Install &amp; First Run</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Like installing a POS machine before selling, you need Python installed before you can build programs. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>On most systems: download from <code>python.org</code> or use your package manager.</p><p>Check installation in a terminal:<br>\n  <code>python3 --version</code></p><p>Run a file: save as <code>hello.py</code>, then <code>python3 hello.py</code>.</p><p><strong>Online option:</strong> Use replit.com or Google Colab if you cannot install yet.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Set up Python and run your first script on your computer.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Setup complete!\")</code> — shows output so you can verify the result.</li><li><code>print(\"Python version check: open terminal and run python3 --version\")</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Install &amp; First Run</em> solve?</li><li>Which line in the example most directly achieves: “Set up Python and run your first script on your computer.”?</li><li>If you change one value in <code>print(\"Setup complete!\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# hello.py\nprint(\"Setup complete!\")\nprint(\"Python version check: open terminal and run python3 --version\")\n\n# Interactive mode (REPL): type python3 and try:\n# >>> 2 + 2\n# 4",
+      "objective": "Write a three-line program and predict the order of its output.",
+      "why": "Receipts, reminders, and welcome messages all present information in a deliberate order. You can already build a simple version.",
+      "explanation": "<h4>A useful program can start with a sequence</h4><p>A single instruction shows a message. Several instructions can show a welcome sign with a title, an activity, and encouragement. This is a <strong>sequence</strong>: instructions arranged in an order. For a simple program like this one, Python executes the first instruction, then the next, until it reaches the end.</p>\n<p>Decide the intended result before writing code. Our sign should first identify the club, then explain what people will do, then close with a friendly message. That ordering is part of the design. A program can be valid Python and still present information in an unhelpful order.</p>\n<h4>Translate the desired output into instructions</h4><p>Each <code>print()</code> call receives one quoted message. The first argument is <code>\"Welcome to the Study Club\"</code>. The second is <code>\"Today: learn one new thing\"</code>. The third is <code>\"Small steps count.\"</code>. Because each call normally ends its output line, three calls produce three lines.</p>\n<p>The spaces and punctuation inside each pair of quotes belong to the message. The line breaks between instructions separate your code into readable lines. At this stage, put one instruction on each line and start every instruction at the left edge.</p>\n<h4>Trace the program before running</h4><p>A <strong>trace</strong> is a step-by-step account of what a program does. Read line one and write its output on paper. Move to line two and add the next output line. Repeat for line three. Your predicted output should match the actual output exactly.</p>\n<p>Now swap the second and third instructions. Python does not know which line you intended as the closing message. It follows the new order you wrote. This is a simple way to test your mental model: change one aspect, make a prediction, and compare.</p>\n<h4>Code spacing is not the same as output spacing</h4><p>A blank line between two print instructions helps separate code visually, but it does not print a blank line. To deliberately create an empty output line, use <code>print()</code> with no argument. It writes the usual line ending without first writing a message.</p>\n<p>The variation below includes both kinds of blank line so you can see the difference. This distinction matters in receipts, reports, and menus: formatting the source code for yourself is separate from formatting output for someone using the program.</p>\n<h4>Use the browser now; understand the local alternative</h4><p>The playground provides Python for these introductory lessons. You can save a browser backup from the dashboard to preserve your progress and drafts. This is different from saving a Python file on your computer: a backup stores your academy learning data, while a <code>.py</code> file contains a program you can run with Python.</p>\n<p>When you are ready for local work, install Python from its official website and save your instructions in a plain-text file such as <code>hello.py</code>. A <strong>terminal</strong> is an application where you type commands. From the folder containing your file, a command such as <code>python3 hello.py</code> runs it. Some systems use <code>python</code> or <code>py</code> instead. These are terminal commands, not lines to paste into the Python editor. You do not need to complete this installation to finish this lesson.</p>\n<h4>Check the message as well as the syntax</h4><p>For a welcome sign, successful execution is only the first check. Read the output as a visitor would. Does it identify the place? Is the activity clear? Is the last line actually last? These questions introduce a habit you will use in larger projects: judge a program against its intended behavior, not just whether it runs.</p>",
+      "codeExample": "print(\"Welcome to the Study Club\")\nprint(\"Today: learn one new thing\")\nprint(\"Small steps count.\")",
       "exercises": [
         {
-          "title": "Verify your environment",
-          "instruction": "Write a script that prints \"Python is ready!\" and the result of 15 * 3. Save mentally as first_run.py.",
-          "solution": "print(\"Python is ready!\")\nprint(15 * 3)  # 45",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write a script that prints \"Python is ready!\" and the result of 15 * 3. Change names/values first; only then restructure."
+          "title": "Guided: your club sign",
+          "instruction": "Create a three-line sign: club name, today’s activity, and a closing message. Choose your own club.",
+          "hint": "Use one print call for each part, in the order visitors should read it.",
+          "solution": "print(\"Welcome to the Coding Club\")\nprint(\"Today: build a welcome sign\")\nprint(\"Questions are welcome.\")",
+          "expectedOutput": "Welcome to the Coding Club\nToday: build a welcome sign\nQuestions are welcome.",
+          "solutionExplanation": "The three instructions have the same shape but different arguments. Their order expresses the desired reading order. Your club name and activity may be different.",
+          "successCriteria": [
+            "The title comes first.",
+            "The activity comes second.",
+            "The sign ends with an appropriate closing message."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: rearrange a sign",
+          "instruction": "A program prints Goodbye, then Welcome, then Today: practise Python. Rewrite it so Welcome is first and Goodbye is last.",
+          "hint": "Move the entire instructions; do not change Python keywords.",
+          "solution": "print(\"Welcome\")\nprint(\"Today: practise Python\")\nprint(\"Goodbye\")",
+          "expectedOutput": "Welcome\nToday: practise Python\nGoodbye",
+          "solutionExplanation": "This is a behavior error, not necessarily a syntax error. All three calls can be valid while the result is wrong for the task. Reordering fixes the behavior.",
+          "successCriteria": [
+            "All three messages remain.",
+            "The order is Welcome, activity, Goodbye."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a notice with breathing room",
+          "instruction": "Make a notice with a place name, an empty output line, and an announcement. Use exactly three print calls.",
+          "hint": "One print call can have no argument.",
+          "solution": "print(\"School Art Room\")\nprint()\nprint(\"Bring your sketchbook on Monday.\")",
+          "expectedOutput": "School Art Room\n\nBring your sketchbook on Monday.",
+          "solutionExplanation": "The middle print() adds a line ending without a message. This creates the requested gap. A blank line in the source alone would not satisfy the output requirement.",
+          "successCriteria": [
+            "There is one empty line between the messages.",
+            "The source contains three print calls.",
+            "You can explain which call creates the gap."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "How do you run a Python file named shop.py?",
+          "q": "In a simple program with three print instructions, which runs first?",
           "options": [
-            "open shop.py",
-            "python3 shop.py",
-            "run shop",
-            "execute shop.py as admin only"
+            "The line whose message comes first alphabetically",
+            "The bottom line",
+            "The top line",
+            "All three at the same time"
           ],
-          "correct": 1,
-          "explanation": "In the terminal: python3 shop.py (or python shop.py on some systems)."
+          "correct": 2,
+          "explanation": "Python starts with the first instruction and continues downward."
         },
         {
-          "q": "When would you use “Install & First Run” in a real project?",
+          "q": "You swap two print instructions. What should you expect?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Set up Python and run your first script on your computer.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "The two messages exchange positions in the output",
+            "The messages stay in their original order",
+            "Each instruction now prints both messages",
+            "Only the instruction moved upward runs"
+          ],
+          "correct": 0,
+          "explanation": "The order of instructions controls the order of output."
+        },
+        {
+          "q": "After editing the message, how do you see the new output?",
+          "options": [
+            "The old output updates while you type",
+            "Press Run Python again",
+            "Switch lessons so the previous output is recalculated",
+            "Edit the output panel instead of running the program"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Set up Python and run your first script on your computer."
+          "explanation": "The output shows the most recent run, so run again after editing."
+        },
+        {
+          "q": "You want an empty output line between two messages. Which change does that?",
+          "options": [
+            "Leave an empty source line between the two print calls",
+            "Add spaces before the second print call",
+            "Put the two calls on the same source line",
+            "Place a print() call between the two message calls"
+          ],
+          "correct": 3,
+          "explanation": "An empty source line helps organise code but produces no output. Calling print() with no arguments writes a newline, creating an empty line between these messages."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Changing the code does not change the old output until you run it again. Keep one print instruction per line while you are learning.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Complete Your First Line of Python: you can write and run a print call with a quoted message."
+        ],
+        "outcomes": [
+          "Predict the order of output from several instructions.",
+          "Distinguish a blank source-code line from an empty output line.",
+          "Build and check a three-part welcome sign."
+        ],
+        "expectedOutput": "Welcome to the Study Club\nToday: learn one new thing\nSmall steps count.",
+        "walkthrough": [
+          {
+            "code": "print(\"Welcome to the Study Club\")",
+            "explanation": "The first call writes the sign’s title and ends its output line."
+          },
+          {
+            "code": "print(\"Today: learn one new thing\")",
+            "explanation": "The second call adds the activity below the title. The colon is part of the string, not a Python control-flow symbol here."
+          },
+          {
+            "code": "print(\"Small steps count.\")",
+            "explanation": "The final call supplies the closing message. Execution then reaches the end of the program."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Create an intentional empty output line",
+            "code": "print(\"Welcome to the Study Club\")\n\nprint()\nprint(\"Bring your curiosity.\")",
+            "expectedOutput": "Welcome to the Study Club\n\nBring your curiosity.",
+            "explanation": "The blank source-code line does nothing by itself. The print() call is what produces the empty output line between the two messages. Removing only the blank source-code line leaves the output unchanged."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The closing message appears first",
+            "cause": "The instructions are in the wrong sequence for the intended sign.",
+            "fix": "Move complete print calls into the desired top-to-bottom order."
+          },
+          {
+            "symptom": "Adding blank lines in the editor does not add output spacing",
+            "cause": "An empty source-code line is not an output instruction.",
+            "fix": "Use print() with no arguments to request an empty output line."
+          },
+          {
+            "symptom": "A terminal setup command causes a Python syntax error",
+            "cause": "A command such as python3 hello.py belongs to your terminal, not inside Python code.",
+            "fix": "Keep the browser editor for Python instructions. Use terminal commands only in a local terminal when following setup instructions."
+          }
+        ],
+        "summary": [
+          "A simple program follows its written sequence.",
+          "Source layout and displayed output are different; use print() to request an empty output line.",
+          "A useful result must match the intended message and order. Next, you will deliberately make and repair syntax errors."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python tutorial: invoking the interpreter",
+            "url": "https://docs.python.org/3/tutorial/interpreter.html"
+          },
+          {
+            "title": "Official Python downloads",
+            "url": "https://www.python.org/downloads/"
+          }
+        ]
+      }
     },
     {
       "id": "py-03",
-      "title": "1.3 Python Syntax — The Rules of the Road",
+      "title": "1.3 Fix Your First Python Error",
       "module": "Getting Started",
-      "objective": "Write valid Python code using indentation, colons, and clear structure.",
-      "why": "Traffic rules keep roads safe. Syntax rules keep programs working. Break them and you get errors.",
-      "explanation": "<p><strong>What you will learn.</strong> Write valid Python code using indentation, colons, and clear structure. By the end you should explain <em>The Rules of the Road</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Traffic rules keep roads safe. Syntax rules keep programs working. Break them and you get errors. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Syntax is the grammar of a language. The computer is strict: one missing quote or wrong indent and it refuses the whole program. Comments are notes for humans; print/log statements are how you see results.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><strong>Key rules:</strong><br>\n  • Indentation (usually 4 spaces) groups code blocks<br>\n  • Colons <code>:</code> start blocks (if, for, def)<br>\n  • Case-sensitive: <code>Name</code> ≠ <code>name</code><br>\n  • One statement per line (or use <code>;</code> sparingly)<br>\n  • Parentheses for function calls: <code>print()</code><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Write valid Python code using indentation, colons, and clear structure.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>age = 20</code> — stores or updates a value.</li><li><code>if age &gt;= 18:</code> — branches based on a condition.</li><li><code>print(\"Adult\")      # indented — inside the if</code> — shows output so you can verify the result.</li><li><code>print(\"Can vote\")</code> — shows output so you can verify the result.</li><li><code>else:</code> — branches based on a condition.</li><li><code>print(\"Minor\")      # indented — inside the else</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>The Rules of the Road</em> solve?</li><li>Which line in the example most directly achieves: “Write valid Python code using indentation, colons, and clear structure.”?</li><li>If you change one value in <code>age = 20</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Keep data and methods that belong together on the same type; avoid god-objects that do everything.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "age = 20\n\nif age >= 18:\n    print(\"Adult\")      # indented — inside the if\n    print(\"Can vote\")\nelse:\n    print(\"Minor\")      # indented — inside the else\n\nprint(\"Done\")           # not indented — always runs",
+      "objective": "Find and fix a missing quote or parenthesis in a print instruction.",
+      "why": "Every programmer makes typing mistakes. Learning to read and repair them helps you keep moving without guessing.",
+      "explanation": "<h4>What syntax means</h4><p><strong>Syntax</strong> is the set of rules that determines how code is written. Python needs to recognise where names, text values, calls, and larger groups of instructions begin and end. A missing character can prevent it from understanding the program, even when the intended message seems obvious to you.</p>\n<p>For a print call, check the function name, a matching pair of parentheses, and matching quotes around a text argument. Compare <code>print(\"Shop open\")</code> with <code>print(\"Shop open\"</code>. The second version has a complete string but an incomplete function call: its final parenthesis is missing.</p>\n<h4>Three different kinds of problem</h4><p>A <strong>syntax error</strong> means Python cannot parse the written structure. A missing quote or parenthesis is a common cause. In a script-like run, Python normally parses the supplied code before executing it, so an incomplete later line can prevent even earlier lines from running.</p>\n<p>A <strong>runtime error</strong> happens after valid syntax is accepted and execution encounters a problem. For example, <code>Print(\"Hello\")</code> has a valid call shape, but normally raises <code>NameError</code> because Python has no built-in function with that capitalised name. A <strong>logic error</strong> is different again: the program runs, but the result is wrong for its purpose, such as saying “Closed” when you meant “Open”.</p>\n<h4>Read the error as evidence</h4><p>Error messages often include a line number, a fragment of code, and an error category. Read the final description, then inspect the indicated line and the line before it. The highlighted location is where Python noticed the problem; the cause can be earlier, such as an unclosed quote.</p>\n<p>Exact wording varies by Python version and by the surrounding code. Do not memorise one sentence as the only sign of a missing parenthesis. Learn the underlying rule: opening and closing boundaries must match. The browser runner may include additional runtime details around the Python error; focus first on the Python exception and your code.</p>\n<h4>Use a small, repeatable debugging process</h4><p>Start by running the working example below. Then remove its final parenthesis and run again. Compare the failure with the working version. Put the parenthesis back, rerun, and verify that the intended output returns. You have performed <strong>debugging</strong>: finding a cause, making a correction, and checking the result.</p>\n<p>Change one thing at a time. If you alter the quotes, function name, and order together, a successful run will not tell you which change fixed the issue. For a larger program, reducing a problem to a tiny example is often more informative than repeatedly rereading every line.</p>\n<h4>Handle quotes and indentation deliberately</h4><p>Text containing an apostrophe can use double quotes: <code>print(\"Ada's shop\")</code>. If you instead place the same apostrophe inside single-quoted text without escaping it, Python may treat that apostrophe as the end of the string. Matching the outer quotes is not just appearance; it determines how Python reads the characters.</p>\n<p>For the straight-line programs in this module, start instructions at the left edge. Extra leading spaces can cause an unexpected-indentation error. Later you will deliberately indent groups after decisions, loops, and function definitions. At that point indentation will express structure; it is not decorative spacing to add at random.</p>\n<h4>A fix is finished when the behavior is right</h4><p>After an error disappears, still compare the output with your original intention. Changing a message to something else might avoid a quote problem while accidentally removing information the user needed. A correct fix preserves the intended result and uses valid syntax. Your exercises will ask you to explain the cause as well as supply working code.</p>",
+      "codeExample": "print(\"Shop open\")\nprint(\"Welcome inside!\")",
       "exercises": [
         {
-          "title": "Fix the structure",
-          "instruction": "Write an if/else that prints \"Open shop\" if hour is between 8 and 20, else \"Closed\". Use proper indentation.",
-          "solution": "hour = 14\nif hour >= 8 and hour <= 20:\n    print(\"Open shop\")\nelse:\n    print(\"Closed\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write an if/else that prints \"Open shop\" if hour is between 8 and 20, else \"Closed\". Change names/values first; only then restructure."
+          "title": "Guided: repair a missing parenthesis",
+          "instruction": "Repair print(\"Welcome\" and explain why adding another quote would not help.",
+          "hint": "The text already has an opening and a closing quote.",
+          "solution": "print(\"Welcome\")",
+          "expectedOutput": "Welcome",
+          "solutionExplanation": "The missing boundary belongs to the function call. The corrected instruction adds ) after the already-complete string. Another quote would change the string syntax instead of closing the call.",
+          "successCriteria": [
+            "The output is Welcome.",
+            "You identify the missing parenthesis."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: the wrong case",
+          "instruction": "The instruction Print(\"Ready\") produces NameError. Fix it and state whether the original issue was missing punctuation or an unknown name.",
+          "hint": "Compare the function name with the one in the working example.",
+          "solution": "print(\"Ready\")",
+          "expectedOutput": "Ready",
+          "solutionExplanation": "Both the string and the call delimiters were already complete. The capital P named a different, undefined function. Lowercase print refers to the built-in output function.",
+          "successCriteria": [
+            "The output is Ready.",
+            "You explain that Python names are case-sensitive."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: preserve a quoted message",
+          "instruction": "Write a working instruction whose output is Ada's shop is open. Then change the message to closed and confirm that this changes behavior without causing a syntax error.",
+          "hint": "Double quotes can surround text containing an apostrophe.",
+          "solution": "print(\"Ada's shop is open\")\nprint(\"Ada's shop is closed\")",
+          "expectedOutput": "Ada's shop is open\nAda's shop is closed",
+          "solutionExplanation": "The reference shows both working states on separate lines for comparison. The apostrophe remains inside double-quoted text. Open versus closed is a choice about the intended message, not a Python syntax rule.",
+          "successCriteria": [
+            "The apostrophe appears in the output.",
+            "Both versions run.",
+            "You distinguish a change in message meaning from a syntax repair."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does indentation do in Python?",
+          "q": "What is missing from print(\"Hello\" ?",
           "options": [
-            "It is only for decoration",
-            "It defines which code belongs to a block",
-            "It speeds up the program",
-            "It is optional always"
+            "A closing quotation mark",
+            "A closing parenthesis",
+            "An opening parenthesis",
+            "A semicolon"
           ],
           "correct": 1,
-          "explanation": "Indentation defines code blocks (if, loops, functions)."
+          "explanation": "The opening parenthesis needs a matching closing parenthesis: print(\"Hello\")."
         },
         {
-          "q": "When would you use “The Rules of the Road” in a real project?",
+          "q": "Which spelling calls the Python output function?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Write valid Python code using indentation, colons, and clear structure.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "PRINT",
+            "Print",
+            "print",
+            "pRint"
           ],
-          "correct": 1,
-          "explanation": "This lesson’s skill is practical: Write valid Python code using indentation, colons, and clear structure."
+          "correct": 2,
+          "explanation": "Python is case-sensitive. The built-in function is named print."
+        },
+        {
+          "q": "The task asks for a total of 5, but print(2 + 2) runs and displays 4. What kind of problem is this?",
+          "options": [
+            "A logic error: valid code does not meet the requirement",
+            "A syntax error: the parentheses cannot be parsed",
+            "An installation error: Python did not start",
+            "A name error: print is undefined"
+          ],
+          "correct": 0,
+          "explanation": "The source is valid and executes successfully. The mismatch is between its calculation and the requirement, so you need to correct the reasoning or chosen values."
+        },
+        {
+          "q": "After a working program breaks, which approach helps you understand the cause?",
+          "options": [
+            "Change the quotes, function name, and message together",
+            "Look only at the final error line without inspecting the source",
+            "Reinstall the tools before reading the diagnostic",
+            "Read the error and test one small fix"
+          ],
+          "correct": 3,
+          "explanation": "One change at a time helps you connect the result to the change you made."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Keep data and methods that belong together on the same type; avoid god-objects that do everything.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Use matching straight quotation marks, not curly smart quotes. An error may point near the problem rather than directly at it. Check the line above too.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can run a sequence of print calls and predict their output."
+        ],
+        "outcomes": [
+          "Distinguish syntax errors, runtime errors, and wrong-but-running output.",
+          "Find a missing quote or parenthesis using an error message and a working comparison.",
+          "Make one correction and verify the intended behavior."
+        ],
+        "expectedOutput": "Shop open\nWelcome inside!",
+        "walkthrough": [
+          {
+            "code": "print(\"Shop open\")",
+            "explanation": "The name print is lowercase, the text has matching double quotes, and the function call has both parentheses. Python can parse and execute this instruction."
+          },
+          {
+            "code": "print(\"Welcome inside!\")",
+            "explanation": "The second call follows the same structure and supplies the second output line. If you remove a closing boundary here, the combined program can fail to parse before either call runs."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Keep an apostrophe inside the message",
+            "code": "print(\"Ada's shop\")\nprint(\"Shop open\")",
+            "expectedOutput": "Ada's shop\nShop open",
+            "explanation": "The apostrophe belongs to the message because the enclosing string uses double quotes. A pair of single quotes would require another way to represent the interior apostrophe, such as an escape; choosing double quotes is the simpler solution here."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "SyntaxError reports that a delimiter is not closed",
+            "cause": "The supplied program has an incomplete quote or parenthesis pair.",
+            "fix": "Inspect the reported line and earlier opening delimiters. Restore the missing closing character, then rerun."
+          },
+          {
+            "symptom": "NameError mentions Print",
+            "cause": "Python names are case-sensitive; Print is not the built-in print.",
+            "fix": "Use lowercase print. Do not try to fix a name error by changing the output text."
+          },
+          {
+            "symptom": "The program runs but says the wrong thing",
+            "cause": "The code is valid but its message does not match the requirement.",
+            "fix": "Compare the displayed output with the task and correct the string, preserving valid syntax."
+          },
+          {
+            "symptom": "Unexpected indentation in a simple print program",
+            "cause": "An instruction begins with spaces even though it is not inside an indented block.",
+            "fix": "Remove the leading spaces in these introductory straight-line examples."
+          }
+        ],
+        "summary": [
+          "Syntax describes valid structure; runtime errors occur during execution; logic errors produce an unintended result.",
+          "Read error evidence, make one change, and rerun.",
+          "A repaired program must still do the intended job. Next you will combine messages with calculated numbers."
+        ],
+        "references": [
+          {
+            "title": "Python tutorial: syntax errors and exceptions",
+            "url": "https://docs.python.org/3/tutorial/errors.html"
+          },
+          {
+            "title": "Python language reference: indentation",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#indentation"
+          }
+        ]
+      }
     },
     {
       "id": "py-04",
-      "title": "1.4 Output — Talking to the User with print()",
+      "title": "1.4 Show Text and Numbers",
       "module": "Getting Started",
-      "objective": "Display text, numbers, and multiple values using print().",
-      "why": "A shop receipt, SMS alert, or dashboard all show output. print() is your first way to communicate results.",
-      "explanation": "<p><strong>What you will learn.</strong> Display text, numbers, and multiple values using print(). By the end you should explain <em>Talking to the User with print()</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> A shop receipt, SMS alert, or dashboard all show output. print() is your first way to communicate results. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Types describe what kind of value you have (text, number, true/false, nothing). Operations only make sense when the type matches — you cannot average a list of names the same way you average prices.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>print() can show strings, numbers, variables, and multiple items separated by commas.<br>\n  Use <code>sep</code> and <code>end</code> to control separators and newlines.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Display text, numbers, and multiple values using print().” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>shop = \"Mama Nkechi Provisions\"</code> — stores or updates a value.</li><li><code>sales = 125000</code> — stores or updates a value.</li><li><code>print(\"Shop:\", shop)</code> — shows output so you can verify the result.</li><li><code>print(\"Today's sales:\", sales, \"naira\")</code> — shows output so you can verify the result.</li><li><code>print(\"A\", \"B\", \"C\", sep=\"-\")       # A-B-C</code> — shows output so you can verify the result.</li><li><code>print(\"Loading\", end=\"...\")         # no newline</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Talking to the User with print()</em> solve?</li><li>Which line in the example most directly achieves: “Display text, numbers, and multiple values using print().”?</li><li>If you change one value in <code>shop = \"Mama Nkechi Provisions\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "shop = \"Mama Nkechi Provisions\"\nsales = 125000\nprint(\"Shop:\", shop)\nprint(\"Today's sales:\", sales, \"naira\")\nprint(\"A\", \"B\", \"C\", sep=\"-\")       # A-B-C\nprint(\"Loading\", end=\"...\")         # no newline\nprint(\" done\")",
+      "objective": "Use print() to display text, calculate a total, and show multiple values.",
+      "why": "A shop receipt needs both a message and a total. You can combine these without learning any new tools.",
+      "explanation": "<h4>Text represents a message; numbers represent quantities</h4><p>A shop receipt needs labels people can read and amounts a program can calculate. In Python, <code>\"200\"</code> is a string containing three characters. <code>200</code> is an integer: a whole-number value. Both can look the same when printed, but they are different kinds of value and support different operations.</p>\n<p>Quotation marks are therefore meaningful. <code>print(\"2 + 3\")</code> displays the characters 2, a space, +, another space, and 3. In <code>print(2 + 3)</code>, Python adds two numbers before displaying the result. The output is 5, not the written calculation.</p>\n<h4>Python evaluates an expression before printing it</h4><p>An <strong>expression</strong> is a piece of code that produces a value. The expression <code>200 + 300</code> produces 500. The <code>+</code> operator asks Python to add those two integer values. When that expression is an argument to print, evaluation happens before the result is written.</p>\n<p>Trace the process in order: identify the numbers, perform the addition, give the result to print, then display it. This distinction will become especially useful when calculations grow longer. You can predict the intermediate value even when it is not stored under a variable name.</p>\n<h4>Separate several arguments with commas</h4><p>The call <code>print(\"Total:\", 200 + 300, \"naira\")</code> supplies three arguments: a label string, the calculated number 500, and a currency string. Commas separate these arguments in the source code. The commas themselves are not printed.</p>\n<p>By default, print puts one space between arguments and finishes with a newline. That gives <code>Total: 500 naira</code>. A space already inside a string is additional: <code>print(\"Total: \", 500)</code> produces two spaces before 500 because one belongs to the label and another is the default separator.</p>\n<h4>Contrast addition with joining text</h4><p>Numbers and strings can both use a plus sign, but not with the same meaning. With integers, <code>2 + 3</code> adds to 5. With strings, <code>\"2\" + \"3\"</code> joins characters to form <code>\"23\"</code>. Joining strings is called <strong>concatenation</strong>. It does not calculate the number they might represent.</p>\n<p>Mixing a string and an integer with +, such as <code>\"Total: \" + 500</code>, raises TypeError because Python does not silently choose how to combine those types. At this stage, pass them as separate print arguments instead. Later lessons explain explicit conversion when you really need one combined string.</p>\n<h4>Build a receipt that you can check</h4><p>The main example shows a title, an item count, and a total. Read each line and identify which parts are fixed text and which are numbers. Predict the displayed total before running. Change one price from 300 to 350, rerun, and verify that the total becomes 550 while the label and currency stay the same.</p>\n<p>The item count in this simple example is a number you wrote directly; Python is not automatically counting a list of purchases. Likewise, the currency label does not convert or format money. These are deliberate boundaries of the example. Later you will represent changing data with variables and learn more careful number formatting.</p>\n<h4>Use the output to explain the calculation</h4><p>A bare number such as 500 may be correct but unclear. A label tells the reader what it means. In your practice, use labels and units that match the calculation, and check both arithmetic and presentation. This makes your work easier for another person to understand and easier for you to debug.</p>",
+      "codeExample": "print(\"Mini shop receipt\")\nprint(\"Items:\", 2)\nprint(\"Total:\", 200 + 300, \"naira\")",
       "exercises": [
         {
-          "title": "Daily sales line",
-          "instruction": "Print a one-line summary: business name, number of customers, and total sales (use variables).",
-          "solution": "business = \"City Buka\"\ncustomers = 48\ntotal = 87500\nprint(business, \"| customers:\", customers, \"| sales: ₦\", total)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Print a one-line summary: business name, number of customers, and total sales (use variables). Change names/values first; only then restructure."
+          "title": "Guided: a labelled total",
+          "instruction": "Display a receipt title and a calculated total for items costing 150 and 250, followed by the word naira.",
+          "hint": "Give print a label string, an unquoted addition, and a currency string.",
+          "solution": "print(\"Ada’s Shop\")\nprint(\"Total:\", 150 + 250, \"naira\")",
+          "expectedOutput": "Ada’s Shop\nTotal: 400 naira",
+          "solutionExplanation": "The price expression is evaluated as 400 before print receives it. The label and unit make the number meaningful. The commas separate arguments and are replaced by default spaces in the output.",
+          "successCriteria": [
+            "The total is calculated from 150 + 250.",
+            "The displayed amount is 400.",
+            "The output contains an appropriate label and unit."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: text instead of arithmetic",
+          "instruction": "A receipt uses print(\"Total:\", \"150\" + \"250\") and shows 150250. Repair the calculation so it shows 400.",
+          "hint": "The quoted operands are strings. Change their types by changing the way you write these literal values.",
+          "solution": "print(\"Total:\", 150 + 250)",
+          "expectedOutput": "Total: 400",
+          "solutionExplanation": "The original plus sign joined two strings. Removing quotes from these numeric literals makes them integers, so + performs addition. Changing only the label would not fix the result.",
+          "successCriteria": [
+            "The result is 400, not 150250.",
+            "You explain the difference between string concatenation and arithmetic."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: include delivery",
+          "instruction": "Create a receipt with an item costing 300, delivery costing 100, and a displayed total. Use labels so a reader can understand all three amounts.",
+          "hint": "Three print calls can show item, delivery, and total. Only the total needs an addition expression.",
+          "solution": "print(\"Item:\", 300, \"naira\")\nprint(\"Delivery:\", 100, \"naira\")\nprint(\"Total:\", 300 + 100, \"naira\")",
+          "expectedOutput": "Item: 300 naira\nDelivery: 100 naira\nTotal: 400 naira",
+          "solutionExplanation": "Separate lines explain how the final amount was formed. The total is evaluated from the same amounts shown above, making the calculation easy to check. This is a small receipt, not a complete accounting system.",
+          "successCriteria": [
+            "All amounts have labels and units.",
+            "The total agrees with the displayed item and delivery amounts.",
+            "Changing the delivery amount and total expression consistently changes the final result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does print(\"Hi\", end=\"\") do?",
+          "q": "What does print(2 + 3) display?",
           "options": [
-            "Crashes",
-            "Prints Hi without moving to a new line",
-            "Prints Hi twice",
-            "Deletes Hi"
+            "2 + 3",
+            "23",
+            "5",
+            "An error"
           ],
-          "correct": 1,
-          "explanation": "end=\"\" replaces the default newline so the next print continues on the same line."
+          "correct": 2,
+          "explanation": "Python evaluates the addition before print displays the result."
         },
         {
-          "q": "When would you use “Talking to the User with print()” in a real project?",
+          "q": "What does print(\"2 + 3\") display?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Display text, numbers, and multiple values using print().",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "5",
+            "2 + 3",
+            "23",
+            "Nothing"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Display text, numbers, and multiple values using print()."
+          "explanation": "Quotes turn the characters into text, so no addition happens."
+        },
+        {
+          "q": "What does print(\"Items:\", 2) display?",
+          "options": [
+            "Items: 2",
+            "Items:2 with no space",
+            "Only 2",
+            "An error"
+          ],
+          "correct": 0,
+          "explanation": "print inserts a space between values separated by a comma."
+        },
+        {
+          "q": "Which instruction calculates a total and adds a label?",
+          "options": [
+            "print(Total: 100 + 50)",
+            "print(\"Total: 100 + 50\")",
+            "print(\"Total:\" 100 + 50)",
+            "print(\"Total:\", 100 + 50)"
+          ],
+          "correct": 3,
+          "explanation": "The label is quoted, the calculation is unquoted, and a comma separates them."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Quote labels such as \"Total:\". Leave numbers unquoted when you want Python to calculate with them. Put commas between separate values.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can write and repair print calls with strings.",
+          "You know basic whole-number addition."
+        ],
+        "outcomes": [
+          "Predict the difference between a quoted calculation and an arithmetic expression.",
+          "Use commas to print labels, a calculated value, and a unit.",
+          "Explain why joining numeric-looking strings does not add numbers."
+        ],
+        "expectedOutput": "Mini shop receipt\nItems: 2\nTotal: 500 naira",
+        "walkthrough": [
+          {
+            "code": "print(\"Mini shop receipt\")",
+            "explanation": "A single string supplies the title. The surrounding quotes are not part of the displayed message."
+          },
+          {
+            "code": "print(\"Items:\", 2)",
+            "explanation": "The comma separates two arguments. print inserts a space between the label and the integer, then ends the line."
+          },
+          {
+            "code": "print(\"Total:\", 200 + 300, \"naira\")",
+            "explanation": "Python first evaluates 200 + 300 as 500. print then displays three values with spaces between them: the label, 500, and the currency."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Same-looking digits, different operations",
+            "code": "print(\"Text:\", \"2 + 3\")\nprint(\"Addition:\", 2 + 3)\nprint(\"Joined text:\", \"2\" + \"3\")",
+            "expectedOutput": "Text: 2 + 3\nAddition: 5\nJoined text: 23",
+            "explanation": "The first expression is entirely quoted, so it stays text. The second adds integers. The third joins two strings. Looking only at the characters is not enough: the quotes determine the kind of value and therefore the operation."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The total displays 200 + 300 instead of 500",
+            "cause": "The calculation was written inside quotes.",
+            "fix": "Leave the numeric expression unquoted when you want addition."
+          },
+          {
+            "symptom": "TypeError appears while adding a label to a number",
+            "cause": "The + operator received a string and an integer.",
+            "fix": "Pass the label and number as separate print arguments with a comma."
+          },
+          {
+            "symptom": "There are unexpected spaces around a result",
+            "cause": "A label has a trailing space as well as the default separator.",
+            "fix": "Remove unnecessary spaces inside the label and inspect the output again."
+          }
+        ],
+        "summary": [
+          "Quoted digits are text; unquoted whole numbers are integer values.",
+          "Expressions are evaluated before print displays their results.",
+          "Commas separate print arguments, and print normally places a space between them. Next, use comments to explain your intentions without changing output."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python tutorial: using Python as a calculator",
+            "url": "https://docs.python.org/3/tutorial/introduction.html"
+          }
+        ]
+      }
     },
     {
       "id": "py-05",
-      "title": "1.5 Comments — Notes for Future You",
+      "title": "1.5 Leave Helpful Comments",
       "module": "Getting Started",
-      "objective": "Write clear comments and docstrings so code stays understandable.",
-      "why": "When you reopen code after 3 months (or hand it to a teammate), comments save hours of confusion.",
-      "explanation": "<p><strong>What you will learn.</strong> Write clear comments and docstrings so code stays understandable. By the end you should explain <em>Notes for Future You</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> When you reopen code after 3 months (or hand it to a teammate), comments save hours of confusion. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Syntax is the grammar of a language. The computer is strict: one missing quote or wrong indent and it refuses the whole program. Comments are notes for humans; print/log statements are how you see results.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Use <code>#</code> for single-line comments.<br>\n  Use triple quotes <code>\"\"\" ... \"\"\"</code> for multi-line notes or function docs.<br>\n  Comment the <em>why</em>, not the obvious <em>what</em>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Write clear comments and docstrings so code stays understandable.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>11</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>base_fee = 500</code> — stores or updates a value.</li><li><code>extra_per_km = 100</code> — stores or updates a value.</li><li><code>\"\"\"</code> — does a step in the overall recipe.</li><li><code>Business rule:</code> — does a step in the overall recipe.</li><li><code>Free delivery if order total &gt; 15000</code> — branches based on a condition.</li><li><code>\"\"\"</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Notes for Future You</em> solve?</li><li>Which line in the example most directly achieves: “Write clear comments and docstrings so code stays understandable.”?</li><li>If you change one value in <code>base_fee = 500</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Calculate delivery fee for orders outside Lagos\nbase_fee = 500\n# Extra charge per km beyond 5km\nextra_per_km = 100\n\n\"\"\"\nBusiness rule:\nFree delivery if order total > 15000\n\"\"\"\norder_total = 18000\nif order_total > 15000:\n    delivery = 0  # promo: free delivery\nelse:\n    delivery = base_fee",
+      "objective": "Use a # comment to explain code without changing its output.",
+      "why": "A note can help you remember why a program does something when you come back tomorrow.",
+      "explanation": "<h4>Comments communicate with people reading code</h4><p>Code tells Python what to execute. A <strong>comment</strong> tells a person something about that code. In Python, a hash character <code>#</code> outside a string starts a comment that continues to the end of the physical line. Python ignores that comment when executing the program.</p>\n<p>A comment can explain an intention, a constraint, or a decision that is not obvious from the instructions alone. For a receipt, the calculation may be easy to read, but a note that delivery must be included explains why both amounts are present.</p>\n<h4>Use full-line and inline comments appropriately</h4><p>A <strong>full-line comment</strong> occupies a line by itself, such as <code># Include the item price and the delivery fee</code>. It is useful before one or more related instructions. The next line starts normal code again; the comment does not automatically continue onto it.</p>\n<p>An <strong>inline comment</strong> follows code on the same line, such as <code>print(\"Thank you!\")  # A friendly closing message</code>. Python executes the print call and ignores the following comment. Keep a small separation between code and the comment so a reader can see the boundary.</p>\n<h4>A hash inside a string is ordinary text</h4><p>The instruction <code>print(\"Order #1\")</code> displays the hash because it is inside the quoted string. Python recognises the string boundary before treating a later hash as a comment marker. In <code>print(\"Order #1\")  # Receipt heading</code>, the first hash is output text and the second begins a comment.</p>\n<p>This is why you must interpret symbols in context. The same written character can serve a different role depending on whether it is inside a string. Predicting the output requires reading the quote boundaries, not just searching for a hash anywhere on the line.</p>\n<h4>Explain why, and keep the explanation true</h4><p>Compare <code># Add numbers</code> with <code># Include delivery in the amount the customer pays</code>. The first mostly repeats what + already shows; the second records a reason. A useful comment helps someone understand a choice they might otherwise question.</p>\n<p>Comments can become wrong when code changes. If you remove a delivery amount from the calculation but leave a comment saying it is included, the program still runs and the note becomes misleading. Review comments whenever you change the behavior they describe. A comment does not enforce a business rule; the executable instructions must implement it.</p>\n<h4>Temporarily comment out an instruction</h4><p>Putting <code>#</code> before a print call makes the entire call part of a comment, so it no longer runs. This is sometimes called <strong>commenting out</strong> code. It can help you isolate a problem or compare behavior while experimenting.</p>\n<p>Use this deliberately and temporarily. A large collection of old commented-out instructions makes a program harder to read. Also do not confuse disabling an instruction with fixing it: if the required output disappears, the task may still be incomplete even though the error is gone.</p>\n<h4>Comments, printed messages, and later documentation</h4><p>A comment is visible in the source code but not in ordinary output. If a customer or learner needs to see a message, use print. If a future programmer needs to understand a decision, a comment may be suitable. Keeping these audiences separate makes both the interface and the source clearer.</p>\n<p>Later you will meet <strong>docstrings</strong>, which document modules, functions, or classes and are actual string literals with a special placement. They are not a general replacement for # comments. For this module, use # for notes and print for displayed messages; you can build a useful habit before learning those larger structures.</p>",
+      "codeExample": "# Include the item price and the delivery fee\nprint(\"Total:\", 200 + 50, \"naira\")\nprint(\"Thank you!\")  # A friendly closing message",
       "exercises": [
         {
-          "title": "Document a price rule",
-          "instruction": "Write a short script with comments explaining a 5% VAT calculation on a product price.",
-          "solution": "# Product price before tax\nprice = 10000\n# VAT rate in many businesses is 7.5% or 5% for practice\nvat_rate = 0.05  # 5%\nvat = price * vat_rate\ntotal = price + vat\nprint(\"Total with VAT:\", total)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write a short script with comments explaining a 5% VAT calculation on a product price. Change names/values first; only then restructure."
+          "title": "Guided: explain a receipt total",
+          "instruction": "Add a comment explaining why a total includes an item costing 300 and delivery costing 100. Display the total.",
+          "hint": "Put the reason after # on the line before the calculation.",
+          "solution": "# Include delivery in the amount the customer pays\nprint(\"Total:\", 300 + 100, \"naira\")",
+          "expectedOutput": "Total: 400 naira",
+          "solutionExplanation": "The comment records the intent; the addition actually implements it. Python ignores the comment and prints the calculated total. Both the note and the expression should agree.",
+          "successCriteria": [
+            "The total is 400 naira.",
+            "The comment explains why delivery is included.",
+            "The comment itself is not printed."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: restore a required message",
+          "instruction": "A program contains # print(\"Order received\") and produces no output. Restore the message and add a separate comment explaining its purpose.",
+          "hint": "Move the explanatory note onto its own comment line and leave the call executable.",
+          "solution": "# Confirm that the order reached the program\nprint(\"Order received\")",
+          "expectedOutput": "Order received",
+          "solutionExplanation": "Removing the hash before print restores execution. The separate comment still explains the purpose without disabling the instruction.",
+          "successCriteria": [
+            "The output is Order received.",
+            "An explanatory comment remains in the source."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a numbered receipt",
+          "instruction": "Display Receipt #2 and a calculated total of 500 + 50. Add a comment explaining what the extra 50 represents.",
+          "hint": "Keep the receipt hash inside the quoted title. Use a separate # comment for the explanation.",
+          "solution": "print(\"Receipt #2\")\n# Add a delivery fee of 50 to the item price\nprint(\"Total:\", 500 + 50, \"naira\")",
+          "expectedOutput": "Receipt #2\nTotal: 550 naira",
+          "solutionExplanation": "The receipt marker is string content and appears in output. The separate comment explains the fee. The unquoted arithmetic calculates 550. This combines the ideas from the whole introductory module.",
+          "successCriteria": [
+            "The receipt number includes a visible hash.",
+            "The final total is 550 naira.",
+            "The fee has a clear source-code explanation."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Which is a valid Python comment?",
+          "q": "Which line is a Python comment?",
           "options": [
-            "// note",
-            "/* note */",
-            "# note",
-            "-- note"
-          ],
-          "correct": 2,
-          "explanation": "Python uses # for single-line comments."
-        },
-        {
-          "q": "When would you use “Notes for Future You” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Write clear comments and docstrings so code stays understandable.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "// Delivery fee",
+            "# Delivery fee",
+            "<!-- Delivery fee -->",
+            "comment Delivery fee"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Write clear comments and docstrings so code stays understandable."
+          "explanation": "Python uses # to begin a line comment."
+        },
+        {
+          "q": "You change only a comment and run again. What normally happens to the output?",
+          "options": [
+            "The new comment is printed before the result",
+            "The commented line becomes an instruction",
+            "It stays the same",
+            "The following instruction is skipped"
+          ],
+          "correct": 2,
+          "explanation": "Changing only comment text leaves the executable instructions unchanged, so this program produces the same output."
+        },
+        {
+          "q": "What does print(\"Order #1\") display?",
+          "options": [
+            "Order #1",
+            "Order",
+            "Nothing",
+            "An error"
+          ],
+          "correct": 0,
+          "explanation": "Inside quotation marks, # is part of the text, not a comment marker."
+        },
+        {
+          "q": "Which comment is most useful above a total calculation?",
+          "options": [
+            "# Add two numbers",
+            "# Print the result",
+            "# The plus sign adds",
+            "# Include delivery in the amount the customer pays"
+          ],
+          "correct": 3,
+          "explanation": "The delivery comment explains the reason for the calculation. The other comments mostly repeat operations already visible in the source."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "A comment is not displayed to the learner or customer. Use print() if you want a message in the output. A # inside quoted text is displayed normally.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can print labelled arithmetic results and distinguish quoted text from numbers."
+        ],
+        "outcomes": [
+          "Write a full-line or inline comment without changing the result.",
+          "Explain why # inside a string is displayed rather than treated as a comment.",
+          "Choose between a code comment and a message intended for the user."
+        ],
+        "expectedOutput": "Total: 250 naira\nThank you!",
+        "walkthrough": [
+          {
+            "code": "# Include the item price and the delivery fee",
+            "explanation": "This entire line is a note to the reader. It explains the intent of the next calculation and contributes nothing to stdout."
+          },
+          {
+            "code": "print(\"Total:\", 200 + 50, \"naira\")",
+            "explanation": "Python adds the item and delivery amounts to get 250. print displays that number with the label and currency."
+          },
+          {
+            "code": "print(\"Thank you!\")  # A friendly closing message",
+            "explanation": "Python runs the call before the comment marker. The trailing note is ignored; only Thank you! appears in the output."
+          }
+        ],
+        "variations": [
+          {
+            "title": "One hash is text; another starts a comment",
+            "code": "print(\"Order #1\")  # Display a receipt heading\n# print(\"Draft receipt\")\nprint(\"Ready\")",
+            "expectedOutput": "Order #1\nReady",
+            "explanation": "The hash inside Order #1 is part of a string. The hash after the call begins a note. The second source line is entirely commented out, so Draft receipt is not displayed. Execution continues with the final print call."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "A helpful note never appears in the output",
+            "cause": "It was written as a comment rather than an output instruction.",
+            "fix": "Use print for information a person running the program needs to see."
+          },
+          {
+            "symptom": "A required message disappears",
+            "cause": "Its print call was commented out during experimentation.",
+            "fix": "Remove the leading # from that instruction and check that the expected output returns."
+          },
+          {
+            "symptom": "The comment and calculation disagree",
+            "cause": "The code changed but the explanation was not updated.",
+            "fix": "Review both together. Ensure the executable expression implements the stated intention."
+          }
+        ],
+        "summary": [
+          "Outside a string, # begins a comment through the end of the line.",
+          "Inside a string, # is ordinary text.",
+          "Comments explain decisions but do not execute or enforce them. The next module introduces variables so useful values can be named and reused."
+        ],
+        "references": [
+          {
+            "title": "Python language reference: comments",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#comments"
+          },
+          {
+            "title": "Python tutorial: documentation strings",
+            "url": "https://docs.python.org/3/tutorial/controlflow.html#documentation-strings"
+          }
+        ]
+      }
     },
     {
       "id": "py-06",

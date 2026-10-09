@@ -1,5 +1,5 @@
-// ZeroToCode Academy — HTML & CSS curriculum (18 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — HTML & CSS curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.WEB_COURSE = {
   "id": "web",
   "name": "HTML & CSS",
@@ -12,36 +12,188 @@ window.WEB_COURSE = {
       "id": "web-01",
       "title": "1.1 How the Web Works",
       "module": "Foundations",
-      "objective": "Describe HTML, CSS, and the browser’s role.",
-      "why": "When you open a shop website, the browser requests HTML (structure), CSS (style), and JS (behavior).",
-      "explanation": "<p><strong>What you will learn.</strong> Describe HTML, CSS, and the browser’s role. By the end you should explain <em>How the Web Works</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> When you open a shop website, the browser requests HTML (structure), CSS (style), and JS (behavior). Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> HTML describes structure and meaning (headings, forms, landmarks, links). Clear structure helps browsers, screen readers, and search engines.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><strong>HTML</strong> = structure/content<br><strong>CSS</strong> = look and layout<br><strong>JS</strong> = interactivity<br>Browser downloads files and paints the page.<p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Describe HTML, CSS, and the browser’s role.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>12</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>&lt;!-- index.html --&gt;</code> — does a step in the overall recipe.</li><li><code>&lt;!DOCTYPE html&gt;</code> — does a step in the overall recipe.</li><li><code>&lt;html lang=\"en\"&gt;</code> — stores or updates a value.</li><li><code>&lt;head&gt;</code> — does a step in the overall recipe.</li><li><code>&lt;meta charset=\"UTF-8\" /&gt;</code> — stores or updates a value.</li><li><code>&lt;title&gt;My Shop&lt;/title&gt;</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the live <strong>HTML/CSS preview</strong>. Change one CSS property or HTML tag at a time and watch the layout update. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>How the Web Works</em> solve?</li><li>Which line in the example most directly achieves: “Describe HTML, CSS, and the browser’s role.”?</li><li>If you change one value in <code>&lt;!-- index.html --&gt;</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Layout bugs often mean the parent is not display:flex/grid, or a width is constrained by the wrong container.</li><li>Every input needs a visible label; images need alt text. Invalid nesting breaks accessibility and SEO.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "<!-- index.html -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>My Shop</title>\n  <link rel=\"stylesheet\" href=\"styles.css\" />\n</head>\n<body>\n  <h1>Welcome</h1>\n</body>\n</html>",
+      "objective": "Explain how a browser displays a web document and create a complete page with a meaningful heading and paragraph.",
+      "why": "Every web interface begins with content people can understand. Knowing how a document reaches the browser and how HTML describes its structure makes later styling and interaction much easier to reason about.",
+      "explanation": "<h4>Follow a page from its address to the screen</h4><p>A <strong>web browser</strong> is an application that retrieves and displays web content. When you open a website address, the browser typically asks a server for the resource identified by that address. A <strong>server</strong> is software that receives requests and returns responses. The response may contain an HTML document, and that document may refer to additional resources such as images and stylesheets.</p>\n<p>A <strong>URL</strong> identifies a resource and how to access it. In an address such as <code>https://example.com/about</code>, https identifies the access scheme, example.com identifies the host, and /about is a path. You do not need to run a server to start this lesson: Preview HTML displays the document you provide directly inside the academy page.</p>\n<h4>Give HTML, CSS, and JavaScript distinct jobs</h4><p><strong>HTML</strong>, HyperText Markup Language, describes the structure and meaning of content. A heading says what a section is about; a paragraph groups prose; a link identifies another resource. <strong>CSS</strong>, Cascading Style Sheets, controls presentation such as color, spacing, and layout. <strong>JavaScript</strong> can add behavior such as responding to a button or updating content.</p>\n<p>A page does not need custom CSS or JavaScript to be useful. Browsers have default styles, so a heading is usually larger and bolder than a paragraph even in plain HTML. Begin with understandable content and correct structure. Adding decoration before the content makes sense does not make the page easier to use.</p>\n<h4>Read tags as boundaries around content</h4><p>In <code>&lt;h1&gt;Welcome&lt;/h1&gt;</code>, the opening tag starts a level-one heading, the closing tag ends it, and Welcome is its text content. Together these form an <strong>element</strong>. The slash distinguishes the closing tag. A paragraph uses the same pattern with <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>.</p>\n<p>Some elements, such as <code>&lt;meta&gt;</code>, are void elements and do not wrap text or require a closing tag in HTML. Do not apply the paired-tag rule blindly to every element. The document below uses meta to declare character encoding and paired elements to organise the visible content.</p>\n<h4>Understand the complete document skeleton</h4><p><code>&lt;!DOCTYPE html&gt;</code> tells the browser to use modern HTML standards mode. The outer <code>&lt;html&gt;</code> element contains the document, and <code>lang=\"en\"</code> declares that its main language is English. An <strong>attribute</strong> such as lang adds information to an element through a name and value.</p>\n<p>The <code>&lt;head&gt;</code> contains document information, including a character encoding and title. The <code>&lt;body&gt;</code> contains the main visible content. The title is document metadata, usually shown in a browser tab when the document is opened on its own. The h1 is a heading inside the page. These are related descriptions of the document, but they are not interchangeable.</p>\n<h4>Let meaning guide the structure</h4><p>Use a heading because text introduces the page or a section, not merely because you want a large font. Use a paragraph for prose. Meaningful elements help browsers and assistive technologies interpret the document, and they provide a sound basis for later CSS.</p>\n<p>Indent nested elements to make the source easier for a person to read. HTML normally collapses runs of ordinary whitespace in text, so indentation is not a reliable way to create page layout. Likewise, a missing closing tag might be repaired by the browser and still look plausible. A page rendering something is not proof that its structure is correct.</p>\n<h4>Preview, compare, and make one controlled change</h4><p>Copy the complete example into the editor and choose <strong>Preview HTML</strong>. You should see a heading followed by a paragraph. The embedded preview may not change the academy’s browser-tab title, because it is a separate document inside a frame. Inspect the visible heading and paragraph to verify this lesson’s behavior.</p>\n<p>Change the paragraph to describe your own club, then preview again. Next, inspect the variation, which adds a tiny internal stylesheet. Its CSS changes presentation while retaining the same heading and paragraph roles. Later lessons will explain selectors and declarations in detail; here the important connection is that HTML describes the content and CSS affects how it looks.</p>",
+      "codeExample": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Study Club</title>\n</head>\n<body>\n  <h1>Welcome to the Study Club</h1>\n  <p>We learn one new thing at a time.</p>\n</body>\n</html>",
       "exercises": [
         {
-          "title": "Name the trio",
-          "instruction": "In a comment-like sentence, state what HTML/CSS/JS each do.",
-          "solution": "// HTML structure, CSS style, JS behavior",
-          "hint": "Keep it simple",
+          "title": "Guided: personalise the page",
+          "instruction": "Change the example to describe a Reading Club. Keep a complete document with a title, an h1, and a paragraph.",
+          "hint": "Change the text inside title, h1, and p; preserve their surrounding tags.",
+          "solution": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><title>Reading Club</title></head>\n<body><h1>Welcome to the Reading Club</h1><p>We discuss one book each month.</p></body>\n</html>",
+          "expectedOutput": "A Reading Club heading and a paragraph about discussing a book each month.",
+          "solutionExplanation": "The document skeleton stays intact while the content changes. The title supplies metadata, and the h1 and p supply visible content. Indentation can differ without changing these roles.",
+          "successCriteria": [
+            "The page has one clear main heading.",
+            "A paragraph describes the club.",
+            "The title and content refer to the same club."
+          ],
           "level": "easy"
+        },
+        {
+          "title": "Repair: a title is not a page heading",
+          "instruction": "A page has a title of My Shop but an empty body. Add a visible My Shop heading and a short welcome paragraph.",
+          "hint": "Keep title in head and put h1 and p in body.",
+          "solution": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><title>My Shop</title></head>\n<body><h1>My Shop</h1><p>Welcome to our local store.</p></body>\n</html>",
+          "expectedOutput": "A visible My Shop heading followed by Welcome to our local store.",
+          "solutionExplanation": "Adding body content makes the message visible in the page. Changing the title alone would not create a body heading. The repair respects the different roles of metadata and content.",
+          "successCriteria": [
+            "My Shop is visible inside the preview.",
+            "A visible paragraph follows it.",
+            "The document still includes its title metadata."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: an announcement page",
+          "instruction": "Create a complete page announcing a school or community event. Include a meaningful document title, a main heading, and a paragraph stating what the event is and when it happens.",
+          "hint": "Use the complete skeleton, but choose your own event and wording.",
+          "solution": "<!DOCTYPE html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><title>Community Art Day</title></head>\n<body><h1>Community Art Day</h1><p>Join us on Saturday to draw and share your work.</p></body>\n</html>",
+          "expectedOutput": "An event heading and a paragraph describing the activity and its day.",
+          "solutionExplanation": "This transfers the same document structure to a new communication task. The content makes the announcement useful; HTML identifies its title, heading, and prose. Many event descriptions are valid.",
+          "successCriteria": [
+            "The title describes the event.",
+            "The visible content explains what and when.",
+            "The page can be previewed without missing external files."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "CSS is responsible for?",
+          "q": "The heading text is correct, but it should appear in teal. Which change addresses that?",
           "options": [
-            "Database queries",
-            "Visual style and layout",
-            "Server RAM",
-            "DNS only"
+            "Rename the title element to h1",
+            "Add a CSS color rule for the heading",
+            "Change lang=\"en\" to lang=\"teal\"",
+            "Replace the doctype with the desired color"
           ],
           "correct": 1,
-          "explanation": "Look and layout."
+          "explanation": "CSS controls presentation: an h1 color rule can change the heading to teal while keeping its text and meaning. The title, language attribute, and doctype have different jobs."
+        },
+        {
+          "q": "Which element creates a visible main heading?",
+          "options": [
+            "title inside head",
+            "meta charset",
+            "h1 inside body",
+            "The doctype declaration"
+          ],
+          "correct": 2,
+          "explanation": "h1 is a heading element in the page content. title supplies document metadata."
+        },
+        {
+          "q": "What does a browser usually do when you open a website URL?",
+          "options": [
+            "Request a resource from its host and interpret the response",
+            "Treat the URL itself as the HTML body",
+            "Execute the server’s application source directly inside the page",
+            "Read every page from the learner’s local disk"
+          ],
+          "correct": 0,
+          "explanation": "For a typical website URL, the browser requests a resource from the host and interprets the response. A URL identifies a resource; it is not the document’s visible contents or the server’s source code."
+        },
+        {
+          "q": "A page appears even with a missing closing tag. What follows?",
+          "options": [
+            "The displayed page proves the source nesting is correct",
+            "Adding CSS will fix the source nesting automatically",
+            "The doctype supplies all missing closing tags",
+            "The browser may have repaired the markup; inspect the structure"
+          ],
+          "correct": 3,
+          "explanation": "Browser error recovery can hide markup mistakes. Check intended nesting and semantics as well as appearance."
         }
       ],
       "pitfalls": "Layout bugs often mean the parent is not display:flex/grid, or a width is constrained by the wrong container.; Every input needs a visible label; images need alt text. Invalid nesting breaks accessibility and SEO.; If stuck more than 10 minutes: restate the objective in one sentence, change only one",
       "path": "beginner",
       "project": false,
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can type or paste text into the playground. No HTML, CSS, or JavaScript knowledge is required.",
+          "Use Preview HTML for this lesson. Run JS is for JavaScript source, not HTML documents."
+        ],
+        "outcomes": [
+          "Describe the browser/request/response relationship at a basic level.",
+          "Distinguish an HTML document title from a visible page heading.",
+          "Build and preview a complete document containing a heading and paragraph."
+        ],
+        "expectedOutput": "A visible heading: Welcome to the Study Club\nA paragraph below it: We learn one new thing at a time.",
+        "walkthrough": [
+          {
+            "code": "<!DOCTYPE html>",
+            "explanation": "Selects modern standards mode; it is a declaration, not visible page text."
+          },
+          {
+            "code": "<html lang=\"en\">",
+            "explanation": "Begins the document element and declares English as the main content language."
+          },
+          {
+            "code": "<head> ... </head>",
+            "explanation": "Groups document metadata. The meta charset declaration identifies UTF-8 text, and title names the document. This block is not the page’s main visible content."
+          },
+          {
+            "code": "<body> ... </body>",
+            "explanation": "Contains the visible heading and paragraph. These are the elements a visitor reads in this example."
+          },
+          {
+            "code": "<h1>Welcome to the Study Club</h1>",
+            "explanation": "Marks the page’s main heading. Opening and closing tags surround the actual heading text."
+          },
+          {
+            "code": "<p>We learn one new thing at a time.</p>",
+            "explanation": "Marks one paragraph of prose below the heading. The closing body and html tags then finish the enclosing elements."
+          }
+        ],
+        "variations": [
+          {
+            "title": "The same content, with presentation added",
+            "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Study Club</title>\n  <style>h1 { color: teal; }</style>\n</head>\n<body>\n  <h1>Welcome to the Study Club</h1>\n  <p>We learn one new thing at a time.</p>\n</body>\n</html>",
+            "expectedOutput": "The same heading and paragraph are visible. The heading is teal.",
+            "explanation": "The style element contains CSS. The selector h1 identifies the heading, and color: teal changes its text color. It does not replace the heading text or its HTML meaning. This introduces the separation between content and presentation; later lessons teach the CSS syntax in detail."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Run JS reports an unexpected < character",
+            "cause": "HTML markup was sent to the JavaScript console.",
+            "fix": "Select Preview HTML when the editor contains a document."
+          },
+          {
+            "symptom": "Changing title does not change the visible page heading",
+            "cause": "title is metadata in the head; h1 is visible content in the body.",
+            "fix": "Edit the h1 text when you want to change the main visible heading."
+          },
+          {
+            "symptom": "The page looks almost right despite a missing closing tag",
+            "cause": "Browsers repair some malformed markup, which can hide mistakes.",
+            "fix": "Check the intended nesting and closing tags rather than relying only on appearance."
+          },
+          {
+            "symptom": "The example cannot find styles.css",
+            "cause": "An external stylesheet was referenced without providing that file.",
+            "fix": "This lesson’s examples are self-contained; keep the small demonstration style inside the supplied document."
+          }
+        ],
+        "summary": [
+          "A browser retrieves and interprets resources; the preview can display your supplied HTML directly.",
+          "HTML describes content structure, CSS presentation, and JavaScript behavior.",
+          "A complete document separates metadata in head from visible content in body. Next, examine document structure in more detail."
+        ],
+        "references": [
+          {
+            "title": "MDN: how the web works",
+            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works"
+          },
+          {
+            "title": "MDN: basic HTML syntax",
+            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          }
+        ]
+      }
     },
     {
       "id": "web-02",
