@@ -5,23 +5,31 @@ async function openLesson(page, lang = 'javascript', id = 'js-01', path = 'all')
   await expect(page.locator('#lesson-heading')).toBeVisible();
 }
 
+async function answerIntroQuiz(page, correctly) {
+  const questions = await page.evaluate(() => ZeroToCode.courseData.javascript.lessons[0].quiz);
+  for (const [index, question] of questions.entries()) {
+    const answer = correctly ? question.correct : (question.correct + 1) % question.options.length;
+    await page.locator(`input[name="quiz-js-01-${index}"][value="${answer}"]`).check();
+  }
+}
+
 test('quiz feedback supports retries, best scores, and completion without duplicate XP', async ({ page }) => {
   await openLesson(page);
   await expect(page.locator('#btn-complete-lesson')).toBeDisabled();
   await page.getByRole('button', { name: 'Check answers' }).click();
   await expect(page.locator('#quiz-result-js-01')).toContainText('Answer every question');
-  await page.getByRole('radio', { name: 'Only on servers' }).check();
+  await answerIntroQuiz(page, false);
   await page.getByRole('button', { name: 'Check answers' }).click();
   await expect(page.locator('#quiz-result-js-01')).toContainText('Score 0%');
   await expect(page.locator('#q-feedback-js-01-0')).toContainText('Browsers include a JS engine');
   await page.getByRole('button', { name: 'Try again' }).click();
-  await page.getByRole('radio', { name: 'In every modern browser' }).check();
+  await answerIntroQuiz(page, true);
   await page.getByRole('button', { name: 'Check answers' }).click();
   await expect(page.locator('#quiz-result-js-01')).toContainText('Score 100%');
   await page.evaluate(() => ZeroToCode.checkQuiz('js-01', 'javascript'));
   await expect(page.locator('#quiz-result-js-01')).toContainText('Score 100%');
   await page.getByRole('button', { name: 'Try again' }).click();
-  await page.getByRole('radio', { name: 'Only on servers' }).check();
+  await answerIntroQuiz(page, false);
   await page.getByRole('button', { name: 'Check answers' }).click();
   await expect(page.locator('#quiz-result-js-01')).toContainText('earlier passing score is saved');
   await page.getByRole('button', { name: 'Complete lesson' }).click();
@@ -129,7 +137,7 @@ test('malformed and unavailable storage leave the learning flow usable', async (
 test('backup downloads restore progress and drafts on a fresh browser', async ({ page, browser }) => {
   await openLesson(page);
   await page.locator('#code-runner-editor').fill('console.log("my draft")');
-  await page.getByRole('radio', { name: 'In every modern browser' }).check();
+  await answerIntroQuiz(page, true);
   await page.getByRole('button', { name: 'Check answers' }).click();
   await page.getByRole('button', { name: 'Complete lesson' }).click();
   await page.goto('/#dashboard');

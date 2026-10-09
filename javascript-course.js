@@ -1,5 +1,5 @@
-// ZeroToCode Academy — JavaScript curriculum (25 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — JavaScript curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.JAVASCRIPT_COURSE = {
   "id": "javascript",
   "name": "JavaScript",
@@ -12,36 +12,174 @@ window.JAVASCRIPT_COURSE = {
       "id": "js-01",
       "title": "1.1 What is JavaScript?",
       "module": "Getting Started",
-      "objective": "Explain what JS does in the browser and where it runs.",
-      "why": "Every interactive website (buttons, menus, forms) uses JavaScript. It is the only language that runs natively in every browser.",
-      "explanation": "<p><strong>What you will learn.</strong> Explain what JS does in the browser and where it runs. By the end you should explain <em>What is JavaScript?</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Every interactive website (buttons, menus, forms) uses JavaScript. It is the only language that runs natively in every browser. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Every program is a set of clear instructions a computer can follow. Your job is to write those instructions so they match the real-world job you care about.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>JavaScript makes pages interactive. You can write it in a <code>&lt;script&gt;</code> tag, an external .js file, or the browser console (F12).</p><p><strong>Real life:</strong> show/hide a mobile menu, validate a payment form, update a cart total without reloading.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Explain what JS does in the browser and where it runs.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>console.log(\"Hello from JavaScript!\");</code> — shows output so you can verify the result.</li><li><code>console.log(2 + 2);</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>JS runner</strong>. Also try the same snippet in the browser console (F12) to build speed. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>What is JavaScript?</em> solve?</li><li>Which line in the example most directly achieves: “Explain what JS does in the browser and where it runs.”?</li><li>If you change one value in <code>console.log(\"Hello from JavaScript!\");</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "// Open browser console (F12) and try:\nconsole.log(\"Hello from JavaScript!\");\nconsole.log(2 + 2);\n\n// On a webpage:\n// <script>\n//   console.log(\"Page loaded\");\n// </script>",
+      "objective": "Explain where JavaScript runs, execute console instructions, and distinguish code from its output.",
+      "why": "JavaScript can react to actions and update information in a web application. Before working with a page, you need to understand how a JavaScript runtime executes instructions and how to inspect their results.",
+      "explanation": "<h4>JavaScript is a language; a browser is one place it runs</h4><p>JavaScript is a programming language for expressing instructions and working with values. A <strong>JavaScript engine</strong> is software that executes those instructions. Modern browsers include an engine, which is why a website can run JavaScript on your device without asking you to install a separate language runtime.</p>\n<p>JavaScript also runs outside browsers in environments such as Node.js. The language and its surrounding environment are different things. A browser can provide access to a web page; a server runtime can provide other capabilities. Code that depends on a particular environment may not work unchanged in another one.</p>\n<h4>Separate structure, presentation, and behavior</h4><p>On a web page, <strong>HTML</strong> gives content its structure, such as headings, paragraphs, and buttons. <strong>CSS</strong> controls presentation, such as spacing and colors. JavaScript can add behavior: responding to a button, validating an entry, or updating a displayed total.</p>\n<p>For example, HTML can create an Add item button, CSS can style it, and JavaScript can respond when someone presses it. These roles cooperate, but learning JavaScript does not automatically create the corresponding HTML elements. Later DOM lessons will explain how code finds and changes elements in a page.</p>\n<h4>Understand the console instruction</h4><p>The expression <code>console.log(\"Hello from JavaScript!\")</code> calls a method named <code>log</code> on an object named <code>console</code>. For now, think of console as a collection of tools for reporting information, and log as the tool that writes a message. The dot connects the collection to the tool being used.</p>\n<p>The parentheses enclose the arguments supplied to log. The quotes mark a string: text to display. The final semicolon explicitly ends this statement. JavaScript can insert semicolons in many situations, but writing them here gives you a consistent, visible boundary between instructions.</p>\n<h4>Predict strings and calculated values</h4><p><code>console.log(2 + 2)</code> evaluates the addition and displays 4. In contrast, <code>console.log(\"2 + 2\")</code> displays the text 2 + 2 because the quotes make the entire expression a string. A number and a string containing digits can look similar in output while representing different kinds of value.</p>\n<p>Read the main example from top to bottom. The first statement reports a message, then the second reports a calculated value. Before pressing Run JS, predict those two output lines. Change one number, run again, and check whether only the calculated result changes.</p>\n<h4>Use the right practice environment</h4><p>The academy’s <strong>Run JS</strong> console executes JavaScript in a background Worker. A Worker is a separate execution context that helps keep a long-running program from freezing the learning interface. This console does not have a page document, so code referring to <code>document</code> or <code>window</code> will not behave as it would in a normal page script.</p>\n<p>For this lesson, plain console instructions are exactly what you need. Later, page exercises should include their HTML elements and a script in <strong>Preview HTML</strong>. Do not paste an HTML <code>&lt;script&gt;</code> tag into Run JS: the tag belongs to HTML, not to JavaScript source. The Worker console also has a five-second lifetime; it is intended for small learning examples.</p>\n<h4>Read feedback and know what logging does not do</h4><p>If you misspell <code>console</code>, omit a closing quote, or leave a parenthesis unfinished, inspect the reported error and repair one detail. JavaScript names are case-sensitive, so <code>Console</code> and <code>console</code> are not interchangeable. An error is information about the code, not a verdict on your ability.</p>\n<p>Logging helps you inspect values, but it does not automatically show a message in a website’s visible content. In browser developer tools, evaluating a statement can also display its return value, sometimes undefined; that is different from the message logged by console.log. The academy console focuses on captured log output. In all environments, distinguish the instruction you wrote, the value it computed, and where that value was displayed.</p>",
+      "codeExample": "console.log(\"Hello from JavaScript!\");\nconsole.log(2 + 2);",
       "exercises": [
         {
-          "title": "Console hello",
-          "instruction": "Log your name and one goal for learning JS.",
+          "title": "Guided: a name and a goal",
+          "instruction": "Log your name and one goal for learning JavaScript on separate lines.",
+          "hint": "Use two console.log calls with quoted text.",
           "solution": "console.log(\"My name is Ada\");\nconsole.log(\"I want to build interactive websites\");",
-          "hint": "Use console.log(\"text\")",
+          "expectedOutput": "My name is Ada\nI want to build interactive websites",
+          "solutionExplanation": "Each statement calls the same method with a different string. The statements run in order. Your own name and goal are valid alternatives to the sample wording.",
+          "successCriteria": [
+            "Two messages appear in the correct order.",
+            "The code runs in Run JS without an HTML wrapper."
+          ],
           "level": "easy"
+        },
+        {
+          "title": "Repair: spelling and syntax",
+          "instruction": "Repair Console.log(\"Ready\"); so it works in this console, and explain what changed.",
+          "hint": "The method name is already correct; inspect the object name.",
+          "solution": "console.log(\"Ready\");",
+          "expectedOutput": "Ready",
+          "solutionExplanation": "The capital C named an object that the environment does not define. Lowercase console selects the provided reporting object. The quotes, parentheses, and semicolon were already correctly paired.",
+          "successCriteria": [
+            "The output is Ready.",
+            "You explain why letter case matters."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a labelled calculation",
+          "instruction": "Show a message identifying a calculation, then log a labelled result for 7 + 5. Make the result an actual arithmetic expression.",
+          "hint": "Keep the label quoted and the arithmetic unquoted; separate arguments with commas.",
+          "solution": "console.log(\"Practice calculation\");\nconsole.log(\"Result:\", 7 + 5);",
+          "expectedOutput": "Practice calculation\nResult: 12",
+          "solutionExplanation": "The addition is evaluated to the number 12 before it is logged with the label. Quoting 7 + 5 would instead display the written calculation, which would not satisfy the task.",
+          "successCriteria": [
+            "The result is 12.",
+            "The output explains what the number represents.",
+            "You can predict what would change if the expression were quoted."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
           "q": "Where does JavaScript run natively?",
           "options": [
-            "Only on servers",
-            "In every modern browser",
-            "Only in Python",
-            "Only on Android"
+            "Only in a browser tab, never in another environment",
+            "In modern browsers, and also in runtimes such as Node.js",
+            "Only after CSS starts a JavaScript engine",
+            "Only inside an HTML document with a visible button"
           ],
           "correct": 1,
-          "explanation": "Browsers include a JS engine (V8, SpiderMonkey, etc.)."
+          "explanation": "Browsers include a JS engine (V8, SpiderMonkey, etc.). JavaScript can also run in other environments such as Node.js."
+        },
+        {
+          "q": "What does console.log(2 + 2) report?",
+          "options": [
+            "2 + 2",
+            "22",
+            "4",
+            "The name console"
+          ],
+          "correct": 2,
+          "explanation": "The unquoted numeric expression is evaluated before its result is passed to log."
+        },
+        {
+          "q": "What does HTML mainly contribute to a page?",
+          "options": [
+            "Content structure and meaning",
+            "Text colors and spacing rules",
+            "Instructions that respond to a button click",
+            "The rules for evaluating numeric JavaScript expressions"
+          ],
+          "correct": 0,
+          "explanation": "HTML structures and labels content. CSS handles presentation, while JavaScript can add behavior."
+        },
+        {
+          "q": "Why does document fail in this lesson’s Run JS console?",
+          "options": [
+            "All JavaScript environments provide exactly the same page APIs",
+            "Adding a semicolon makes document available in any environment",
+            "Printing text first creates a document for the console",
+            "This console runs in a Worker without a page DOM"
+          ],
+          "correct": 3,
+          "explanation": "The surrounding environment determines which APIs exist. Page DOM work needs an actual page context, such as the HTML preview."
         }
       ],
       "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.",
       "path": "beginner",
       "project": false,
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "No previous JavaScript knowledge is required.",
+          "Use Run JS for this lesson; no local installation or HTML document is needed."
+        ],
+        "outcomes": [
+          "Distinguish JavaScript from HTML and CSS.",
+          "Identify the method, string argument, and statement boundary in a console call.",
+          "Predict text and arithmetic output and explain why the Worker console has no document."
+        ],
+        "expectedOutput": "Hello from JavaScript!\n4",
+        "walkthrough": [
+          {
+            "code": "console.log(\"Hello from JavaScript!\");",
+            "explanation": "console identifies the reporting object, the dot selects its log method, and the parentheses supply a string argument. The method reports the string; the quotes and semicolon do not appear in the output."
+          },
+          {
+            "code": "console.log(2 + 2);",
+            "explanation": "JavaScript evaluates the numeric expression as 4, then passes that number to log. This statement runs after the greeting statement."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Compare literal text with a calculation",
+            "code": "console.log(\"Calculation:\", \"2 + 2\");\nconsole.log(\"Result:\", 2 + 2);",
+            "expectedOutput": "Calculation: 2 + 2\nResult: 4",
+            "explanation": "Each call supplies two arguments separated by a comma. The playground shows them separated by a space. The first call keeps the calculation as quoted text; the second evaluates the addition before logging its result."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "ReferenceError mentions Console",
+            "cause": "JavaScript names are case-sensitive; the environment provides console with a lowercase c.",
+            "fix": "Use console.log with the exact spelling."
+          },
+          {
+            "symptom": "SyntaxError appears after pasting a script tag",
+            "cause": "Run JS expects JavaScript source, not an HTML wrapper.",
+            "fix": "Remove the script tags for console practice. Use Preview HTML when writing an HTML document."
+          },
+          {
+            "symptom": "ReferenceError mentions document",
+            "cause": "The Worker console does not expose a page DOM.",
+            "fix": "For a DOM exercise, provide the necessary HTML and JavaScript together in Preview HTML. Basic console practice does not need document."
+          },
+          {
+            "symptom": "Changing the code does not update the output",
+            "cause": "The panel still contains the result of the earlier run.",
+            "fix": "Run the edited program again and compare the new result with your prediction."
+          }
+        ],
+        "summary": [
+          "JavaScript instructions run in an engine within a particular environment.",
+          "console.log reports values; quotes produce strings and unquoted arithmetic produces a calculated number.",
+          "Browser page APIs are not available in every JavaScript environment. Next, variables let you name and reuse values."
+        ],
+        "references": [
+          {
+            "title": "MDN: what is JavaScript?",
+            "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript"
+          },
+          {
+            "title": "MDN: console.log()",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/console/log_static"
+          },
+          {
+            "title": "MDN: using Web Workers",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers"
+          }
+        ]
+      }
     },
     {
       "id": "js-02",

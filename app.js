@@ -377,6 +377,62 @@
       .replace(/>/g, '&gt;');
   }
 
+  function renderGuideIntro(guide) {
+    if (!guide) return '';
+    return `<section aria-label="Lesson preparation" class="mb-6 grid sm:grid-cols-2 gap-4">
+      <div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-semibold mb-3">Before you begin</h3><ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">${guide.prerequisites.map(item => `<li>${escHtml(item)}</li>`).join('')}</ul></div>
+      <div class="border border-slate-200 rounded-2xl p-5"><h3 class="font-semibold mb-3">By the end, you can</h3><ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">${guide.outcomes.map(item => `<li>${escHtml(item)}</li>`).join('')}</ul></div>
+    </section>`;
+  }
+
+  function renderWorkedGuide(guide) {
+    if (!guide) return '';
+    return `<section aria-label="Worked example explanation" class="mb-8 space-y-5">
+      <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5"><h3 class="font-semibold text-emerald-900 mb-2">Expected result</h3><pre class="whitespace-pre-wrap break-words font-mono text-sm text-emerald-900">${escHtml(guide.expectedOutput)}</pre></div>
+      <div><h3 class="font-semibold text-lg mb-3">Walk through the code</h3><ol class="list-decimal pl-6 space-y-4">${guide.walkthrough.map(step => `<li class="pl-1"><code class="block whitespace-pre-wrap break-words bg-slate-100 p-3 rounded-xl text-sm">${escHtml(step.code)}</code><p class="mt-2 text-sm leading-6 text-slate-700">${escHtml(step.explanation)}</p></li>`).join('')}</ol></div>
+      ${guide.variations.map(example => `<article class="border border-slate-200 rounded-2xl p-5"><h3 class="font-semibold text-lg mb-3">${escHtml(example.title)}</h3><pre class="code-block p-4 rounded-xl text-sm overflow-auto"><code>${escHtml(example.code)}</code></pre><h4 class="font-semibold text-sm mt-4 mb-2">Expected result</h4><pre class="whitespace-pre-wrap break-words font-mono text-sm text-slate-700">${escHtml(example.expectedOutput)}</pre><p class="mt-4 text-sm leading-6 text-slate-700">${escHtml(example.explanation)}</p></article>`).join('')}
+    </section>`;
+  }
+
+  function renderTroubleshooting(lesson) {
+    if (lesson.guide) return `<section aria-label="Troubleshooting" class="mb-6 bg-amber-50 border border-amber-100 rounded-2xl p-5"><h3 class="font-semibold text-lg text-amber-900 mb-4">Common mistakes and how to fix them</h3><dl class="space-y-5">${lesson.guide.mistakes.map(item => `<div><dt class="font-semibold text-sm text-amber-950">${escHtml(item.symptom)}</dt><dd class="text-sm text-amber-900 leading-6 mt-1"><p><strong>Why:</strong> ${escHtml(item.cause)}</p><p><strong>Fix:</strong> ${escHtml(item.fix)}</p></dd></div>`).join('')}</dl></section>`;
+    return lesson.pitfalls ? `<div class="mb-6 bg-amber-50 border border-amber-100 rounded-2xl p-5"><h3 class="font-semibold text-amber-900 mb-2">Common mistakes</h3><p class="text-amber-900 text-sm">${lesson.pitfalls}</p></div>` : '';
+  }
+
+  function renderRecap(guide) {
+    if (!guide) return '';
+    return `<section aria-label="Lesson recap" class="my-8 p-5 bg-slate-50 border border-slate-200 rounded-2xl"><h3 class="font-semibold text-lg mb-3">What to take with you</h3><ul class="list-disc pl-5 space-y-2 text-sm text-slate-700">${guide.summary.map(item => `<li>${escHtml(item)}</li>`).join('')}</ul><h4 class="font-semibold mt-5 mb-2">Read more in the documentation</h4><ul class="space-y-2 text-sm">${guide.references.map(ref => {
+      const url = new URL(ref.url);
+      return url.protocol === 'https:' ? `<li><a class="underline text-emerald-800" href="${url.href.replace(/"/g, '&quot;')}" target="_blank" rel="noopener noreferrer">${escHtml(ref.title)} <span class="sr-only">(opens in a new tab)</span></a></li>` : '';
+    }).join('')}</ul></section>`;
+  }
+
+  function buildLessonContents() {
+    const contents = document.getElementById('lesson-contents');
+    const headings = [...document.querySelectorAll('#lesson-explanation .explanation-body h4')];
+    if (!headings.length) return;
+    contents.classList.remove('hidden');
+    const title = document.createElement('p');
+    title.className = 'font-semibold text-slate-800 mb-2';
+    title.textContent = 'In this explanation';
+    const list = document.createElement('ol');
+    list.className = 'list-decimal pl-5 space-y-2';
+    headings.forEach((heading, index) => {
+      heading.id = 'explanation-topic-' + index;
+      heading.tabIndex = -1;
+      heading.classList.add('scroll-mt-32');
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent;
+      link.className = 'text-emerald-800 underline';
+      link.onclick = (event) => { event.preventDefault(); heading.focus({ preventScroll: true }); heading.scrollIntoView(); };
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    contents.append(title, list);
+  }
+
   function loadLesson(langId, lessonId) {
     const course = Object.hasOwn(courseData, langId) && courseData[langId];
     const lesson = course?.lessons.find((l) => l.id === lessonId);
@@ -415,22 +471,17 @@
             <p class="text-emerald-800 mt-1">${lesson.objective}</p></div>
           </div>
         </div>
+        ${renderGuideIntro(lesson.guide)}
         <div class="mb-6">
           <h3 class="font-semibold flex items-center gap-x-2 mb-3 text-lg"><i aria-hidden="true" class="fa-solid fa-lightbulb text-amber-500"></i> Why this matters</h3>
           <p class="text-slate-700 leading-relaxed">${lesson.why}</p>
         </div>
         <div id="lesson-explanation" class="mb-8 scroll-mt-24">
           <h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2"><i aria-hidden="true" class="fa-solid fa-book-open text-emerald-700"></i> Full explanation</h3>
+          <nav id="lesson-contents" aria-label="Explanation contents" class="hidden border border-slate-200 rounded-2xl p-5 text-sm mb-4"></nav>
           <div class="explanation-body max-w-none text-[15px] leading-7 text-slate-700 space-y-4 bg-slate-50 border border-slate-100 rounded-2xl p-5 md:p-6">${lesson.explanation}</div>
         </div>
-        ${
-          lesson.pitfalls
-            ? `<div class="mb-6 bg-amber-50 border border-amber-100 rounded-2xl p-5">
-          <h3 class="font-semibold text-amber-900 mb-2"><i aria-hidden="true" class="fa-solid fa-triangle-exclamation mr-2"></i>Common mistakes</h3>
-          <p class="text-amber-900/90 text-sm">${lesson.pitfalls}</p>
-        </div>`
-            : ''
-        }
+        ${renderTroubleshooting(lesson)}
     `;
 
     if (lesson.codeExample) {
@@ -443,6 +494,8 @@
           <pre class="code-block p-5 rounded-2xl text-sm overflow-auto"><code id="example-code">${escHtml(lesson.codeExample)}</code></pre>
         </div>`;
     }
+
+    html += renderWorkedGuide(lesson.guide);
 
     // Live runner
     html += renderRunner(runnerKind, lesson, langId);
@@ -463,6 +516,7 @@
               <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full ${levelColor}">${level}</span>
             </div>
             <p class="text-slate-700 mb-3">${escHtml(ex.instruction)}</p>
+            ${ex.successCriteria ? `<p class="font-semibold text-sm mb-2">Check your work</p><ul class="list-disc pl-5 mb-4 space-y-1 text-sm text-slate-700">${ex.successCriteria.map(item => `<li>${escHtml(item)}</li>`).join('')}</ul>` : ''}
             <details class="mb-3">
               <summary class="text-sm text-slate-500 cursor-pointer hover:text-emerald-700">Show hint</summary>
               <p class="text-sm text-slate-600 mt-2 bg-slate-50 p-3 rounded-xl">${escHtml(ex.hint || 'Try changing one value at a time.')}</p>
@@ -472,11 +526,13 @@
               <button onclick="window.ZeroToCode.copyText(window.__solutions['${solId}'])" class="px-5 py-2 text-sm font-medium bg-emerald-700 text-white rounded-2xl">Copy Solution</button>
               ${runnerKind !== 'readonly' ? `<button onclick="window.ZeroToCode.loadSolutionInRunner(window.__solutions['${solId}'])" class="px-5 py-2 text-sm font-medium bg-slate-800 text-white rounded-2xl">Load solution in editor</button>` : ''}
             </div>
-            <div class="solution-box hidden mt-4 p-4 bg-slate-900 text-emerald-300 text-sm rounded-xl font-mono whitespace-pre-wrap"></div>
+            <div class="solution-box hidden mt-4 space-y-3"><pre data-solution-code class="p-4 bg-slate-900 text-emerald-200 text-sm rounded-xl font-mono whitespace-pre-wrap break-words"></pre>${ex.solutionExplanation ? `<p class="text-sm leading-6 text-slate-700"><strong>Why this works:</strong> ${escHtml(ex.solutionExplanation)}</p><h4 class="font-semibold text-sm">Reference solution output</h4><pre class="font-mono text-sm whitespace-pre-wrap break-words bg-slate-50 p-3 rounded-xl">${escHtml(ex.expectedOutput)}</pre>` : ''}</div>
           </div>`;
       });
       html += '</div>';
     }
+
+    html += renderRecap(lesson.guide);
 
     // Quiz
     if (lesson.quiz && lesson.quiz.length) {
@@ -515,6 +571,7 @@
     </nav>`;
 
     container.innerHTML = html;
+    buildLessonContents();
     if (lesson.quiz && lesson.quiz.length) renderQuiz(lesson.quiz, lessonId);
     if (runnerKind !== 'readonly' && lesson.codeExample) {
       const ed = document.getElementById('code-runner-editor');
@@ -684,7 +741,7 @@
   function showSolution(btn, solution) {
     const box = btn.closest('.exercise-box').querySelector('.solution-box');
     if (!box) return;
-    box.textContent = solution;
+    box.querySelector('[data-solution-code]').textContent = solution;
     box.classList.toggle('hidden');
   }
 

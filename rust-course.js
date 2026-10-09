@@ -1,5 +1,5 @@
-// ZeroToCode Academy — Rust curriculum (14 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — Rust curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.RUST_COURSE = {
   "id": "rust",
   "name": "Rust",
@@ -12,36 +12,188 @@ window.RUST_COURSE = {
       "id": "rs-01",
       "title": "1.1 Why Rust & Hello",
       "module": "Getting Started",
-      "objective": "Install cargo mindset and print Hello.",
-      "why": "Rust prevents memory bugs at compile time — used in browsers, OS tools, and fast APIs.",
-      "explanation": "<p><strong>What you will learn.</strong> Install cargo mindset and print Hello. By the end you should explain <em>Why Rust &amp; Hello</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Rust prevents memory bugs at compile time — used in browsers, OS tools, and fast APIs. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Libraries and modules save you from reinventing the wheel. You import proven tools, then focus on your business logic.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>cargo new app<br>cargo run<br>fn main() { println!(...); }</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Install cargo mindset and print Hello.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>4</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>fn main() {</code> — sets up a name, type, import, or definition you will use next.</li><li><code>println!(\"Hello from Rust!\");</code> — shows output so you can verify the result.</li><li><code>println!(\"Safety + speed\");</code> — shows output so you can verify the result.</li><li><code>}</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> On your machine: <code>cargo new lesson && cd lesson</code>, paste into <code>src/main.rs</code>, then <code>cargo run</code>. Ownership errors are teachers — read them fully. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Why Rust &amp; Hello</em> solve?</li><li>Which line in the example most directly achieves: “Install cargo mindset and print Hello.”?</li><li>If you change one value in <code>fn main() {</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Compile errors are normal — read the first error carefully; later errors often cascade from it.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
+      "objective": "Create a Cargo project, run a complete Rust program, and explain main, println!, and the compile/run cycle.",
+      "why": "Rust is used for software where predictable performance and memory safety matter. A successful first build teaches how its tools report problems and how source instructions become a running executable.",
+      "explanation": "<h4>Understand what Rust promises and what it does not</h4><p>Rust is a compiled programming language. Its compiler checks your source and translates accepted code into an executable program. Later you will learn ownership and borrowing, rules that help Rust prevent many memory-safety errors in safe Rust. You do not need to master those rules to display your first message.</p>\n<p>Compilation is not a promise that every result is correct. A program can compile and still calculate the wrong amount, show the wrong message, or fail while running. Treat the compiler as a source of useful checks and explanations, then verify the behavior against your intended result.</p>\n<h4>Install the tools and confirm the environment</h4><p>Follow the official Rust installation instructions for your operating system. The recommended rustup installer manages Rust toolchains. The <code>rustc</code> command is the compiler, and <code>cargo</code> is the project and build tool you will normally use. Check <code>rustc --version</code> and <code>cargo --version</code> in a terminal.</p>\n<p>Depending on your operating system, the installation instructions may also require native build tools or a linker. A <strong>linker</strong> combines compiled pieces into an executable. If installation is incomplete, solve that environment problem before changing your Rust source. The academy does not execute Rust in the browser.</p>\n<h4>Create a project with Cargo</h4><p>In a terminal, run <code>cargo new rust-practice</code>, then enter the new folder with <code>cd rust-practice</code>. Cargo creates a project manifest named <code>Cargo.toml</code> and a source file at <code>src/main.rs</code>. The manifest describes the package and its dependencies; the source file contains the program.</p>\n<p>Replace the source file with the complete example below, save it, and run <code>cargo run</code> from the project folder. Cargo builds the project and runs its executable. Its build messages are tool output; the greetings printed by your program are program output. To focus on the latter during practice, <code>cargo run --quiet</code> reduces Cargo’s ordinary status messages.</p>\n<h4>Read the main function</h4><p><code>fn main() { ... }</code> defines the entry-point function. The keyword fn introduces a function, main is its name, the parentheses contain its parameter list, and the braces surround its body. The empty parentheses in this example mean there are no declared parameters.</p>\n<p>The two printing instructions are inside that body. When the executable starts, it runs them in sequence. The final closing brace ends the function. Keep the complete wrapper in your source file; a printing instruction by itself is not the same as a complete Rust executable.</p>\n<h4>Understand println! and the punctuation</h4><p><code>println!(\"Hello from Rust!\");</code> invokes the println macro. The exclamation mark distinguishes a macro invocation from an ordinary function call. A macro is a language mechanism that works with source syntax; for now, learn the invocation shape rather than trying to define a macro.</p>\n<p>The parentheses contain a format string, which is quoted text describing what to display. With no placeholders, its text is printed directly. println! adds a newline. The semicolon ends this statement, and the second call follows it. Names and punctuation matter: <code>println</code> without ! is not the same invocation.</p>\n<h4>Use a placeholder for a value</h4><p>The variation uses <code>println!(\"Items: {}\", 2 + 3);</code>. The pair of braces inside the format string is a placeholder. Rust evaluates the expression as 5 and uses it to fill that placeholder. The comma separates the format string from the value to format; it is not printed.</p>\n<p>The braces inside the quoted format string serve a different purpose from the braces surrounding main’s body. One pair belongs to formatting text; the other belongs to program structure. Reading punctuation in context is more useful than assuming every brace means the same thing.</p>\n<h4>Use compiler feedback and check the final behavior</h4><p>When a build fails, read the first relevant error and its source location. A later diagnostic can result from an earlier missing delimiter. Compare the complete function shape, the macro’s exclamation mark, its quotes and parentheses, and the statement ending. Make one change and build again.</p>\n<p>Run <code>cargo fmt</code> to apply standard formatting and <code>cargo check</code> for a development check without producing the final executable. Neither replaces running the program and comparing its output with the task. This lesson uses simple stable language features; more advanced lessons will explain the additional compiler rules as you encounter them.</p>",
       "codeExample": "fn main() {\n    println!(\"Hello from Rust!\");\n    println!(\"Safety + speed\");\n}",
       "exercises": [
         {
-          "title": "Greeting",
-          "instruction": "Print your name with println!.",
+          "title": "Guided: a greeting from your project",
+          "instruction": "Replace src/main.rs with a complete program that displays your name, then run it with Cargo.",
+          "hint": "Keep fn main and place the println! statement inside its braces.",
           "solution": "fn main() {\n    println!(\"Hello, I am Tunde\");\n}",
-          "hint": "println! macro",
+          "expectedOutput": "Hello, I am Tunde",
+          "solutionExplanation": "The function supplies the executable entry point. The macro prints one literal string and ends the output line. Changing the name inside the string does not alter the surrounding program structure.",
+          "successCriteria": [
+            "The file is inside the Cargo project’s src folder.",
+            "cargo run succeeds.",
+            "The output contains the chosen greeting."
+          ],
           "level": "easy"
+        },
+        {
+          "title": "Repair: macro punctuation",
+          "instruction": "A complete main function contains println(\"Ready\"); and fails to compile. Repair the invocation without changing its message.",
+          "hint": "Check how macro invocations are distinguished from function calls.",
+          "solution": "fn main() {\n    println!(\"Ready\");\n}",
+          "expectedOutput": "Ready",
+          "solutionExplanation": "Adding ! selects the println macro invocation. The quoted message, parentheses, and statement semicolon remain. This is a syntax-level distinction, not a change in the displayed content.",
+          "successCriteria": [
+            "The corrected program compiles.",
+            "The output is Ready.",
+            "You explain the purpose of ! in this invocation."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a labelled total",
+          "instruction": "Write a complete Rust program that displays Total: 12 by calculating 7 + 5 and placing the result into a format-string placeholder.",
+          "hint": "Use {} inside the format string and supply the expression after a comma.",
+          "solution": "fn main() {\n    println!(\"Total: {}\", 7 + 5);\n}",
+          "expectedOutput": "Total: 12",
+          "solutionExplanation": "Rust evaluates the integer addition and formats the result at the placeholder. Writing 12 directly would look the same but would not demonstrate that the program calculates the total.",
+          "successCriteria": [
+            "The output is Total: 12.",
+            "The code actually evaluates 7 + 5.",
+            "The format string and supplied argument match."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Rust package tool?",
+          "q": "Which tool normally creates and builds Rust projects?",
           "options": [
-            "npm",
-            "cargo",
-            "pip",
-            "gem"
+            "rustc by itself, including generating Cargo.toml",
+            "cargo, which manages the project and invokes rustc",
+            "rustup, which compiles every project instead of managing toolchains",
+            "The main function, which creates the project before compilation"
           ],
           "correct": 1,
-          "explanation": "cargo"
+          "explanation": "Cargo creates and manages Rust projects and invokes rustc to compile them. rustup manages toolchains, while main is an entry point in your program."
+        },
+        {
+          "q": "What is the role of main in this program?",
+          "options": [
+            "It stores the project’s dependency settings",
+            "It replaces the Cargo build command",
+            "It is the executable’s entry-point function",
+            "It declares the string that every println! call must display"
+          ],
+          "correct": 2,
+          "explanation": "The executable begins its own program logic in the main function."
+        },
+        {
+          "q": "What does the ! indicate in println!(\"Ready\")?",
+          "options": [
+            "A macro invocation",
+            "A character that will be printed after Ready",
+            "A command to run the statement only if an error occurs",
+            "An optional spelling of an ordinary function call"
+          ],
+          "correct": 0,
+          "explanation": "println! is a macro invocation. Omitting ! does not call the same construct."
+        },
+        {
+          "q": "What does println!(\"Items: {}\", 2 + 3) display?",
+          "options": [
+            "Items: {}",
+            "Items: 2 + 3",
+            "Items: 23",
+            "Items: 5"
+          ],
+          "correct": 3,
+          "explanation": "The expression evaluates to 5, which is formatted into the placeholder. println! then ends the line."
         }
       ],
       "pitfalls": "Compile errors are normal — read the first error carefully; later errors often cascade from it.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.",
       "path": "beginner",
       "project": false,
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "No previous Rust knowledge is required.",
+          "Install the Rust toolchain and any operating-system prerequisites, then create a local Cargo project."
+        ],
+        "outcomes": [
+          "Distinguish Cargo, rustc, the project manifest, and the main source file.",
+          "Explain the complete main function and a println! statement.",
+          "Build, run, and compare program output with the expected result."
+        ],
+        "expectedOutput": "Hello from Rust!\nSafety + speed",
+        "walkthrough": [
+          {
+            "code": "fn main() {",
+            "explanation": "Declares the entry-point function. fn introduces the declaration, the parentheses contain no parameters, and the brace starts its body."
+          },
+          {
+            "code": "println!(\"Hello from Rust!\");",
+            "explanation": "Invokes the println macro with a literal format string. It writes the greeting and a newline; the semicolon ends the statement."
+          },
+          {
+            "code": "println!(\"Safety + speed\");",
+            "explanation": "Writes the second string. The plus sign is inside text, so it is displayed rather than used for arithmetic."
+          },
+          {
+            "code": "}",
+            "explanation": "Closes the function body. Reaching the end of this main function finishes the program."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Format a calculated value",
+            "code": "fn main() {\n    println!(\"Items: {}\", 2 + 3);\n}",
+            "expectedOutput": "Items: 5",
+            "explanation": "The integer expression evaluates to 5. println! places its formatted value at the {} placeholder in the string. Unlike the function-body braces, these braces are characters within a format string and have a formatting role."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "cargo or rustc is not found",
+            "cause": "The Rust tools are not installed or are unavailable in the current terminal environment.",
+            "fix": "Follow the official installation guidance, reopen the terminal if required, and verify both version commands."
+          },
+          {
+            "symptom": "The compiler cannot find a function named println",
+            "cause": "The call omitted the exclamation mark and was written as a function call.",
+            "fix": "Use println!(...) for this standard output macro."
+          },
+          {
+            "symptom": "Cargo reports that it cannot find Cargo.toml",
+            "cause": "The command was run outside the Cargo project folder.",
+            "fix": "Change into the folder created by cargo new, then run cargo run again."
+          },
+          {
+            "symptom": "A format string reports a missing argument",
+            "cause": "The string contains a {} placeholder without a corresponding supplied value.",
+            "fix": "Provide the value after a comma, or remove a placeholder you do not intend to fill."
+          }
+        ],
+        "summary": [
+          "Cargo organises and builds the project; rustc compiles Rust source.",
+          "A complete executable supplies fn main, and println! writes formatted output with a newline.",
+          "Compiler success is followed by a behavior check. Next, look more closely at the files and folders Cargo creates."
+        ],
+        "references": [
+          {
+            "title": "The Rust Book: installation",
+            "url": "https://doc.rust-lang.org/book/ch01-01-installation.html"
+          },
+          {
+            "title": "The Rust Book: Hello, World!",
+            "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html"
+          },
+          {
+            "title": "The Rust Book: Hello, Cargo!",
+            "url": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html"
+          },
+          {
+            "title": "Rust standard library: println!",
+            "url": "https://doc.rust-lang.org/std/macro.println.html"
+          }
+        ]
+      }
     },
     {
       "id": "rs-02",

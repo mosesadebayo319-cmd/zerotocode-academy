@@ -1,5 +1,5 @@
-// ZeroToCode Academy — Go (Golang) curriculum (16 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — Go (Golang) curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.GO_COURSE = {
   "id": "go",
   "name": "Go (Golang)",
@@ -12,36 +12,191 @@ window.GO_COURSE = {
       "id": "go-01",
       "title": "1.1 Why Go & Hello World",
       "module": "Getting Started",
-      "objective": "Write and run a basic Go program.",
-      "why": "Go powers Docker, many cloud CLIs, and fast APIs — simple syntax, great concurrency later.",
-      "explanation": "<p><strong>What you will learn.</strong> Write and run a basic Go program. By the end you should explain <em>Why Go &amp; Hello World</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Go powers Docker, many cloud CLIs, and fast APIs — simple syntax, great concurrency later. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Syntax is the grammar of a language. The computer is strict: one missing quote or wrong indent and it refuses the whole program. Comments are notes for humans; print/log statements are how you see results.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>package main + func main()<br>go run . or go run file.go<br>fmt.Println for output</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Write and run a basic Go program.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>6</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>package main</code> — sets up a name, type, import, or definition you will use next.</li><li><code>import \"fmt\"</code> — sets up a name, type, import, or definition you will use next.</li><li><code>func main() {</code> — sets up a name, type, import, or definition you will use next.</li><li><code>fmt.Println(\"Hello from Go!\")</code> — shows output so you can verify the result.</li><li><code>fmt.Println(\"Ready to build reliable tools\")</code> — shows output so you can verify the result.</li><li><code>}</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> On your machine: put the code in <code>main.go</code>, then run <code>go run .</code>. Keep a notes file of errors you hit and how you fixed them. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Why Go &amp; Hello World</em> solve?</li><li>Which line in the example most directly achieves: “Write and run a basic Go program.”?</li><li>If you change one value in <code>package main</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Compile errors are normal — read the first error carefully; later errors often cascade from it.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
+      "objective": "Set up a Go practice folder, run a complete program, and explain its package, import, and main function.",
+      "why": "Go is used to build command-line tools and network services. Understanding the complete path from source file to running program gives you a reliable foundation before learning variables, functions, or concurrency.",
+      "explanation": "<h4>Understand the language and the toolchain</h4><p>Go is a programming language designed for building software with a relatively small language surface and a standard toolchain. A <strong>toolchain</strong> is the collection of tools used to check, build, run, and format a program. The <code>go</code> command is the main entry point to these tasks.</p>\n<p>Go is compiled: source code is translated into an executable program. <code>go run</code> performs a build step and then runs the result, which makes it convenient during learning. <code>go build</code> builds an executable without immediately running it. A compiler error therefore happens before your program starts; it is not output from the program itself.</p>\n<h4>Prepare a local practice environment</h4><p>Install Go using the official installation instructions for your operating system. Open a terminal and run <code>go version</code> to confirm that the command is available. A terminal is a place to issue commands to your operating system; it is separate from the Go source file you will write.</p>\n<p>Create a folder named <code>go-practice</code>, open a terminal in that folder, and run <code>go mod init example.com/go-practice</code>. This creates a <code>go.mod</code> file describing the module. A <strong>module</strong> groups packages and their dependency information. The example.com name is a local module identifier in this exercise; you do not need to register that website to run the program.</p>\n<h4>Save and run the complete program</h4><p>Create a plain-text file called <code>main.go</code> in that folder and copy the full example into it. Save the file, then run <code>go run .</code> from the same folder. The dot means the package in the current directory. Alternatively, <code>go run main.go</code> can run this single-file example.</p>\n<p>The academy does not run Go in the browser. Its editor examples and reference solutions are material to copy into your local project. If a command fails because go is not found, fix the installation or terminal environment first; changing a print statement cannot repair a missing toolchain.</p>\n<h4>Read the package and import declarations</h4><p><code>package main</code> declares that this file belongs to a package named main. For an executable Go program, this package contains the entry-point function that begins execution. A <strong>package</strong> is a way to group related source code and the names it provides.</p>\n<p><code>import \"fmt\"</code> makes the standard formatting package available to this file. The quotes identify the package import path. The name fmt is then used to access operations from that package, such as Println. Imports are not arbitrary decoration: if you use fmt without importing it, the name is undefined; if you import a package and never use it, Go reports an error.</p>\n<h4>Find the entry point and follow the output calls</h4><p><code>func main() { ... }</code> defines a function named main. The word func introduces a function declaration. The empty parentheses mean this function takes no declared parameters, and the braces enclose its body. The Go runtime invokes main when this executable starts.</p>\n<p>Inside the body, <code>fmt.Println(\"Hello from Go!\")</code> calls the exported Println function from fmt. The dot selects the package member; the capital P is significant. A quoted string supplies the message, and Println ends the output with a newline. The next call produces the second line. At this stage, keep the complete wrapper around your printing instructions so you have a valid executable.</p>\n<h4>Format, inspect, and distinguish failures</h4><p>Run <code>go fmt ./...</code> from the module folder to apply standard Go formatting to its packages. Formatting makes indentation consistent; it does not prove that the program meets its requirements. Compare the actual output with the expected output and change one thing at a time.</p>\n<p>Go generally handles statement-ending semicolons for you through its lexical rules, so these ordinary lines do not need visible semicolons. Keep an opening function brace on the same line as the declaration, as shown. If you move it carelessly to the next line, the compiler may reject the structure. Read the first compiler error before chasing later ones that may follow from it.</p>",
       "codeExample": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello from Go!\")\n    fmt.Println(\"Ready to build reliable tools\")\n}",
       "exercises": [
         {
-          "title": "Personal hello",
-          "instruction": "Print your name and city.",
+          "title": "Guided: a personal greeting",
+          "instruction": "Copy the complete program into main.go and change its output to identify your name and city.",
+          "hint": "Keep package main, the fmt import, and the main function. Change the string argument.",
           "solution": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"I am Ada from Lagos\")\n}",
-          "hint": "fmt.Println",
+          "expectedOutput": "I am Ada from Lagos",
+          "solutionExplanation": "Only the message changes. The surrounding declarations are still required to give Go an executable entry point and make fmt.Println available. Your own name and city are valid alternatives.",
+          "successCriteria": [
+            "go run . succeeds from the module folder.",
+            "Your greeting appears once.",
+            "You can identify the package, import, and function in the source."
+          ],
           "level": "easy"
+        },
+        {
+          "title": "Repair: restore the missing import",
+          "instruction": "A file begins with package main and calls fmt.Println(\"Ready\") in main, but has no import declaration. Supply a complete working program.",
+          "hint": "Declare the fmt import between the package line and the function.",
+          "solution": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Ready\")\n}",
+          "expectedOutput": "Ready",
+          "solutionExplanation": "The repair connects the fmt name used in the function body to the standard package that provides Println. Merely changing the printed message would not resolve an undefined package name.",
+          "successCriteria": [
+            "The compiler no longer reports undefined: fmt.",
+            "The output is Ready."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a simple event notice",
+          "instruction": "Write a complete Go program that displays an event name on one line and its activity on another. Then format and run it locally.",
+          "hint": "Use two Println calls inside one main function.",
+          "solution": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Community Coding Day\")\n    fmt.Println(\"Today: write a small program\")\n}",
+          "expectedOutput": "Community Coding Day\nToday: write a small program",
+          "solutionExplanation": "Both calls belong inside the same entry-point function and use the same imported package. Their order determines the order of the notice. go fmt changes source formatting, not the messages.",
+          "successCriteria": [
+            "The program is complete and compiles.",
+            "The event name appears before its activity.",
+            "Formatting the source leaves the intended output unchanged."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Entry point function in Go?",
+          "q": "What is the entry point of this executable Go program?",
           "options": [
-            "start",
-            "main in package main",
-            "init only",
-            "run"
+            "The first function listed in any package",
+            "main() in package main",
+            "The import declaration alone",
+            "Println() in package fmt"
           ],
           "correct": 1,
-          "explanation": "package main + main()"
+          "explanation": "The executable main package provides the main function that begins the program’s own execution."
+        },
+        {
+          "q": "Why does this file import fmt?",
+          "options": [
+            "To apply standard indentation to the source file",
+            "To declare which function is the entry point",
+            "To make formatting functions such as Println available in this file",
+            "To download the Go compiler every time the program runs"
+          ],
+          "correct": 2,
+          "explanation": "The import makes the standard fmt package available to this file. Its Println function writes output. Source formatting is a separate go fmt command, and func main declares the entry point."
+        },
+        {
+          "q": "What does go run . do in this module folder?",
+          "options": [
+            "Build and run the current package",
+            "Build an executable without running it",
+            "Reformat the source files without running them",
+            "Create go.mod without running the program"
+          ],
+          "correct": 0,
+          "explanation": "go run . builds and runs the current package. go build builds without immediately running, go fmt formats source, and go mod init creates a module manifest."
+        },
+        {
+          "q": "The terminal cannot find go. What should you inspect first?",
+          "options": [
+            "Add an fmt import before retrying the same unavailable command",
+            "Rename main.go before checking the tool installation",
+            "Move the function’s opening brace before checking the terminal",
+            "Check the Go installation and terminal search path"
+          ],
+          "correct": 3,
+          "explanation": "A command-not-found message means the terminal cannot start Go. The source has not been compiled yet; check installation and the terminal search path before editing the program."
         }
       ],
       "pitfalls": "Compile errors are normal — read the first error carefully; later errors often cascade from it.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.",
       "path": "beginner",
       "project": false,
-      "difficulty": "beginner"
+      "difficulty": "beginner",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "No previous Go knowledge is required.",
+          "Install Go, confirm go version, and prepare a module folder containing main.go. This track uses local execution."
+        ],
+        "outcomes": [
+          "Explain the jobs of package main, import \"fmt\", and func main().",
+          "Run the complete example with go run . from its module folder.",
+          "Distinguish a missing toolchain, a compiler error, and an incorrect displayed message."
+        ],
+        "expectedOutput": "Hello from Go!\nReady to build reliable tools",
+        "walkthrough": [
+          {
+            "code": "package main",
+            "explanation": "Assigns the file to the executable package named main. It appears before the import and function declarations."
+          },
+          {
+            "code": "import \"fmt\"",
+            "explanation": "Brings the standard formatting package into this file’s scope so fmt.Println can be used."
+          },
+          {
+            "code": "func main() {",
+            "explanation": "Declares the entry-point function and opens its body. The opening brace belongs on this line."
+          },
+          {
+            "code": "fmt.Println(\"Hello from Go!\")",
+            "explanation": "Calls fmt’s Println with one string argument, producing the first output line."
+          },
+          {
+            "code": "fmt.Println(\"Ready to build reliable tools\")",
+            "explanation": "Produces the second output line after the first call completes."
+          },
+          {
+            "code": "}",
+            "explanation": "Closes the main function body. Reaching the end of main ends this simple program."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Print a computed result with a label",
+            "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Items:\", 2 + 3)\n}",
+            "expectedOutput": "Items: 5",
+            "explanation": "The package, import, and main wrapper stay the same. Inside the body, Go evaluates 2 + 3 as an integer expression and passes the result with the string label to Println. Println places a space between these arguments and ends the line."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The terminal says go is not found",
+            "cause": "The Go command is not installed or is not available on this terminal’s search path.",
+            "fix": "Follow the official installation steps, reopen the terminal if necessary, and check go version before editing the program."
+          },
+          {
+            "symptom": "undefined: fmt",
+            "cause": "The source uses fmt.Println without importing fmt.",
+            "fix": "Restore import \"fmt\" after the package declaration."
+          },
+          {
+            "symptom": "An import is reported as unused",
+            "cause": "The file imports fmt but no executable code refers to it.",
+            "fix": "Use the imported package in the intended output instruction, or remove an import you genuinely do not need."
+          },
+          {
+            "symptom": "The compiler objects near the function brace",
+            "cause": "The function structure is incomplete or the opening brace was put on a separate line.",
+            "fix": "Restore func main() { on one line and make sure the final closing brace is present."
+          }
+        ],
+        "summary": [
+          "The go tool can build and run a program; installation problems occur before your source can execute.",
+          "An executable main package supplies a main function; imported fmt supplies Println.",
+          "Keep the complete program structure and verify the output. Next, study modules and project layout more closely."
+        ],
+        "references": [
+          {
+            "title": "Go: download and install",
+            "url": "https://go.dev/doc/install"
+          },
+          {
+            "title": "Go tutorial: get started",
+            "url": "https://go.dev/doc/tutorial/getting-started"
+          },
+          {
+            "title": "Go standard library: fmt.Println",
+            "url": "https://pkg.go.dev/fmt#Println"
+          }
+        ]
+      }
     },
     {
       "id": "go-02",

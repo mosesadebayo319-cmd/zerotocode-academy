@@ -21,6 +21,20 @@ for (const track of ['python', 'javascript', 'web', 'go', 'rust']) {
         assert.ok(Number.isInteger(question.correct) && question.correct >= 0 && question.correct < question.options.length, lesson.id);
         assert.equal(new Set(question.options).size, question.options.length, `${lesson.id}: ambiguous duplicate choices`);
       }
+      if (lesson.guide) {
+        const { coverage } = require('../scripts/curriculum-audit.cjs');
+        assert.equal(lesson.guide.version, 1);
+        for (const [name, present] of Object.entries(coverage(lesson))) assert.ok(present, `${lesson.id}: missing ${name}`);
+        for (const step of lesson.guide.walkthrough) assert.ok(step.code?.trim() && step.explanation?.trim(), lesson.id);
+        for (const example of lesson.guide.variations) assert.ok(example.title?.trim() && example.code?.trim() && example.expectedOutput?.trim() && example.explanation?.trim(), lesson.id);
+        for (const item of lesson.guide.mistakes) assert.ok(item.symptom?.trim() && item.cause?.trim() && item.fix?.trim(), lesson.id);
+        for (const ref of lesson.guide.references) assert.equal(new URL(ref.url).protocol, 'https:', lesson.id);
+      }
     }
   });
 }
+
+test('the committed audit reports the current catalog without hiding unexpanded lessons', () => {
+  const { report } = require('../scripts/curriculum-audit.cjs');
+  assert.equal(fs.readFileSync(path.join(__dirname, '../docs/CURRICULUM-AUDIT.md'), 'utf8'), report());
+});
