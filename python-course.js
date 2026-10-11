@@ -1,5 +1,5 @@
-// ZeroToCode Academy — Python curriculum (144 lessons)
-// Topic-specific explanations for deeper beginner comprehension
+// ZeroToCode Academy — Python curriculum
+// Comprehensive guide structure is documented in docs/LESSON-STANDARD.md.
 window.PYTHON_COURSE = {
   "id": "python",
   "name": "Python",
@@ -10,228 +10,836 @@ window.PYTHON_COURSE = {
   "lessons": [
     {
       "id": "py-01",
-      "title": "1.1 Python Intro — Why Python Wins",
+      "title": "1.1 Your First Line of Python",
       "module": "Getting Started",
-      "objective": "Understand what Python is and where it is used in real life.",
-      "why": "Banks, hospitals, online shops, and AI tools all run Python behind the scenes. Learning it opens doors to automation, data, and web apps.",
-      "explanation": "<p><strong>What you will learn.</strong> Understand what Python is and where it is used in real life. By the end you should explain <em>Why Python Wins</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Banks, hospitals, online shops, and AI tools all run Python behind the scenes. Learning it opens doors to automation, data, and web apps. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Every program is a set of clear instructions a computer can follow. Your job is to write those instructions so they match the real-world job you care about.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Python is a <strong>high-level, readable programming language</strong>. You write instructions in plain English-like syntax; the computer runs them.</p><p><strong>Real uses:</strong> automate WhatsApp business reports, analyse sales data, build websites (Django), train AI models, control robots.</p><p>It is free, has huge community support, and is the #1 first language for beginners.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Understand what Python is and where it is used in real life.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Welcome to ZeroToCode Academy\")</code> — shows output so you can verify the result.</li><li><code>print(\"Python powers Netflix recommendations, Instagram, and local ba…</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Why Python Wins</em> solve?</li><li>Which line in the example most directly achieves: “Understand what Python is and where it is used in real life.”?</li><li>If you change one value in <code>print(\"Welcome to ZeroToCode Academy\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Python is readable — almost like English\nprint(\"Welcome to ZeroToCode Academy\")\nprint(\"Python powers Netflix recommendations, Instagram, and local bank apps\")",
+      "objective": "Run a Python instruction, change its message, and explain the output.",
+      "why": "Programs follow instructions. Showing a message is a small, useful first step toward receipts, reminders, and tools you can build yourself.",
+      "explanation": "<h4>What a program is</h4><p>A <strong>program</strong> is a set of instructions a computer can carry out. A recipe is a useful comparison: each instruction tells someone what to do. Unlike a person reading a recipe, a computer does not reliably infer a missing instruction or guess what an unfamiliar word means. You must use rules the language understands.</p>\n<p><strong>Python</strong> is the programming language we will use to write those instructions. The text you write is called <strong>source code</strong>. A Python runtime is the software that reads and executes it. Here the runtime runs inside your browser. Later, you can install a Python runtime on your own computer and run the same basic instructions there.</p>\n<h4>Read one instruction from the outside inward</h4><p>Our example is <code>print(\"Hello, world!\")</code>. The name <code>print</code> identifies a built-in function: a named operation Python already provides. A function can perform a task when you call it. You do not need to create this function yourself.</p>\n<p>The opening <code>(</code> and closing <code>)</code> mark the function call and surround the information we give it. That information is called an <strong>argument</strong>. Here there is one argument: the message <code>\"Hello, world!\"</code>. Read the whole instruction as “call print with this message.”</p>\n<h4>Understand the quotation marks</h4><p>The double quotation marks tell Python that the characters between them are <strong>text</strong>, also called a <strong>string</strong>. The comma, space, and exclamation mark inside the quotes are part of that text. The quotes themselves mark the string boundary; print does not normally display those surrounding quotes.</p>\n<p>You can also use matching single quotes, such as <code>print('Hello!')</code>. Open and close a string with the same kind of straight quote. Smart quotes copied from a word processor are different characters. For now, keep using straight double quotes so you can focus on the idea.</p>\n<h4>Connect code, execution, and output</h4><p>The editor contains your instructions. The output panel contains the result of the most recent run. These are separate things: changing the editor does not change old output until you run the program again. Press <strong>Run Python</strong> to execute the current code.</p>\n<p>Before you run the example, predict exactly what you will see. Afterward, compare the output with the expected output below. Replace <code>world</code> with your name, keeping the quotes and parentheses. Run again. The message changes because you changed the argument, not because print learned a new operation.</p>\n<h4>When to use this and what it does not do</h4><p>Displaying text is useful for a greeting, a receipt, a result, or a temporary message that helps you inspect a program. In this playground, print writes to the output panel. In a terminal, it writes to the terminal. It does not create a website heading or send a document to a physical printer.</p>\n<p>The first browser run downloads Python and needs an internet connection. Loading is an environment step, not a Python statement. Once output appears, your job is to connect each result to the code that produced it. If you get an error, inspect the message and fix one detail at a time. Making and repairing a mistake is part of learning the rules.</p>",
+      "codeExample": "print(\"Hello, world!\")",
       "exercises": [
         {
-          "title": "Where will YOU use Python?",
-          "instruction": "Write 3 print() lines: (1) your name, (2) one problem you want to solve with code, (3) one career or business goal.",
-          "solution": "print(\"My name is Adaora\")\nprint(\"I want to automate my shop's daily sales summary\")\nprint(\"I want to become a data analyst or freelancing developer\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write 3 print() lines: (1) your name, (2) one problem you want to solve with code, (3) one career or business goal. Change names/values first; only then restructure."
+          "title": "Guided: introduce yourself",
+          "instruction": "Display a greeting with your name, then display one thing you want to build on a second line.",
+          "hint": "Use one print() call for each line. Change only the text inside the quotes to begin.",
+          "solution": "print(\"Hello, I am Ada!\")\nprint(\"I want to build a study planner.\")",
+          "expectedOutput": "Hello, I am Ada!\nI want to build a study planner.",
+          "solutionExplanation": "Each message is a string argument to its own print call. Python runs the calls in order, and each call ends its output line. Your own name and goal can replace the sample wording.",
+          "successCriteria": [
+            "The output has two lines.",
+            "Both lines contain the messages you chose.",
+            "No quotation marks appear around the displayed messages."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: a missing boundary",
+          "instruction": "Repair print(\"Learning starts here\" so it displays the message successfully. Identify the missing character before running.",
+          "hint": "Match every opening parenthesis with a closing parenthesis.",
+          "solution": "print(\"Learning starts here\")",
+          "expectedOutput": "Learning starts here",
+          "solutionExplanation": "The string already had its closing quote. The missing character was the closing parenthesis for the function call. Adding another quote would not fix that problem.",
+          "successCriteria": [
+            "The program runs without a syntax error.",
+            "You can explain which pair was incomplete."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a notice for a real place",
+          "instruction": "Write two lines for a school, shop, or club notice. The first should name the place; the second should give a useful message. Use your own wording.",
+          "hint": "You know everything needed: two print calls, each receiving one string.",
+          "solution": "print(\"Riverside Library\")\nprint(\"Please return borrowed books on Friday.\")",
+          "expectedOutput": "Riverside Library\nPlease return borrowed books on Friday.",
+          "solutionExplanation": "The technique is the same as a greeting, but it now serves a different purpose: communicating a useful notice. Two complete instructions keep the lines separate. Many other places and messages are valid.",
+          "successCriteria": [
+            "The place and message make sense together.",
+            "The program uses two complete print calls.",
+            "You predicted the output before running."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Which statement about Python is TRUE?",
+          "q": "What does print(\"Hello!\") display?",
           "options": [
-            "It only runs on Windows",
-            "It is free and beginner-friendly",
-            "It cannot work with data",
-            "You must pay for a license"
+            "print(\"Hello!\")",
+            "Hello!",
+            "Hello without the exclamation mark",
+            "\"Hello!\" including the quotation marks"
           ],
           "correct": 1,
-          "explanation": "Python is free, open source, and designed to be readable for beginners."
+          "explanation": "print displays the text inside the quotes; the quote marks are part of the code, not the output."
         },
         {
-          "q": "When would you use “Why Python Wins” in a real project?",
+          "q": "You change \"Hello!\" to \"Welcome!\" and run again. What changes?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Understand what Python is and where it is used in real life.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "The output message becomes Welcome!",
+            "Both the old and new message print from this one instruction",
+            "The message stays Hello! because the function name did not change",
+            "Python displays the quotation marks instead of their contents"
           ],
-          "correct": 1,
-          "explanation": "This lesson’s skill is practical: Understand what Python is and where it is used in real life."
+          "correct": 0,
+          "explanation": "The text you give to print determines the displayed message."
+        },
+        {
+          "q": "Which instruction correctly displays Ada?",
+          "options": [
+            "print(\"Ada)",
+            "Print(\"Ada\")",
+            "print(\"Ada\")",
+            "print(Ada)"
+          ],
+          "correct": 2,
+          "explanation": "Python uses lowercase print, a pair of parentheses, and quotes around text."
+        },
+        {
+          "q": "After editing a working print instruction, Python reports a syntax error. What should you do first?",
+          "options": [
+            "Change the message text before inspecting the instruction",
+            "Reinstall Python immediately",
+            "Add more print instructions to get past the error",
+            "Read the reported location and check the quotes and parentheses"
+          ],
+          "correct": 3,
+          "explanation": "A syntax error means Python could not read the source correctly. Inspect the reported location and nearby delimiters before changing unrelated text or reinstalling tools."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Keep both quotation marks and the closing parenthesis. Use lowercase print. Your message can be anything you like.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "No previous programming knowledge is required.",
+          "Use a browser with JavaScript enabled and an internet connection for the first Python run."
+        ],
+        "outcomes": [
+          "Explain the difference between source code and output.",
+          "Identify the function name, parentheses, and string argument in a print call.",
+          "Change a message and predict the new output."
+        ],
+        "expectedOutput": "Hello, world!",
+        "walkthrough": [
+          {
+            "code": "print(\"Hello, world!\")",
+            "explanation": "Python finds the built-in print function. It evaluates the quoted text as one string argument, writes its characters to the output panel, and ends the output line. The quotation marks and parentheses are syntax, so they do not appear in this output."
+          }
+        ],
+        "variations": [
+          {
+            "title": "One instruction can be followed by another",
+            "code": "print(\"Hello, Ada!\")\nprint(\"Today I wrote my first program.\")",
+            "expectedOutput": "Hello, Ada!\nToday I wrote my first program.",
+            "explanation": "The first call displays the greeting. The second call displays a different message on a new line because print ends each line by default. The computer follows these two instructions from top to bottom; it does not combine the messages into one string."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "NameError after removing the quotes",
+            "cause": "In print(Ada), Python treats Ada as a name to look up, not as literal text.",
+            "fix": "Use print(\"Ada\") when you intend to display the name as text."
+          },
+          {
+            "symptom": "SyntaxError after typing the instruction",
+            "cause": "A quote or parenthesis is missing, mismatched, or replaced by a smart quote.",
+            "fix": "Check the pair of parentheses and the pair of straight quotes. The error wording can vary with Python version."
+          },
+          {
+            "symptom": "The output still shows the old message",
+            "cause": "You edited the code but have not run the new version.",
+            "fix": "Press Run Python again and compare the new output with your prediction."
+          }
+        ],
+        "summary": [
+          "A program contains instructions written in a language.",
+          "print() displays the value supplied to it; quoted characters form a string.",
+          "Edit, predict, run, and compare. The next lesson uses several instructions to make a small welcome sign."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python documentation: string literals",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals"
+          }
+        ]
+      }
     },
     {
       "id": "py-02",
-      "title": "1.2 Get Started — Install & First Run",
+      "title": "1.2 Build a Welcome Sign",
       "module": "Getting Started",
-      "objective": "Set up Python and run your first script on your computer.",
-      "why": "Like installing a POS machine before selling, you need Python installed before you can build programs.",
-      "explanation": "<p><strong>What you will learn.</strong> Set up Python and run your first script on your computer. By the end you should explain <em>Install &amp; First Run</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Like installing a POS machine before selling, you need Python installed before you can build programs. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>On most systems: download from <code>python.org</code> or use your package manager.</p><p>Check installation in a terminal:<br>\n  <code>python3 --version</code></p><p>Run a file: save as <code>hello.py</code>, then <code>python3 hello.py</code>.</p><p><strong>Online option:</strong> Use replit.com or Google Colab if you cannot install yet.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Set up Python and run your first script on your computer.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Setup complete!\")</code> — shows output so you can verify the result.</li><li><code>print(\"Python version check: open terminal and run python3 --version\")</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Install &amp; First Run</em> solve?</li><li>Which line in the example most directly achieves: “Set up Python and run your first script on your computer.”?</li><li>If you change one value in <code>print(\"Setup complete!\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# hello.py\nprint(\"Setup complete!\")\nprint(\"Python version check: open terminal and run python3 --version\")\n\n# Interactive mode (REPL): type python3 and try:\n# >>> 2 + 2\n# 4",
+      "objective": "Write a three-line program and predict the order of its output.",
+      "why": "Receipts, reminders, and welcome messages all present information in a deliberate order. You can already build a simple version.",
+      "explanation": "<h4>A useful program can start with a sequence</h4><p>A single instruction shows a message. Several instructions can show a welcome sign with a title, an activity, and encouragement. This is a <strong>sequence</strong>: instructions arranged in an order. For a simple program like this one, Python executes the first instruction, then the next, until it reaches the end.</p>\n<p>Decide the intended result before writing code. Our sign should first identify the club, then explain what people will do, then close with a friendly message. That ordering is part of the design. A program can be valid Python and still present information in an unhelpful order.</p>\n<h4>Translate the desired output into instructions</h4><p>Each <code>print()</code> call receives one quoted message. The first argument is <code>\"Welcome to the Study Club\"</code>. The second is <code>\"Today: learn one new thing\"</code>. The third is <code>\"Small steps count.\"</code>. Because each call normally ends its output line, three calls produce three lines.</p>\n<p>The spaces and punctuation inside each pair of quotes belong to the message. The line breaks between instructions separate your code into readable lines. At this stage, put one instruction on each line and start every instruction at the left edge.</p>\n<h4>Trace the program before running</h4><p>A <strong>trace</strong> is a step-by-step account of what a program does. Read line one and write its output on paper. Move to line two and add the next output line. Repeat for line three. Your predicted output should match the actual output exactly.</p>\n<p>Now swap the second and third instructions. Python does not know which line you intended as the closing message. It follows the new order you wrote. This is a simple way to test your mental model: change one aspect, make a prediction, and compare.</p>\n<h4>Code spacing is not the same as output spacing</h4><p>A blank line between two print instructions helps separate code visually, but it does not print a blank line. To deliberately create an empty output line, use <code>print()</code> with no argument. It writes the usual line ending without first writing a message.</p>\n<p>The variation below includes both kinds of blank line so you can see the difference. This distinction matters in receipts, reports, and menus: formatting the source code for yourself is separate from formatting output for someone using the program.</p>\n<h4>Use the browser now; understand the local alternative</h4><p>The playground provides Python for these introductory lessons. You can save a browser backup from the dashboard to preserve your progress and drafts. This is different from saving a Python file on your computer: a backup stores your academy learning data, while a <code>.py</code> file contains a program you can run with Python.</p>\n<p>When you are ready for local work, install Python from its official website and save your instructions in a plain-text file such as <code>hello.py</code>. A <strong>terminal</strong> is an application where you type commands. From the folder containing your file, a command such as <code>python3 hello.py</code> runs it. Some systems use <code>python</code> or <code>py</code> instead. These are terminal commands, not lines to paste into the Python editor. You do not need to complete this installation to finish this lesson.</p>\n<h4>Check the message as well as the syntax</h4><p>For a welcome sign, successful execution is only the first check. Read the output as a visitor would. Does it identify the place? Is the activity clear? Is the last line actually last? These questions introduce a habit you will use in larger projects: judge a program against its intended behavior, not just whether it runs.</p>",
+      "codeExample": "print(\"Welcome to the Study Club\")\nprint(\"Today: learn one new thing\")\nprint(\"Small steps count.\")",
       "exercises": [
         {
-          "title": "Verify your environment",
-          "instruction": "Write a script that prints \"Python is ready!\" and the result of 15 * 3. Save mentally as first_run.py.",
-          "solution": "print(\"Python is ready!\")\nprint(15 * 3)  # 45",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write a script that prints \"Python is ready!\" and the result of 15 * 3. Change names/values first; only then restructure."
+          "title": "Guided: your club sign",
+          "instruction": "Create a three-line sign: club name, today’s activity, and a closing message. Choose your own club.",
+          "hint": "Use one print call for each part, in the order visitors should read it.",
+          "solution": "print(\"Welcome to the Coding Club\")\nprint(\"Today: build a welcome sign\")\nprint(\"Questions are welcome.\")",
+          "expectedOutput": "Welcome to the Coding Club\nToday: build a welcome sign\nQuestions are welcome.",
+          "solutionExplanation": "The three instructions have the same shape but different arguments. Their order expresses the desired reading order. Your club name and activity may be different.",
+          "successCriteria": [
+            "The title comes first.",
+            "The activity comes second.",
+            "The sign ends with an appropriate closing message."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: rearrange a sign",
+          "instruction": "A program prints Goodbye, then Welcome, then Today: practise Python. Rewrite it so Welcome is first and Goodbye is last.",
+          "hint": "Move the entire instructions; do not change Python keywords.",
+          "solution": "print(\"Welcome\")\nprint(\"Today: practise Python\")\nprint(\"Goodbye\")",
+          "expectedOutput": "Welcome\nToday: practise Python\nGoodbye",
+          "solutionExplanation": "This is a behavior error, not necessarily a syntax error. All three calls can be valid while the result is wrong for the task. Reordering fixes the behavior.",
+          "successCriteria": [
+            "All three messages remain.",
+            "The order is Welcome, activity, Goodbye."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a notice with breathing room",
+          "instruction": "Make a notice with a place name, an empty output line, and an announcement. Use exactly three print calls.",
+          "hint": "One print call can have no argument.",
+          "solution": "print(\"School Art Room\")\nprint()\nprint(\"Bring your sketchbook on Monday.\")",
+          "expectedOutput": "School Art Room\n\nBring your sketchbook on Monday.",
+          "solutionExplanation": "The middle print() adds a line ending without a message. This creates the requested gap. A blank line in the source alone would not satisfy the output requirement.",
+          "successCriteria": [
+            "There is one empty line between the messages.",
+            "The source contains three print calls.",
+            "You can explain which call creates the gap."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "How do you run a Python file named shop.py?",
+          "q": "In a simple program with three print instructions, which runs first?",
           "options": [
-            "open shop.py",
-            "python3 shop.py",
-            "run shop",
-            "execute shop.py as admin only"
+            "The line whose message comes first alphabetically",
+            "The bottom line",
+            "The top line",
+            "All three at the same time"
           ],
-          "correct": 1,
-          "explanation": "In the terminal: python3 shop.py (or python shop.py on some systems)."
+          "correct": 2,
+          "explanation": "Python starts with the first instruction and continues downward."
         },
         {
-          "q": "When would you use “Install & First Run” in a real project?",
+          "q": "You swap two print instructions. What should you expect?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Set up Python and run your first script on your computer.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "The two messages exchange positions in the output",
+            "The messages stay in their original order",
+            "Each instruction now prints both messages",
+            "Only the instruction moved upward runs"
+          ],
+          "correct": 0,
+          "explanation": "The order of instructions controls the order of output."
+        },
+        {
+          "q": "After editing the message, how do you see the new output?",
+          "options": [
+            "The old output updates while you type",
+            "Press Run Python again",
+            "Switch lessons so the previous output is recalculated",
+            "Edit the output panel instead of running the program"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Set up Python and run your first script on your computer."
+          "explanation": "The output shows the most recent run, so run again after editing."
+        },
+        {
+          "q": "You want an empty output line between two messages. Which change does that?",
+          "options": [
+            "Leave an empty source line between the two print calls",
+            "Add spaces before the second print call",
+            "Put the two calls on the same source line",
+            "Place a print() call between the two message calls"
+          ],
+          "correct": 3,
+          "explanation": "An empty source line helps organise code but produces no output. Calling print() with no arguments writes a newline, creating an empty line between these messages."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Changing the code does not change the old output until you run it again. Keep one print instruction per line while you are learning.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Complete Your First Line of Python: you can write and run a print call with a quoted message."
+        ],
+        "outcomes": [
+          "Predict the order of output from several instructions.",
+          "Distinguish a blank source-code line from an empty output line.",
+          "Build and check a three-part welcome sign."
+        ],
+        "expectedOutput": "Welcome to the Study Club\nToday: learn one new thing\nSmall steps count.",
+        "walkthrough": [
+          {
+            "code": "print(\"Welcome to the Study Club\")",
+            "explanation": "The first call writes the sign’s title and ends its output line."
+          },
+          {
+            "code": "print(\"Today: learn one new thing\")",
+            "explanation": "The second call adds the activity below the title. The colon is part of the string, not a Python control-flow symbol here."
+          },
+          {
+            "code": "print(\"Small steps count.\")",
+            "explanation": "The final call supplies the closing message. Execution then reaches the end of the program."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Create an intentional empty output line",
+            "code": "print(\"Welcome to the Study Club\")\n\nprint()\nprint(\"Bring your curiosity.\")",
+            "expectedOutput": "Welcome to the Study Club\n\nBring your curiosity.",
+            "explanation": "The blank source-code line does nothing by itself. The print() call is what produces the empty output line between the two messages. Removing only the blank source-code line leaves the output unchanged."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The closing message appears first",
+            "cause": "The instructions are in the wrong sequence for the intended sign.",
+            "fix": "Move complete print calls into the desired top-to-bottom order."
+          },
+          {
+            "symptom": "Adding blank lines in the editor does not add output spacing",
+            "cause": "An empty source-code line is not an output instruction.",
+            "fix": "Use print() with no arguments to request an empty output line."
+          },
+          {
+            "symptom": "A terminal setup command causes a Python syntax error",
+            "cause": "A command such as python3 hello.py belongs to your terminal, not inside Python code.",
+            "fix": "Keep the browser editor for Python instructions. Use terminal commands only in a local terminal when following setup instructions."
+          }
+        ],
+        "summary": [
+          "A simple program follows its written sequence.",
+          "Source layout and displayed output are different; use print() to request an empty output line.",
+          "A useful result must match the intended message and order. Next, you will deliberately make and repair syntax errors."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python tutorial: invoking the interpreter",
+            "url": "https://docs.python.org/3/tutorial/interpreter.html"
+          },
+          {
+            "title": "Official Python downloads",
+            "url": "https://www.python.org/downloads/"
+          }
+        ]
+      }
     },
     {
       "id": "py-03",
-      "title": "1.3 Python Syntax — The Rules of the Road",
+      "title": "1.3 Fix Your First Python Error",
       "module": "Getting Started",
-      "objective": "Write valid Python code using indentation, colons, and clear structure.",
-      "why": "Traffic rules keep roads safe. Syntax rules keep programs working. Break them and you get errors.",
-      "explanation": "<p><strong>What you will learn.</strong> Write valid Python code using indentation, colons, and clear structure. By the end you should explain <em>The Rules of the Road</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Traffic rules keep roads safe. Syntax rules keep programs working. Break them and you get errors. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Syntax is the grammar of a language. The computer is strict: one missing quote or wrong indent and it refuses the whole program. Comments are notes for humans; print/log statements are how you see results.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><strong>Key rules:</strong><br>\n  • Indentation (usually 4 spaces) groups code blocks<br>\n  • Colons <code>:</code> start blocks (if, for, def)<br>\n  • Case-sensitive: <code>Name</code> ≠ <code>name</code><br>\n  • One statement per line (or use <code>;</code> sparingly)<br>\n  • Parentheses for function calls: <code>print()</code><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Write valid Python code using indentation, colons, and clear structure.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>age = 20</code> — stores or updates a value.</li><li><code>if age &gt;= 18:</code> — branches based on a condition.</li><li><code>print(\"Adult\")      # indented — inside the if</code> — shows output so you can verify the result.</li><li><code>print(\"Can vote\")</code> — shows output so you can verify the result.</li><li><code>else:</code> — branches based on a condition.</li><li><code>print(\"Minor\")      # indented — inside the else</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>The Rules of the Road</em> solve?</li><li>Which line in the example most directly achieves: “Write valid Python code using indentation, colons, and clear structure.”?</li><li>If you change one value in <code>age = 20</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Keep data and methods that belong together on the same type; avoid god-objects that do everything.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "age = 20\n\nif age >= 18:\n    print(\"Adult\")      # indented — inside the if\n    print(\"Can vote\")\nelse:\n    print(\"Minor\")      # indented — inside the else\n\nprint(\"Done\")           # not indented — always runs",
+      "objective": "Find and fix a missing quote or parenthesis in a print instruction.",
+      "why": "Every programmer makes typing mistakes. Learning to read and repair them helps you keep moving without guessing.",
+      "explanation": "<h4>What syntax means</h4><p><strong>Syntax</strong> is the set of rules that determines how code is written. Python needs to recognise where names, text values, calls, and larger groups of instructions begin and end. A missing character can prevent it from understanding the program, even when the intended message seems obvious to you.</p>\n<p>For a print call, check the function name, a matching pair of parentheses, and matching quotes around a text argument. Compare <code>print(\"Shop open\")</code> with <code>print(\"Shop open\"</code>. The second version has a complete string but an incomplete function call: its final parenthesis is missing.</p>\n<h4>Three different kinds of problem</h4><p>A <strong>syntax error</strong> means Python cannot parse the written structure. A missing quote or parenthesis is a common cause. In a script-like run, Python normally parses the supplied code before executing it, so an incomplete later line can prevent even earlier lines from running.</p>\n<p>A <strong>runtime error</strong> happens after valid syntax is accepted and execution encounters a problem. For example, <code>Print(\"Hello\")</code> has a valid call shape, but normally raises <code>NameError</code> because Python has no built-in function with that capitalised name. A <strong>logic error</strong> is different again: the program runs, but the result is wrong for its purpose, such as saying “Closed” when you meant “Open”.</p>\n<h4>Read the error as evidence</h4><p>Error messages often include a line number, a fragment of code, and an error category. Read the final description, then inspect the indicated line and the line before it. The highlighted location is where Python noticed the problem; the cause can be earlier, such as an unclosed quote.</p>\n<p>Exact wording varies by Python version and by the surrounding code. Do not memorise one sentence as the only sign of a missing parenthesis. Learn the underlying rule: opening and closing boundaries must match. The browser runner may include additional runtime details around the Python error; focus first on the Python exception and your code.</p>\n<h4>Use a small, repeatable debugging process</h4><p>Start by running the working example below. Then remove its final parenthesis and run again. Compare the failure with the working version. Put the parenthesis back, rerun, and verify that the intended output returns. You have performed <strong>debugging</strong>: finding a cause, making a correction, and checking the result.</p>\n<p>Change one thing at a time. If you alter the quotes, function name, and order together, a successful run will not tell you which change fixed the issue. For a larger program, reducing a problem to a tiny example is often more informative than repeatedly rereading every line.</p>\n<h4>Handle quotes and indentation deliberately</h4><p>Text containing an apostrophe can use double quotes: <code>print(\"Ada's shop\")</code>. If you instead place the same apostrophe inside single-quoted text without escaping it, Python may treat that apostrophe as the end of the string. Matching the outer quotes is not just appearance; it determines how Python reads the characters.</p>\n<p>For the straight-line programs in this module, start instructions at the left edge. Extra leading spaces can cause an unexpected-indentation error. Later you will deliberately indent groups after decisions, loops, and function definitions. At that point indentation will express structure; it is not decorative spacing to add at random.</p>\n<h4>A fix is finished when the behavior is right</h4><p>After an error disappears, still compare the output with your original intention. Changing a message to something else might avoid a quote problem while accidentally removing information the user needed. A correct fix preserves the intended result and uses valid syntax. Your exercises will ask you to explain the cause as well as supply working code.</p>",
+      "codeExample": "print(\"Shop open\")\nprint(\"Welcome inside!\")",
       "exercises": [
         {
-          "title": "Fix the structure",
-          "instruction": "Write an if/else that prints \"Open shop\" if hour is between 8 and 20, else \"Closed\". Use proper indentation.",
-          "solution": "hour = 14\nif hour >= 8 and hour <= 20:\n    print(\"Open shop\")\nelse:\n    print(\"Closed\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write an if/else that prints \"Open shop\" if hour is between 8 and 20, else \"Closed\". Change names/values first; only then restructure."
+          "title": "Guided: repair a missing parenthesis",
+          "instruction": "Repair print(\"Welcome\" and explain why adding another quote would not help.",
+          "hint": "The text already has an opening and a closing quote.",
+          "solution": "print(\"Welcome\")",
+          "expectedOutput": "Welcome",
+          "solutionExplanation": "The missing boundary belongs to the function call. The corrected instruction adds ) after the already-complete string. Another quote would change the string syntax instead of closing the call.",
+          "successCriteria": [
+            "The output is Welcome.",
+            "You identify the missing parenthesis."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: the wrong case",
+          "instruction": "The instruction Print(\"Ready\") produces NameError. Fix it and state whether the original issue was missing punctuation or an unknown name.",
+          "hint": "Compare the function name with the one in the working example.",
+          "solution": "print(\"Ready\")",
+          "expectedOutput": "Ready",
+          "solutionExplanation": "Both the string and the call delimiters were already complete. The capital P named a different, undefined function. Lowercase print refers to the built-in output function.",
+          "successCriteria": [
+            "The output is Ready.",
+            "You explain that Python names are case-sensitive."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: preserve a quoted message",
+          "instruction": "Write a working instruction whose output is Ada's shop is open. Then change the message to closed and confirm that this changes behavior without causing a syntax error.",
+          "hint": "Double quotes can surround text containing an apostrophe.",
+          "solution": "print(\"Ada's shop is open\")\nprint(\"Ada's shop is closed\")",
+          "expectedOutput": "Ada's shop is open\nAda's shop is closed",
+          "solutionExplanation": "The reference shows both working states on separate lines for comparison. The apostrophe remains inside double-quoted text. Open versus closed is a choice about the intended message, not a Python syntax rule.",
+          "successCriteria": [
+            "The apostrophe appears in the output.",
+            "Both versions run.",
+            "You distinguish a change in message meaning from a syntax repair."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does indentation do in Python?",
+          "q": "What is missing from print(\"Hello\" ?",
           "options": [
-            "It is only for decoration",
-            "It defines which code belongs to a block",
-            "It speeds up the program",
-            "It is optional always"
+            "A closing quotation mark",
+            "A closing parenthesis",
+            "An opening parenthesis",
+            "A semicolon"
           ],
           "correct": 1,
-          "explanation": "Indentation defines code blocks (if, loops, functions)."
+          "explanation": "The opening parenthesis needs a matching closing parenthesis: print(\"Hello\")."
         },
         {
-          "q": "When would you use “The Rules of the Road” in a real project?",
+          "q": "Which spelling calls the Python output function?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Write valid Python code using indentation, colons, and clear structure.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "PRINT",
+            "Print",
+            "print",
+            "pRint"
           ],
-          "correct": 1,
-          "explanation": "This lesson’s skill is practical: Write valid Python code using indentation, colons, and clear structure."
+          "correct": 2,
+          "explanation": "Python is case-sensitive. The built-in function is named print."
+        },
+        {
+          "q": "The task asks for a total of 5, but print(2 + 2) runs and displays 4. What kind of problem is this?",
+          "options": [
+            "A logic error: valid code does not meet the requirement",
+            "A syntax error: the parentheses cannot be parsed",
+            "An installation error: Python did not start",
+            "A name error: print is undefined"
+          ],
+          "correct": 0,
+          "explanation": "The source is valid and executes successfully. The mismatch is between its calculation and the requirement, so you need to correct the reasoning or chosen values."
+        },
+        {
+          "q": "After a working program breaks, which approach helps you understand the cause?",
+          "options": [
+            "Change the quotes, function name, and message together",
+            "Look only at the final error line without inspecting the source",
+            "Reinstall the tools before reading the diagnostic",
+            "Read the error and test one small fix"
+          ],
+          "correct": 3,
+          "explanation": "One change at a time helps you connect the result to the change you made."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Keep data and methods that belong together on the same type; avoid god-objects that do everything.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Use matching straight quotation marks, not curly smart quotes. An error may point near the problem rather than directly at it. Check the line above too.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can run a sequence of print calls and predict their output."
+        ],
+        "outcomes": [
+          "Distinguish syntax errors, runtime errors, and wrong-but-running output.",
+          "Find a missing quote or parenthesis using an error message and a working comparison.",
+          "Make one correction and verify the intended behavior."
+        ],
+        "expectedOutput": "Shop open\nWelcome inside!",
+        "walkthrough": [
+          {
+            "code": "print(\"Shop open\")",
+            "explanation": "The name print is lowercase, the text has matching double quotes, and the function call has both parentheses. Python can parse and execute this instruction."
+          },
+          {
+            "code": "print(\"Welcome inside!\")",
+            "explanation": "The second call follows the same structure and supplies the second output line. If you remove a closing boundary here, the combined program can fail to parse before either call runs."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Keep an apostrophe inside the message",
+            "code": "print(\"Ada's shop\")\nprint(\"Shop open\")",
+            "expectedOutput": "Ada's shop\nShop open",
+            "explanation": "The apostrophe belongs to the message because the enclosing string uses double quotes. A pair of single quotes would require another way to represent the interior apostrophe, such as an escape; choosing double quotes is the simpler solution here."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "SyntaxError reports that a delimiter is not closed",
+            "cause": "The supplied program has an incomplete quote or parenthesis pair.",
+            "fix": "Inspect the reported line and earlier opening delimiters. Restore the missing closing character, then rerun."
+          },
+          {
+            "symptom": "NameError mentions Print",
+            "cause": "Python names are case-sensitive; Print is not the built-in print.",
+            "fix": "Use lowercase print. Do not try to fix a name error by changing the output text."
+          },
+          {
+            "symptom": "The program runs but says the wrong thing",
+            "cause": "The code is valid but its message does not match the requirement.",
+            "fix": "Compare the displayed output with the task and correct the string, preserving valid syntax."
+          },
+          {
+            "symptom": "Unexpected indentation in a simple print program",
+            "cause": "An instruction begins with spaces even though it is not inside an indented block.",
+            "fix": "Remove the leading spaces in these introductory straight-line examples."
+          }
+        ],
+        "summary": [
+          "Syntax describes valid structure; runtime errors occur during execution; logic errors produce an unintended result.",
+          "Read error evidence, make one change, and rerun.",
+          "A repaired program must still do the intended job. Next you will combine messages with calculated numbers."
+        ],
+        "references": [
+          {
+            "title": "Python tutorial: syntax errors and exceptions",
+            "url": "https://docs.python.org/3/tutorial/errors.html"
+          },
+          {
+            "title": "Python language reference: indentation",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#indentation"
+          }
+        ]
+      }
     },
     {
       "id": "py-04",
-      "title": "1.4 Output — Talking to the User with print()",
+      "title": "1.4 Show Text and Numbers",
       "module": "Getting Started",
-      "objective": "Display text, numbers, and multiple values using print().",
-      "why": "A shop receipt, SMS alert, or dashboard all show output. print() is your first way to communicate results.",
-      "explanation": "<p><strong>What you will learn.</strong> Display text, numbers, and multiple values using print(). By the end you should explain <em>Talking to the User with print()</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> A shop receipt, SMS alert, or dashboard all show output. print() is your first way to communicate results. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Types describe what kind of value you have (text, number, true/false, nothing). Operations only make sense when the type matches — you cannot average a list of names the same way you average prices.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>print() can show strings, numbers, variables, and multiple items separated by commas.<br>\n  Use <code>sep</code> and <code>end</code> to control separators and newlines.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Display text, numbers, and multiple values using print().” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>shop = \"Mama Nkechi Provisions\"</code> — stores or updates a value.</li><li><code>sales = 125000</code> — stores or updates a value.</li><li><code>print(\"Shop:\", shop)</code> — shows output so you can verify the result.</li><li><code>print(\"Today's sales:\", sales, \"naira\")</code> — shows output so you can verify the result.</li><li><code>print(\"A\", \"B\", \"C\", sep=\"-\")       # A-B-C</code> — shows output so you can verify the result.</li><li><code>print(\"Loading\", end=\"...\")         # no newline</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Talking to the User with print()</em> solve?</li><li>Which line in the example most directly achieves: “Display text, numbers, and multiple values using print().”?</li><li>If you change one value in <code>shop = \"Mama Nkechi Provisions\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "shop = \"Mama Nkechi Provisions\"\nsales = 125000\nprint(\"Shop:\", shop)\nprint(\"Today's sales:\", sales, \"naira\")\nprint(\"A\", \"B\", \"C\", sep=\"-\")       # A-B-C\nprint(\"Loading\", end=\"...\")         # no newline\nprint(\" done\")",
+      "objective": "Use print() to display text, calculate a total, and show multiple values.",
+      "why": "A shop receipt needs both a message and a total. You can combine these without learning any new tools.",
+      "explanation": "<h4>Text represents a message; numbers represent quantities</h4><p>A shop receipt needs labels people can read and amounts a program can calculate. In Python, <code>\"200\"</code> is a string containing three characters. <code>200</code> is an integer: a whole-number value. Both can look the same when printed, but they are different kinds of value and support different operations.</p>\n<p>Quotation marks are therefore meaningful. <code>print(\"2 + 3\")</code> displays the characters 2, a space, +, another space, and 3. In <code>print(2 + 3)</code>, Python adds two numbers before displaying the result. The output is 5, not the written calculation.</p>\n<h4>Python evaluates an expression before printing it</h4><p>An <strong>expression</strong> is a piece of code that produces a value. The expression <code>200 + 300</code> produces 500. The <code>+</code> operator asks Python to add those two integer values. When that expression is an argument to print, evaluation happens before the result is written.</p>\n<p>Trace the process in order: identify the numbers, perform the addition, give the result to print, then display it. This distinction will become especially useful when calculations grow longer. You can predict the intermediate value even when it is not stored under a variable name.</p>\n<h4>Separate several arguments with commas</h4><p>The call <code>print(\"Total:\", 200 + 300, \"naira\")</code> supplies three arguments: a label string, the calculated number 500, and a currency string. Commas separate these arguments in the source code. The commas themselves are not printed.</p>\n<p>By default, print puts one space between arguments and finishes with a newline. That gives <code>Total: 500 naira</code>. A space already inside a string is additional: <code>print(\"Total: \", 500)</code> produces two spaces before 500 because one belongs to the label and another is the default separator.</p>\n<h4>Contrast addition with joining text</h4><p>Numbers and strings can both use a plus sign, but not with the same meaning. With integers, <code>2 + 3</code> adds to 5. With strings, <code>\"2\" + \"3\"</code> joins characters to form <code>\"23\"</code>. Joining strings is called <strong>concatenation</strong>. It does not calculate the number they might represent.</p>\n<p>Mixing a string and an integer with +, such as <code>\"Total: \" + 500</code>, raises TypeError because Python does not silently choose how to combine those types. At this stage, pass them as separate print arguments instead. Later lessons explain explicit conversion when you really need one combined string.</p>\n<h4>Build a receipt that you can check</h4><p>The main example shows a title, an item count, and a total. Read each line and identify which parts are fixed text and which are numbers. Predict the displayed total before running. Change one price from 300 to 350, rerun, and verify that the total becomes 550 while the label and currency stay the same.</p>\n<p>The item count in this simple example is a number you wrote directly; Python is not automatically counting a list of purchases. Likewise, the currency label does not convert or format money. These are deliberate boundaries of the example. Later you will represent changing data with variables and learn more careful number formatting.</p>\n<h4>Use the output to explain the calculation</h4><p>A bare number such as 500 may be correct but unclear. A label tells the reader what it means. In your practice, use labels and units that match the calculation, and check both arithmetic and presentation. This makes your work easier for another person to understand and easier for you to debug.</p>",
+      "codeExample": "print(\"Mini shop receipt\")\nprint(\"Items:\", 2)\nprint(\"Total:\", 200 + 300, \"naira\")",
       "exercises": [
         {
-          "title": "Daily sales line",
-          "instruction": "Print a one-line summary: business name, number of customers, and total sales (use variables).",
-          "solution": "business = \"City Buka\"\ncustomers = 48\ntotal = 87500\nprint(business, \"| customers:\", customers, \"| sales: ₦\", total)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Print a one-line summary: business name, number of customers, and total sales (use variables). Change names/values first; only then restructure."
+          "title": "Guided: a labelled total",
+          "instruction": "Display a receipt title and a calculated total for items costing 150 and 250, followed by the word naira.",
+          "hint": "Give print a label string, an unquoted addition, and a currency string.",
+          "solution": "print(\"Ada’s Shop\")\nprint(\"Total:\", 150 + 250, \"naira\")",
+          "expectedOutput": "Ada’s Shop\nTotal: 400 naira",
+          "solutionExplanation": "The price expression is evaluated as 400 before print receives it. The label and unit make the number meaningful. The commas separate arguments and are replaced by default spaces in the output.",
+          "successCriteria": [
+            "The total is calculated from 150 + 250.",
+            "The displayed amount is 400.",
+            "The output contains an appropriate label and unit."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: text instead of arithmetic",
+          "instruction": "A receipt uses print(\"Total:\", \"150\" + \"250\") and shows 150250. Repair the calculation so it shows 400.",
+          "hint": "The quoted operands are strings. Change their types by changing the way you write these literal values.",
+          "solution": "print(\"Total:\", 150 + 250)",
+          "expectedOutput": "Total: 400",
+          "solutionExplanation": "The original plus sign joined two strings. Removing quotes from these numeric literals makes them integers, so + performs addition. Changing only the label would not fix the result.",
+          "successCriteria": [
+            "The result is 400, not 150250.",
+            "You explain the difference between string concatenation and arithmetic."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: include delivery",
+          "instruction": "Create a receipt with an item costing 300, delivery costing 100, and a displayed total. Use labels so a reader can understand all three amounts.",
+          "hint": "Three print calls can show item, delivery, and total. Only the total needs an addition expression.",
+          "solution": "print(\"Item:\", 300, \"naira\")\nprint(\"Delivery:\", 100, \"naira\")\nprint(\"Total:\", 300 + 100, \"naira\")",
+          "expectedOutput": "Item: 300 naira\nDelivery: 100 naira\nTotal: 400 naira",
+          "solutionExplanation": "Separate lines explain how the final amount was formed. The total is evaluated from the same amounts shown above, making the calculation easy to check. This is a small receipt, not a complete accounting system.",
+          "successCriteria": [
+            "All amounts have labels and units.",
+            "The total agrees with the displayed item and delivery amounts.",
+            "Changing the delivery amount and total expression consistently changes the final result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does print(\"Hi\", end=\"\") do?",
+          "q": "What does print(2 + 3) display?",
           "options": [
-            "Crashes",
-            "Prints Hi without moving to a new line",
-            "Prints Hi twice",
-            "Deletes Hi"
+            "2 + 3",
+            "23",
+            "5",
+            "An error"
           ],
-          "correct": 1,
-          "explanation": "end=\"\" replaces the default newline so the next print continues on the same line."
+          "correct": 2,
+          "explanation": "Python evaluates the addition before print displays the result."
         },
         {
-          "q": "When would you use “Talking to the User with print()” in a real project?",
+          "q": "What does print(\"2 + 3\") display?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Display text, numbers, and multiple values using print().",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "5",
+            "2 + 3",
+            "23",
+            "Nothing"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Display text, numbers, and multiple values using print()."
+          "explanation": "Quotes turn the characters into text, so no addition happens."
+        },
+        {
+          "q": "What does print(\"Items:\", 2) display?",
+          "options": [
+            "Items: 2",
+            "Items:2 with no space",
+            "Only 2",
+            "An error"
+          ],
+          "correct": 0,
+          "explanation": "print inserts a space between values separated by a comma."
+        },
+        {
+          "q": "Which instruction calculates a total and adds a label?",
+          "options": [
+            "print(Total: 100 + 50)",
+            "print(\"Total: 100 + 50\")",
+            "print(\"Total:\" 100 + 50)",
+            "print(\"Total:\", 100 + 50)"
+          ],
+          "correct": 3,
+          "explanation": "The label is quoted, the calculation is unquoted, and a comma separates them."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Quote labels such as \"Total:\". Leave numbers unquoted when you want Python to calculate with them. Put commas between separate values.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can write and repair print calls with strings.",
+          "You know basic whole-number addition."
+        ],
+        "outcomes": [
+          "Predict the difference between a quoted calculation and an arithmetic expression.",
+          "Use commas to print labels, a calculated value, and a unit.",
+          "Explain why joining numeric-looking strings does not add numbers."
+        ],
+        "expectedOutput": "Mini shop receipt\nItems: 2\nTotal: 500 naira",
+        "walkthrough": [
+          {
+            "code": "print(\"Mini shop receipt\")",
+            "explanation": "A single string supplies the title. The surrounding quotes are not part of the displayed message."
+          },
+          {
+            "code": "print(\"Items:\", 2)",
+            "explanation": "The comma separates two arguments. print inserts a space between the label and the integer, then ends the line."
+          },
+          {
+            "code": "print(\"Total:\", 200 + 300, \"naira\")",
+            "explanation": "Python first evaluates 200 + 300 as 500. print then displays three values with spaces between them: the label, 500, and the currency."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Same-looking digits, different operations",
+            "code": "print(\"Text:\", \"2 + 3\")\nprint(\"Addition:\", 2 + 3)\nprint(\"Joined text:\", \"2\" + \"3\")",
+            "expectedOutput": "Text: 2 + 3\nAddition: 5\nJoined text: 23",
+            "explanation": "The first expression is entirely quoted, so it stays text. The second adds integers. The third joins two strings. Looking only at the characters is not enough: the quotes determine the kind of value and therefore the operation."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The total displays 200 + 300 instead of 500",
+            "cause": "The calculation was written inside quotes.",
+            "fix": "Leave the numeric expression unquoted when you want addition."
+          },
+          {
+            "symptom": "TypeError appears while adding a label to a number",
+            "cause": "The + operator received a string and an integer.",
+            "fix": "Pass the label and number as separate print arguments with a comma."
+          },
+          {
+            "symptom": "There are unexpected spaces around a result",
+            "cause": "A label has a trailing space as well as the default separator.",
+            "fix": "Remove unnecessary spaces inside the label and inspect the output again."
+          }
+        ],
+        "summary": [
+          "Quoted digits are text; unquoted whole numbers are integer values.",
+          "Expressions are evaluated before print displays their results.",
+          "Commas separate print arguments, and print normally places a space between them. Next, use comments to explain your intentions without changing output."
+        ],
+        "references": [
+          {
+            "title": "Python documentation: print()",
+            "url": "https://docs.python.org/3/library/functions.html#print"
+          },
+          {
+            "title": "Python tutorial: using Python as a calculator",
+            "url": "https://docs.python.org/3/tutorial/introduction.html"
+          }
+        ]
+      }
     },
     {
       "id": "py-05",
-      "title": "1.5 Comments — Notes for Future You",
+      "title": "1.5 Leave Helpful Comments",
       "module": "Getting Started",
-      "objective": "Write clear comments and docstrings so code stays understandable.",
-      "why": "When you reopen code after 3 months (or hand it to a teammate), comments save hours of confusion.",
-      "explanation": "<p><strong>What you will learn.</strong> Write clear comments and docstrings so code stays understandable. By the end you should explain <em>Notes for Future You</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> When you reopen code after 3 months (or hand it to a teammate), comments save hours of confusion. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Syntax is the grammar of a language. The computer is strict: one missing quote or wrong indent and it refuses the whole program. Comments are notes for humans; print/log statements are how you see results.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Use <code>#</code> for single-line comments.<br>\n  Use triple quotes <code>\"\"\" ... \"\"\"</code> for multi-line notes or function docs.<br>\n  Comment the <em>why</em>, not the obvious <em>what</em>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Write clear comments and docstrings so code stays understandable.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>11</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>base_fee = 500</code> — stores or updates a value.</li><li><code>extra_per_km = 100</code> — stores or updates a value.</li><li><code>\"\"\"</code> — does a step in the overall recipe.</li><li><code>Business rule:</code> — does a step in the overall recipe.</li><li><code>Free delivery if order total &gt; 15000</code> — branches based on a condition.</li><li><code>\"\"\"</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Notes for Future You</em> solve?</li><li>Which line in the example most directly achieves: “Write clear comments and docstrings so code stays understandable.”?</li><li>If you change one value in <code>base_fee = 500</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Calculate delivery fee for orders outside Lagos\nbase_fee = 500\n# Extra charge per km beyond 5km\nextra_per_km = 100\n\n\"\"\"\nBusiness rule:\nFree delivery if order total > 15000\n\"\"\"\norder_total = 18000\nif order_total > 15000:\n    delivery = 0  # promo: free delivery\nelse:\n    delivery = base_fee",
+      "objective": "Use a # comment to explain code without changing its output.",
+      "why": "A note can help you remember why a program does something when you come back tomorrow.",
+      "explanation": "<h4>Comments communicate with people reading code</h4><p>Code tells Python what to execute. A <strong>comment</strong> tells a person something about that code. In Python, a hash character <code>#</code> outside a string starts a comment that continues to the end of the physical line. Python ignores that comment when executing the program.</p>\n<p>A comment can explain an intention, a constraint, or a decision that is not obvious from the instructions alone. For a receipt, the calculation may be easy to read, but a note that delivery must be included explains why both amounts are present.</p>\n<h4>Use full-line and inline comments appropriately</h4><p>A <strong>full-line comment</strong> occupies a line by itself, such as <code># Include the item price and the delivery fee</code>. It is useful before one or more related instructions. The next line starts normal code again; the comment does not automatically continue onto it.</p>\n<p>An <strong>inline comment</strong> follows code on the same line, such as <code>print(\"Thank you!\")  # A friendly closing message</code>. Python executes the print call and ignores the following comment. Keep a small separation between code and the comment so a reader can see the boundary.</p>\n<h4>A hash inside a string is ordinary text</h4><p>The instruction <code>print(\"Order #1\")</code> displays the hash because it is inside the quoted string. Python recognises the string boundary before treating a later hash as a comment marker. In <code>print(\"Order #1\")  # Receipt heading</code>, the first hash is output text and the second begins a comment.</p>\n<p>This is why you must interpret symbols in context. The same written character can serve a different role depending on whether it is inside a string. Predicting the output requires reading the quote boundaries, not just searching for a hash anywhere on the line.</p>\n<h4>Explain why, and keep the explanation true</h4><p>Compare <code># Add numbers</code> with <code># Include delivery in the amount the customer pays</code>. The first mostly repeats what + already shows; the second records a reason. A useful comment helps someone understand a choice they might otherwise question.</p>\n<p>Comments can become wrong when code changes. If you remove a delivery amount from the calculation but leave a comment saying it is included, the program still runs and the note becomes misleading. Review comments whenever you change the behavior they describe. A comment does not enforce a business rule; the executable instructions must implement it.</p>\n<h4>Temporarily comment out an instruction</h4><p>Putting <code>#</code> before a print call makes the entire call part of a comment, so it no longer runs. This is sometimes called <strong>commenting out</strong> code. It can help you isolate a problem or compare behavior while experimenting.</p>\n<p>Use this deliberately and temporarily. A large collection of old commented-out instructions makes a program harder to read. Also do not confuse disabling an instruction with fixing it: if the required output disappears, the task may still be incomplete even though the error is gone.</p>\n<h4>Comments, printed messages, and later documentation</h4><p>A comment is visible in the source code but not in ordinary output. If a customer or learner needs to see a message, use print. If a future programmer needs to understand a decision, a comment may be suitable. Keeping these audiences separate makes both the interface and the source clearer.</p>\n<p>Later you will meet <strong>docstrings</strong>, which document modules, functions, or classes and are actual string literals with a special placement. They are not a general replacement for # comments. For this module, use # for notes and print for displayed messages; you can build a useful habit before learning those larger structures.</p>",
+      "codeExample": "# Include the item price and the delivery fee\nprint(\"Total:\", 200 + 50, \"naira\")\nprint(\"Thank you!\")  # A friendly closing message",
       "exercises": [
         {
-          "title": "Document a price rule",
-          "instruction": "Write a short script with comments explaining a 5% VAT calculation on a product price.",
-          "solution": "# Product price before tax\nprice = 10000\n# VAT rate in many businesses is 7.5% or 5% for practice\nvat_rate = 0.05  # 5%\nvat = price * vat_rate\ntotal = price + vat\nprint(\"Total with VAT:\", total)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Write a short script with comments explaining a 5% VAT calculation on a product price. Change names/values first; only then restructure."
+          "title": "Guided: explain a receipt total",
+          "instruction": "Add a comment explaining why a total includes an item costing 300 and delivery costing 100. Display the total.",
+          "hint": "Put the reason after # on the line before the calculation.",
+          "solution": "# Include delivery in the amount the customer pays\nprint(\"Total:\", 300 + 100, \"naira\")",
+          "expectedOutput": "Total: 400 naira",
+          "solutionExplanation": "The comment records the intent; the addition actually implements it. Python ignores the comment and prints the calculated total. Both the note and the expression should agree.",
+          "successCriteria": [
+            "The total is 400 naira.",
+            "The comment explains why delivery is included.",
+            "The comment itself is not printed."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: restore a required message",
+          "instruction": "A program contains # print(\"Order received\") and produces no output. Restore the message and add a separate comment explaining its purpose.",
+          "hint": "Move the explanatory note onto its own comment line and leave the call executable.",
+          "solution": "# Confirm that the order reached the program\nprint(\"Order received\")",
+          "expectedOutput": "Order received",
+          "solutionExplanation": "Removing the hash before print restores execution. The separate comment still explains the purpose without disabling the instruction.",
+          "successCriteria": [
+            "The output is Order received.",
+            "An explanatory comment remains in the source."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: a numbered receipt",
+          "instruction": "Display Receipt #2 and a calculated total of 500 + 50. Add a comment explaining what the extra 50 represents.",
+          "hint": "Keep the receipt hash inside the quoted title. Use a separate # comment for the explanation.",
+          "solution": "print(\"Receipt #2\")\n# Add a delivery fee of 50 to the item price\nprint(\"Total:\", 500 + 50, \"naira\")",
+          "expectedOutput": "Receipt #2\nTotal: 550 naira",
+          "solutionExplanation": "The receipt marker is string content and appears in output. The separate comment explains the fee. The unquoted arithmetic calculates 550. This combines the ideas from the whole introductory module.",
+          "successCriteria": [
+            "The receipt number includes a visible hash.",
+            "The final total is 550 naira.",
+            "The fee has a clear source-code explanation."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Which is a valid Python comment?",
+          "q": "Which line is a Python comment?",
           "options": [
-            "// note",
-            "/* note */",
-            "# note",
-            "-- note"
-          ],
-          "correct": 2,
-          "explanation": "Python uses # for single-line comments."
-        },
-        {
-          "q": "When would you use “Notes for Future You” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Write clear comments and docstrings so code stays understandable.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "// Delivery fee",
+            "# Delivery fee",
+            "<!-- Delivery fee -->",
+            "comment Delivery fee"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Write clear comments and docstrings so code stays understandable."
+          "explanation": "Python uses # to begin a line comment."
+        },
+        {
+          "q": "You change only a comment and run again. What normally happens to the output?",
+          "options": [
+            "The new comment is printed before the result",
+            "The commented line becomes an instruction",
+            "It stays the same",
+            "The following instruction is skipped"
+          ],
+          "correct": 2,
+          "explanation": "Changing only comment text leaves the executable instructions unchanged, so this program produces the same output."
+        },
+        {
+          "q": "What does print(\"Order #1\") display?",
+          "options": [
+            "Order #1",
+            "Order",
+            "Nothing",
+            "An error"
+          ],
+          "correct": 0,
+          "explanation": "Inside quotation marks, # is part of the text, not a comment marker."
+        },
+        {
+          "q": "Which comment is most useful above a total calculation?",
+          "options": [
+            "# Add two numbers",
+            "# Print the result",
+            "# The plus sign adds",
+            "# Include delivery in the amount the customer pays"
+          ],
+          "correct": 3,
+          "explanation": "The delivery comment explains the reason for the calculation. The other comments mostly repeat operations already visible in the source."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "A comment is not displayed to the learner or customer. Use print() if you want a message in the output. A # inside quoted text is displayed normally.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "You can print labelled arithmetic results and distinguish quoted text from numbers."
+        ],
+        "outcomes": [
+          "Write a full-line or inline comment without changing the result.",
+          "Explain why # inside a string is displayed rather than treated as a comment.",
+          "Choose between a code comment and a message intended for the user."
+        ],
+        "expectedOutput": "Total: 250 naira\nThank you!",
+        "walkthrough": [
+          {
+            "code": "# Include the item price and the delivery fee",
+            "explanation": "This entire line is a note to the reader. It explains the intent of the next calculation and contributes nothing to stdout."
+          },
+          {
+            "code": "print(\"Total:\", 200 + 50, \"naira\")",
+            "explanation": "Python adds the item and delivery amounts to get 250. print displays that number with the label and currency."
+          },
+          {
+            "code": "print(\"Thank you!\")  # A friendly closing message",
+            "explanation": "Python runs the call before the comment marker. The trailing note is ignored; only Thank you! appears in the output."
+          }
+        ],
+        "variations": [
+          {
+            "title": "One hash is text; another starts a comment",
+            "code": "print(\"Order #1\")  # Display a receipt heading\n# print(\"Draft receipt\")\nprint(\"Ready\")",
+            "expectedOutput": "Order #1\nReady",
+            "explanation": "The hash inside Order #1 is part of a string. The hash after the call begins a note. The second source line is entirely commented out, so Draft receipt is not displayed. Execution continues with the final print call."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "A helpful note never appears in the output",
+            "cause": "It was written as a comment rather than an output instruction.",
+            "fix": "Use print for information a person running the program needs to see."
+          },
+          {
+            "symptom": "A required message disappears",
+            "cause": "Its print call was commented out during experimentation.",
+            "fix": "Remove the leading # from that instruction and check that the expected output returns."
+          },
+          {
+            "symptom": "The comment and calculation disagree",
+            "cause": "The code changed but the explanation was not updated.",
+            "fix": "Review both together. Ensure the executable expression implements the stated intention."
+          }
+        ],
+        "summary": [
+          "Outside a string, # begins a comment through the end of the line.",
+          "Inside a string, # is ordinary text.",
+          "Comments explain decisions but do not execute or enforce them. The next module introduces variables so useful values can be named and reused."
+        ],
+        "references": [
+          {
+            "title": "Python language reference: comments",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#comments"
+          },
+          {
+            "title": "Python tutorial: documentation strings",
+            "url": "https://docs.python.org/3/tutorial/controlflow.html#documentation-strings"
+          }
+        ]
+      }
     },
     {
       "id": "py-06",
@@ -417,676 +1025,2438 @@ window.PYTHON_COURSE = {
       "id": "py-10",
       "title": "3.1 Strings — Working with Text",
       "module": "Strings",
-      "objective": "Create and print strings with single, double, and triple quotes.",
-      "why": "Names, addresses, SMS messages, and invoices are all text (strings).",
-      "explanation": "<p><strong>What you will learn.</strong> Create and print strings with single, double, and triple quotes. By the end you should explain <em>Working with Text</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Names, addresses, SMS messages, and invoices are all text (strings). Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Strings hold text. Use <code>'...'</code>, <code>\"...\"</code>, or <code>'''...'''</code> for multi-line.<br>\n  Length: <code>len(s)</code>. Index: <code>s[0]</code> is first character.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Create and print strings with single, double, and triple quotes.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>customer = \"Amina Yusuf\"</code> — stores or updates a value.</li><li><code>message = 'Your order is ready'</code> — stores or updates a value.</li><li><code>poem = \"\"\"Thank you for shopping</code> — stores or updates a value.</li><li><code>See you next week!\"\"\"</code> — does a step in the overall recipe.</li><li><code>print(customer)</code> — shows output so you can verify the result.</li><li><code>print(len(customer))</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Working with Text</em> solve?</li><li>Which line in the example most directly achieves: “Create and print strings with single, double, and triple quotes.”?</li><li>If you change one value in <code>customer = \"Amina Yusuf\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "customer = \"Amina Yusuf\"\nmessage = 'Your order is ready'\npoem = \"\"\"Thank you for shopping\nSee you next week!\"\"\"\nprint(customer)\nprint(len(customer))\nprint(customer[0])   # A\nprint(customer[-1])  # f (last char)",
+      "objective": "Create strings and inspect their characters using length and indexing.",
+      "why": "Names, phone numbers, and references are ordered text. Keeping their exact characters is the foundation of reliable text processing.",
+      "explanation": "<h4>Text has order and boundaries</h4><p>A string is a sequence of Unicode characters. Single or double straight quotes mark its boundaries and are not part of its stored text. Match the opening and closing kind. Use double quotes around a message containing an apostrophe. Triple quotes allow actual newlines inside the value; indentation between those boundaries is preserved too.</p>\n<h4>Length includes invisible characters</h4><p>len(text) counts characters, including spaces and newlines. For our simple Latin text, each visible letter is one character; some Unicode symbols can consist of several code points. A phone number should usually stay text: arithmetic is not meaningful for it, and converting to an integer discards leading zeros.</p>\n<h4>Indexes name individual positions</h4><p>Square brackets after a string retrieve one character. Index zero is first, index one is second, and a string of length four ends at index three. Negative indexes count backward: minus one is last. The retrieved character is itself a string because Python has no separate character type.</p>\n<h4>Strings cannot be edited in place</h4><p>Strings are immutable. Assigning text[0] = \"X\" fails, but assigning text = \"X\" is allowed: the variable now refers to a different value. A single index must name an existing character or Python raises IndexError. An empty string therefore has no valid index. Slicing next provides a way to retrieve whole regions.</p>\n<h4>Follow the complete example</h4><p>The operation <code>customer = \"Amina Yusuf\"</code>: The space separates two names but still occupies a character position. There are eleven characters in total. The operation <code>customer[0], customer[-1]</code>: Zero retrieves A; minus one retrieves f. print separates its three arguments with spaces. The operation <code>print(message)</code>: The triple-quoted value already contains a newline, so one call displays two lines.</p>\n<h4>Boundary cases and design choices</h4><p>Compare empty text, one letter, and one space before indexing. A one-letter value has the same first and last character; a space-only value is not empty. Printing text hides its boundary quotes, while printing a collection of text usually shows quotes to distinguish elements. Preserve the original text when constructing new versions so you can compare transformations later.</p>",
+      "codeExample": "customer = \"Amina Yusuf\"\nnotice = \"It's ready\"\nmessage = \"\"\"Collect today\nBring your receipt\"\"\"\nprint(customer)\nprint(len(customer), customer[0], customer[-1])\nprint(notice)\nprint(message)",
       "exercises": [
         {
-          "title": "Business SMS",
-          "instruction": "Create a multi-line string thanking a customer by name and print its length.",
-          "solution": "name = \"Tunde\"\nsms = f\"\"\"Hello {name},\nThanks for buying from us today!\n— MoTechy Store\"\"\"\nprint(sms)\nprint(\"Characters:\", len(sms))",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Create a multi-line string thanking a customer by name and print its length. Change names/values first; only then restructure."
+          "title": "Guided: inspect a code",
+          "instruction": "Print the length, first, and last character of \"AB07\".",
+          "hint": "Use len, [0], and [-1].",
+          "solution": "code = \"AB07\"\nprint(len(code), code[0], code[-1])",
+          "expectedOutput": "4 A 7",
+          "solutionExplanation": "Digits remain characters, including the zero.",
+          "successCriteria": [
+            "Print the length, first, and last character of \"AB07\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: final character",
+          "instruction": "Replace the invalid name[3] for name = \"Ada\" with a length-independent last-character expression.",
+          "hint": "Count from the end.",
+          "solution": "name = \"Ada\"\nprint(name[-1])",
+          "expectedOutput": "a",
+          "solutionExplanation": "Minus one selects the last existing position.",
+          "successCriteria": [
+            "Replace the invalid name[3] for name = \"Ada\" with a length-independent last-character expression.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: multiline label",
+          "instruction": "Store Box and Fragile on separate lines in one value; print its length and contents.",
+          "hint": "The newline counts as one character.",
+          "solution": "label = \"\"\"Box\nFragile\"\"\"\nprint(len(label))\nprint(label)",
+          "expectedOutput": "11\nBox\nFragile",
+          "solutionExplanation": "Three letters, one newline, and seven letters total eleven.",
+          "successCriteria": [
+            "Store Box and Fragile on separate lines in one value; print its length and contents.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does len(\"Hi\") return?",
+          "q": "What is len(\"A B\")?",
           "options": [
-            "1",
-            "2",
             "3",
-            "0"
+            "2",
+            "4",
+            "1"
           ],
-          "correct": 1,
-          "explanation": "H and i — two characters."
+          "correct": 0,
+          "explanation": "The space counts."
         },
         {
-          "q": "When would you use “Working with Text” in a real project?",
+          "q": "Which index selects the last character?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Create and print strings with single, double, and triple quotes.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "-0",
+            "-1",
+            "len(text)",
+            "1"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Create and print strings with single, double, and triple quotes."
+          "explanation": "Minus one counts backward from the end."
+        },
+        {
+          "q": "What do triple-quoted strings preserve?",
+          "options": [
+            "The delimiter quotes",
+            "No whitespace",
+            "Newlines within their boundaries",
+            "Only the first line"
+          ],
+          "correct": 2,
+          "explanation": "Newlines and indentation become text."
+        },
+        {
+          "q": "Why does text[0] = \"X\" fail?",
+          "options": [
+            "Indexes begin at one",
+            "X is invalid",
+            "Variables cannot be reassigned",
+            "Strings are immutable"
+          ],
+          "correct": 3,
+          "explanation": "Indexed character replacement is unsupported."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "IndexError at the end: len(text) is one past the last valid index. Use text[-1] for nonempty text. SyntaxError inside a message: An apostrophe closed a single-quoted literal. Use double outer quotes or escape the apostrophe. Character replacement fails: Strings do not support indexed assignment. Construct and assign a new string.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Assign variables and print values.",
+          "Distinguish strings from numbers."
+        ],
+        "outcomes": [
+          "Create single-line and multiline string literals.",
+          "Predict length and positive or negative character indexes.",
+          "Explain string immutability and invalid indexes."
+        ],
+        "expectedOutput": "Amina Yusuf\n11 A f\nIt's ready\nCollect today\nBring your receipt",
+        "walkthrough": [
+          {
+            "code": "customer = \"Amina Yusuf\"",
+            "explanation": "The space separates two names but still occupies a character position. There are eleven characters in total."
+          },
+          {
+            "code": "customer[0], customer[-1]",
+            "explanation": "Zero retrieves A; minus one retrieves f. print separates its three arguments with spaces."
+          },
+          {
+            "code": "print(message)",
+            "explanation": "The triple-quoted value already contains a newline, so one call displays two lines."
+          }
+        ],
+        "variations": [
+          {
+            "title": "One-character text",
+            "code": "initial = \"A\"\nprint(len(initial))\nprint(initial[0] == initial[-1])",
+            "expectedOutput": "1\nTrue",
+            "explanation": "Both indexes select the only character."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "IndexError at the end",
+            "cause": "len(text) is one past the last valid index.",
+            "fix": "Use text[-1] for nonempty text."
+          },
+          {
+            "symptom": "SyntaxError inside a message",
+            "cause": "An apostrophe closed a single-quoted literal.",
+            "fix": "Use double outer quotes or escape the apostrophe."
+          },
+          {
+            "symptom": "Character replacement fails",
+            "cause": "Strings do not support indexed assignment.",
+            "fix": "Construct and assign a new string."
+          }
+        ],
+        "summary": [
+          "Quotes delimit text and len includes spaces.",
+          "Index from zero or backward from minus one.",
+          "Next retrieve regions with slices."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Text sequence types",
+            "url": "https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str"
+          }
+        ]
+      }
     },
     {
       "id": "py-11",
       "title": "3.2 Slicing Strings — Cut Out Pieces",
       "module": "Strings",
-      "objective": "Extract parts of a string using slice notation [start:stop:step].",
-      "why": "Need only the first 3 digits of a phone number or a product code prefix? Slicing extracts it.",
-      "explanation": "<p><strong>What you will learn.</strong> Extract parts of a string using slice notation [start:stop:step]. By the end you should explain <em>Cut Out Pieces</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Need only the first 3 digits of a phone number or a product code prefix? Slicing extracts it. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Syntax: <code>s[start:stop]</code> — stop is exclusive.<br>\n  <code>s[:3]</code> first 3 chars. <code>s[2:]</code> from index 2 to end. <code>s[::-1]</code> reverse.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Extract parts of a string using slice notation [start:stop:step].” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>phone = \"08031234567\"</code> — stores or updates a value.</li><li><code>print(phone[:4])      # 0803 network prefix area</code> — shows output so you can verify the result.</li><li><code>print(phone[4:])      # rest of number</code> — shows output so you can verify the result.</li><li><code>print(phone[0:7])     # 0803123</code> — shows output so you can verify the result.</li><li><code>code = \"INV-2026-0042\"</code> — stores or updates a value.</li><li><code>print(code[4:8])      # 2026 year</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Cut Out Pieces</em> solve?</li><li>Which line in the example most directly achieves: “Extract parts of a string using slice notation [start:stop:step].”?</li><li>If you change one value in <code>phone = \"08031234567\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "phone = \"08031234567\"\nprint(phone[:4])      # 0803 network prefix area\nprint(phone[4:])      # rest of number\nprint(phone[0:7])     # 0803123\ncode = \"INV-2026-0042\"\nprint(code[4:8])      # 2026 year\nprint(code[::-1])     # reverse",
+      "objective": "Extract string regions with start, stop, and step slices.",
+      "why": "Fixed-format references often contain a prefix, year, and serial number that can be separated into meaningful pieces.",
+      "explanation": "<h4>Slices select a region</h4><p>The form text[start:stop:step] creates a new string. Start is included and stop is excluded. With a positive step, text[2:5] selects indexes two, three, and four. Think of stop as the boundary just after the desired region. Slicing leaves the original string unchanged.</p>\n<h4>Defaults and negative boundaries</h4><p>Omitting start begins at the beginning for a forward slice; omitting stop continues to the end. Negative boundaries count from the end, so text[-4:] selects the final four characters. This is useful when a suffix has a fixed width even though the prefix varies. It still depends on the record format being correct.</p>\n<h4>Step determines the direction</h4><p>A step of two selects every other character. A negative step walks backward; text[::-1] reverses the complete sequence because its omitted boundaries adjust to that direction. A zero step is invalid because traversal cannot advance. Explicit boundaries for a negative step must run from a later position toward an earlier one.</p>\n<h4>Clipping is convenient but not validation</h4><p>Oversized slice boundaries clip to the available text instead of raising IndexError. A region selecting no characters returns an empty string. This helps handle variable-length data but can hide incomplete records. Before treating a slice as a trusted field, check the required length and separators; later conditionals will let you reject invalid input.</p>\n<h4>Follow the complete example</h4><p>The operation <code>reference[:3]</code>: Start defaults to zero and stop three excludes the hyphen. The operation <code>reference[4:8]</code>: The four indexes from four through seven contain the year. The operation <code>reference[::2]</code>: Indexes zero, two, four, six, eight, ten, and twelve are selected. This illustrates traversal rather than a business field. The operation <code>reference[::-1]</code>: A step of minus one visits the whole reference backward.</p>\n<h4>Boundary cases and design choices</h4><p>Compare reference[4:4], reference[4:80], and reference[80:] to distinguish an empty region from clipping. For ASCII identifiers reversal is straightforward; for Unicode text a visible symbol may contain several code points, so this is not a complete language-aware reversal. Extracting a piece does not validate its meaning or convert its type. Keep parsing, validation, and conversion as separate decisions.</p>",
+      "codeExample": "reference = \"INV-2026-0042\"\nprint(reference[:3])\nprint(reference[4:8])\nprint(reference[-4:])\nprint(reference[::2])\nprint(reference[::-1])",
       "exercises": [
         {
-          "title": "Extract order year",
-          "instruction": "order_id = \"ORD-2026-LAG-778\". Print the year portion using slicing.",
-          "solution": "order_id = \"ORD-2026-LAG-778\"\nyear = order_id[4:8]\nprint(year)  # 2026",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: order_id = \"ORD-2026-LAG-778\". Change names/values first; only then restructure."
+          "title": "Guided: year",
+          "instruction": "Extract 2030 from \"ORD-2030-19\".",
+          "hint": "The year begins after four characters.",
+          "solution": "code = \"ORD-2030-19\"\nprint(code[4:8])",
+          "expectedOutput": "2030",
+          "solutionExplanation": "Stop eight excludes the following hyphen.",
+          "successCriteria": [
+            "Extract 2030 from \"ORD-2030-19\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Predict: every second letter",
+          "instruction": "Print the first three letters and every second letter of \"abcdef\".",
+          "hint": "Indexes begin at zero.",
+          "solution": "text = \"abcdef\"\nprint(text[:3])\nprint(text[::2])",
+          "expectedOutput": "abc\nace",
+          "solutionExplanation": "The selections are zero through two, then zero, two, four.",
+          "successCriteria": [
+            "Print the first three letters and every second letter of \"abcdef\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: mask a reference",
+          "instruction": "Keep the first two and last two characters of \"AB123456CD\", separated by four asterisks.",
+          "hint": "Combine two slices and a literal.",
+          "solution": "code = \"AB123456CD\"\nprint(code[:2] + \"****\" + code[-2:])",
+          "expectedOutput": "AB****CD",
+          "solutionExplanation": "The source remains available; masking changes only displayed text.",
+          "successCriteria": [
+            "Keep the first two and last two characters of \"AB123456CD\", separated by four asterisks.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "For s=\"Python\", what is s[1:4]?",
+          "q": "What is \"abcd\"[1:3]?",
           "options": [
-            "Pyt",
-            "yth",
-            "ytho",
-            "thon"
+            "bc",
+            "bcd",
+            "ab",
+            "cd"
           ],
-          "correct": 1,
-          "explanation": "Indexes 1,2,3 → y,t,h → \"yth\"."
+          "correct": 0,
+          "explanation": "Stop three excludes d."
         },
         {
-          "q": "When would you use “Cut Out Pieces” in a real project?",
+          "q": "What is \"ab\"[:20]?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Extract parts of a string using slice notation [start:stop:step].",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Empty text",
+            "ab",
+            "IndexError",
+            "Twenty characters"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Extract parts of a string using slice notation [start:stop:step]."
+          "explanation": "The stop clips to the actual end."
+        },
+        {
+          "q": "Which slice reverses text?",
+          "options": [
+            "[::0]",
+            "[-1:0]",
+            "[::-1]",
+            "[1:]"
+          ],
+          "correct": 2,
+          "explanation": "Defaults adjust to the negative direction."
+        },
+        {
+          "q": "Why validate before slicing?",
+          "options": [
+            "Slices mutate the source",
+            "Slices require numeric text",
+            "Negative boundaries always fail",
+            "Partial fields can look plausible"
+          ],
+          "correct": 3,
+          "explanation": "Clipping does not enforce record length."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Last desired letter missing: Stop is exclusive. Set stop one past the final desired index. Backward slice is empty: The supplied boundaries run in the wrong direction. Use descending boundaries or [::-1]. Incomplete code appears accepted: Slices clip short text. Validate the format before using the field.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "String length, indexes, and concatenation."
+        ],
+        "outcomes": [
+          "Predict slices with omitted or negative boundaries.",
+          "Explain exclusive stop and clipped boundaries.",
+          "Reverse or skip characters using step."
+        ],
+        "expectedOutput": "INV\n2026\n0042\nIV22-02\n2400-6202-VNI",
+        "walkthrough": [
+          {
+            "code": "reference[:3]",
+            "explanation": "Start defaults to zero and stop three excludes the hyphen."
+          },
+          {
+            "code": "reference[4:8]",
+            "explanation": "The four indexes from four through seven contain the year."
+          },
+          {
+            "code": "reference[::2]",
+            "explanation": "Indexes zero, two, four, six, eight, ten, and twelve are selected. This illustrates traversal rather than a business field."
+          },
+          {
+            "code": "reference[::-1]",
+            "explanation": "A step of minus one visits the whole reference backward."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Short records clip",
+            "code": "code = \"AB\"\nprint(code[:4])\nprint(code[-4:])\nprint(len(code[5:]))",
+            "expectedOutput": "AB\nAB\n0",
+            "explanation": "Short input produces partial or empty text rather than an index error."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Last desired letter missing",
+            "cause": "Stop is exclusive.",
+            "fix": "Set stop one past the final desired index."
+          },
+          {
+            "symptom": "Backward slice is empty",
+            "cause": "The supplied boundaries run in the wrong direction.",
+            "fix": "Use descending boundaries or [::-1]."
+          },
+          {
+            "symptom": "Incomplete code appears accepted",
+            "cause": "Slices clip short text.",
+            "fix": "Validate the format before using the field."
+          }
+        ],
+        "summary": [
+          "Start is included; stop is excluded.",
+          "Step changes traversal and boundaries can be omitted.",
+          "Next transform selected text with methods."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Sequence operations",
+            "url": "https://docs.python.org/3/library/stdtypes.html#common-sequence-operations"
+          }
+        ]
+      }
     },
     {
       "id": "py-12",
       "title": "3.3 Modify Strings — upper, lower, strip, replace",
       "module": "Strings",
-      "objective": "Clean and transform text with common string methods.",
-      "why": "Customer types \"  LAGOS  \" or \"lagos\". You normalize to \"Lagos\" before saving to a database.",
-      "explanation": "<p><strong>What you will learn.</strong> Clean and transform text with common string methods. By the end you should explain <em>upper, lower, strip, replace</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Customer types \"  LAGOS  \" or \"lagos\". You normalize to \"Lagos\" before saving to a database. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Strings are immutable — methods return <em>new</em> strings.<br>\n  Useful: <code>upper()</code>, <code>lower()</code>, <code>title()</code>, <code>strip()</code>, <code>replace()</code>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Clean and transform text with common string methods.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>city = \"  lagos  \"</code> — stores or updates a value.</li><li><code>clean = city.strip().title()</code> — stores or updates a value.</li><li><code>print(clean)  # Lagos</code> — shows output so you can verify the result.</li><li><code>msg = \"Order pending\"</code> — stores or updates a value.</li><li><code>print(msg.replace(\"pending\", \"shipped\"))</code> — shows output so you can verify the result.</li><li><code>print(\"HELLO\".lower())</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>upper, lower, strip, replace</em> solve?</li><li>Which line in the example most directly achieves: “Clean and transform text with common string methods.”?</li><li>If you change one value in <code>city = \"  lagos  \"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>Wrong argument count or forgetting return are the most common function mistakes.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "city = \"  lagos  \"\nclean = city.strip().title()\nprint(clean)  # Lagos\n\nmsg = \"Order pending\"\nprint(msg.replace(\"pending\", \"shipped\"))\nprint(\"HELLO\".lower())\nprint(\"ada\".upper())",
+      "objective": "Clean and transform strings using methods and deliberate normalization rules.",
+      "why": "Input often contains inconsistent spacing or case. A predictable cleaning sequence helps display and comparison without losing meaningful information.",
+      "explanation": "<h4>A method belongs to a value</h4><p>The dot in city.strip() selects a method associated with the string. Parentheses call the operation. Arguments supply additional information, as in replace(old, new). These methods return new strings because strings are immutable. Calling a method without using its return value does not overwrite the original variable.</p>\n<h4>Whitespace has boundaries</h4><p>strip removes whitespace from both ends, including spaces, tabs, and newlines. It leaves interior whitespace alone. lstrip and rstrip target one end. An argument to strip is a set of removable characters, not a whole substring. Use removeprefix or removesuffix when the requirement is to remove one exact boundary substring.</p>\n<h4>Case conversion needs a policy</h4><p>lower and upper change letter case; title creates a mechanically title-cased version. title is convenient for simple place labels but does not correctly format every personal name. Passwords and case-sensitive identifiers should not be normalized blindly. For Unicode caseless comparison, casefold handles additional equivalences beyond lower; the appropriate choice depends on your comparison rules.</p>\n<h4>Replace and chain deliberately</h4><p>replace changes every nonoverlapping match by default; its third argument limits how many matches change. Chaining strip().title() passes the cleaned result into title. Read chains left to right. Keep intermediate names when different business rules deserve separate explanation or you need to inspect which transformation produced unexpected text.</p>\n<h4>Follow the complete example</h4><p>The operation <code>raw_city.strip().title()</code>: strip removes boundary spaces, then title changes the initial letter. The operation <code>status.replace(\"pending\", \"ready\", 1)</code>: Only the first matching substring changes; the payment field is preserved. The operation <code>raw_city == clean_city</code>: The original retains its spaces and lowercase letters, so these strings differ.</p>\n<h4>Boundary cases and design choices</h4><p>Try a string with several spaces inside the name as well as at the edges: strip solves only the boundary problem. Try replacing a word that is absent; the operation succeeds with equivalent text. Preserve raw input when you need an audit trail. Normalization should implement a written rule, because apparently harmless cleanup can remove a meaningful difference between two identifiers.</p>",
+      "codeExample": "raw_city = \"  lagos  \"\nclean_city = raw_city.strip().title()\nstatus = \"Order pending; payment pending\"\nprint(clean_city)\nprint(status.replace(\"pending\", \"ready\", 1))\nprint(raw_city == clean_city)",
       "exercises": [
         {
-          "title": "Clean form input",
-          "instruction": "raw = \"  CHINEDU OKAFOR \". Strip spaces and convert to title case.",
-          "solution": "raw = \"  CHINEDU OKAFOR \"\nclean = raw.strip().title()\nprint(clean)  # Chinedu Okafor",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: raw = \"  CHINEDU OKAFOR \". Change names/values first; only then restructure."
+          "title": "Guided: status",
+          "instruction": "Transform \"  shipped  \" into \"SHIPPED\".",
+          "hint": "Strip before uppercasing.",
+          "solution": "raw = \"  shipped  \"\nprint(raw.strip().upper())",
+          "expectedOutput": "SHIPPED",
+          "solutionExplanation": "Each method supplies the next method’s input.",
+          "successCriteria": [
+            "Transform \"  shipped  \" into \"SHIPPED\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: lost result",
+          "instruction": "Fix code that calls name.title() but prints name as \"ada\".",
+          "hint": "Assign the result.",
+          "solution": "name = \"ada\"\nname = name.title()\nprint(name)",
+          "expectedOutput": "Ada",
+          "solutionExplanation": "Reassignment connects the name to the new string.",
+          "successCriteria": [
+            "Fix code that calls name.title() but prints name as \"ada\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: first stage",
+          "instruction": "Change only the first draft in \"draft -> draft\" to review, preserving the source.",
+          "hint": "Use count one and a separate variable.",
+          "solution": "original = \"draft -> draft\"\nupdated = original.replace(\"draft\", \"review\", 1)\nprint(updated)\nprint(original)",
+          "expectedOutput": "review -> draft\ndraft -> draft",
+          "solutionExplanation": "Count limits the operation and a new name preserves raw input.",
+          "successCriteria": [
+            "Change only the first draft in \"draft -> draft\" to review, preserving the source.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does \" hi \".strip() return?",
+          "q": "What is \" x y \".strip()?",
           "options": [
-            "\" hi \"",
-            "\"hi\"",
-            "\"hi \"",
-            "error"
+            "x y",
+            "xy",
+            " x y",
+            "X Y"
           ],
-          "correct": 1,
-          "explanation": "strip() removes leading and trailing whitespace."
+          "correct": 0,
+          "explanation": "Only edge whitespace is removed."
         },
         {
-          "q": "When would you use “upper, lower, strip, replace” in a real project?",
+          "q": "What happens after s.upper() alone?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Clean and transform text with common string methods.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Nothing is evaluated",
+            "A new result exists; s is unchanged",
+            "s is overwritten",
+            "s becomes a list"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Clean and transform text with common string methods."
+          "explanation": "Immutable operations return values."
+        },
+        {
+          "q": "How do you replace only the first match?",
+          "options": [
+            "Use upper",
+            "Use square brackets",
+            "Supply count 1",
+            "Call strip first"
+          ],
+          "correct": 2,
+          "explanation": "The third replace argument is the maximum count."
+        },
+        {
+          "q": "Why be cautious with title() on names?",
+          "options": [
+            "It deletes punctuation",
+            "It mutates the original",
+            "It only accepts ASCII",
+            "Mechanical case rules miss naming conventions"
+          ],
+          "correct": 3,
+          "explanation": "Names require domain-specific handling."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; Wrong argument count or forgetting return are the most common function mistakes.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Text is unchanged: The returned string was discarded. Assign or print the method result. Interior spaces remain: strip handles only the edges. Choose a separate interior-space rule. Unexpected edge letters disappear: strip interpreted its argument as characters. Use removeprefix for an exact prefix.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Strings and variable assignment."
+        ],
+        "outcomes": [
+          "Use strip, case conversion, and replace.",
+          "Explain returned values and method chaining.",
+          "Choose transformations suited to a field’s meaning."
+        ],
+        "expectedOutput": "Lagos\nOrder ready; payment pending\nFalse",
+        "walkthrough": [
+          {
+            "code": "raw_city.strip().title()",
+            "explanation": "strip removes boundary spaces, then title changes the initial letter."
+          },
+          {
+            "code": "status.replace(\"pending\", \"ready\", 1)",
+            "explanation": "Only the first matching substring changes; the payment field is preserved."
+          },
+          {
+            "code": "raw_city == clean_city",
+            "explanation": "The original retains its spaces and lowercase letters, so these strings differ."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Replacement count",
+            "code": "message = \"pending / pending\"\nprint(message.replace(\"pending\", \"ready\"))\nprint(message.replace(\"pending\", \"ready\", 1))",
+            "expectedOutput": "ready / ready\nready / pending",
+            "explanation": "Omitting count changes both occurrences."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Text is unchanged",
+            "cause": "The returned string was discarded.",
+            "fix": "Assign or print the method result."
+          },
+          {
+            "symptom": "Interior spaces remain",
+            "cause": "strip handles only the edges.",
+            "fix": "Choose a separate interior-space rule."
+          },
+          {
+            "symptom": "Unexpected edge letters disappear",
+            "cause": "strip interpreted its argument as characters.",
+            "fix": "Use removeprefix for an exact prefix."
+          }
+        ],
+        "summary": [
+          "String methods return new values.",
+          "Separate whitespace, case, and replacement policies.",
+          "Next combine text pieces into messages."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: String methods",
+            "url": "https://docs.python.org/3/library/stdtypes.html#string-methods"
+          }
+        ]
+      }
     },
     {
       "id": "py-13",
       "title": "3.4 Concatenate Strings — Join Text Together",
       "module": "Strings",
-      "objective": "Combine strings with + and join().",
-      "why": "Building a full address or a WhatsApp message means joining several text pieces.",
-      "explanation": "<p><strong>What you will learn.</strong> Combine strings with + and join(). By the end you should explain <em>Join Text Together</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Building a full address or a WhatsApp message means joining several text pieces. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Databases store large amounts of data safely. You ask questions with queries instead of scanning huge files by hand.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Use <code>+</code> for simple joins (all must be strings).<br>\n  Use <code>\" \".join(list)</code> for lists of words — faster and cleaner.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Combine strings with + and join().” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>first = \"Ngozi\"</code> — stores or updates a value.</li><li><code>last = \"Eze\"</code> — stores or updates a value.</li><li><code>full = first + \" \" + last</code> — stores or updates a value.</li><li><code>print(full)</code> — shows output so you can verify the result.</li><li><code>parts = [\"12\", \"Adeniyi Jones\", \"Ikeja\", \"Lagos\"]</code> — stores or updates a value.</li><li><code>address = \", \".join(parts)</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Join Text Together</em> solve?</li><li>Which line in the example most directly achieves: “Combine strings with + and join().”?</li><li>If you change one value in <code>first = \"Ngozi\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "first = \"Ngozi\"\nlast = \"Eze\"\nfull = first + \" \" + last\nprint(full)\n\nparts = [\"12\", \"Adeniyi Jones\", \"Ikeja\", \"Lagos\"]\naddress = \", \".join(parts)\nprint(address)\n\n# Careful: cannot do \"Age: \" + 25  → use str(25)",
+      "objective": "Join text using concatenation and a separator’s join method.",
+      "why": "Addresses and labels need explicit separators between pieces. Choosing the right operation prevents missing spaces and trailing punctuation.",
+      "explanation": "<h4>Concatenation is exact</h4><p>The plus operator creates text containing the left value followed immediately by the right. It supplies no automatic space. Use an explicit \" \" between a first and last name. This is clear for a few fixed pieces. Repeated concatenation over a large collection is better expressed by join, which describes the intended separator in one place.</p>\n<h4>Numbers require an explicit choice</h4><p>\"Age: \" + 25 fails because Python does not guess whether you intended addition or text joining. str(25) makes a text representation while the original integer remains available for arithmetic. Printing multiple comma-separated arguments can display them together, but it does not store a single combined message for later use.</p>\n<h4>A small introduction to lists</h4><p>A list is an ordered collection written with square brackets and comma-separated elements. Here the elements are all strings; later lessons cover editing and iteration. In \", \".join(parts), the separator is the string before the dot. The method inserts that separator between every adjacent pair and returns one complete string.</p>\n<h4>Separators connect elements</h4><p>No separator appears before the first element or after the last. One element therefore needs no separator; an empty list joins to empty text. Empty string elements still count, however, so a missing address part may create consecutive commas. Define whether missing parts should be rejected, preserved, or omitted before formatting the address.</p>\n<h4>Follow the complete example</h4><p>The operation <code>first + \" \" + last</code>: The middle literal contributes exactly one space. The operation <code>parts = [\"12\", ...]</code>: The house number is text because its role is an address label. The operation <code>\", \".join(parts)</code>: Three separator boundaries connect four ordered pieces. The operation <code>str(25)</code>: The conversion supplies the type required by string addition.</p>\n<h4>Boundary cases and design choices</h4><p>Test zero, one, and several pieces before using a separator. Compare an empty list with a list containing an empty string: both can look blank, but they behave differently when another element is added. If a piece already contains commas, this joining technique is suitable for display but does not implement CSV quoting. File-format serialization needs a dedicated writer when delimiters can occur inside data.</p>",
+      "codeExample": "first = \"Ngozi\"\nlast = \"Eze\"\nfull = first + \" \" + last\nparts = [\"12\", \"Adeniyi Jones\", \"Ikeja\", \"Lagos\"]\nprint(full)\nprint(\", \".join(parts))\nprint(\"Age: \" + str(25))",
       "exercises": [
         {
-          "title": "Full receipt header",
-          "instruction": "Join shop_name, branch, and date into one header string separated by \" | \".",
-          "solution": "shop_name = \"FreshMart\"\nbranch = \"Yaba\"\ndate = \"2026-07-16\"\nheader = \" | \".join([shop_name, branch, date])\nprint(header)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Join shop_name, branch, and date into one header string separated by \" | \". Change names/values first; only then restructure."
+          "title": "Guided: badge",
+          "instruction": "Build \"Ada - Python\" from two variables.",
+          "hint": "Include spaces with the hyphen.",
+          "solution": "name = \"Ada\"\ncourse = \"Python\"\nprint(name + \" - \" + course)",
+          "expectedOutput": "Ada - Python",
+          "solutionExplanation": "The separator is an explicit third string.",
+          "successCriteria": [
+            "Build \"Ada - Python\" from two variables.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: numeric label",
+          "instruction": "Repair \"Items: \" + 3.",
+          "hint": "Convert only the display representation.",
+          "solution": "count = 3\nprint(\"Items: \" + str(count))",
+          "expectedOutput": "Items: 3",
+          "solutionExplanation": "The stored count remains numeric.",
+          "successCriteria": [
+            "Repair \"Items: \" + 3.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: route",
+          "instruction": "Store and print a route joining Accra, Lagos, Abuja with \" -> \".",
+          "hint": "Use a list and separator.join.",
+          "solution": "stops = [\"Accra\", \"Lagos\", \"Abuja\"]\nroute = \" -> \".join(stops)\nprint(route)",
+          "expectedOutput": "Accra -> Lagos -> Abuja",
+          "solutionExplanation": "Two separators connect the three stops.",
+          "successCriteria": [
+            "Store and print a route joining Accra, Lagos, Abuja with \" -> \".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the best way to join many words from a list?",
+          "q": "What is \"A\" + \"B\"?",
           "options": [
-            "Using + in a loop only",
-            "\" \".join(words)",
-            "print(words)",
-            "int(words)"
+            "AB",
+            "A B",
+            "A+B",
+            "An error"
           ],
-          "correct": 1,
-          "explanation": "str.join() is the idiomatic way to combine a list of strings."
+          "correct": 0,
+          "explanation": "No space is inserted."
         },
         {
-          "q": "When would you use “Join Text Together” in a real project?",
+          "q": "Which joins words with commas?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Combine strings with + and join().",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "words + \", \"",
+            "\", \".join(words)",
+            "words.join(\", \")",
+            "join.words(\", \")"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Combine strings with + and join()."
+          "explanation": "join is called on the separator."
+        },
+        {
+          "q": "Why does joining [\"A\", 2] fail?",
+          "options": [
+            "The separator must be numeric",
+            "join accepts only two values",
+            "Every element must be text",
+            "Lists reject numbers"
+          ],
+          "correct": 2,
+          "explanation": "Mixed lists are valid but join requires strings."
+        },
+        {
+          "q": "How many separators join four pieces?",
+          "options": [
+            "4",
+            "5",
+            "0",
+            "3"
+          ],
+          "correct": 3,
+          "explanation": "Separators occupy adjacent boundaries."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Words run together: Plus supplies no whitespace. Add a space literal. join raises TypeError: An element is not text. Convert display values explicitly. Repeated punctuation appears: Blank components remain in the list. Apply a missing-field policy before joining.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Strings, method calls, and str conversion."
+        ],
+        "outcomes": [
+          "Concatenate a small number of strings.",
+          "Build a simple list of strings for join.",
+          "Explain mixed-type and empty-element problems."
+        ],
+        "expectedOutput": "Ngozi Eze\n12, Adeniyi Jones, Ikeja, Lagos\nAge: 25",
+        "walkthrough": [
+          {
+            "code": "first + \" \" + last",
+            "explanation": "The middle literal contributes exactly one space."
+          },
+          {
+            "code": "parts = [\"12\", ...]",
+            "explanation": "The house number is text because its role is an address label."
+          },
+          {
+            "code": "\", \".join(parts)",
+            "explanation": "Three separator boundaries connect four ordered pieces."
+          },
+          {
+            "code": "str(25)",
+            "explanation": "The conversion supplies the type required by string addition."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Blank components",
+            "code": "print(\"-\".join([\"A\", \"\", \"B\"]))\nprint(\"-\".join([\"A\"]))\nprint(len(\"-\".join([])))",
+            "expectedOutput": "A--B\nA\n0",
+            "explanation": "The blank middle piece still has boundaries on both sides."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Words run together",
+            "cause": "Plus supplies no whitespace.",
+            "fix": "Add a space literal."
+          },
+          {
+            "symptom": "join raises TypeError",
+            "cause": "An element is not text.",
+            "fix": "Convert display values explicitly."
+          },
+          {
+            "symptom": "Repeated punctuation appears",
+            "cause": "Blank components remain in the list.",
+            "fix": "Apply a missing-field policy before joining."
+          }
+        ],
+        "summary": [
+          "Plus combines a few fixed strings.",
+          "join inserts a separator between ordered elements.",
+          "Next interpolate values using f-strings."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: str.join",
+            "url": "https://docs.python.org/3/library/stdtypes.html#str.join"
+          }
+        ]
+      }
     },
     {
       "id": "py-14",
       "title": "3.5 Format Strings — f-strings & Placeholders",
       "module": "Strings",
-      "objective": "Insert variables into strings cleanly with f-strings.",
-      "why": "Customer messages like \"Hello Amina, your balance is ₦12,000\" need clean formatting.",
-      "explanation": "<p><strong>What you will learn.</strong> Insert variables into strings cleanly with f-strings. By the end you should explain <em>f-strings &amp; Placeholders</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Customer messages like \"Hello Amina, your balance is ₦12,000\" need clean formatting. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Preferred modern style: <code>f\"Hello {name}\"</code>.<br>\n  Also: <code>\"Hello {}\".format(name)</code> and old <code>%s</code> style.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Insert variables into strings cleanly with f-strings.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>name = \"Ifeanyi\"</code> — stores or updates a value.</li><li><code>balance = 12500.5</code> — stores or updates a value.</li><li><code>print(f\"Hello {name}, balance: ₦{balance:,.2f}\")</code> — shows output so you can verify the result.</li><li><code>print(\"Hello {}, balance: ₦{}\".format(name, balance))</code> — shows output so you can verify the result.</li><li><code>print(\"Hello %s\" % name)</code> — shows output so you can verify the result.</li><li><code>qty = 3</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>f-strings &amp; Placeholders</em> solve?</li><li>Which line in the example most directly achieves: “Insert variables into strings cleanly with f-strings.”?</li><li>If you change one value in <code>name = \"Ifeanyi\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>Clear names beat short names. Avoid reusing one variable for unrelated meanings.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "name = \"Ifeanyi\"\nbalance = 12500.5\nprint(f\"Hello {name}, balance: ₦{balance:,.2f}\")\nprint(\"Hello {}, balance: ₦{}\".format(name, balance))\nprint(\"Hello %s\" % name)\n\n# Expressions inside f-strings\nqty = 3\nprice = 500\nprint(f\"Line total: ₦{qty * price}\")",
+      "objective": "Interpolate expressions and format numeric values with f-strings.",
+      "why": "Receipts mix labels, calculations, and display rules. F-strings keep that relationship visible without manual type conversion.",
+      "explanation": "<h4>The f prefix activates expressions</h4><p>Put f directly before a string’s opening quote. Python evaluates expressions inside braces and copies the surrounding text literally. Without f, braces and names are ordinary characters. The produced value is a string that you can store, return, or print. The currency symbol outside a brace is simply text, not a conversion instruction.</p>\n<h4>Messages are snapshots</h4><p>An expression is evaluated when the f-string executes. Changing a variable afterward does not update an existing message. Rebuild the string to display current values. Simple calculations such as quantity * price are readable inside braces; name more complicated calculations first so the presentation remains easy to inspect.</p>\n<h4>A colon introduces formatting</h4><p>In {balance:,.2f}, the expression is balance and the format specification follows the colon. Comma requests digit grouping, .2 requests two digits after the decimal point, and f selects fixed-point notation. The original numeric value is unchanged. Floating-point arithmetic approximates some decimal values; exact money often uses integer minor units or Decimal.</p>\n<h4>Literal braces and other styles</h4><p>Double braces, {{ and }}, display literal braces inside an f-string. Regular strings also support the format method, which inserts separately supplied values. Older code may use percent formatting. Recognize these alternatives when reading existing programs, but use one consistent style for new beginner examples instead of mixing several conventions in one message.</p>\n<h4>Follow the complete example</h4><p>The operation <code>{name}</code>: The current value replaces the brace expression. The operation <code>{balance:,.2f}</code>: Grouping inserts a comma and fixed precision appends the final zero. The operation <code>{qty * price:,}</code>: Multiplication happens first, then the resulting integer is formatted. The operation <code>{{customer}}</code>: Doubled braces produce literal braces and do not evaluate customer.</p>\n<h4>Boundary cases and design choices</h4><p>Predict the formatted result for zero, negative values, and an amount with more than two fractional digits. Formatting controls a displayed representation; it is not a financial rounding policy for stored balances. Keep numeric data available instead of parsing your formatted strings to resume arithmetic. When a saved message appears stale, find where it was created and recreate it after the relevant state change.</p>",
+      "codeExample": "name = \"Ifeanyi\"\nbalance = 12500.5\nqty = 3\nprice = 500\nprint(f\"Hello {name}, balance: ₦{balance:,.2f}\")\nprint(f\"Line total: ₦{qty * price:,}\")\nprint(f\"Reference {{customer}}: {name}\")",
       "exercises": [
         {
-          "title": "Invoice line",
-          "instruction": "item=\"Bread\", qty=4, price=800. Print: \"4 x Bread = ₦3200\" using an f-string.",
-          "solution": "item = \"Bread\"\nqty = 4\nprice = 800\nprint(f\"{qty} x {item} = ₦{qty * price}\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: item=\"Bread\", qty=4, price=800. Change names/values first; only then restructure."
+          "title": "Guided: line total",
+          "instruction": "Print \"4 notebooks cost 1,200\" from quantity 4 and price 300.",
+          "hint": "Use comma grouping on the product.",
+          "solution": "qty = 4\nprice = 300\nprint(f\"{qty} notebooks cost {qty * price:,}\")",
+          "expectedOutput": "4 notebooks cost 1,200",
+          "solutionExplanation": "The product is evaluated before formatting.",
+          "successCriteria": [
+            "Print \"4 notebooks cost 1,200\" from quantity 4 and price 300.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: greeting",
+          "instruction": "Repair \"Hello {name}\" so it inserts Ada.",
+          "hint": "The string needs its interpolation prefix.",
+          "solution": "name = \"Ada\"\nprint(f\"Hello {name}\")",
+          "expectedOutput": "Hello Ada",
+          "solutionExplanation": "The braces evaluate name when the f-string runs.",
+          "successCriteria": [
+            "Repair \"Hello {name}\" so it inserts Ada.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: account line",
+          "instruction": "Display balance 900 and fee 12.5 with exactly two decimal places.",
+          "hint": "Each expression needs its own format specification.",
+          "solution": "balance = 900\nfee = 12.5\nprint(f\"Balance: {balance:.2f} | Fee: {fee:.2f}\")",
+          "expectedOutput": "Balance: 900.00 | Fee: 12.50",
+          "solutionExplanation": "Precision applies independently to both values.",
+          "successCriteria": [
+            "Display balance 900 and fee 12.5 with exactly two decimal places.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Which is a valid f-string?",
+          "q": "What does .2f request?",
           "options": [
-            "f\"Hi {name}\"",
-            "f\"Hi [name]\"",
-            "\"Hi {name}\"f",
-            "fmt\"Hi {name}\""
+            "Two fractional digits",
+            "Two total digits",
+            "Multiplication by two",
+            "Two spaces"
           ],
           "correct": 0,
-          "explanation": "Prefix the string with f and put expressions in {}."
+          "explanation": "Fixed-point precision controls digits after the decimal."
         },
         {
-          "q": "When would you use “f-strings & Placeholders” in a real project?",
+          "q": "When are f-string expressions evaluated?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Insert variables into strings cleanly with f-strings.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Only in print",
+            "When the string expression executes",
+            "Whenever a variable changes",
+            "When the program exits"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Insert variables into strings cleanly with f-strings."
+          "explanation": "Stored strings do not remain linked to source variables."
+        },
+        {
+          "q": "What does {n:,} do?",
+          "options": [
+            "Adds a trailing comma",
+            "Changes n permanently",
+            "Adds grouping separators",
+            "Creates a tuple"
+          ],
+          "correct": 2,
+          "explanation": "Formatting affects the result string."
+        },
+        {
+          "q": "How are literal braces written?",
+          "options": [
+            "Remove f but keep interpolation",
+            "Use parentheses",
+            "Put the colon outside",
+            "Double each brace"
+          ],
+          "correct": 3,
+          "explanation": "Doubled braces escape expression boundaries."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; Clear names beat short names. Avoid reusing one variable for unrelated meanings.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Variable name prints inside braces: The prefix f is missing. Add f before the opening quote. Arithmetic fails on formatted money: The formatted value is a string. Calculate with the original number. Intended braces trigger evaluation: Single braces mark expressions. Double literal braces.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Variables, arithmetic, strings, and concatenation."
+        ],
+        "outcomes": [
+          "Insert variables and expressions with braces.",
+          "Use comma grouping and fixed decimal precision.",
+          "Distinguish display formatting from stored numeric data."
+        ],
+        "expectedOutput": "Hello Ifeanyi, balance: ₦12,500.50\nLine total: ₦1,500\nReference {customer}: Ifeanyi",
+        "walkthrough": [
+          {
+            "code": "{name}",
+            "explanation": "The current value replaces the brace expression."
+          },
+          {
+            "code": "{balance:,.2f}",
+            "explanation": "Grouping inserts a comma and fixed precision appends the final zero."
+          },
+          {
+            "code": "{qty * price:,}",
+            "explanation": "Multiplication happens first, then the resulting integer is formatted."
+          },
+          {
+            "code": "{{customer}}",
+            "explanation": "Doubled braces produce literal braces and do not evaluate customer."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Saved message versus new message",
+            "code": "count = 2\nmessage = f\"Count: {count}\"\ncount = 3\nprint(message)\nprint(f\"Count: {count}\")",
+            "expectedOutput": "Count: 2\nCount: 3",
+            "explanation": "The first string was built before the reassignment."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Variable name prints inside braces",
+            "cause": "The prefix f is missing.",
+            "fix": "Add f before the opening quote."
+          },
+          {
+            "symptom": "Arithmetic fails on formatted money",
+            "cause": "The formatted value is a string.",
+            "fix": "Calculate with the original number."
+          },
+          {
+            "symptom": "Intended braces trigger evaluation",
+            "cause": "Single braces mark expressions.",
+            "fix": "Double literal braces."
+          }
+        ],
+        "summary": [
+          "f activates brace expressions.",
+          "Format specifications control presentation.",
+          "Next represent newlines and literal backslashes."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Formatted string literals",
+            "url": "https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals"
+          }
+        ]
+      }
     },
     {
       "id": "py-15",
       "title": "3.6 Escape Characters — Special Symbols in Text",
       "module": "Strings",
-      "objective": "Use escape sequences like \\n, \\t, and \\\" correctly.",
-      "why": "When printing multi-line receipts or quotes inside quotes, escapes control special characters.",
-      "explanation": "<p><strong>What you will learn.</strong> Use escape sequences like \\n, \\t, and \\\" correctly. By the end you should explain <em>Special Symbols in Text</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> When printing multi-line receipts or quotes inside quotes, escapes control special characters. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Common escapes: <code>\\n</code> newline, <code>\\t</code> tab, <code>\\\\</code> backslash, <code>\\'</code> / <code>\\\"</code> quotes.<br>\n  Raw strings: <code>r\"C:\\Users\\data\"</code> (paths, regex).</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use escape sequences like \\n, \\t, and \\\" correctly.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>6</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Line1\\nLine2\")</code> — shows output so you can verify the result.</li><li><code>print(\"Name:\\tAda\")</code> — shows output so you can verify the result.</li><li><code>print(\"She said \\\"Welcome\\\" to the shop\")</code> — shows output so you can verify the result.</li><li><code>print('It\\'s open')</code> — shows output so you can verify the result.</li><li><code>path = r\"C:\\Users\\Shop\\sales.csv\"</code> — stores or updates a value.</li><li><code>print(path)</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Special Symbols in Text</em> solve?</li><li>Which line in the example most directly achieves: “Use escape sequences like \\n, \\t, and \\\" correctly.”?</li><li>If you change one value in <code>print(\"Line1\\nLine2\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "print(\"Line1\\nLine2\")\nprint(\"Name:\\tAda\")\nprint(\"She said \\\"Welcome\\\" to the shop\")\nprint('It\\'s open')\npath = r\"C:\\Users\\Shop\\sales.csv\"\nprint(path)",
+      "objective": "Represent newlines, tabs, quotes, and backslashes correctly in string literals.",
+      "why": "Messages need line breaks, and paths or quoted speech contain characters that also have meaning in Python syntax.",
+      "explanation": "<h4>Source spelling differs from stored text</h4><p>An escape sequence begins with a backslash inside an ordinary string literal. Python interprets it while creating the value. The two source characters backslash and n in \\n represent one newline character. The newline moves subsequent printed text to a new line; it does not display the letter n. This distinction explains why source length and stored-string length can differ.</p>\n<h4>Quotes and backslashes can be data</h4><p>A quote matching the outer delimiter normally closes the literal. Preceding it with a backslash makes it part of the text instead. You can often avoid escaping by choosing the other quote kind around the value. To store a literal backslash in an ordinary string, write two backslashes. This is useful when showing commands or Windows-style paths.</p>\n<h4>Tabs are not a fixed number of spaces</h4><p>The escape \\t creates a tab character. Its visible width depends on the output viewer and the next tab stop, so tabs are unsuitable for precisely aligned reports. Use explicit formatting widths when alignment matters. The newline escape is more predictable for separating logical lines; print also adds a newline at the end unless you change its end argument.</p>\n<h4>Raw strings preserve backslashes</h4><p>An r prefix tells Python to preserve backslashes rather than interpreting ordinary escape sequences. Raw strings are convenient for regular-expression patterns and path examples. They are still Python literals with quote boundaries: a raw literal cannot end with an odd number of backslashes because the final quote would be escaped. A raw string is not a different runtime type; it is another way to spell a string.</p>\n<h4>Follow the complete example</h4><p>The operation <code>\"First line\\nSecond line\"</code>: The source escape becomes one embedded line break. The operation <code>\\\"Welcome\\\"</code>: Escaped double quotes remain visible rather than closing the outer string. The operation <code>r\"C:\\Shop\\sales.csv\"</code>: The raw prefix preserves each backslash as path text. The operation <code>len(\"A\\nB\")</code>: Two letters plus one newline produce a length of three.</p>\n<h4>Boundary cases and design choices</h4><p>Compare \"A\\nB\" with r\"A\\nB\": the first contains a line break; the second contains a backslash and the letter n. Inspect their lengths to verify the distinction without relying on how the output viewer renders whitespace. Do not assume a raw path exists merely because its spelling is correct. String syntax and filesystem access are separate concerns, and path-handling libraries later help construct platform-appropriate paths.</p>",
+      "codeExample": "message = \"First line\\nSecond line\"\nquote = \"She said \\\"Welcome\\\".\"\npath = r\"C:\\Shop\\sales.csv\"\nprint(message)\nprint(quote)\nprint(path)\nprint(len(\"A\\nB\"))",
       "exercises": [
         {
-          "title": "Pretty receipt",
-          "instruction": "Print three lines using one string with \\n: shop name, dashed line, thank you.",
-          "solution": "print(\"City Mart\\n-----------\\nThank you for shopping!\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Print three lines using one string with \\n: shop name, dashed line, thank you. Change names/values first; only then restructure."
+          "title": "Guided: two lines",
+          "instruction": "Print Ready and Collect on separate lines with one print call.",
+          "hint": "Place a newline escape inside one string.",
+          "solution": "print(\"Ready\\nCollect\")",
+          "expectedOutput": "Ready\nCollect",
+          "solutionExplanation": "The stored newline creates the second line.",
+          "successCriteria": [
+            "Print Ready and Collect on separate lines with one print call.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Predict: raw versus ordinary",
+          "instruction": "Print lengths of \"A\\nB\" and r\"A\\nB\".",
+          "hint": "The raw version preserves both escape characters.",
+          "solution": "print(len(\"A\\nB\"))\nprint(len(r\"A\\nB\"))",
+          "expectedOutput": "3\n4",
+          "solutionExplanation": "One interpreted newline occupies one position; its raw spelling occupies two.",
+          "successCriteria": [
+            "Print lengths of \"A\\nB\" and r\"A\\nB\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: quoted notice",
+          "instruction": "Display exactly She said \"It is ready\". and a literal C:\\Data path on a second line.",
+          "hint": "Use escaped quotes and a raw path.",
+          "solution": "print(\"She said \\\"It is ready\\\".\")\nprint(r\"C:\\Data\")",
+          "expectedOutput": "She said \"It is ready\".\nC:\\Data",
+          "solutionExplanation": "The two literal techniques solve different delimiter problems.",
+          "successCriteria": [
+            "Display exactly She said \"It is ready\". and a literal C:\\Data path on a second line.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does \\n mean in a string?",
+          "q": "How many characters are in \"x\\ny\"?",
           "options": [
-            "New name",
-            "Newline",
-            "Null",
-            "Number"
+            "3",
+            "4",
+            "2",
+            "5"
           ],
-          "correct": 1,
-          "explanation": "\\n inserts a newline character."
+          "correct": 0,
+          "explanation": "The escape becomes one newline."
         },
         {
-          "q": "When would you use “Special Symbols in Text” in a real project?",
+          "q": "What does r\"x\\ny\" contain?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use escape sequences like \\n, \\t, and \\\" correctly.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "An invalid escape error",
+            "A literal backslash and n",
+            "A newline",
+            "A tab"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use escape sequences like \\n, \\t, and \\\" correctly."
+          "explanation": "Raw spelling preserves the backslash."
+        },
+        {
+          "q": "How is a literal backslash written in a normal string?",
+          "options": [
+            "As \\n",
+            "As a comma",
+            "As two source backslashes",
+            "As /"
+          ],
+          "correct": 2,
+          "explanation": "One backslash escapes the other."
+        },
+        {
+          "q": "Why avoid tabs for precise report columns?",
+          "options": [
+            "Tabs delete numbers",
+            "Tabs only work in raw strings",
+            "Python always expands them to four spaces",
+            "Display tab stops vary"
+          ],
+          "correct": 3,
+          "explanation": "Tab width is determined by the output environment."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Path unexpectedly gains a tab: An ordinary literal interpreted \\t. Use a raw literal or escape each backslash. Quoted speech causes SyntaxError: An internal quote closed the literal. Escape it or switch outer delimiters. Tab columns do not align consistently: Tab stops depend on the display. Use fixed-width formatting for aligned reports.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "String literals and print."
+        ],
+        "outcomes": [
+          "Predict the difference between source escapes and displayed characters.",
+          "Use escaped quotes and backslashes.",
+          "Choose raw strings when backslashes should remain literal."
+        ],
+        "expectedOutput": "First line\nSecond line\nShe said \"Welcome\".\nC:\\Shop\\sales.csv\n3",
+        "walkthrough": [
+          {
+            "code": "\"First line\\nSecond line\"",
+            "explanation": "The source escape becomes one embedded line break."
+          },
+          {
+            "code": "\\\"Welcome\\\"",
+            "explanation": "Escaped double quotes remain visible rather than closing the outer string."
+          },
+          {
+            "code": "r\"C:\\Shop\\sales.csv\"",
+            "explanation": "The raw prefix preserves each backslash as path text."
+          },
+          {
+            "code": "len(\"A\\nB\")",
+            "explanation": "Two letters plus one newline produce a length of three."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Literal escape spelling",
+            "code": "text = r\"A\\nB\"\nprint(text)\nprint(len(text))",
+            "expectedOutput": "A\\nB\n4",
+            "explanation": "The raw prefix retains four characters, including backslash and n."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Path unexpectedly gains a tab",
+            "cause": "An ordinary literal interpreted \\t.",
+            "fix": "Use a raw literal or escape each backslash."
+          },
+          {
+            "symptom": "Quoted speech causes SyntaxError",
+            "cause": "An internal quote closed the literal.",
+            "fix": "Escape it or switch outer delimiters."
+          },
+          {
+            "symptom": "Tab columns do not align consistently",
+            "cause": "Tab stops depend on the display.",
+            "fix": "Use fixed-width formatting for aligned reports."
+          }
+        ],
+        "summary": [
+          "Escapes are source spellings for special characters.",
+          "Raw strings preserve most backslashes.",
+          "Next use methods to search and split text."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: String literals and escapes",
+            "url": "https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals"
+          }
+        ]
+      }
     },
     {
       "id": "py-16",
       "title": "3.7 String Methods — find, split, startswith & More",
       "module": "Strings",
-      "objective": "Use powerful string methods for search and parsing.",
-      "why": "Parsing CSV lines, checking if a message starts with \"PAY\", or splitting a full name — methods do the heavy lifting.",
-      "explanation": "<p><strong>What you will learn.</strong> Use powerful string methods for search and parsing. By the end you should explain <em>find, split, startswith &amp; More</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Parsing CSV lines, checking if a message starts with \"PAY\", or splitting a full name — methods do the heavy lifting. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Handy methods: <code>split()</code>, <code>find()</code>, <code>startswith()</code>, <code>endswith()</code>, <code>count()</code>, <code>isdigit()</code>, <code>isalpha()</code>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use powerful string methods for search and parsing.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>row = \"Rice,2500,10\"</code> — stores or updates a value.</li><li><code>parts = row.split(\",\")</code> — stores or updates a value.</li><li><code>print(parts)  # ['Rice', '2500', '10']</code> — shows output so you can verify the result.</li><li><code>msg = \"PAY 5000 to MTN\"</code> — stores or updates a value.</li><li><code>print(msg.startswith(\"PAY\"))</code> — shows output so you can verify the result.</li><li><code>print(msg.find(\"5000\"))</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>find, split, startswith &amp; More</em> solve?</li><li>Which line in the example most directly achieves: “Use powerful string methods for search and parsing.”?</li><li>If you change one value in <code>row = \"Rice,2500,10\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>Wrong argument count or forgetting return are the most common function mistakes.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "row = \"Rice,2500,10\"\nparts = row.split(\",\")\nprint(parts)  # ['Rice', '2500', '10']\n\nmsg = \"PAY 5000 to MTN\"\nprint(msg.startswith(\"PAY\"))\nprint(msg.find(\"5000\"))\nprint(\"0803\".isdigit())\nprint(\"Hello world\".count(\"l\"))",
+      "objective": "Search simple text and split a delimiter-separated record into fields.",
+      "why": "A program often needs to recognize a message prefix or separate a simple row before using its contents.",
+      "explanation": "<h4>Choose the question before the method</h4><p>startswith(prefix) answers whether text begins with that exact prefix and returns True or False. find(fragment) returns the first matching index, or minus one when absent. count(fragment) counts nonoverlapping occurrences. These answers have different types and meanings: a location of zero means a successful match at the beginning, not failure.</p>\n<h4>Split produces separate values</h4><p>text.split(\",\") returns a list of strings separated at every comma. The commas themselves are removed. Square brackets then retrieve a field by its zero-based index. Splitting does not convert digits to numbers; int or float must be called deliberately if the data represents a quantity. Names and phone numbers should remain strings.</p>\n<h4>Whitespace and explicit delimiters differ</h4><p>split() without an argument treats runs of whitespace as separators and ignores edge whitespace. split(\",\") uses exact comma boundaries and preserves empty fields between repeated commas. That distinction matters when a missing quantity should remain visible rather than silently shifting later columns. Always know the expected number and meaning of fields before indexing them.</p>\n<h4>Predicates are narrow tests</h4><p>isdigit checks whether every character is a digit and the string is nonempty. It does not accept signs or decimal points, and some Unicode digits that it accepts cannot be passed directly to int. It therefore does not replace conversion error handling. Likewise a simple split is not a CSV reader: quoted fields can contain commas that require a real parser.</p>\n<h4>Follow the complete example</h4><p>The operation <code>row.split(\",\")</code>: Three textual fields are returned in their original order. The operation <code>int(parts[1]) * int(parts[2])</code>: Both numeric fields are explicitly converted before multiplication. The operation <code>message.find(\"5000\")</code>: The first digit starts at index four; the missing word cash returns minus one.</p>\n<h4>Boundary cases and design choices</h4><p>Test a missing delimiter, a blank middle field, and extra whitespace. Each reveals an assumption about the input format. A missing search result of minus one must not be used immediately as an index because minus one validly selects the final character. When the goal is merely containment, the in operator is clearer than comparing a find result; comparisons and control flow will let you act on these answers later.</p>",
+      "codeExample": "row = \"Rice,2500,10\"\nparts = row.split(\",\")\nprint(parts)\nprint(parts[0], int(parts[1]) * int(parts[2]))\nmessage = \"PAY 5000 to MTN\"\nprint(message.startswith(\"PAY\"))\nprint(message.find(\"5000\"), message.find(\"cash\"))\nprint(\"0803\".isdigit(), \"10.5\".isdigit())",
       "exercises": [
         {
-          "title": "Parse sales CSV line",
-          "instruction": "line = \"Beans,1800,5\". Split and print product name and total value (price*qty).",
-          "solution": "line = \"Beans,1800,5\"\nname, price, qty = line.split(\",\")\ntotal = int(price) * int(qty)\nprint(name, \"total ₦\", total)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: line = \"Beans,1800,5\". Change names/values first; only then restructure."
+          "title": "Guided: product row",
+          "instruction": "Split \"Beans,4\" and print the product and numeric quantity plus one.",
+          "hint": "Convert the second field.",
+          "solution": "parts = \"Beans,4\".split(\",\")\nprint(parts[0], int(parts[1]) + 1)",
+          "expectedOutput": "Beans 5",
+          "solutionExplanation": "Index one contains text until int converts it.",
+          "successCriteria": [
+            "Split \"Beans,4\" and print the product and numeric quantity plus one.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Predict: beginning and absence",
+          "instruction": "Print find results for A and Z in \"ABBA\".",
+          "hint": "A match at the beginning is zero.",
+          "solution": "text = \"ABBA\"\nprint(text.find(\"A\"), text.find(\"Z\"))",
+          "expectedOutput": "0 -1",
+          "solutionExplanation": "Zero is a valid location and minus one means absent.",
+          "successCriteria": [
+            "Print find results for A and Z in \"ABBA\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: inspect a command",
+          "instruction": "For \"SEND 25\", print whether it starts with SEND, the final field, and whether that field contains digits.",
+          "hint": "Split on whitespace and use the last index.",
+          "solution": "command = \"SEND 25\"\nparts = command.split()\nprint(command.startswith(\"SEND\"))\nprint(parts[-1], parts[-1].isdigit())",
+          "expectedOutput": "True\n25 True",
+          "solutionExplanation": "The operations separately recognize the prefix and inspect the argument.",
+          "successCriteria": [
+            "For \"SEND 25\", print whether it starts with SEND, the final field, and whether that field contains digits.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does \"a,b,c\".split(\",\") return?",
+          "q": "What does find return when absent?",
           "options": [
-            "\"a b c\"",
-            "['a','b','c']",
-            "3",
-            "Error"
+            "-1",
+            "0",
+            "False as a special object",
+            "An empty string"
           ],
-          "correct": 1,
-          "explanation": "split returns a list of pieces."
+          "correct": 0,
+          "explanation": "Minus one is the missing marker."
         },
         {
-          "q": "When would you use “find, split, startswith & More” in a real project?",
+          "q": "What is \"A,,B\".split(\",\")?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use powerful string methods for search and parsing.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "An error",
+            "[\"A\", \"\", \"B\"]",
+            "[\"A\", \"B\"]",
+            "[\"A,\", \"B\"]"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use powerful string methods for search and parsing."
+          "explanation": "Explicit separators preserve the empty middle field."
+        },
+        {
+          "q": "What type is each split result here?",
+          "options": [
+            "bool",
+            "tuple",
+            "str",
+            "int"
+          ],
+          "correct": 2,
+          "explanation": "Splitting does not convert types."
+        },
+        {
+          "q": "Why use csv for quoted comma-containing fields?",
+          "options": [
+            "It sorts rows",
+            "split mutates text",
+            "find cannot search commas",
+            "It understands quoting rules"
+          ],
+          "correct": 3,
+          "explanation": "Delimiter splitting alone cannot identify quoted boundaries."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; Wrong argument count or forgetting return are the most common function mistakes.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Wrong final character after a failed search: find returned -1 and that value was indexed. Check the search result before retrieving characters. Multiplication repeats text: A numeric field was not converted. Call int or float on the field before arithmetic. Quoted CSV fields split incorrectly: A comma inside quoted text was treated as a separator. Use the csv module for actual CSV records.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "String methods, indexing, and simple list literals."
+        ],
+        "outcomes": [
+          "Use startswith, find, count, and isdigit.",
+          "Split text and access returned fields.",
+          "Explain why simple delimiter splitting is not a complete CSV parser."
+        ],
+        "expectedOutput": "['Rice', '2500', '10']\nRice 25000\nTrue\n4 -1\nTrue False",
+        "walkthrough": [
+          {
+            "code": "row.split(\",\")",
+            "explanation": "Three textual fields are returned in their original order."
+          },
+          {
+            "code": "int(parts[1]) * int(parts[2])",
+            "explanation": "Both numeric fields are explicitly converted before multiplication."
+          },
+          {
+            "code": "message.find(\"5000\")",
+            "explanation": "The first digit starts at index four; the missing word cash returns minus one."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Empty fields versus whitespace",
+            "code": "print(\"A,,B\".split(\",\"))\nprint(\"  A   B  \".split())",
+            "expectedOutput": "['A', '', 'B']\n['A', 'B']",
+            "explanation": "An explicit delimiter preserves an empty field, while default whitespace splitting collapses runs."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Wrong final character after a failed search",
+            "cause": "find returned -1 and that value was indexed.",
+            "fix": "Check the search result before retrieving characters."
+          },
+          {
+            "symptom": "Multiplication repeats text",
+            "cause": "A numeric field was not converted.",
+            "fix": "Call int or float on the field before arithmetic."
+          },
+          {
+            "symptom": "Quoted CSV fields split incorrectly",
+            "cause": "A comma inside quoted text was treated as a separator.",
+            "fix": "Use the csv module for actual CSV records."
+          }
+        ],
+        "summary": [
+          "Search methods return different kinds of answers.",
+          "split creates text fields and conversion is separate.",
+          "Next combine these techniques into small text tools."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: String methods",
+            "url": "https://docs.python.org/3/library/stdtypes.html#string-methods"
+          }
+        ]
+      }
     },
     {
       "id": "py-17",
       "title": "3.8 String Exercises — Mini Text Toolkit",
       "module": "Strings",
-      "objective": "Practice string skills on realistic text problems.",
-      "why": "Customer support tools constantly clean, search, and reformat text.",
-      "explanation": "<p><strong>What you will learn.</strong> Practice string skills on realistic text problems. By the end you should explain <em>Mini Text Toolkit</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Customer support tools constantly clean, search, and reformat text. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Combine slicing, methods, and f-strings to solve small business text tasks.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Practice string skills on realistic text problems.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>5</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>phone = \"08031234567\"</code> — stores or updates a value.</li><li><code>masked = phone[:3] + \"****\" + phone[-4:]</code> — stores or updates a value.</li><li><code>print(masked)</code> — shows output so you can verify the result.</li><li><code>email = \"User@Email.COM\".lower().strip()</code> — stores or updates a value.</li><li><code>print(email)</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Mini Text Toolkit</em> solve?</li><li>Which line in the example most directly achieves: “Practice string skills on realistic text problems.”?</li><li>If you change one value in <code>phone = \"08031234567\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Mask phone number: 080****4567\nphone = \"08031234567\"\nmasked = phone[:3] + \"****\" + phone[-4:]\nprint(masked)\n\nemail = \"User@Email.COM\".lower().strip()\nprint(email)",
+      "objective": "Combine text operations into a small, specified cleanup and masking workflow.",
+      "why": "Real text tasks use several operations in sequence. A clear input contract keeps convenient cleanup from changing the meaning of identifiers.",
+      "explanation": "<h4>Start with the contract</h4><p>This toolkit accepts a phone string containing exactly eleven digits with no spaces and a human-readable tag with optional edge whitespace. Its outputs are a display phone retaining the first three and last four digits, and an uppercase tag. These restrictions are part of the task: this lesson assembles transformations, while later conditionals will enforce invalid-input policies.</p>\n<h4>Masking is a display operation</h4><p>phone[:3] retrieves the prefix and phone[-4:] retrieves the suffix. Four asterisks replace the four hidden middle characters. The result has eleven displayed characters for an eleven-character input. The original variable remains unchanged. A masked display can reduce accidental exposure, but it is not encryption and does not remove the original data from memory or storage.</p>\n<h4>Normalize fields according to meaning</h4><p>The tag is a human-facing label, so strip followed by upper implements the agreed display policy. Do not automatically apply the same transformation to passwords, case-sensitive account IDs, or every part of an email address. A reusable tool needs a separate rule for each field. Keeping raw and clean names distinct helps explain which transformations occurred.</p>\n<h4>Check stages independently</h4><p>Inspect the prefix and suffix separately before joining the mask. Check cleaned length separately from visible printing, since spaces can be hard to see. A comparison between the original and cleaned values confirms that the pipeline produced a new string. These small observations are useful even before you learn automated tests: they connect each requirement to a visible result.</p>\n<h4>Follow the complete example</h4><p>The operation <code>phone[:3] + \"****\" + phone[-4:]</code>: The two slices preserve three plus four digits and the literal supplies the hidden middle display. The operation <code>raw_tag.strip().upper()</code>: Only edge whitespace is removed; the space between the two words remains. The operation <code>print(len(masked), phone)</code>: The result has the agreed width and the source phone is still available unchanged.</p>\n<h4>Boundary cases and design choices</h4><p>For a shorter phone, the prefix and suffix slices can overlap, revealing more than intended. The algorithm must therefore not claim support for arbitrary lengths. In a later validation version, reject unsupported lengths before masking. Empty tags become empty strings after stripping, which may need rejection in an application. Distinguish a valid transformation from a valid business record; the latter requires additional rules.</p>",
+      "codeExample": "phone = \"08031234567\"\nraw_tag = \"  pickup desk  \"\nmasked = phone[:3] + \"****\" + phone[-4:]\ntag = raw_tag.strip().upper()\nprint(masked)\nprint(tag)\nprint(len(masked), phone)",
       "exercises": [
         {
-          "title": "Username from email",
-          "instruction": "email = \"chidi.okeke@gmail.com\". Extract the part before @ as username (lowercase).",
-          "solution": "email = \"chidi.okeke@gmail.com\"\nusername = email.split(\"@\")[0].lower()\nprint(username)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: email = \"chidi. Change names/values first; only then restructure."
+          "title": "Guided: another phone",
+          "instruction": "Mask \"09011112222\" using the stated first-three/last-four policy.",
+          "hint": "Use the same boundary lengths.",
+          "solution": "phone = \"09011112222\"\nprint(phone[:3] + \"****\" + phone[-4:])",
+          "expectedOutput": "090****2222",
+          "solutionExplanation": "The final four characters, not the final four indexes, are retained.",
+          "successCriteria": [
+            "Mask \"09011112222\" using the stated first-three/last-four policy.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: wrong suffix",
+          "instruction": "Repair a mask that uses phone[4:] and reveals too much. Use \"08031234567\".",
+          "hint": "The suffix is counted backward.",
+          "solution": "phone = \"08031234567\"\nprint(phone[:3] + \"****\" + phone[-4:])",
+          "expectedOutput": "080****4567",
+          "solutionExplanation": "Index four begins too early; a negative slice selects exactly four characters.",
+          "successCriteria": [
+            "Repair a mask that uses phone[4:] and reveals too much. Use \"08031234567\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: reference badge",
+          "instruction": "For \"  order-0042  \", print the cleaned uppercase reference and a display keeping only its final four characters after \"REF-\".",
+          "hint": "Clean once, then slice the cleaned value.",
+          "solution": "raw = \"  order-0042  \"\nclean = raw.strip().upper()\nprint(clean)\nprint(\"REF-\" + clean[-4:])",
+          "expectedOutput": "ORDER-0042\nREF-0042",
+          "solutionExplanation": "Removing trailing spaces before slicing ensures the suffix contains the identifier digits.",
+          "successCriteria": [
+            "For \"  order-0042  \", print the cleaned uppercase reference and a display keeping only its final four characters after \"REF-\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Best method to split a sentence into words?",
+          "q": "Why clean before taking a final identifier suffix?",
           "options": [
-            "sentence.cut()",
-            "sentence.split()",
-            "sentence.break()",
-            "list(sentence) only"
+            "Trailing spaces could enter the slice",
+            "Slicing changes the original",
+            "upper requires slices",
+            "strip removes digits"
           ],
-          "correct": 1,
-          "explanation": "split() without args splits on whitespace."
+          "correct": 0,
+          "explanation": "Boundary whitespace affects position-based extraction."
         },
         {
-          "q": "When would you use “Mini Text Toolkit” in a real project?",
+          "q": "Is masking encryption?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Practice string skills on realistic text problems.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Only when upper is used",
+            "No; it only changes the displayed representation",
+            "Yes; asterisks are a cipher",
+            "Yes if the result has eleven characters"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Practice string skills on realistic text problems."
+          "explanation": "The original value remains available."
+        },
+        {
+          "q": "What happens on a four-character phone here?",
+          "options": [
+            "It becomes four asterisks",
+            "Python rejects concatenation",
+            "Prefix and suffix overlap",
+            "IndexError always occurs"
+          ],
+          "correct": 2,
+          "explanation": "Slices clip and can select overlapping regions."
+        },
+        {
+          "q": "Why keep raw_tag and tag separate?",
+          "options": [
+            "Methods require two variables",
+            "upper changes both variables",
+            "To make strip faster",
+            "To preserve and inspect the original input"
+          ],
+          "correct": 3,
+          "explanation": "A distinct result name preserves provenance."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Short numbers reveal repeated digits: The slices overlap on unsupported input. Validate the required length before using this algorithm. Raw data disappears from a variable: The original name was reassigned during cleanup. Store the transformed result under a separate name. Interior spacing is unexpected: strip does not change spaces inside a value. Specify an interior-space rule separately if needed.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Slicing, concatenation, string methods, and len."
+        ],
+        "outcomes": [
+          "Specify assumptions for text transformations.",
+          "Build a masked phone display and normalized tag.",
+          "Check preservation of original input and boundary behavior."
+        ],
+        "expectedOutput": "080****4567\nPICKUP DESK\n11 08031234567",
+        "walkthrough": [
+          {
+            "code": "phone[:3] + \"****\" + phone[-4:]",
+            "explanation": "The two slices preserve three plus four digits and the literal supplies the hidden middle display."
+          },
+          {
+            "code": "raw_tag.strip().upper()",
+            "explanation": "Only edge whitespace is removed; the space between the two words remains."
+          },
+          {
+            "code": "print(len(masked), phone)",
+            "explanation": "The result has the agreed width and the source phone is still available unchanged."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Short input exposes the assumption",
+            "code": "phone = \"1234\"\nmasked = phone[:3] + \"****\" + phone[-4:]\nprint(masked)\nprint(len(masked))",
+            "expectedOutput": "123****1234\n11",
+            "explanation": "The slices overlap, demonstrating why this mask requires an eleven-digit input contract."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Short numbers reveal repeated digits",
+            "cause": "The slices overlap on unsupported input.",
+            "fix": "Validate the required length before using this algorithm."
+          },
+          {
+            "symptom": "Raw data disappears from a variable",
+            "cause": "The original name was reassigned during cleanup.",
+            "fix": "Store the transformed result under a separate name."
+          },
+          {
+            "symptom": "Interior spacing is unexpected",
+            "cause": "strip does not change spaces inside a value.",
+            "fix": "Specify an interior-space rule separately if needed."
+          }
+        ],
+        "summary": [
+          "A text tool needs an explicit input contract.",
+          "Order transformations according to their dependencies.",
+          "Next build a complete customer notification."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Text sequence types",
+            "url": "https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str"
+          }
+        ]
+      }
     },
     {
       "id": "py-18",
       "title": "3.9 Code Challenge — Customer Message Builder",
       "module": "Strings",
-      "objective": "Build a complete customer notification string from variables.",
-      "why": "E-commerce and logistics apps generate SMS/email from templates + data.",
-      "explanation": "<p><strong>What you will learn.</strong> Build a complete customer notification string from variables. By the end you should explain <em>Customer Message Builder</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> E-commerce and logistics apps generate SMS/email from templates + data. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Text is a sequence of characters. Almost everything users see — names, messages, receipts, SMS — is text, so string skills show up in every real app.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Challenge: given customer, item, qty, price, and status — produce a polished multi-line message.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Build a complete customer notification string from variables.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>10</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>customer = \"Amaka\"</code> — stores or updates a value.</li><li><code>item = \"Indomie carton\"</code> — stores or updates a value.</li><li><code>qty = 2</code> — stores or updates a value.</li><li><code>price = 6500</code> — stores or updates a value.</li><li><code>status = \"shipped\"</code> — stores or updates a value.</li><li><code>total = qty * price</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Customer Message Builder</em> solve?</li><li>Which line in the example most directly achieves: “Build a complete customer notification string from variables.”?</li><li>If you change one value in <code>customer = \"Amaka\"</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.</li><li>Clear names beat short names. Avoid reusing one variable for unrelated meanings.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "customer = \"Amaka\"\nitem = \"Indomie carton\"\nqty = 2\nprice = 6500\nstatus = \"shipped\"\ntotal = qty * price\nmessage = f\"\"\"Hello {customer},\nYour order of {qty} x {item} (₦{total:,}) is now {status.upper()}.\nTrack anytime. — ZeroToCode Shop\"\"\"\nprint(message)",
+      "objective": "Build a complete customer notification from validated-by-contract order values.",
+      "why": "A useful message combines readable wording with correct calculations and stable formatting. This challenge brings the string module together.",
+      "explanation": "<h4>Challenge brief and accepted inputs</h4><p>Build a three-line notification for one order. Accept a nonempty customer name and item, a positive integer quantity, a nonnegative integer unit price in whole currency units, and a known status label. These are preconditions for this string-only challenge; validation branches arrive later. Line one greets the customer, line two names the quantity, item, total, and uppercase status, and line three gives the collection instruction.</p>\n<h4>Plan data before presentation</h4><p>Keep quantity and unit price numeric while calculating total = quantity * unit_price. Clean only leading and trailing whitespace from the customer and item fields. Title-casing arbitrary personal names could change their preferred spelling, so preserve internal case. Convert the status for display with upper. Store the final message only after these values are ready.</p>\n<h4>Build one readable template</h4><p>A multiline f-string makes the three-line structure visible in the source. Expressions inside braces insert the prepared values. The comma format groups a large integer total without introducing fractional currency assumptions. Newlines inside the literal determine message lines; print adds its usual final newline afterward. Avoid indentation inside the literal unless it is intended to appear in the message.</p>\n<h4>Rubric and review process</h4><p>A successful submission calculates the total rather than hardcoding it, preserves the customer’s spelling, formats the amount with grouping, produces exactly three content lines, and leaves source numeric values available. Award one check for each criterion. Review with a second quantity and a zero-price item. A negative quantity is outside this brief and should be rejected when validation is added, not quietly formatted as a normal purchase.</p>\n<h4>Follow the complete example</h4><p>The operation <code>customer = raw_customer.strip()</code>: Boundary cleanup keeps the displayed greeting neat without rewriting the person’s name. The operation <code>total = qty * unit_price</code>: The amount is derived from numeric fields, so changing quantity updates the total automatically. The operation <code>message = f\"\"\"...\"\"\"</code>: The template holds exactly three content lines and formats only the presentation.</p>\n<h4>Boundary cases and design choices</h4><p>The reference solution is one acceptable design, not the only wording possible. For this assessment, retain the specified three-line structure so comparison is meaningful. A free item should display zero rather than disappear; a long item name may wrap in a narrow viewer without adding actual newline characters. Distinguish visual wrapping from logical lines when checking the output. The next module supplies boolean conditions for validating these inputs.</p>",
+      "codeExample": "raw_customer = \"  Amaka  \"\nitem = \"Indomie carton\"\nqty = 2\nunit_price = 6500\nstatus = \"shipped\"\ncustomer = raw_customer.strip()\ntotal = qty * unit_price\nmessage = f\"\"\"Hello {customer},\nYour order: {qty} x {item}, ₦{total:,}, {status.upper()}.\nKeep your receipt for collection.\"\"\"\nprint(message)",
       "exercises": [
         {
-          "title": "Your turn",
-          "instruction": "Change the variables to a pharmacy order (drugs/item of your choice) and print a similar message with status \"ready for pickup\".",
-          "solution": "customer = \"Mr. Bello\"\nitem = \"Paracetamol pack\"\nqty = 3\nprice = 500\nstatus = \"ready for pickup\"\ntotal = qty * price\nprint(f\"\"\"Hello {customer},\nYour order of {qty} x {item} (₦{total:,}) is {status}.\n— City Pharmacy\"\"\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Change the variables to a pharmacy order (drugs/item of your choice) and print a similar message with status \"ready for . Change names/values first; only then restructure."
+          "title": "Guided: calculate and display",
+          "instruction": "For three bags at 1200 each, print \"3 x bag: ₦3,600\".",
+          "hint": "Compute the numeric product and group its digits.",
+          "solution": "qty = 3\nprice = 1200\nitem = \"bag\"\nprint(f\"{qty} x {item}: ₦{qty * price:,}\")",
+          "expectedOutput": "3 x bag: ₦3,600",
+          "solutionExplanation": "The calculation stays numeric until formatting.",
+          "successCriteria": [
+            "For three bags at 1200 each, print \"3 x bag: ₦3,600\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: literal braces",
+          "instruction": "Repair a notification that displays \"Hello {name}\" for name \"Ada\" and status \"ready\".",
+          "hint": "Both lines need evaluated expressions.",
+          "solution": "name = \"Ada\"\nstatus = \"ready\"\nprint(f\"Hello {name}\")\nprint(f\"Status: {status.upper()}\")",
+          "expectedOutput": "Hello Ada\nStatus: READY",
+          "solutionExplanation": "The f prefix activates both interpolation and the method expression.",
+          "successCriteria": [
+            "Repair a notification that displays \"Hello {name}\" for name \"Ada\" and status \"ready\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: collection notice",
+          "instruction": "Build three lines for \"  Tola \", two books at 900, and status \"ready\": greeting, total/status, then \"Collect tomorrow.\".",
+          "hint": "Clean the name, calculate total, and create the lines.",
+          "solution": "raw_name = \"  Tola \"\nqty = 2\nprice = 900\nstatus = \"ready\"\nname = raw_name.strip()\ntotal = qty * price\nprint(f\"Hello {name},\")\nprint(f\"Total: ₦{total:,}; {status.upper()}\")\nprint(\"Collect tomorrow.\")",
+          "expectedOutput": "Hello Tola,\nTotal: ₦1,800; READY\nCollect tomorrow.",
+          "solutionExplanation": "Separate preparation and display satisfy the brief without hardcoding the computed amount.",
+          "successCriteria": [
+            "Three content lines follow the specified structure.",
+            "The name is trimmed and status is uppercase.",
+            "The total is calculated from numeric inputs."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Code Challenge — Customer Message Builder”?",
+          "q": "When should total be calculated?",
           "options": [
-            "Build a complete customer notification string from variables.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
+            "Before constructing the message that uses it",
+            "Only after printing",
+            "Inside a quoted plain string",
+            "By joining price and quantity"
           ],
           "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
+          "explanation": "Preparation must precede presentation."
         },
         {
-          "q": "When would you use “Customer Message Builder” in a real project?",
+          "q": "Why retain quantity as an integer?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Build a complete customer notification string from variables.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Integers preserve leading zeros",
+            "Arithmetic needs numeric meaning",
+            "f-strings cannot show strings",
+            "strip requires integers"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Build a complete customer notification string from variables."
+          "explanation": "Numeric multiplication differs from text repetition."
+        },
+        {
+          "q": "Which is an edge case allowed by the brief?",
+          "options": [
+            "Missing customer name",
+            "Unknown status",
+            "Unit price zero",
+            "Negative quantity"
+          ],
+          "correct": 2,
+          "explanation": "The unit price is nonnegative, including zero."
+        },
+        {
+          "q": "What proves the solution is reusable?",
+          "options": [
+            "It always prints 13,000",
+            "Every field is hardcoded in one literal",
+            "It uppercases all customer names",
+            "Changing quantity changes the computed amount"
+          ],
+          "correct": 3,
+          "explanation": "Derived values should respond to the source inputs."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Mismatched quotes and forgetting indexes start at 0 are the #1 string bugs.; Clear names beat short names. Avoid reusing one variable for unrelated meanings.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Total becomes repeated digits: The price was kept as text. Use numeric values for multiplication. Every message line is indented: Source indentation became part of a multiline literal. Place content at the intended literal indentation. Changing quantity leaves an old total: The total or message was hardcoded or built too early. Calculate and build the message after updating inputs.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "String methods, f-strings, arithmetic, and multiline text."
+        ],
+        "outcomes": [
+          "Separate raw fields, numeric calculations, and display text.",
+          "Produce a specified multiline notification.",
+          "Assess a message against formatting and data-preservation criteria."
+        ],
+        "expectedOutput": "Hello Amaka,\nYour order: 2 x Indomie carton, ₦13,000, SHIPPED.\nKeep your receipt for collection.",
+        "walkthrough": [
+          {
+            "code": "customer = raw_customer.strip()",
+            "explanation": "Boundary cleanup keeps the displayed greeting neat without rewriting the person’s name."
+          },
+          {
+            "code": "total = qty * unit_price",
+            "explanation": "The amount is derived from numeric fields, so changing quantity updates the total automatically."
+          },
+          {
+            "code": "message = f\"\"\"...\"\"\"",
+            "explanation": "The template holds exactly three content lines and formats only the presentation."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Free-item order",
+            "code": "customer = \"Bola\"\nqty = 1\nprice = 0\nprint(f\"Hello {customer},\")\nprint(f\"Total for {qty} item: ₦{qty * price:,}\")",
+            "expectedOutput": "Hello Bola,\nTotal for 1 item: ₦0",
+            "explanation": "Zero is a valid nonnegative unit price under the brief; the amount is still displayed explicitly."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Total becomes repeated digits",
+            "cause": "The price was kept as text.",
+            "fix": "Use numeric values for multiplication."
+          },
+          {
+            "symptom": "Every message line is indented",
+            "cause": "Source indentation became part of a multiline literal.",
+            "fix": "Place content at the intended literal indentation."
+          },
+          {
+            "symptom": "Changing quantity leaves an old total",
+            "cause": "The total or message was hardcoded or built too early.",
+            "fix": "Calculate and build the message after updating inputs."
+          }
+        ],
+        "summary": [
+          "Prepare values, calculate, then format.",
+          "Review output against an explicit brief and edge cases.",
+          "Next use boolean values to describe validity and decisions."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Input and output formatting",
+            "url": "https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting"
+          }
+        ]
+      }
     },
     {
       "id": "py-19",
       "title": "4.1 Booleans — True, False & Truthiness",
       "module": "Booleans & Operators",
-      "objective": "Use True/False values and understand truthy/falsy values.",
-      "why": "Is the door open? Is payment confirmed? Software decisions are yes/no (boolean) questions.",
-      "explanation": "<p><strong>What you will learn.</strong> Use True/False values and understand truthy/falsy values. By the end you should explain <em>True, False &amp; Truthiness</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Is the door open? Is payment confirmed? Software decisions are yes/no (boolean) questions. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Programs make decisions. A condition is a yes/no question; different branches run depending on the answer — just like a shop discount rule.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><code>True</code> and <code>False</code> are bools.<br>\n  Falsy: <code>0</code>, <code>\"\"</code>, <code>[]</code>, <code>{}</code>, <code>None</code>, <code>False</code>. Everything else is truthy.<p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use True/False values and understand truthy/falsy values.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>6</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>is_open = True</code> — stores or updates a value.</li><li><code>has_stock = False</code> — stores or updates a value.</li><li><code>print(is_open and has_stock)  # False</code> — shows output so you can verify the result.</li><li><code>print(is_open or has_stock)   # True</code> — shows output so you can verify the result.</li><li><code>print(not has_stock)          # True</code> — shows output so you can verify the result.</li><li><code>print(bool(0), bool(15), bool(\"\"), bool(\"yes\"))</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>True, False &amp; Truthiness</em> solve?</li><li>Which line in the example most directly achieves: “Use True/False values and understand truthy/falsy values.”?</li><li>If you change one value in <code>is_open = True</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Use comparison operators (== / ===), not assignment (=). Keep branches small and readable.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "is_open = True\nhas_stock = False\nprint(is_open and has_stock)  # False\nprint(is_open or has_stock)   # True\nprint(not has_stock)          # True\n\nprint(bool(0), bool(15), bool(\"\"), bool(\"yes\"))",
+      "objective": "Represent yes/no facts and predict Python truth-value testing.",
+      "why": "Eligibility, availability, and empty input checks need values a program can reason about rather than ambiguous words such as \"yes\".",
+      "explanation": "<h4>Boolean values describe propositions</h4><p>A boolean represents the answer to a yes/no question. Python spells its two values True and False with capital initial letters and without quotes. A descriptive name such as has_stock makes the proposition clear. The string \"False\" is text, not the boolean False; its content is not automatically interpreted as a decision.</p>\n<h4>Truthiness is a conversion rule</h4><p>bool(value) asks whether a value counts as true in a boolean context. Numeric zero and empty strings are false; nonzero numbers and nonempty strings are true. Collections introduced next follow a similar empty/nonempty rule. Truthiness does not mean that a value is valid: negative quantities and a space-only name can both be truthy even though your application may reject them.</p>\n<h4>Combine facts with logical operators</h4><p>For boolean operands, and is true only when both facts are true. or is true when at least one is true. not reverses a truth value. A shop can fulfill an order only when it is open and has stock. A notification may be possible when email or phone is available. Use parentheses when grouping is important to the meaning.</p>\n<h4>Short-circuit behavior and operand values</h4><p>and does not evaluate its right operand when the left is falsey; or does not evaluate the right when the left is truthy. With arbitrary operands, these operators return a selected operand rather than always returning a boolean. For example, an empty nickname or \"Guest\" selects the fallback text. Use bool explicitly when your interface needs an actual True or False result.</p>\n<h4>Follow the complete example</h4><p>The operation <code>is_open and has_stock</code>: Fulfillment requires both facts, so the unavailable stock makes the result false. The operation <code>bool(\"False\")</code>: The word is a nonempty string, so it is truthy regardless of its spelling. The operation <code>nickname or \"Guest\"</code>: The falsey empty nickname causes or to select and return the fallback string.</p>\n<h4>Boundary cases and design choices</h4><p>Test zero, a negative number, an empty string, and a string containing one space. These expose the difference between truthiness and domain validity. Cleaning whitespace before checking a human name may be sensible, while stripping a password changes its meaning. Keep each proposition explicit; a name like invalid or not_ready makes multiple uses of not harder to read than a positive fact such as ready.</p>",
+      "codeExample": "is_open = True\nhas_stock = False\nprint(is_open and has_stock)\nprint(is_open or has_stock)\nprint(not has_stock)\nprint(bool(0), bool(-2), bool(\"\"), bool(\"False\"))\nnickname = \"\"\nprint(nickname or \"Guest\")",
       "exercises": [
         {
-          "title": "Shop open logic",
-          "instruction": "Variables: has_power=True, staff_present=True. Print whether the shop can open (both must be True).",
-          "solution": "has_power = True\nstaff_present = True\ncan_open = has_power and staff_present\nprint(\"Can open?\", can_open)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Variables: has_power=True, staff_present=True. Change names/values first; only then restructure."
+          "title": "Guided: availability",
+          "instruction": "Print whether an open shop with stock can fulfill an order.",
+          "hint": "Both facts must hold.",
+          "solution": "is_open = True\nhas_stock = True\nprint(is_open and has_stock)",
+          "expectedOutput": "True",
+          "solutionExplanation": "and expresses the conjunction of the two facts.",
+          "successCriteria": [
+            "Print whether an open shop with stock can fulfill an order.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Predict: textual false",
+          "instruction": "Print bool(\"0\"), bool(0), and bool(\"\").",
+          "hint": "Nonempty text differs from numeric zero.",
+          "solution": "print(bool(\"0\"), bool(0), bool(\"\"))",
+          "expectedOutput": "True False False",
+          "solutionExplanation": "String content does not change the empty/nonempty rule.",
+          "successCriteria": [
+            "Print bool(\"0\"), bool(0), and bool(\"\").",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: contact option",
+          "instruction": "Use email_available False and phone_available True to compute can_contact, then print its opposite.",
+          "hint": "Combine alternatives with or and negate with not.",
+          "solution": "email_available = False\nphone_available = True\ncan_contact = email_available or phone_available\nprint(can_contact)\nprint(not can_contact)",
+          "expectedOutput": "True\nFalse",
+          "solutionExplanation": "One available channel is sufficient, and not reverses the result.",
+          "successCriteria": [
+            "Use email_available False and phone_available True to compute can_contact, then print its opposite.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is bool([])?",
+          "q": "Which is a boolean literal?",
           "options": [
-            "True",
             "False",
-            "None",
-            "Error"
+            "\"False\"",
+            "false",
+            "\"0\""
           ],
-          "correct": 1,
-          "explanation": "Empty list is falsy → False."
+          "correct": 0,
+          "explanation": "The unquoted, capitalized spelling is a boolean."
         },
         {
-          "q": "When would you use “True, False & Truthiness” in a real project?",
+          "q": "What is bool(-1)?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use True/False values and understand truthy/falsy values.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "An error",
+            "True",
+            "False",
+            "-1"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use True/False values and understand truthy/falsy values."
+          "explanation": "Every nonzero integer is truthy."
+        },
+        {
+          "q": "What is \"\" or \"Guest\"?",
+          "options": [
+            "False",
+            "Empty text",
+            "Guest",
+            "True"
+          ],
+          "correct": 2,
+          "explanation": "or returns the fallback operand."
+        },
+        {
+          "q": "Why is truthiness insufficient for a positive quantity rule?",
+          "options": [
+            "Numbers cannot be checked",
+            "Zero is always valid",
+            "bool changes the number",
+            "Negative numbers are truthy too"
+          ],
+          "correct": 3,
+          "explanation": "Validity requires a comparison with zero."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Use comparison operators (== / ===), not assignment (=). Keep branches small and readable.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "\"False\" acts true: Quoted text is not a boolean. Use False or explicitly parse allowed input words. A valid zero is replaced: or selects a fallback for any falsey value. Use an explicit missing-value policy rather than a truthiness shortcut. and returns text: Logical operators can return operands. Use bool when a boolean result is required.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Variables, numbers, and strings."
+        ],
+        "outcomes": [
+          "Use True and False as boolean values.",
+          "Predict bool conversion of zero, empty, and nonempty values.",
+          "Combine boolean facts with and, or, and not."
+        ],
+        "expectedOutput": "False\nTrue\nTrue\nFalse True False True\nGuest",
+        "walkthrough": [
+          {
+            "code": "is_open and has_stock",
+            "explanation": "Fulfillment requires both facts, so the unavailable stock makes the result false."
+          },
+          {
+            "code": "bool(\"False\")",
+            "explanation": "The word is a nonempty string, so it is truthy regardless of its spelling."
+          },
+          {
+            "code": "nickname or \"Guest\"",
+            "explanation": "The falsey empty nickname causes or to select and return the fallback string."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Zero is not the same as missing",
+            "code": "count = 0\nfallback = count or 10\nprint(fallback)\nprint(bool(\" \"))",
+            "expectedOutput": "10\nTrue",
+            "explanation": "Using or for a fallback replaces a valid zero, and one space is still nonempty text."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "\"False\" acts true",
+            "cause": "Quoted text is not a boolean.",
+            "fix": "Use False or explicitly parse allowed input words."
+          },
+          {
+            "symptom": "A valid zero is replaced",
+            "cause": "or selects a fallback for any falsey value.",
+            "fix": "Use an explicit missing-value policy rather than a truthiness shortcut."
+          },
+          {
+            "symptom": "and returns text",
+            "cause": "Logical operators can return operands.",
+            "fix": "Use bool when a boolean result is required."
+          }
+        ],
+        "summary": [
+          "Booleans express explicit facts.",
+          "Truthiness follows type-specific empty/zero rules.",
+          "Next compare values and combine rules with operators."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Truth value testing",
+            "url": "https://docs.python.org/3/library/stdtypes.html#truth-value-testing"
+          }
+        ]
+      }
     },
     {
       "id": "py-20",
       "title": "4.2 Operators — Math, Compare & Logic",
       "module": "Booleans & Operators",
-      "objective": "Use arithmetic, comparison, and logical operators correctly.",
-      "why": "Price checks, eligibility rules, and discounts are all operator combinations.",
-      "explanation": "<p><strong>What you will learn.</strong> Use arithmetic, comparison, and logical operators correctly. By the end you should explain <em>Math, Compare &amp; Logic</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Price checks, eligibility rules, and discounts are all operator combinations. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Programs make decisions. A condition is a yes/no question; different branches run depending on the answer — just like a shop discount rule.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Comparison: <code>== != < > <= >=</code><br>\n  Logic: <code>and or not</code><br>\n  Membership: <code>in</code>, <code>not in</code><br>\n  Identity: <code>is</code>, <code>is not</code> (for None etc.)</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use arithmetic, comparison, and logical operators correctly.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>age = 22</code> — stores or updates a value.</li><li><code>income = 80000</code> — stores or updates a value.</li><li><code>eligible = age &gt;= 18 and income &gt;= 50000</code> — does a step in the overall recipe.</li><li><code>print(\"Loan eligible?\", eligible)</code> — shows output so you can verify the result.</li><li><code>product = \"milk\"</code> — stores or updates a value.</li><li><code>cart = [\"bread\", \"milk\", \"eggs\"]</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Math, Compare &amp; Logic</em> solve?</li><li>Which line in the example most directly achieves: “Use arithmetic, comparison, and logical operators correctly.”?</li><li>If you change one value in <code>age = 22</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Use comparison operators (== / ===), not assignment (=). Keep branches small and readable.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "age = 22\nincome = 80000\neligible = age >= 18 and income >= 50000\nprint(\"Loan eligible?\", eligible)\n\nproduct = \"milk\"\ncart = [\"bread\", \"milk\", \"eggs\"]\nprint(product in cart)\n\nprint(5 == 5, 5 != 3, 10 > 2)",
+      "objective": "Build correct numeric, comparison, membership, and logical expressions.",
+      "why": "Business rules combine calculations with boundaries, such as an age minimum and an income threshold. The operators must match the intended rule.",
+      "explanation": "<h4>Different operators answer different questions</h4><p>Arithmetic operators produce values: plus adds, minus subtracts, star multiplies, and slash divides. Double slash performs floor division and percent returns a remainder. Comparisons such as ==, !=, &lt;, &lt;=, &gt;, and &gt;= produce boolean answers. A single equals sign assigns a value to a name; it is not an equality question.</p>\n<h4>Translate boundaries precisely</h4><p>An age of at least eighteen means age &gt;= 18, which includes eighteen. Greater than eighteen would reject that boundary. A valid percentage from zero through one can be written 0 &lt;= rate &lt;= 1. Chained comparisons express a range without requiring separate temporary values. Test boundary values before testing ordinary interior cases because off-by-one rules often hide there.</p>\n<h4>Combine independent requirements</h4><p>and expresses that all requirements must hold; or expresses alternatives. Python evaluates arithmetic before comparisons and comparisons before and or or. not binds more tightly than and, and and more tightly than or. Parentheses can make a mixed rule easier to inspect even when they are not strictly necessary. First name intermediate facts when a long expression becomes difficult to explain.</p>\n<h4>Membership asks about containment</h4><p>The in operator checks whether a value occurs in a collection or a substring occurs in text. A small list is written with square brackets and comma-separated elements; full list editing follows next. \"milk\" in cart checks an exact element, whereas \"ilk\" in \"milk\" checks a substring. not in reverses membership. Use == for equal values rather than is, which checks object identity.</p>\n<h4>Follow the complete example</h4><p>The operation <code>age &gt;= 18 and income &gt;= 50000</code>: Both inclusive minimum rules are satisfied, so the conjunction is true. The operation <code>\"ilk\" in cart</code>: Membership compares complete list elements, not substrings within each item. The operation <code>17 // 5, 17 % 5</code>: Seventeen contains three complete groups of five with a remainder of two.</p>\n<h4>Boundary cases and design choices</h4><p>Try exactly eighteen years and exactly fifty thousand income, then lower one at a time. This isolates which requirement changes the outcome. Do not use a chained equality as a substitute for alternatives: choice == \"A\" or \"B\" is truthy because the second operand is nonempty text. Repeat the comparison or use membership in a list of accepted choices. Clear expressions are easier to review than clever shortcuts.</p>",
+      "codeExample": "age = 22\nincome = 80000\neligible = age >= 18 and income >= 50000\ncart = [\"bread\", \"milk\", \"eggs\"]\nprint(\"Eligible:\", eligible)\nprint(\"milk\" in cart, \"ilk\" in cart)\nprint(5 == 5, 5 != 3)\nprint(17 // 5, 17 % 5)",
       "exercises": [
         {
-          "title": "Discount rule",
-          "instruction": "Give 10% off if total > 10000 OR customer is_vip. Compute final price for total=9000, is_vip=True.",
-          "solution": "total = 9000\nis_vip = True\nif total > 10000 or is_vip:\n    final = total * 0.9\nelse:\n    final = total\nprint(\"Final:\", final)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Give 10% off if total > 10000 OR customer is_vip. Change names/values first; only then restructure."
+          "title": "Guided: allowed range",
+          "instruction": "Check whether score 75 lies from 0 through 100 inclusive.",
+          "hint": "Use a chained comparison.",
+          "solution": "score = 75\nprint(0 <= score <= 100)",
+          "expectedOutput": "True",
+          "solutionExplanation": "Both inclusive bounds must hold.",
+          "successCriteria": [
+            "Check whether score 75 lies from 0 through 100 inclusive.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: alternative command",
+          "instruction": "Repair command == \"save\" or \"quit\" for command \"open\".",
+          "hint": "Membership states the allowed alternatives.",
+          "solution": "command = \"open\"\nprint(command in [\"save\", \"quit\"])",
+          "expectedOutput": "False",
+          "solutionExplanation": "No bare truthy string can make the condition pass.",
+          "successCriteria": [
+            "Repair command == \"save\" or \"quit\" for command \"open\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: shipping rule",
+          "instruction": "Shipping is free when subtotal is at least 5000 and destination is local. Evaluate subtotal 5000 and destination \"local\".",
+          "hint": "Name or directly combine the two requirements.",
+          "solution": "subtotal = 5000\ndestination = \"local\"\nfree_shipping = subtotal >= 5000 and destination == \"local\"\nprint(free_shipping)",
+          "expectedOutput": "True",
+          "solutionExplanation": "The inclusive amount boundary and destination match both pass.",
+          "successCriteria": [
+            "Shipping is free when subtotal is at least 5000 and destination is local. Evaluate subtotal 5000 and destination \"local\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is True and False?",
+          "q": "Which includes an age of eighteen?",
           "options": [
-            "True",
-            "False",
-            "None",
-            "Error"
+            "age >= 18",
+            "age > 18",
+            "age = 18",
+            "age != 18"
           ],
-          "correct": 1,
-          "explanation": "and requires both sides True."
+          "correct": 0,
+          "explanation": "The equality bar includes the boundary."
         },
         {
-          "q": "When would you use “Math, Compare & Logic” in a real project?",
+          "q": "What is 17 % 5?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use arithmetic, comparison, and logical operators correctly.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "5",
+            "2",
+            "3",
+            "3.4"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use arithmetic, comparison, and logical operators correctly."
+          "explanation": "Percent returns the remainder."
+        },
+        {
+          "q": "Why is x == \"A\" or \"B\" wrong?",
+          "options": [
+            "Equality cannot compare text",
+            "A and B must be numbers",
+            "The nonempty second operand makes it truthy",
+            "or compares both strings automatically"
+          ],
+          "correct": 2,
+          "explanation": "Each alternative needs a comparison or membership."
+        },
+        {
+          "q": "What does \"ilk\" in [\"milk\"] return?",
+          "options": [
+            "True",
+            "\"milk\"",
+            "An error",
+            "False"
+          ],
+          "correct": 3,
+          "explanation": "List membership checks whole elements."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Use comparison operators (== / ===), not assignment (=). Keep branches small and readable.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Equality check is a syntax error: Assignment = was used where a comparison was intended. Use == for value equality. Alternative rule always passes: A bare nonempty string appeared after or. Compare both alternatives or use in. Boundary customer is rejected: A strict operator excluded equality. Translate at least into >= and at most into <=.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Arithmetic, variables, strings, and boolean logic."
+        ],
+        "outcomes": [
+          "Distinguish assignment from equality and inequality.",
+          "Combine inclusive comparisons into a rule.",
+          "Use membership and parentheses to make intent clear."
+        ],
+        "expectedOutput": "Eligible: True\nTrue False\nTrue True\n3 2",
+        "walkthrough": [
+          {
+            "code": "age >= 18 and income >= 50000",
+            "explanation": "Both inclusive minimum rules are satisfied, so the conjunction is true."
+          },
+          {
+            "code": "\"ilk\" in cart",
+            "explanation": "Membership compares complete list elements, not substrings within each item."
+          },
+          {
+            "code": "17 // 5, 17 % 5",
+            "explanation": "Seventeen contains three complete groups of five with a remainder of two."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Boundary eligibility",
+            "code": "age = 18\nincome = 49999\nprint(age >= 18)\nprint(income >= 50000)\nprint(age >= 18 and income >= 50000)",
+            "expectedOutput": "True\nFalse\nFalse",
+            "explanation": "Meeting the age boundary does not compensate for failing income."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Equality check is a syntax error",
+            "cause": "Assignment = was used where a comparison was intended.",
+            "fix": "Use == for value equality."
+          },
+          {
+            "symptom": "Alternative rule always passes",
+            "cause": "A bare nonempty string appeared after or.",
+            "fix": "Compare both alternatives or use in."
+          },
+          {
+            "symptom": "Boundary customer is rejected",
+            "cause": "A strict operator excluded equality.",
+            "fix": "Translate at least into >= and at most into <=."
+          }
+        ],
+        "summary": [
+          "Choose arithmetic, comparison, or membership intentionally.",
+          "Test inclusive boundaries and group combined rules.",
+          "Next store and edit multiple values with collections."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Comparisons",
+            "url": "https://docs.python.org/3/reference/expressions.html#comparisons"
+          }
+        ]
+      }
     },
     {
       "id": "py-21",
       "title": "5.1 Lists — Ordered Shopping Lists",
       "module": "Collections",
-      "objective": "Create, index, append, remove, and loop over lists.",
-      "why": "A market shopping list, queue of orders, or student roster is a list — ordered and changeable.",
-      "explanation": "<p><strong>What you will learn.</strong> Create, index, append, remove, and loop over lists. By the end you should explain <em>Ordered Shopping Lists</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> A market shopping list, queue of orders, or student roster is a list — ordered and changeable. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Lists: <code>[item1, item2]</code>. Mutable. Methods: <code>append</code>, <code>insert</code>, <code>remove</code>, <code>pop</code>, <code>sort</code>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Create, index, append, remove, and loop over lists.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>orders = [\"jollof\", \"suya\", \"zobo\"]</code> — stores or updates a value.</li><li><code>orders.append(\"puff-puff\")</code> — changes a collection.</li><li><code>print(orders[0])</code> — shows output so you can verify the result.</li><li><code>orders[1] = \"kilishi\"</code> — stores or updates a value.</li><li><code>print(len(orders))</code> — shows output so you can verify the result.</li><li><code>for item in orders:</code> — repeats work over items or until a condition ends.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Ordered Shopping Lists</em> solve?</li><li>Which line in the example most directly achieves: “Create, index, append, remove, and loop over lists.”?</li><li>If you change one value in <code>orders = [\"jollof\", \"suya\", \"zobo\"]</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "orders = [\"jollof\", \"suya\", \"zobo\"]\norders.append(\"puff-puff\")\nprint(orders[0])\norders[1] = \"kilishi\"\nprint(len(orders))\nfor item in orders:\n    print(\"-\", item)",
+      "objective": "Create and edit ordered lists while understanding indexes and shared references.",
+      "why": "Shopping items and task queues grow and change. A list keeps their order and supports adding, replacing, and removing entries.",
+      "explanation": "<h4>A list is an ordered mutable sequence</h4><p>Square brackets contain comma-separated elements. A list preserves insertion order and can hold duplicate values. Unlike a string, it is mutable: assigning items[0] changes an element in the same list. Zero-based and negative indexes work as they do for strings. An invalid single index raises IndexError, so the list must contain the selected position.</p>\n<h4>Adding and replacing are different operations</h4><p>append(value) adds one value at the end and increases length by one. Assigning an existing index replaces that element without changing the length. Most list methods that mutate return None rather than the changed list. Call items.append(value) as a statement; do not assign its result back to items. Later loops will let you process every element systematically.</p>\n<h4>Remove by value or by position</h4><p>remove(value) deletes the first equal value and raises ValueError when none exists. pop(index) removes and returns an element by position; with no index it removes the last. Choose based on whether the requirement names a value or a position. Duplicates make the distinction important: remove does not delete every occurrence.</p>\n<h4>Names can share one mutable list</h4><p>backup = items creates a second reference to the same list, not a snapshot. Mutating through either name is visible through both. items.copy() creates a separate outer list, sufficient for our flat strings. A shallow copy still shares any nested mutable elements; later nested-data work needs that distinction. Choose copying according to what must remain independent.</p>\n<h4>Follow the complete example</h4><p>The operation <code>orders.append(\"puff-puff\")</code>: A fourth element is added after the original three. The operation <code>orders[1] = \"kilishi\"</code>: Index one replaces the second item while the other positions remain unchanged. The operation <code>removed = orders.pop()</code>: The last item is removed and returned, so removed receives its text and the list returns to length three.</p>\n<h4>Boundary cases and design choices</h4><p>Trace the list after each mutation rather than only at the end. On an empty list, append works but pop and direct indexing fail. With duplicate values, remove deletes only the first match. A copy is useful for preserving the starting order while editing a new version. Avoid introducing a loop merely to display the entire list; print can show the collection directly until iteration is taught.</p>",
+      "codeExample": "orders = [\"jollof\", \"suya\", \"zobo\"]\norders.append(\"puff-puff\")\norders[1] = \"kilishi\"\nremoved = orders.pop()\nprint(orders)\nprint(orders[0], len(orders))\nprint(\"Removed:\", removed)",
       "exercises": [
         {
-          "title": "Todo for the day",
-          "instruction": "Create a list of 4 tasks. Add one more, remove the first, print remaining.",
-          "solution": "tasks = [\"buy data\", \"call supplier\", \"update prices\", \"close books\"]\ntasks.append(\"backup sales file\")\ntasks.pop(0)\nprint(tasks)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Create a list of 4 tasks. Change names/values first; only then restructure."
+          "title": "Guided: add and replace",
+          "instruction": "Start with [\"pen\", \"book\"], append \"bag\", then replace pen with pencil.",
+          "hint": "Use append and index zero.",
+          "solution": "items = [\"pen\", \"book\"]\nitems.append(\"bag\")\nitems[0] = \"pencil\"\nprint(items)",
+          "expectedOutput": "['pencil', 'book', 'bag']",
+          "solutionExplanation": "Appending grows the list; replacement preserves length.",
+          "successCriteria": [
+            "Start with [\"pen\", \"book\"], append \"bag\", then replace pen with pencil.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: lost list",
+          "instruction": "Repair assigning items = items.append(\"tea\") for an initial [\"rice\"].",
+          "hint": "Mutating append returns None.",
+          "solution": "items = [\"rice\"]\nitems.append(\"tea\")\nprint(items)",
+          "expectedOutput": "['rice', 'tea']",
+          "solutionExplanation": "The list stays bound to items when the method is called as a statement.",
+          "successCriteria": [
+            "Repair assigning items = items.append(\"tea\") for an initial [\"rice\"].",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: editable plan",
+          "instruction": "Copy [\"draft\", \"review\"] into a new plan, remove its last item, append \"publish\", and print both plans.",
+          "hint": "Use copy before mutation.",
+          "solution": "original = [\"draft\", \"review\"]\nplan = original.copy()\nplan.pop()\nplan.append(\"publish\")\nprint(original)\nprint(plan)",
+          "expectedOutput": "['draft', 'review']\n['draft', 'publish']",
+          "solutionExplanation": "The original and revised outer lists remain independent.",
+          "successCriteria": [
+            "Copy [\"draft\", \"review\"] into a new plan, remove its last item, append \"publish\", and print both plans.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What does append do?",
+          "q": "What does append return?",
           "options": [
-            "Sorts the list",
-            "Adds item at the end",
-            "Deletes last item",
-            "Reverses list"
+            "None",
+            "The changed list",
+            "The appended index",
+            "The new length"
           ],
-          "correct": 1,
-          "explanation": "append adds to the end of the list."
+          "correct": 0,
+          "explanation": "append mutates the list and returns no meaningful result."
         },
         {
-          "q": "When would you use “Ordered Shopping Lists” in a real project?",
+          "q": "What does pop() remove?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Create, index, append, remove, and loop over lists.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Nothing without an index",
+            "The last element",
+            "The first element",
+            "All duplicates"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Create, index, append, remove, and loop over lists."
+          "explanation": "Its default index is the end."
+        },
+        {
+          "q": "What does alias = items create?",
+          "options": [
+            "A tuple",
+            "An immutable snapshot",
+            "Another reference to the same list",
+            "A deep copy"
+          ],
+          "correct": 2,
+          "explanation": "Assignment alone does not copy mutable values."
+        },
+        {
+          "q": "What does remove(\"A\") do with two A entries?",
+          "options": [
+            "Deletes both",
+            "Deletes the last only",
+            "Always raises",
+            "Deletes the first equal entry"
+          ],
+          "correct": 3,
+          "explanation": "remove operates on one matching value."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "List becomes None: The result of append was assigned back. Call append without reassignment. Wrong duplicate disappears: remove deletes the first equal value. Use an index with pop when a specific occurrence matters. Backup changes unexpectedly: Two names refer to the same mutable list. Use copy for an independent flat list.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Variables, string indexes, and len."
+        ],
+        "outcomes": [
+          "Create lists and retrieve or replace elements.",
+          "Use append, remove, and pop appropriately.",
+          "Distinguish aliasing from a shallow list copy."
+        ],
+        "expectedOutput": "['jollof', 'kilishi', 'zobo']\njollof 3\nRemoved: puff-puff",
+        "walkthrough": [
+          {
+            "code": "orders.append(\"puff-puff\")",
+            "explanation": "A fourth element is added after the original three."
+          },
+          {
+            "code": "orders[1] = \"kilishi\"",
+            "explanation": "Index one replaces the second item while the other positions remain unchanged."
+          },
+          {
+            "code": "removed = orders.pop()",
+            "explanation": "The last item is removed and returned, so removed receives its text and the list returns to length three."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Alias and copy",
+            "code": "items = [\"rice\"]\nalias = items\ncopy = items.copy()\nitems.append(\"beans\")\nprint(alias)\nprint(copy)",
+            "expectedOutput": "['rice', 'beans']\n['rice']",
+            "explanation": "The alias sees the mutation; the independent outer copy retains its earlier elements."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "List becomes None",
+            "cause": "The result of append was assigned back.",
+            "fix": "Call append without reassignment."
+          },
+          {
+            "symptom": "Wrong duplicate disappears",
+            "cause": "remove deletes the first equal value.",
+            "fix": "Use an index with pop when a specific occurrence matters."
+          },
+          {
+            "symptom": "Backup changes unexpectedly",
+            "cause": "Two names refer to the same mutable list.",
+            "fix": "Use copy for an independent flat list."
+          }
+        ],
+        "summary": [
+          "Lists preserve order and support mutation.",
+          "Methods differ in whether they return removed data.",
+          "Next use tuples for fixed-position records."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Lists",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"
+          }
+        ]
+      }
     },
     {
       "id": "py-22",
       "title": "5.2 Tuples — Fixed Records",
       "module": "Collections",
-      "objective": "Use tuples for fixed collections that should not change.",
-      "why": "GPS coordinates, RGB colors, or (latitude, longitude) of a shop should stay fixed — use tuples.",
-      "explanation": "<p><strong>What you will learn.</strong> Use tuples for fixed collections that should not change. By the end you should explain <em>Fixed Records</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> GPS coordinates, RGB colors, or (latitude, longitude) of a shop should stay fixed — use tuples. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Tuples: <code>(a, b)</code>. Ordered, immutable.<br>\n  Good for dictionary keys and fixed records.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use tuples for fixed collections that should not change.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>5</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>lagos_coords = (6.5244, 3.3792)</code> — stores or updates a value.</li><li><code>print(lagos_coords[0])</code> — shows output so you can verify the result.</li><li><code>lat, lon = lagos_coords</code> — stores or updates a value.</li><li><code>print(lat, lon)</code> — shows output so you can verify the result.</li><li><code>singleton = (42,)</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Fixed Records</em> solve?</li><li>Which line in the example most directly achieves: “Use tuples for fixed collections that should not change.”?</li><li>If you change one value in <code>lagos_coords = (6.5244, 3.3792)</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "lagos_coords = (6.5244, 3.3792)\nprint(lagos_coords[0])\n\n# Unpacking\nlat, lon = lagos_coords\nprint(lat, lon)\n\n# Single-item tuple needs comma\nsingleton = (42,)",
+      "objective": "Represent fixed-position records with tuples and unpack their fields.",
+      "why": "A coordinate pair or RGB color has a stable field structure. A tuple communicates that positions form one record rather than a growing queue.",
+      "explanation": "<h4>Tuples describe a stable record shape</h4><p>A tuple is an ordered sequence, commonly displayed with parentheses. Commas create the tuple: (42,) is a one-element tuple, while (42) is just a grouped integer. The empty tuple is (). Like lists, tuples support len, zero-based indexing, negative indexes, and slices. Their elements may represent different fields, such as a name and score.</p>\n<h4>Immutability applies to the tuple positions</h4><p>You cannot assign a new value to point[0] or append another coordinate to a tuple. Create a new tuple when the record should change. This prevents accidental structural edits but does not validate the meaning of its fields. A two-element tuple could still contain nonsensical coordinates unless your program enforces the intended domain.</p>\n<h4>Unpacking gives positions readable names</h4><p>latitude, longitude = point assigns the first element to latitude and the second to longitude. The number of targets must match the number of elements for simple unpacking. Named variables are often clearer than repeatedly writing point[0] and point[1]. Order remains important: swapping targets silently swaps meanings even when both values are numbers.</p>\n<h4>Choose a collection by its job</h4><p>Use a list for an ordered collection whose membership changes, a tuple for a fixed-position record, and a dictionary later for named fields. A tuple can contain a mutable list; the tuple still holds the same list object even if that list changes. Immutability is therefore not automatically recursive. Prefer simple immutable fields when you want a fully stable value record.</p>\n<h4>Follow the complete example</h4><p>The operation <code>coordinates = (6.5244, 3.3792)</code>: The two values form an ordered coordinate record. The operation <code>latitude, longitude = coordinates</code>: Unpacking gives the positions meaningful names without changing the tuple. The operation <code>singleton = (42,)</code>: The trailing comma creates a tuple; parentheses alone would only group the integer.</p>\n<h4>Boundary cases and design choices</h4><p>Compare a single value, a one-element tuple, and a two-element tuple when predicting unpacking. A mismatch raises ValueError instead of guessing where fields belong. If you need to change a record, construct a replacement with the same documented order. When the number of fields grows enough that indexes are difficult to remember, prefer a structure with named fields rather than adding more unexplained tuple positions.</p>",
+      "codeExample": "coordinates = (6.5244, 3.3792)\nlatitude, longitude = coordinates\nsingleton = (42,)\nprint(latitude, longitude)\nprint(coordinates[-1])\nprint(len(singleton), singleton[0])",
       "exercises": [
         {
-          "title": "RGB brand color",
-          "instruction": "Store your brand color as an RGB tuple and print each component with labels.",
-          "solution": "brand = (16, 185, 129)  # emerald-ish\nr, g, b = brand\nprint(\"R:\", r, \"G:\", g, \"B:\", b)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Store your brand color as an RGB tuple and print each component with labels. Change names/values first; only then restructure."
+          "title": "Guided: unpack a record",
+          "instruction": "Unpack (\"Ada\", 88) into name and score and print them.",
+          "hint": "Match two targets to two fields.",
+          "solution": "record = (\"Ada\", 88)\nname, score = record\nprint(name, score)",
+          "expectedOutput": "Ada 88",
+          "solutionExplanation": "Names make the positional meanings explicit.",
+          "successCriteria": [
+            "Unpack (\"Ada\", 88) into name and score and print them.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: singleton",
+          "instruction": "Create a tuple containing just \"ready\" and print its length.",
+          "hint": "The comma is essential.",
+          "solution": "status = (\"ready\",)\nprint(len(status))",
+          "expectedOutput": "1",
+          "solutionExplanation": "Without the comma len would count the string characters.",
+          "successCriteria": [
+            "Create a tuple containing just \"ready\" and print its length.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: replacement point",
+          "instruction": "Given (2, 3), make a new point with x increased by five while keeping the original.",
+          "hint": "Unpack and construct a replacement tuple.",
+          "solution": "point = (2, 3)\nx, y = point\nshifted = (x + 5, y)\nprint(point)\nprint(shifted)",
+          "expectedOutput": "(2, 3)\n(7, 3)",
+          "solutionExplanation": "A new tuple expresses the update without mutating the original.",
+          "successCriteria": [
+            "Given (2, 3), make a new point with x increased by five while keeping the original.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Can you change an element of a tuple?",
+          "q": "Which is a one-element tuple?",
           "options": [
-            "Yes always",
-            "No — tuples are immutable",
-            "Only if numbers",
-            "Only first element"
+            "(7,)",
+            "(7)",
+            "[7]",
+            "{7}"
           ],
-          "correct": 1,
-          "explanation": "Tuples cannot be modified after creation."
+          "correct": 0,
+          "explanation": "The comma creates a tuple."
         },
         {
-          "q": "When would you use “Fixed Records” in a real project?",
+          "q": "What happens when two values unpack into three targets?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use tuples for fixed collections that should not change.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "A list is created",
+            "ValueError",
+            "The third becomes None",
+            "The final value repeats"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use tuples for fixed collections that should not change."
+          "explanation": "Simple unpacking requires matching counts."
+        },
+        {
+          "q": "Can a list inside a tuple change?",
+          "options": [
+            "Only with tuple.append",
+            "Only after conversion to text",
+            "Yes; the contained list remains mutable",
+            "No; all contents freeze"
+          ],
+          "correct": 2,
+          "explanation": "Tuple immutability protects its references, not nested objects."
+        },
+        {
+          "q": "When is a tuple a good choice?",
+          "options": [
+            "A queue with frequent append",
+            "A named lookup table",
+            "A set of unique visitors",
+            "A fixed latitude/longitude record"
+          ],
+          "correct": 3,
+          "explanation": "Stable positional fields fit tuples."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "One-item tuple behaves as an integer: The comma was omitted. Write (value,). Unpacking raises ValueError: Target count differs from field count. Match the documented record shape. Coordinate meanings are reversed: Unpacking targets were in the wrong order. Document and preserve the field order.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Lists, indexes, and assignment."
+        ],
+        "outcomes": [
+          "Create ordinary, empty, and single-element tuples.",
+          "Unpack a tuple into named variables.",
+          "Explain tuple immutability and nested mutable values."
+        ],
+        "expectedOutput": "6.5244 3.3792\n3.3792\n1 42",
+        "walkthrough": [
+          {
+            "code": "coordinates = (6.5244, 3.3792)",
+            "explanation": "The two values form an ordered coordinate record."
+          },
+          {
+            "code": "latitude, longitude = coordinates",
+            "explanation": "Unpacking gives the positions meaningful names without changing the tuple."
+          },
+          {
+            "code": "singleton = (42,)",
+            "explanation": "The trailing comma creates a tuple; parentheses alone would only group the integer."
+          }
+        ],
+        "variations": [
+          {
+            "title": "A mutable element inside a tuple",
+            "code": "record = (\"Ada\", [80])\nrecord[1].append(90)\nprint(record)",
+            "expectedOutput": "('Ada', [80, 90])",
+            "explanation": "The tuple still refers to the same list; the list itself is mutable."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "One-item tuple behaves as an integer",
+            "cause": "The comma was omitted.",
+            "fix": "Write (value,)."
+          },
+          {
+            "symptom": "Unpacking raises ValueError",
+            "cause": "Target count differs from field count.",
+            "fix": "Match the documented record shape."
+          },
+          {
+            "symptom": "Coordinate meanings are reversed",
+            "cause": "Unpacking targets were in the wrong order.",
+            "fix": "Document and preserve the field order."
+          }
+        ],
+        "summary": [
+          "Commas create tuples and positions stay fixed.",
+          "Unpacking makes record fields readable.",
+          "Next use sets when uniqueness matters more than order."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Tuples and sequences",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+          }
+        ]
+      }
     },
     {
       "id": "py-23",
       "title": "5.3 Sets — Unique Items Only",
       "module": "Collections",
-      "objective": "Store unique values and use set operations (union, intersection).",
-      "why": "Which phone numbers are unique leads? Who attended both events? Sets remove duplicates fast.",
-      "explanation": "<p><strong>What you will learn.</strong> Store unique values and use set operations (union, intersection). By the end you should explain <em>Unique Items Only</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Which phone numbers are unique leads? Who attended both events? Sets remove duplicates fast. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> An ordered collection stores many values under one name. You can loop through items, pick one by position, add/remove, and pass the whole group around.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Sets: <code>{1, 2, 3}</code>. Unordered, unique members.<br>\n  Ops: <code>|</code> union, <code>&</code> intersection, <code>-</code> difference.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Store unique values and use set operations (union, intersection).” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>6</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>visitors = {\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}</code> — stores or updates a value.</li><li><code>print(visitors)  # Ada once only</code> — shows output so you can verify the result.</li><li><code>vip = {\"Ada\", \"Emeka\"}</code> — stores or updates a value.</li><li><code>print(visitors &amp; vip)   # intersection</code> — shows output so you can verify the result.</li><li><code>print(visitors | vip)   # union</code> — shows output so you can verify the result.</li><li><code>visitors.add(\"Fatima\")</code> — changes a collection.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Unique Items Only</em> solve?</li><li>Which line in the example most directly achieves: “Store unique values and use set operations (union, intersection).”?</li><li>If you change one value in <code>visitors = {\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "visitors = {\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}\nprint(visitors)  # Ada once only\n\nvip = {\"Ada\", \"Emeka\"}\nprint(visitors & vip)   # intersection\nprint(visitors | vip)   # union\nvisitors.add(\"Fatima\")",
+      "objective": "Use sets to deduplicate values and compare membership groups.",
+      "why": "Visitor counts and audience overlap need distinct membership rather than repeated records or a particular order.",
+      "explanation": "<h4>A set stores distinct members</h4><p>Curly braces around values create a set, and duplicate equal values collapse to one member. A set has no positional indexing and does not promise a display order. Use membership with in instead of selecting a supposed first element. An empty set is set(); empty braces create a dictionary, introduced in the next lesson.</p>\n<h4>Adding and removing membership</h4><p>add(value) ensures a member is present. Adding an existing member does not increase length. discard(value) removes it if present and does nothing when absent. remove(value) also removes a member but raises KeyError when absent. Choose whether absence is normal or a mistake rather than catching every missing-member problem indiscriminately.</p>\n<h4>Compare two groups with set algebra</h4><p>The intersection operator &amp; finds members in both sets. Union | finds members in either set, with duplicates still removed. Difference A - B finds members of A that are not in B; direction matters. These operations produce new sets and leave the inputs unchanged. They express audience comparison more clearly than manual duplicate checks.</p>\n<h4>Membership and presentation are separate</h4><p>sorted(a_set) returns a sorted list for stable display; it does not give the set a permanent order. Our members are strings, which can be compared consistently for sorting. Set elements must be hashable, meaning they support stable identity for hash-based lookup; strings and integers are suitable, while mutable lists are not. Use a tuple for a fixed compound member when its fields are hashable.</p>\n<h4>Follow the complete example</h4><p>The operation <code>{\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}</code>: The repeated Ada creates only one member, leaving three initial visitors. The operation <code>visitors.add(\"Fatima\")</code>: A new distinct member increases the count to four. The operation <code>sorted(visitors &amp; vip)</code>: Intersection identifies Ada, then sorted makes the output deterministic. The operation <code>visitors - vip</code>: The difference excludes VIP members from the visitor set; reversing operands asks a different question.</p>\n<h4>Boundary cases and design choices</h4><p>Test empty groups, disjoint groups, and identical groups. Intersection is empty for disjoint groups; union of identical groups adds nothing new. If duplicates represent repeated purchases, converting to a set loses quantity information and is the wrong aggregation. Decide whether the task is about unique membership or frequency before deduplicating records.</p>",
+      "codeExample": "visitors = {\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}\nvip = {\"Ada\", \"Emeka\"}\nvisitors.add(\"Fatima\")\nprint(len(visitors))\nprint(sorted(visitors & vip))\nprint(sorted(visitors | vip))\nprint(sorted(visitors - vip))",
       "exercises": [
         {
-          "title": "Unique tags",
-          "instruction": "tags list has duplicates. Convert to a set and print how many unique tags.",
-          "solution": "tags = [\"python\", \"data\", \"python\", \"web\", \"data\", \"ai\"]\nunique = set(tags)\nprint(unique)\nprint(\"Unique count:\", len(unique))",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: tags list has duplicates. Change names/values first; only then restructure."
+          "title": "Guided: distinct tags",
+          "instruction": "Deduplicate [\"red\", \"blue\", \"red\"] and print the sorted members and count.",
+          "hint": "Construct a set from the list.",
+          "solution": "tags = set([\"red\", \"blue\", \"red\"])\nprint(sorted(tags))\nprint(len(tags))",
+          "expectedOutput": "['blue', 'red']\n2",
+          "solutionExplanation": "Repeated red becomes one membership entry.",
+          "successCriteria": [
+            "Deduplicate [\"red\", \"blue\", \"red\"] and print the sorted members and count.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Predict: missing discard",
+          "instruction": "Create {\"A\"}, discard \"B\", then add \"A\" and print length.",
+          "hint": "Neither operation changes the existing membership.",
+          "solution": "members = {\"A\"}\nmembers.discard(\"B\")\nmembers.add(\"A\")\nprint(len(members))",
+          "expectedOutput": "1",
+          "solutionExplanation": "discard tolerates absence and add does not duplicate a member.",
+          "successCriteria": [
+            "Create {\"A\"}, discard \"B\", then add \"A\" and print length.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: invitation gap",
+          "instruction": "Find invited people who have not replied: invited Ada,Bola,Chidi; replied Bola. Print sorted names.",
+          "hint": "Subtract replies from invitations.",
+          "solution": "invited = {\"Ada\", \"Bola\", \"Chidi\"}\nreplied = {\"Bola\"}\nprint(sorted(invited - replied))",
+          "expectedOutput": "['Ada', 'Chidi']",
+          "solutionExplanation": "The left-side membership establishes the population whose missing replies matter.",
+          "successCriteria": [
+            "Find invited people who have not replied: invited Ada,Bola,Chidi; replied Bola. Print sorted names.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is special about sets?",
+          "q": "How is an empty set created?",
           "options": [
-            "They keep order always",
-            "They only store unique items",
-            "They allow duplicates",
-            "They are strings"
+            "set()",
+            "{}",
+            "[]",
+            "()"
           ],
-          "correct": 1,
-          "explanation": "Sets automatically store each unique value once."
+          "correct": 0,
+          "explanation": "Empty braces are a dictionary."
         },
         {
-          "q": "When would you use “Unique Items Only” in a real project?",
+          "q": "Which finds common members?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Store unique values and use set operations (union, intersection).",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "+",
+            "&",
+            "|",
+            "-"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Store unique values and use set operations (union, intersection)."
+          "explanation": "Intersection retains members present in both."
+        },
+        {
+          "q": "Why sort a set for an example output?",
+          "options": [
+            "Sets require sorting for membership",
+            "sorted returns a set",
+            "Set display order is not guaranteed",
+            "Sorting removes duplicates"
+          ],
+          "correct": 2,
+          "explanation": "A sorted list makes presentation stable."
+        },
+        {
+          "q": "What information is lost by set([\"A\", \"A\"])?",
+          "options": [
+            "Whether A exists",
+            "All string values",
+            "The element type",
+            "The duplicate frequency"
+          ],
+          "correct": 3,
+          "explanation": "Sets retain membership, not occurrence counts."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Empty collection has no add method: {} created a dictionary. Use set() for an empty set. Output order changes: Set order was treated as a contract. Sort only for deterministic presentation. TypeError adding a list: Mutable lists are unhashable. Use a suitable immutable record or another collection.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Lists, membership, and len."
+        ],
+        "outcomes": [
+          "Create empty and populated sets and add or discard values.",
+          "Use union, intersection, and difference.",
+          "Display deterministic results without assuming set order."
+        ],
+        "expectedOutput": "4\n['Ada']\n['Ada', 'Bola', 'Chidi', 'Emeka', 'Fatima']\n['Bola', 'Chidi', 'Fatima']",
+        "walkthrough": [
+          {
+            "code": "{\"Ada\", \"Bola\", \"Ada\", \"Chidi\"}",
+            "explanation": "The repeated Ada creates only one member, leaving three initial visitors."
+          },
+          {
+            "code": "visitors.add(\"Fatima\")",
+            "explanation": "A new distinct member increases the count to four."
+          },
+          {
+            "code": "sorted(visitors & vip)",
+            "explanation": "Intersection identifies Ada, then sorted makes the output deterministic."
+          },
+          {
+            "code": "visitors - vip",
+            "explanation": "The difference excludes VIP members from the visitor set; reversing operands asks a different question."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Difference has a direction",
+            "code": "a = {\"Ada\", \"Bola\"}\nb = {\"Bola\", \"Chidi\"}\nprint(sorted(a - b))\nprint(sorted(b - a))",
+            "expectedOutput": "['Ada']\n['Chidi']",
+            "explanation": "Each difference keeps only the members exclusive to its left operand."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Empty collection has no add method",
+            "cause": "{} created a dictionary.",
+            "fix": "Use set() for an empty set."
+          },
+          {
+            "symptom": "Output order changes",
+            "cause": "Set order was treated as a contract.",
+            "fix": "Sort only for deterministic presentation."
+          },
+          {
+            "symptom": "TypeError adding a list",
+            "cause": "Mutable lists are unhashable.",
+            "fix": "Use a suitable immutable record or another collection."
+          }
+        ],
+        "summary": [
+          "Sets represent unique membership without positional order.",
+          "Use algebra to compare groups.",
+          "Next map named keys to values with dictionaries."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Sets",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+          }
+        ]
+      }
     },
     {
       "id": "py-24",
       "title": "5.4 Dictionaries — Key → Value Maps",
       "module": "Collections",
-      "objective": "Store and retrieve data with keys (like a real dictionary or contact book).",
-      "why": "A student profile, product catalog, or settings file is naturally a dictionary.",
-      "explanation": "<p><strong>What you will learn.</strong> Store and retrieve data with keys (like a real dictionary or contact book). By the end you should explain <em>Key → Value Maps</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> A student profile, product catalog, or settings file is naturally a dictionary. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Key–value maps store labeled data (like a form: name → value). They shine when you look things up by a name instead of by position.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Dicts: <code>{\"name\": \"Ada\", \"age\": 20}</code>. Access with keys. Methods: <code>keys()</code>, <code>values()</code>, <code>items()</code>, <code>get()</code>.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Store and retrieve data with keys (like a real dictionary or contact book).” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>10</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>student = {</code> — stores or updates a value.</li><li><code>\"name\": \"Emeka\",</code> — does a step in the overall recipe.</li><li><code>\"course\": \"Python\",</code> — does a step in the overall recipe.</li><li><code>\"score\": 88</code> — does a step in the overall recipe.</li><li><code>}</code> — does a step in the overall recipe.</li><li><code>print(student[\"name\"])</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Key → Value Maps</em> solve?</li><li>Which line in the example most directly achieves: “Store and retrieve data with keys (like a real dictionary or contact book).”?</li><li>If you change one value in <code>student = {</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Missing keys return errors/undefined — print keys or use safe get/default patterns.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "student = {\n    \"name\": \"Emeka\",\n    \"course\": \"Python\",\n    \"score\": 88\n}\nprint(student[\"name\"])\nprint(student.get(\"email\", \"not provided\"))\nstudent[\"score\"] = 91\nfor key, value in student.items():\n    print(key, \"→\", value)",
+      "objective": "Create dictionaries and retrieve, update, or remove values by key.",
+      "why": "Contacts and student records have named fields. A dictionary lets code refer to a field’s meaning instead of remembering its position.",
+      "explanation": "<h4>Keys name values</h4><p>A dictionary literal uses braces containing key: value pairs separated by commas. Keys identify entries and must be unique within a dictionary. In {\"name\": \"Emeka\", \"score\": 88}, the strings on the left are field names and the values on the right hold data. Dictionaries preserve insertion order in modern Python, but lookup is based on keys rather than positions.</p>\n<h4>Retrieve required and optional fields differently</h4><p>student[\"name\"] retrieves a required field and raises KeyError if it is missing. student.get(\"email\", \"not provided\") returns a fallback when that key is absent. get does not add the fallback to the dictionary. An existing key whose value is None still returns None; absence and an explicit empty value are separate states.</p>\n<h4>Assignment inserts or updates</h4><p>student[\"score\"] = 91 replaces the existing score. Assigning a new key adds a new entry. Repeating a key in a literal keeps the final supplied value, so dictionaries cannot directly represent several independent values under the same key. Use a list as a value when a field legitimately contains multiple items. del student[\"score\"] removes the entry and requires it to exist.</p>\n<h4>Membership and views</h4><p>\"email\" in student checks keys, not values. keys(), values(), and items() provide views of the mapping; items pairs each key with its value. Convert a view to list for a snapshot display if needed. Later loops will process these pairs one at a time. For now direct retrieval and a printed dictionary are enough to inspect the record without introducing iteration prematurely.</p>\n<h4>Follow the complete example</h4><p>The operation <code>student[\"name\"]</code>: The required name is retrieved by its key rather than an index. The operation <code>student.get(\"email\", \"not provided\")</code>: The missing optional field produces a display fallback without inserting email. The operation <code>student[\"active\"] = True</code>: A new key is appended to insertion order, while updating score keeps its original position.</p>\n<h4>Boundary cases and design choices</h4><p>Check an absent key, a present key with empty text, and a present key with a numeric zero. A fallback should not silently erase valid empty or zero values unless the application explicitly requires it. Dictionary keys must be hashable, so mutable lists cannot be keys. When two contacts have the same name, a name-keyed mapping needs a conflict policy or a different unique identifier.</p>",
+      "codeExample": "student = {\"name\": \"Emeka\", \"course\": \"Python\", \"score\": 88}\nprint(student[\"name\"])\nprint(student.get(\"email\", \"not provided\"))\nstudent[\"score\"] = 91\nstudent[\"active\"] = True\nprint(student[\"score\"], student[\"active\"])\nprint(\"email\" in student)\nprint(list(student.keys()))",
       "exercises": [
         {
-          "title": "Product record",
-          "instruction": "Create a dict for a phone: brand, model, price, in_stock. Print a sales sentence using the values.",
-          "solution": "phone = {\"brand\": \"Tecno\", \"model\": \"Camon\", \"price\": 185000, \"in_stock\": True}\nprint(f\"{phone['brand']} {phone['model']} costs ₦{phone['price']:,}. In stock: {phone['in_stock']}\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Create a dict for a phone: brand, model, price, in_stock. Change names/values first; only then restructure."
+          "title": "Guided: update inventory",
+          "instruction": "Create rice stock 10, update it to 12, and add beans stock 5. Print both.",
+          "hint": "Assign values by product keys.",
+          "solution": "stock = {\"rice\": 10}\nstock[\"rice\"] = 12\nstock[\"beans\"] = 5\nprint(stock[\"rice\"], stock[\"beans\"])",
+          "expectedOutput": "12 5",
+          "solutionExplanation": "Existing and new keys use the same assignment syntax.",
+          "successCriteria": [
+            "Create rice stock 10, update it to 12, and add beans stock 5. Print both.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: optional phone",
+          "instruction": "Retrieve missing phone from {\"name\": \"Ada\"} as \"not supplied\" without inserting it.",
+          "hint": "Use get with a default.",
+          "solution": "contact = {\"name\": \"Ada\"}\nprint(contact.get(\"phone\", \"not supplied\"))\nprint(\"phone\" in contact)",
+          "expectedOutput": "not supplied\nFalse",
+          "solutionExplanation": "get reports a fallback but leaves the mapping unchanged.",
+          "successCriteria": [
+            "Retrieve missing phone from {\"name\": \"Ada\"} as \"not supplied\" without inserting it.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: named record",
+          "instruction": "Create a book with title \"Python Notes\" and pages 120, add status \"available\", then remove pages and print the record.",
+          "hint": "Use named keys and del for the removed field.",
+          "solution": "book = {\"title\": \"Python Notes\", \"pages\": 120}\nbook[\"status\"] = \"available\"\ndel book[\"pages\"]\nprint(book)",
+          "expectedOutput": "{'title': 'Python Notes', 'status': 'available'}",
+          "solutionExplanation": "The record evolves through explicit named-field updates.",
+          "successCriteria": [
+            "Create a book with title \"Python Notes\" and pages 120, add status \"available\", then remove pages and print the record.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "How do you safely get a key that might be missing?",
+          "q": "What does in test on a dictionary?",
           "options": [
-            "dict[key]",
-            "dict.get(key, default)",
-            "dict.pop only",
-            "dict + key"
+            "Keys",
+            "Values only",
+            "Key/value pairs only",
+            "Insertion indexes"
           ],
-          "correct": 1,
-          "explanation": "get() returns default instead of crashing if key is missing."
+          "correct": 0,
+          "explanation": "Dictionary membership is key membership."
         },
         {
-          "q": "When would you use “Key → Value Maps” in a real project?",
+          "q": "What happens when a key is assigned again?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Store and retrieve data with keys (like a real dictionary or contact book).",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "It always raises",
+            "Its value is replaced",
+            "A second identical key is added",
+            "The dictionary becomes a list"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Store and retrieve data with keys (like a real dictionary or contact book)."
+          "explanation": "Keys remain unique."
+        },
+        {
+          "q": "Does get insert its default?",
+          "options": [
+            "Only for strings",
+            "Only for zero",
+            "No",
+            "Yes always"
+          ],
+          "correct": 2,
+          "explanation": "get is a retrieval operation."
+        },
+        {
+          "q": "When should direct lookup be preferred?",
+          "options": [
+            "Every field is optional",
+            "You want an automatic default inserted",
+            "You need positional access",
+            "A required key should exist and absence is an error"
+          ],
+          "correct": 3,
+          "explanation": "KeyError can expose a violated required-field assumption."
         }
       ],
       "path": "beginner",
       "difficulty": "beginner",
-      "pitfalls": "Missing keys return errors/undefined — print keys or use safe get/default patterns.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "KeyError on an optional field: Direct lookup assumed the key existed. Use get with an intentional fallback for optional data. A duplicate entry disappears: The same key was assigned twice. Choose unique IDs or store multiple values in a list. Membership misses an existing value: in checks keys. Inspect values() when value membership is intended.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Lists, membership, and string keys."
+        ],
+        "outcomes": [
+          "Build and update key/value mappings.",
+          "Choose direct lookup or get based on missing-key expectations.",
+          "Explain unique keys and dictionary membership."
+        ],
+        "expectedOutput": "Emeka\nnot provided\n91 True\nFalse\n['name', 'course', 'score', 'active']",
+        "walkthrough": [
+          {
+            "code": "student[\"name\"]",
+            "explanation": "The required name is retrieved by its key rather than an index."
+          },
+          {
+            "code": "student.get(\"email\", \"not provided\")",
+            "explanation": "The missing optional field produces a display fallback without inserting email."
+          },
+          {
+            "code": "student[\"active\"] = True",
+            "explanation": "A new key is appended to insertion order, while updating score keeps its original position."
+          }
+        ],
+        "variations": [
+          {
+            "title": "A fallback does not insert",
+            "code": "record = {\"score\": 0}\nprint(record.get(\"score\", 100))\nprint(record.get(\"email\", \"unknown\"))\nprint(\"email\" in record)",
+            "expectedOutput": "0\nunknown\nFalse",
+            "explanation": "Existing zero is preserved; get’s missing-key fallback is returned without changing the dictionary."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "KeyError on an optional field",
+            "cause": "Direct lookup assumed the key existed.",
+            "fix": "Use get with an intentional fallback for optional data."
+          },
+          {
+            "symptom": "A duplicate entry disappears",
+            "cause": "The same key was assigned twice.",
+            "fix": "Choose unique IDs or store multiple values in a list."
+          },
+          {
+            "symptom": "Membership misses an existing value",
+            "cause": "in checks keys.",
+            "fix": "Inspect values() when value membership is intended."
+          }
+        ],
+        "summary": [
+          "Dictionaries map unique keys to values.",
+          "Choose missing-key behavior deliberately.",
+          "Next combine mappings into an in-memory contact book."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Dictionaries",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+          }
+        ]
+      }
     },
     {
       "id": "py-mp-01",
@@ -1095,40 +3465,165 @@ window.PYTHON_COURSE = {
       "path": "beginner",
       "project": true,
       "difficulty": "beginner",
-      "objective": "Build an in-memory contact book with dicts and lists.",
-      "why": "Every business keeps customer names and phones — this is CRUD in miniature.",
-      "explanation": "<p><strong>What you will learn.</strong> Build an in-memory contact book with dicts and lists. By the end you should explain <em>Contact Book</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Every business keeps customer names and phones — this is CRUD in miniature. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Projects glue skills together. You combine inputs, decisions, collections, and functions into one useful tool someone could actually use.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Store contacts as a list of dicts with name and phone. Support add, list, and find by name. This glues lists, dicts, loops, and functions.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Build an in-memory contact book with dicts and lists.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>12</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>contacts = []</code> — stores or updates a value.</li><li><code>def add_contact(name, phone):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>contacts.append({\"name\": name, \"phone\": phone})</code> — changes a collection.</li><li><code>def find_contact(name):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>for c in contacts:</code> — repeats work over items or until a condition ends.</li><li><code>if c[\"name\"].lower() == name.lower():</code> — branches based on a condition.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Contact Book</em> solve?</li><li>Which line in the example most directly achieves: “Build an in-memory contact book with dicts and lists.”?</li><li>If you change one value in <code>contacts = []</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "contacts = []\n\ndef add_contact(name, phone):\n    contacts.append({\"name\": name, \"phone\": phone})\n\ndef find_contact(name):\n    for c in contacts:\n        if c[\"name\"].lower() == name.lower():\n            return c\n    return None\n\nadd_contact(\"Ada\", \"0803...\")\nadd_contact(\"Bola\", \"0901...\")\nprint(find_contact(\"ada\"))\nprint(len(contacts), \"contacts saved\")",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.",
+      "objective": "Build and review an in-memory contact book using dictionary operations.",
+      "why": "A small project shows how data modeling and update rules work together before adding functions, menus, or persistent storage.",
+      "explanation": "<h4>Project brief and scope</h4><p>Build an in-memory contact book keyed by a normalized name. Support adding two contacts, finding one with differently cased input, updating its phone, reporting a missing contact, and deleting an existing contact. The reference uses straight-line dictionary operations because loops and functions have not been taught yet. A menu and repeated interaction are later extensions, not hidden prerequisites.</p>\n<h4>Choose a simple data model</h4><p>Use a dictionary whose keys are trimmed, casefolded names and whose values are phone strings. Casefold implements the chosen case-insensitive lookup policy; trimming removes accidental boundary spaces. Phones remain text so leading zeros survive. This model assumes normalized names are unique. It cannot safely distinguish two different people with the same name, so a larger address book should use unique contact IDs.</p>\n<h4>Use the same normalization at every boundary</h4><p>Normalize both inserted names and search names with the same expression. Otherwise adding \"Ada\" but searching \"ada\" can miss the record. Updating an existing key replaces its phone rather than adding a duplicate entry. For this brief, that replacement is the explicit duplicate-name policy. A production application could instead reject duplicates or ask which person was intended.</p>\n<h4>Rubric and edge cases</h4><p>Award one check each for preserving phone zeros, normalizing both writes and reads, returning a clear missing-contact message, updating without increasing the count, and deleting only the named record. Demonstrate all five with visible output. Test a missing name and a repeat insertion of the same normalized name. Empty names and malformed phones are outside this version’s accepted-input contract; later branches will reject them explicitly.</p>\n<h4>Follow the complete example</h4><p>The operation <code>contacts = {}</code>: An empty mapping holds the contact index; no file is created. The operation <code>strip().casefold()</code>: Insertion and search use one normalization policy, making the differently cased lookup succeed. The operation <code>contacts[query] = \"08030000000\"</code>: Updating the existing normalized key replaces its phone without changing the count. The operation <code>del contacts[\"bola\"]</code>: The known existing record is removed, leaving one contact.</p>\n<h4>Boundary cases and design choices</h4><p>This project deliberately avoids pretending that memory is persistent storage. Rerunning the script starts a fresh dictionary, and closing the program loses unsaved changes. It also avoids introducing functions before the functions module. After learning conditionals, add existence checks around deletion and reject blank names. After file handling, save a structured representation and load it explicitly. Each extension should preserve the lookup and duplicate policies established here.</p>",
+      "codeExample": "contacts = {}\ncontacts[\" Ada \".strip().casefold()] = \"08031234567\"\ncontacts[\"Bola\".strip().casefold()] = \"09011112222\"\nquery = \"ADA\".strip().casefold()\nprint(contacts.get(query, \"Not found\"))\ncontacts[query] = \"08030000000\"\nprint(contacts[query])\nprint(contacts.get(\"chidi\", \"Not found\"))\ndel contacts[\"bola\"]\nprint(len(contacts), \"contact remaining\")",
+      "pitfalls": "Search misses a differently cased name: Writes and reads use different normalization. Apply the same cleanup to both. Phone loses its first zero: It was converted to an integer. Keep identifiers as strings. Two people merge into one record: Their names normalize to the same key. Use unique IDs when names are not unique.",
       "exercises": [
         {
-          "title": "Delete contact",
-          "instruction": "Write remove_contact(name) that removes the first match.",
-          "hint": "Rebuild list with a comprehension or use index",
-          "level": "medium",
-          "solution": "def remove_contact(name):\n    global contacts\n    contacts = [c for c in contacts if c[\"name\"].lower() != name.lower()]\n\nremove_contact(\"Bola\")\nprint(contacts)"
+          "title": "Guided: add and find",
+          "instruction": "Add \"  Tola \" with phone \"07001234567\" and find it using \"TOLA\".",
+          "hint": "Normalize both name expressions.",
+          "solution": "contacts = {}\ncontacts[\"  Tola \".strip().casefold()] = \"07001234567\"\nprint(contacts.get(\"TOLA\".strip().casefold(), \"Not found\"))",
+          "expectedOutput": "07001234567",
+          "solutionExplanation": "Both expressions resolve to the same key.",
+          "successCriteria": [
+            "Add \"  Tola \" with phone \"07001234567\" and find it using \"TOLA\".",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
         },
         {
-          "title": "List all",
-          "instruction": "Print each contact as \"Name — phone\".",
-          "hint": "for loop",
-          "level": "easy",
-          "solution": "for c in contacts:\n    print(f\"{c['name']} — {c['phone']}\")"
+          "title": "Repair: missing lookup",
+          "instruction": "Replace a failing direct lookup of chidi in an Ada-only book with a clear fallback.",
+          "hint": "Missing contacts are expected, so use get.",
+          "solution": "contacts = {\"ada\": \"0800\"}\nprint(contacts.get(\"chidi\", \"Not found\"))",
+          "expectedOutput": "Not found",
+          "solutionExplanation": "The missing record is handled without changing the book.",
+          "successCriteria": [
+            "Replace a failing direct lookup of chidi in an Ada-only book with a clear fallback.",
+            "Explain why the chosen operation produces the stated result."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: maintain a small book",
+          "instruction": "Create Ada and Bola contacts, change Ada’s phone, remove Bola, and show remaining keys and Ada’s phone.",
+          "hint": "Use explicit assignment and deletion operations.",
+          "solution": "contacts = {\"ada\": \"0800\", \"bola\": \"0900\"}\ncontacts[\"ada\"] = \"0811\"\ndel contacts[\"bola\"]\nprint(list(contacts.keys()))\nprint(contacts[\"ada\"])",
+          "expectedOutput": "['ada']\n0811",
+          "solutionExplanation": "Updating and deleting satisfy the maintenance brief without introducing a menu.",
+          "successCriteria": [
+            "One contact remains.",
+            "Ada’s phone changes without losing its leading zero.",
+            "No unexpected key is inserted."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "Why list of dicts?",
+          "q": "Why are phone values strings?",
           "options": [
-            "Faster than CPU always",
-            "Models many records with fields",
-            "Required by Python syntax",
-            "Only works offline"
+            "Leading zeros and identifier meaning must be preserved",
+            "Dictionaries reject integers",
+            "Strings are automatically validated",
+            "Phones need arithmetic"
+          ],
+          "correct": 0,
+          "explanation": "Telephone labels are not quantities."
+        },
+        {
+          "q": "Where must normalization occur?",
+          "options": [
+            "Only on phone values",
+            "On both insertion and lookup",
+            "Only after printing",
+            "Only on failed searches"
           ],
           "correct": 1,
-          "explanation": "Each dict is one contact with fields."
+          "explanation": "Equivalent keys require the same policy."
+        },
+        {
+          "q": "What does a duplicate normalized name do here?",
+          "options": [
+            "Raises automatically",
+            "Saves both records to disk",
+            "Replaces the existing phone",
+            "Creates another identical key"
+          ],
+          "correct": 2,
+          "explanation": "Dictionary assignment updates a unique key."
+        },
+        {
+          "q": "What is the next step for persistence?",
+          "options": [
+            "Use a longer variable name",
+            "Call get twice",
+            "Print the dictionary once",
+            "Explicitly save and load a file representation"
+          ],
+          "correct": 3,
+          "explanation": "In-memory state alone does not survive process exit."
         }
-      ]
+      ],
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Dictionaries, lists, string cleanup, and membership."
+        ],
+        "outcomes": [
+          "Choose a contact key and store phone values as text.",
+          "Add, find, update, and delete contacts with known keys.",
+          "Evaluate duplicate-name and missing-contact edge cases against a rubric."
+        ],
+        "expectedOutput": "08031234567\n08030000000\nNot found\n1 contact remaining",
+        "walkthrough": [
+          {
+            "code": "contacts = {}",
+            "explanation": "An empty mapping holds the contact index; no file is created."
+          },
+          {
+            "code": "strip().casefold()",
+            "explanation": "Insertion and search use one normalization policy, making the differently cased lookup succeed."
+          },
+          {
+            "code": "contacts[query] = \"08030000000\"",
+            "explanation": "Updating the existing normalized key replaces its phone without changing the count."
+          },
+          {
+            "code": "del contacts[\"bola\"]",
+            "explanation": "The known existing record is removed, leaving one contact."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Duplicate normalized names replace",
+            "code": "contacts = {}\ncontacts[\"Ada\".casefold()] = \"0800\"\ncontacts[\"ADA\".casefold()] = \"0900\"\nprint(len(contacts))\nprint(contacts[\"ada\"])",
+            "expectedOutput": "1\n0900",
+            "explanation": "The chosen key policy treats these as the same contact and the later assignment replaces the phone."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Search misses a differently cased name",
+            "cause": "Writes and reads use different normalization.",
+            "fix": "Apply the same cleanup to both."
+          },
+          {
+            "symptom": "Phone loses its first zero",
+            "cause": "It was converted to an integer.",
+            "fix": "Keep identifiers as strings."
+          },
+          {
+            "symptom": "Two people merge into one record",
+            "cause": "Their names normalize to the same key.",
+            "fix": "Use unique IDs when names are not unique."
+          }
+        ],
+        "summary": [
+          "A project needs a data model and explicit conflict policy.",
+          "Implement and check each requirement with known inputs.",
+          "Next use control flow to enforce rules and handle alternatives."
+        ],
+        "references": [
+          {
+            "title": "Python 3 documentation: Dictionaries",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+          }
+        ]
+      }
     },
     {
       "id": "py-25",
@@ -2660,181 +5155,780 @@ window.PYTHON_COURSE = {
       "id": "py-58",
       "title": "11.1 NumPy — Fast Numerical Arrays",
       "module": "Data Libraries",
-      "objective": "Create NumPy arrays and compute basic statistics.",
-      "why": "Analyze thousands of sensor readings or prices in milliseconds — NumPy is the foundation of data science.",
-      "explanation": "<p><strong>What you will learn.</strong> Create NumPy arrays and compute basic statistics. By the end you should explain <em>Fast Numerical Arrays</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Analyze thousands of sensor readings or prices in milliseconds — NumPy is the foundation of data science. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data work is a pipeline: collect → clean → explore → visualize → model. Each tool is one step that turns raw numbers into decisions.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>import numpy as np<br>\n  Arrays are faster than lists for numeric work. Vectorized ops apply to whole arrays.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Create NumPy arrays and compute basic statistics.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>5</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>import numpy as np</code> — sets up a name, type, import, or definition you will use next.</li><li><code>sales = np.array([12000, 15000, 9000, 18000, 11000])</code> — stores or updates a value.</li><li><code>print(sales.mean())</code> — shows output so you can verify the result.</li><li><code>print(sales.max(), sales.min())</code> — shows output so you can verify the result.</li><li><code>print(sales * 1.1)  # 10% boost all days</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Fast Numerical Arrays</em> solve?</li><li>Which line in the example most directly achieves: “Create NumPy arrays and compute basic statistics.”?</li><li>If you change one value in <code>import numpy as np</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>Shape mismatches and missing values silently ruin results. Inspect data before modeling.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "import numpy as np\nsales = np.array([12000, 15000, 9000, 18000, 11000])\nprint(sales.mean())\nprint(sales.max(), sales.min())\nprint(sales * 1.1)  # 10% boost all days",
+      "objective": "Create numerical arrays, inspect shape and dtype, and calculate axis-aware summaries.",
+      "why": "Sensor readings and daily totals need consistent arithmetic over many values.",
+      "explanation": "<h4>Arrays represent a numerical block</h4>\n<p>A NumPy array stores values with a common data type and a shape. Shape is a tuple describing how many positions exist along each axis: six readings have shape (6,), while two shops observed for three days have shape (2, 3). This is more than a faster spelling of a list. NumPy knows the arrangement of a whole numerical block, so operations can apply across it without an explicit Python loop. Use arrays for numerical data; keep irregular records in ordinary objects or a table.</p>\n\n<h4>Elementwise arithmetic and broadcasting</h4>\n<p>Multiplying a Python list by two repeats its contents. Multiplying an array by two doubles each value. Adding a scalar also affects every element; NumPy broadcasts the single value across the array. Two arrays can combine when their trailing dimensions are equal or one dimension is 1. A shape mismatch is useful evidence that the intended pairing is unclear. Do not reshape merely to silence an error: decide which row, column, or reading each value belongs to first.</p>\n\n<h4>Summaries remove an axis</h4>\n<p>The worked example contains rows for shops and columns for days. Calling sum with no axis totals all six values. Using axis=0 collapses the shop dimension, leaving one total per day; axis=1 collapses days, leaving one total per shop. The axis number names the dimension being reduced, not the dimension you want to keep. Print shape before choosing the axis. A mean divides a sum by the number of observations, so unequal observation counts need particular care when combining means.</p>\n\n<h4>Types, missing values, and copies</h4>\n<p>The dtype controls storage and supported operations. Integer arrays cannot represent arbitrary decimal values without conversion. Choosing dtype=float makes the intention explicit when readings may be fractional. A missing reading represented by np.nan usually propagates through mean; nanmean excludes it, which changes the denominator and must be reported. Slices often share storage with the source array, so editing a slice can edit its parent. Call copy when you need an independent working dataset, and never mistake missing readings for zero consumption.</p>\n\n<h4>Run and inspect the fixture</h4>\n<p>Install NumPy in a local Python 3.12 environment with python -m pip install numpy. The fixture is deliberately small enough to verify by hand: shop totals are 60 and 75; day totals are 25, 45, and 65. Converting results with tolist makes printed output readable without NumPy-specific scalar representations. These deterministic checks teach the operation, not a claim about real sales. Once the relationships are clear, the same operations work on a larger rectangular dataset without changing the underlying meaning.</p>\n",
+      "codeExample": "import numpy as np\nsales = np.array([[10, 20, 30], [15, 25, 35]], dtype=float)\nprint(\"shape:\", sales.shape)\nprint(\"daily:\", sales.sum(axis=0).tolist())\nprint(\"shops:\", sales.sum(axis=1).tolist())\nprint(\"mean:\", sales.mean())\nprint(\"doubled:\", (sales * 2).tolist())",
       "exercises": [
         {
-          "title": "Weekly average",
-          "instruction": "np.array of 7 daily customers counts. Print mean and sum.",
-          "solution": "import numpy as np\ncustomers = np.array([40, 55, 38, 60, 72, 90, 85])\nprint(\"Average:\", customers.mean())\nprint(\"Total:\", customers.sum())",
+          "title": "Guided: total demand",
+          "instruction": "Create an array [4, 6, 8], print its sum and every value increased by 1.",
+          "hint": "Use sum() and scalar addition.",
+          "solution": "import numpy as np\nx = np.array([4, 6, 8])\nprint(int(x.sum()))\nprint((x + 1).tolist())",
+          "expectedOutput": "18\n[5, 7, 9]",
+          "solutionExplanation": "The reduction returns 18; broadcasting adds one at each position.",
+          "successCriteria": [
+            "Sum is 18.",
+            "Adjusted values are [5, 7, 9]."
+          ],
           "level": "easy",
-          "hint": "Start from the lesson example. Goal: np. Change names/values first; only then restructure."
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy"
+            ]
+          }
+        },
+        {
+          "title": "Repair: per-sensor averages",
+          "instruction": "Rows [[2, 4], [10, 14]] represent two sensors. Repair an axis=0 mean to report one mean per sensor.",
+          "hint": "Which dimension must disappear?",
+          "solution": "import numpy as np\nx = np.array([[2, 4], [10, 14]])\nprint(x.mean(axis=1).tolist())",
+          "expectedOutput": "[3.0, 12.0]",
+          "solutionExplanation": "Axis 1 removes the two readings within each sensor row, giving 3 and 12.",
+          "successCriteria": [
+            "Use axis=1.",
+            "Explain why axis=0 would answer a different question."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy"
+            ]
+          }
+        },
+        {
+          "title": "Transfer: isolate a correction",
+          "instruction": "Copy the first row of [[1, 2], [3, 4]], change its first value to 99, and demonstrate the source remains unchanged.",
+          "hint": "A slice is usually a view; request a copy.",
+          "solution": "import numpy as np\nx = np.array([[1, 2], [3, 4]])\ncorrected = x[0].copy()\ncorrected[0] = 99\nprint(corrected.tolist())\nprint(x.tolist())",
+          "expectedOutput": "[99, 2]\n[[1, 2], [3, 4]]",
+          "solutionExplanation": "copy allocates independent storage, so the correction does not mutate the raw readings.",
+          "successCriteria": [
+            "Copy reads [99, 2].",
+            "Original retains its first value 1."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy"
+            ]
+          }
         }
       ],
       "quiz": [
         {
-          "q": "NumPy main data structure?",
+          "q": "What is the shape of two rows with three values each?",
           "options": [
-            "DataFrame",
-            "ndarray",
-            "Series",
-            "list only"
+            "(3, 2)",
+            "(2, 3)",
+            "(6,)"
           ],
           "correct": 1,
-          "explanation": "ndarray is the core NumPy array type."
+          "explanation": "Shape records rows then columns for this two-dimensional array."
         },
         {
-          "q": "When would you use “Fast Numerical Arrays” in a real project?",
+          "q": "What does axis=0 sum in the fixture?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Create NumPy arrays and compute basic statistics.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Each shop over days",
+            "Each day over shops",
+            "Only the first row"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Create NumPy arrays and compute basic statistics."
+          "explanation": "Reducing the row dimension leaves one value per column."
+        },
+        {
+          "q": "What does np.array([2, 3]) * 2 produce?",
+          "options": [
+            "[2, 3, 2, 3]",
+            "[4, 6]",
+            "[4, 9]"
+          ],
+          "correct": 1,
+          "explanation": "Array multiplication is elementwise; list repetition is different."
+        },
+        {
+          "q": "Why report a count with nanmean?",
+          "options": [
+            "nanmean always divides by all rows",
+            "Excluded values change the evidence and denominator",
+            "Counts remove measurement bias"
+          ],
+          "correct": 1,
+          "explanation": "A mean of observed values can be misleading if missing readings are systematic."
         }
       ],
       "path": "data",
       "difficulty": "intermediate",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; Shape mismatches and missing values silently ruin results. Inspect data before modeling.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Unexpected number of totals The wrong axis was reduced. Draw the rows and columns and identify which dimension should disappear. Mean is nan At least one input is missing. Inspect missingness; use nanmean only with an explicit exclusion policy and count. Raw data changes after editing a slice The slice shares storage. Call copy before making independent corrections.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.12 with lists, loops, functions, and imports.",
+          "Local virtual environment with the packages named in the setup section."
+        ],
+        "outcomes": [
+          "Create numerical arrays, inspect shape and dtype, and calculate axis-aware summaries.",
+          "Predict and explain the worked example and its variation.",
+          "Diagnose the listed failures and solve the transfer task."
+        ],
+        "expectedOutput": "shape: (2, 3)\ndaily: [25.0, 45.0, 65.0]\nshops: [60.0, 75.0]\nmean: 22.5\ndoubled: [[20.0, 40.0, 60.0], [30.0, 50.0, 70.0]]",
+        "walkthrough": [
+          {
+            "code": "np.array(..., dtype=float)",
+            "explanation": "Create two rows and three columns with floating-point storage."
+          },
+          {
+            "code": "sum(axis=0)",
+            "explanation": "Add the two shops within each day, producing three totals."
+          },
+          {
+            "code": "sum(axis=1)",
+            "explanation": "Add three days within each shop, producing two totals."
+          },
+          {
+            "code": "mean() and sales * 2",
+            "explanation": "The global mean is 135/6 = 22.5; multiplication returns a new array of doubled values."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Missing readings change the denominator",
+            "code": "import numpy as np\nreadings = np.array([10.0, np.nan, 30.0])\nprint(\"ordinary:\", readings.mean())\nprint(\"observed:\", np.nanmean(readings))\nprint(\"observations:\", int(np.isfinite(readings).sum()))",
+            "expectedOutput": "ordinary: nan\nobserved: 20.0\nobservations: 2",
+            "explanation": "The ordinary mean is nan. The observed mean is 20 across two readings; it does not establish the missing reading was 20.",
+            "validation": {
+              "runtime": "python-data",
+              "requirements": [
+                "numpy"
+              ]
+            }
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Unexpected number of totals",
+            "cause": "The wrong axis was reduced.",
+            "fix": "Draw the rows and columns and identify which dimension should disappear."
+          },
+          {
+            "symptom": "Mean is nan",
+            "cause": "At least one input is missing.",
+            "fix": "Inspect missingness; use nanmean only with an explicit exclusion policy and count."
+          },
+          {
+            "symptom": "Raw data changes after editing a slice",
+            "cause": "The slice shares storage.",
+            "fix": "Call copy before making independent corrections."
+          }
+        ],
+        "summary": [
+          "Arrays combine shape, dtype, and elementwise operations.",
+          "Choose reduction axes from the meaning of rows and columns.",
+          "Next, Pandas adds labels and mixed-type columns to tabular work."
+        ],
+        "references": [
+          {
+            "title": "NumPy beginner guide",
+            "url": "https://numpy.org/doc/stable/user/absolute_beginners.html"
+          }
+        ],
+        "validation": {
+          "runtime": "python-data",
+          "requirements": [
+            "numpy"
+          ]
+        }
+      }
     },
     {
       "id": "py-59",
       "title": "11.2 Pandas — Tables for Real Data",
       "module": "Data Libraries",
-      "objective": "Use DataFrames to load, filter, and summarize tabular data.",
-      "why": "Excel sales sheets become superpowered with Pandas — filter Lagos rows, group by product, export CSV.",
-      "explanation": "<p><strong>What you will learn.</strong> Use DataFrames to load, filter, and summarize tabular data. By the end you should explain <em>Tables for Real Data</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Excel sales sheets become superpowered with Pandas — filter Lagos rows, group by product, export CSV. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> HTML describes structure and meaning (headings, forms, landmarks, links). Clear structure helps browsers, screen readers, and search engines.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>import pandas as pd<br>\n  DataFrame = table. Series = column.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use DataFrames to load, filter, and summarize tabular data.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>9</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>import pandas as pd</code> — sets up a name, type, import, or definition you will use next.</li><li><code>df = pd.DataFrame({</code> — stores or updates a value.</li><li><code>\"product\": [\"Rice\", \"Beans\", \"Rice\"],</code> — does a step in the overall recipe.</li><li><code>\"qty\": [10, 5, 7],</code> — does a step in the overall recipe.</li><li><code>\"city\": [\"Lagos\", \"Abuja\", \"Lagos\"]</code> — does a step in the overall recipe.</li><li><code>})</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Tables for Real Data</em> solve?</li><li>Which line in the example most directly achieves: “Use DataFrames to load, filter, and summarize tabular data.”?</li><li>If you change one value in <code>import pandas as pd</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Shape mismatches and missing values silently ruin results. Inspect data before modeling.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "import pandas as pd\ndf = pd.DataFrame({\n    \"product\": [\"Rice\", \"Beans\", \"Rice\"],\n    \"qty\": [10, 5, 7],\n    \"city\": [\"Lagos\", \"Abuja\", \"Lagos\"]\n})\nprint(df)\nprint(df[df[\"city\"] == \"Lagos\"])\nprint(df.groupby(\"product\")[\"qty\"].sum())",
+      "objective": "Load a table, inspect column types, filter rows, and aggregate a measured quantity.",
+      "why": "A sales report requires row definitions and trustworthy totals as well as compact syntax.",
+      "explanation": "<h4>Rows, columns, and labels</h4>\n<p>A DataFrame is a two-dimensional table with named columns and an index that labels rows. A Series is one labelled column. In this lesson each row is one sale, not one product or one customer. That definition is called the grain. Two rows containing Rice are two different sales and must both contribute to quantity. Knowing the grain prevents accidental removal of legitimate repeat purchases. Pandas supports mixed column types, making it useful for files that combine product names, dates, categories, and measurements.</p>\n\n<h4>Load and inspect before calculating</h4>\n<p>read_csv parses comma-separated text into a DataFrame. StringIO provides a small in-memory file so the example has no download or filesystem prerequisite. A real project can pass a local filename instead. Inspect columns, shape, dtypes, and missing-value counts before arithmetic. A numeric-looking column can become text because it contains an unexpected label. Convert with to_numeric when appropriate, and investigate invalid entries instead of silently replacing every failed conversion with zero. The correct handling depends on what those entries mean.</p>\n\n<h4>Boolean masks select records</h4>\n<p>The expression sales[&quot;city&quot;] == &quot;Lagos&quot; produces a Boolean Series with one decision per row. loc uses that mask to select rows and a column list to select fields. For multiple conditions, combine parenthesized comparisons with &amp; for and or | for or; Python and expects one truth value and cannot decide the truth of an entire Series. Filtering changes the population being summarized. A Lagos total must be labelled Lagos; it is not a national total just because the original file had several cities.</p>\n\n<h4>Group and aggregate deliberately</h4>\n<p>groupby partitions rows with matching product labels, and sum adds quantities within each partition. Selecting the quantity column before sum states exactly what is being measured. sort=True makes output order explicit. Missing grouping keys are excluded by default; use dropna=False when unknown categories should form a reported group. A group mean weights each row equally, which may be wrong for pre-aggregated records. When a row represents ten transactions, its average needs that transaction count to contribute correctly to an overall average.</p>\n\n<h4>Reproducible output and safe changes</h4>\n<p>Install Pandas locally with python -m pip install pandas. Printing to_dict or to_string is more predictable for small teaching fixtures than relying on a notebook renderer. The example prints a list of selected quantities and a product-to-total mapping so you can verify 10 + 7 = 17 independently. Use an explicit loc assignment to update selected values, or create a new column from an expression. Preserve the original import when cleaning so you can explain every transformation and reproduce the final report.</p>\n",
+      "codeExample": "from io import StringIO\nimport pandas as pd\nsource = StringIO(\"product,qty,city\\nRice,10,Lagos\\nBeans,5,Abuja\\nRice,7,Lagos\\n\")\nsales = pd.read_csv(source)\nprint(\"shape:\", sales.shape)\nlagos = sales.loc[sales[\"city\"] == \"Lagos\", \"qty\"]\nprint(\"Lagos quantities:\", lagos.tolist())\ntotals = sales.groupby(\"product\", sort=True)[\"qty\"].sum()\nprint(\"totals:\", totals.to_dict())",
       "exercises": [
         {
-          "title": "Filter high qty",
-          "instruction": "From a small DataFrame of products/qty, print rows where qty >= 10.",
-          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"A\", \"B\", \"C\"], \"qty\": [12, 4, 20]})\nprint(df[df[\"qty\"] >= 10])",
+          "title": "Guided: threshold filter",
+          "instruction": "Select product names with quantity at least 10 from A=12, B=4, C=20.",
+          "hint": "Compare the quantity column and pass the mask to loc.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"A\", \"B\", \"C\"], \"qty\": [12, 4, 20]})\nprint(df.loc[df[\"qty\"] >= 10, \"product\"].tolist())",
+          "expectedOutput": "['A', 'C']",
+          "solutionExplanation": "The mask is [True, False, True], so names A and C survive.",
+          "successCriteria": [
+            "Return A and C.",
+            "Include the threshold value using >=."
+          ],
           "level": "easy",
-          "hint": "Start from the lesson example. Goal: From a small DataFrame of products/qty, print rows where qty >= 10. Change names/values first; only then restructure."
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
+        },
+        {
+          "title": "Repair: two conditions",
+          "instruction": "Keep Lagos rows with quantity > 5 in city=[Lagos,Abuja,Lagos], qty=[3,9,8]. Repair use of Python and.",
+          "hint": "Use parenthesized comparisons joined by &.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"city\": [\"Lagos\", \"Abuja\", \"Lagos\"], \"qty\": [3, 9, 8]})\nmask = (df[\"city\"] == \"Lagos\") & (df[\"qty\"] > 5)\nprint(df.loc[mask, \"qty\"].tolist())",
+          "expectedOutput": "[8]",
+          "solutionExplanation": "& combines rowwise truth values, retaining only the third record.",
+          "successCriteria": [
+            "Return [8].",
+            "Explain why and is ambiguous for a Series."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
+        },
+        {
+          "title": "Transfer: revenue by product",
+          "instruction": "For products A,A,B with quantities 2,3,4 and prices 5,5,2, calculate each row revenue then product totals.",
+          "hint": "Multiply columns before grouping.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"A\", \"A\", \"B\"], \"qty\": [2, 3, 4], \"price\": [5, 5, 2]})\ndf[\"revenue\"] = df[\"qty\"] * df[\"price\"]\nprint(df.groupby(\"product\")[\"revenue\"].sum().to_dict())",
+          "expectedOutput": "{'A': 25, 'B': 8}",
+          "solutionExplanation": "Revenue is additive across sales; summing unit prices first would destroy the row pairing.",
+          "successCriteria": [
+            "A totals 25 and B totals 8.",
+            "Compute revenue before aggregation."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
         }
       ],
       "quiz": [
         {
-          "q": "pd.read_csv is used to:",
+          "q": "What is the grain of the worked table?",
           "options": [
-            "Train AI only",
-            "Load CSV into a DataFrame",
-            "Delete files",
-            "Draw charts only"
+            "One product",
+            "One sale",
+            "One city"
           ],
           "correct": 1,
-          "explanation": "read_csv loads tabular CSV data."
+          "explanation": "Rice appears twice because two sales are recorded."
         },
         {
-          "q": "When would you use “Tables for Real Data” in a real project?",
+          "q": "What does a Boolean mask contain?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Use DataFrames to load, filter, and summarize tabular data.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "One True/False value per row",
+            "A list of column types",
+            "One overall truth value"
+          ],
+          "correct": 0,
+          "explanation": "loc uses each decision to include or exclude its corresponding row."
+        },
+        {
+          "q": "Why use & instead of and?",
+          "options": [
+            "& combines rowwise comparisons",
+            "and is always slower",
+            "& automatically ignores nulls"
+          ],
+          "correct": 0,
+          "explanation": "Python and cannot evaluate a whole Series as one truth value."
+        },
+        {
+          "q": "What happens to missing group labels by default?",
+          "options": [
+            "They form a zero group",
+            "They are excluded",
+            "They become the previous label"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use DataFrames to load, filter, and summarize tabular data."
+          "explanation": "Use dropna=False or an explicit unknown-label policy to retain them."
         }
       ],
       "path": "data",
       "difficulty": "intermediate",
-      "pitfalls": "Shape mismatches and missing values silently ruin results. Inspect data before modeling.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Truth value of a Series is ambiguous Python and was used between column comparisons. Use & with parentheses around each comparison. Quantities concatenate as text The column has a string dtype. Inspect invalid values and convert with to_numeric under a documented policy. Totals lose unknown products groupby dropped missing keys. Use dropna=False or assign an explicit Unknown category.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.12 with lists, loops, functions, and imports.",
+          "Local virtual environment with the packages named in the setup section."
+        ],
+        "outcomes": [
+          "Load a table, inspect column types, filter rows, and aggregate a measured quantity.",
+          "Predict and explain the worked example and its variation.",
+          "Diagnose the listed failures and solve the transfer task."
+        ],
+        "expectedOutput": "shape: (3, 3)\nLagos quantities: [10, 7]\ntotals: {'Beans': 5, 'Rice': 17}",
+        "walkthrough": [
+          {
+            "code": "StringIO and read_csv",
+            "explanation": "Create and parse a three-row CSV fixture; the header supplies column names."
+          },
+          {
+            "code": "loc[mask, \"qty\"]",
+            "explanation": "The Boolean mask keeps two Lagos sales and returns their quantity Series."
+          },
+          {
+            "code": "groupby(\"product\")[\"qty\"].sum()",
+            "explanation": "Combine repeated product labels while keeping both Rice transactions."
+          },
+          {
+            "code": "to_dict()",
+            "explanation": "Expose a small mapping whose totals can be checked by hand."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Keep an unknown category",
+            "code": "import pandas as pd\ndf = pd.DataFrame({\"product\": [\"Rice\", None, \"Rice\"], \"qty\": [2, 3, 4]})\ntotals = df.fillna({\"product\": \"Unknown\"}).groupby(\"product\")[\"qty\"].sum()\nprint(totals.to_dict())",
+            "expectedOutput": "{'Rice': 6, 'Unknown': 3}",
+            "explanation": "Replacing only the missing product label preserves its quantity in an explicit Unknown group; it does not impute a numeric sale.",
+            "validation": {
+              "runtime": "python-data",
+              "requirements": [
+                "pandas"
+              ]
+            }
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Truth value of a Series is ambiguous",
+            "cause": "Python and was used between column comparisons.",
+            "fix": "Use & with parentheses around each comparison."
+          },
+          {
+            "symptom": "Quantities concatenate as text",
+            "cause": "The column has a string dtype.",
+            "fix": "Inspect invalid values and convert with to_numeric under a documented policy."
+          },
+          {
+            "symptom": "Totals lose unknown products",
+            "cause": "groupby dropped missing keys.",
+            "fix": "Use dropna=False or assign an explicit Unknown category."
+          }
+        ],
+        "summary": [
+          "Establish row grain before filtering or grouping.",
+          "Column selection and masks express different parts of a table query.",
+          "The sales-summary project combines validation, derived fields, and reconciliation."
+        ],
+        "references": [
+          {
+            "title": "Pandas introductory tutorials",
+            "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html"
+          }
+        ],
+        "validation": {
+          "runtime": "python-data",
+          "requirements": [
+            "pandas"
+          ]
+        }
+      }
     },
     {
       "id": "py-60",
       "title": "11.3 SciPy — Scientific Computing Toolkit",
       "module": "Data Libraries",
-      "objective": "Know when to use SciPy for stats, optimization, and signal tools.",
-      "why": "Engineers and researchers use SciPy for advanced math on top of NumPy.",
-      "explanation": "<p><strong>What you will learn.</strong> Know when to use SciPy for stats, optimization, and signal tools. By the end you should explain <em>Scientific Computing Toolkit</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Engineers and researchers use SciPy for advanced math on top of NumPy. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> This lesson is a building block in the Data Libraries module. Master it with a small example, then reuse the pattern in your own scenario.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>import scipy<br>\n  Subpackages: scipy.stats, optimize, integrate, signal, ...</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Know when to use SciPy for stats, optimization, and signal tools.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>4</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>from scipy import stats</code> — sets up a name, type, import, or definition you will use next.</li><li><code>data = [12, 15, 14, 10, 18, 15, 13]</code> — stores or updates a value.</li><li><code>print(\"Describe:\", stats.describe(data))</code> — shows output so you can verify the result.</li><li><code>print(\"Mode:\", stats.mode(data, keepdims=True))</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Scientific Computing Toolkit</em> solve?</li><li>Which line in the example most directly achieves: “Know when to use SciPy for stats, optimization, and signal tools.”?</li><li>If you change one value in <code>from scipy import stats</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "from scipy import stats\ndata = [12, 15, 14, 10, 18, 15, 13]\nprint(\"Describe:\", stats.describe(data))\nprint(\"Mode:\", stats.mode(data, keepdims=True))",
+      "objective": "Use SciPy for distribution probabilities, bounded optimization, and peak detection, while checking assumptions.",
+      "why": "Scientific problems often need tested numerical algorithms beyond basic array arithmetic.",
+      "explanation": "<h4>A toolbox built on arrays</h4>\n<p>SciPy supplies numerical methods grouped into subpackages such as stats, optimize, integrate, and signal. NumPy supplies array storage and basic operations; SciPy adds algorithms built on those arrays. Choose a function by the mathematical question, not by the library name. A probability under an assumed distribution, an input minimizing a cost, and a local peak in a signal are three different questions. Their outputs need different checks even when they all happen to be floating-point numbers.</p>\n\n<h4>Probabilities require a model</h4>\n<p>stats.norm represents the normal distribution. loc specifies its mean and scale its standard deviation, which must be positive. cdf(x) is the probability of a value at or below x under that distribution; sf(x) is the probability above x. A continuous variable has zero probability of equalling one exact value, so a density is not itself that probability. For a process assumed normal with mean 100 and standard deviation 10, the interval 90 to 110 has probability about 0.683. That conclusion depends on the assumption.</p>\n\n<h4>Optimization finds an input</h4>\n<p>minimize_scalar searches for an input x that makes a scalar objective small. The objective is a callable: the optimizer evaluates it at candidate inputs. The bounded method restricts the search interval, which can encode physical constraints. The result includes x, fun, and success. Inspect success before interpreting x, and check whether the objective and bounds match the real problem. Numerical convergence is not evidence that the cost function is realistic or that a complicated nonconvex problem has a unique global optimum.</p>\n\n<h4>Signals are ordered measurements</h4>\n<p>signal.find_peaks identifies local maxima relative to neighboring samples. Sample order matters: sorting a signal destroys its time structure. A height threshold can remove small peaks; distance and prominence address other definitions of an important event. The returned positions are indices, not timestamps. Convert positions to time using the sampling interval when reporting a real measurement. A noisy sensor can create many local maxima, so an event-detection policy should be checked against labelled examples and the physical process.</p>\n\n<h4>Reproduce and interpret three results</h4>\n<p>Install scipy and numpy in a local Python environment. The example uses an exact quadratic with its minimum at 3, a five-point signal with two obvious peaks, and a standard distribution calculation; no external measurements are implied. Rounding numerical output makes the intended precision explicit. The optimization should return a tiny cost near zero, not a claim of mathematically exact zero for every algorithm. The variation changes the feasible interval so the best allowed input moves near its boundary even though the unconstrained minimum stays at 3.</p>\n",
+      "codeExample": "import numpy as np\nfrom scipy import stats, optimize, signal\nprobability = stats.norm.cdf(110, loc=100, scale=10) - stats.norm.cdf(90, loc=100, scale=10)\nprint(\"within one SD:\", round(float(probability), 3))\nresult = optimize.minimize_scalar(lambda x: (x - 3) ** 2, bounds=(0, 6), method=\"bounded\")\nassert result.success\nprint(\"minimum x:\", round(float(result.x), 3))\npeaks, _ = signal.find_peaks(np.array([0, 3, 0, 5, 0]), height=2)\nprint(\"peak indices:\", peaks.tolist())",
       "exercises": [
         {
-          "title": "Quick stat",
-          "instruction": "Using scipy.stats or pure Python, print mean of [2,4,6,8].",
-          "solution": "import numpy as np\nprint(np.mean([2, 4, 6, 8]))  # 5.0\n# or from scipy import stats; stats.tmean([2,4,6,8])",
+          "title": "Guided: an upper tail",
+          "instruction": "For a standard normal variable, compute P(X > 0).",
+          "hint": "Use norm.sf(0).",
+          "solution": "from scipy.stats import norm\nprint(float(norm.sf(0)))",
+          "expectedOutput": "0.5",
+          "solutionExplanation": "Symmetry puts half the probability above the mean.",
+          "successCriteria": [
+            "Print 0.5.",
+            "Describe this as probability, not density."
+          ],
           "level": "easy",
-          "hint": "Start from the lesson example. Goal: Using scipy. Change names/values first; only then restructure."
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy",
+              "scipy"
+            ]
+          }
+        },
+        {
+          "title": "Repair: peak positions",
+          "instruction": "Find only peaks at least 4 high in [0,3,0,5,0]. Explain why printing [5] would answer a different question.",
+          "hint": "find_peaks returns indices.",
+          "solution": "from scipy.signal import find_peaks\nvalues = [0, 3, 0, 5, 0]\nindices, _ = find_peaks(values, height=4)\nprint(indices.tolist())\nprint([values[i] for i in indices])",
+          "expectedOutput": "[3]\n[5]",
+          "solutionExplanation": "Index 3 locates the event; value 5 is its height.",
+          "successCriteria": [
+            "Index list is [3].",
+            "Distinguish index from height."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy",
+              "scipy"
+            ]
+          }
+        },
+        {
+          "title": "Transfer: tune a cost",
+          "instruction": "Minimize (x-4)**2+2 over 0 to 8 and print the rounded optimum and cost after checking convergence.",
+          "hint": "Inspect success, x, and fun.",
+          "solution": "from scipy.optimize import minimize_scalar\nr = minimize_scalar(lambda x: (x - 4) ** 2 + 2, bounds=(0, 8), method=\"bounded\")\nassert r.success\nprint(round(float(r.x), 3), round(float(r.fun), 3))",
+          "expectedOutput": "4.0 2.0",
+          "solutionExplanation": "The constant increases the minimum cost to 2 without moving its location 4.",
+          "successCriteria": [
+            "Optimum is approximately 4.",
+            "Minimum cost is approximately 2.",
+            "Check success."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "numpy",
+              "scipy"
+            ]
+          }
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “SciPy — Scientific Computing Toolkit”?",
+          "q": "Which function returns P(X > x)?",
           "options": [
-            "Know when to use SciPy for stats, optimization, and signal tools.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Scientific Computing Toolkit” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Know when to use SciPy for stats, optimization, and signal tools.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "pdf",
+            "sf",
+            "mean"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Know when to use SciPy for stats, optimization, and signal tools."
+          "explanation": "The survival function is the upper-tail probability."
+        },
+        {
+          "q": "What does optimizer success establish?",
+          "options": [
+            "The numerical stopping rule was met",
+            "The real-world cost is correct",
+            "Every global optimum was found"
+          ],
+          "correct": 0,
+          "explanation": "Numerical convergence does not validate modeling assumptions."
+        },
+        {
+          "q": "What are find_peaks results?",
+          "options": [
+            "Sorted measurement values",
+            "Positions in the original ordered signal",
+            "Probabilities"
+          ],
+          "correct": 1,
+          "explanation": "Indices locate local maxima and can be mapped to timestamps."
+        },
+        {
+          "q": "Why can a bounded optimum differ from an unconstrained optimum?",
+          "options": [
+            "Bounds change the feasible inputs",
+            "Bounds change Python arithmetic",
+            "The objective is ignored"
+          ],
+          "correct": 0,
+          "explanation": "The solver must stay within the allowed interval."
         }
       ],
       "path": "data",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Probability interpreted as observed frequency A theoretical distribution was assumed without checking data. State the assumption and compare with empirical measurements. Optimum looks physically impossible The objective or bounds omit a real constraint. Define feasible bounds and inspect result.success. Peak times are incorrect Indices were reported as seconds. Multiply indices by the sample interval and add the start time.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.12 with lists, loops, functions, and imports.",
+          "Local virtual environment with the packages named in the setup section."
+        ],
+        "outcomes": [
+          "Use SciPy for distribution probabilities, bounded optimization, and peak detection, while checking assumptions.",
+          "Predict and explain the worked example and its variation.",
+          "Diagnose the listed failures and solve the transfer task."
+        ],
+        "expectedOutput": "within one SD: 0.683\nminimum x: 3.0\npeak indices: [1, 3]",
+        "walkthrough": [
+          {
+            "code": "norm.cdf(110) - norm.cdf(90)",
+            "explanation": "Subtract cumulative probabilities to obtain the interval probability under the chosen normal model."
+          },
+          {
+            "code": "lambda x: (x - 3) ** 2",
+            "explanation": "Define a scalar cost with its lowest possible value at x=3."
+          },
+          {
+            "code": "bounds=(0, 6), method=\"bounded\"",
+            "explanation": "Constrain candidate values and inspect the solver success flag."
+          },
+          {
+            "code": "find_peaks(..., height=2)",
+            "explanation": "Find indices 1 and 3, where the ordered samples rise above their neighbors and threshold."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Constrain the feasible input",
+            "code": "from scipy.optimize import minimize_scalar\nr = minimize_scalar(lambda x: (x - 3) ** 2, bounds=(0, 2), method=\"bounded\")\nassert r.success\nprint(round(float(r.x), 3))\nprint(round(float(r.fun), 3))",
+            "expectedOutput": "2.0\n1.0",
+            "explanation": "The best feasible input is near 2 with cost near 1. A solver cannot choose the excluded unconstrained optimum 3.",
+            "validation": {
+              "runtime": "python-data",
+              "requirements": [
+                "numpy",
+                "scipy"
+              ]
+            }
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Probability interpreted as observed frequency",
+            "cause": "A theoretical distribution was assumed without checking data.",
+            "fix": "State the assumption and compare with empirical measurements."
+          },
+          {
+            "symptom": "Optimum looks physically impossible",
+            "cause": "The objective or bounds omit a real constraint.",
+            "fix": "Define feasible bounds and inspect result.success."
+          },
+          {
+            "symptom": "Peak times are incorrect",
+            "cause": "Indices were reported as seconds.",
+            "fix": "Multiply indices by the sample interval and add the start time."
+          }
+        ],
+        "summary": [
+          "SciPy algorithms answer precise mathematical questions.",
+          "Interpret result objects and assumptions before using their numbers.",
+          "Plotting the underlying data is a useful next check."
+        ],
+        "references": [
+          {
+            "title": "SciPy user guide",
+            "url": "https://docs.scipy.org/doc/scipy/tutorial/index.html"
+          }
+        ],
+        "validation": {
+          "runtime": "python-data",
+          "requirements": [
+            "numpy",
+            "scipy"
+          ]
+        }
+      }
     },
     {
       "id": "py-61",
       "title": "11.4 Django Intro — Python Web Framework",
       "module": "Data Libraries",
-      "objective": "Understand Django’s role for building secure web apps quickly.",
-      "why": "Need a full website with login, admin, and database? Django is a batteries-included web framework.",
-      "explanation": "<p><strong>What you will learn.</strong> Understand Django’s role for building secure web apps quickly. By the end you should explain <em>Python Web Framework</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Need a full website with login, admin, and database? Django is a batteries-included web framework. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Backend code runs on a server: receive a request, run logic, talk to storage, return a response. Frameworks organize that work.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Django uses MVT (Model-View-Template). Famous for admin panel and ORM.<br>\n  Install: pip install django. Start: django-admin startproject mysite</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Understand Django’s role for building secure web apps quickly.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"Django = models (DB) + views (logic) + templates (HTML)\")</code> — shows output so you can verify the result.</li><li><code>print(\"Great for: portals, e-commerce, dashboards\")</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Python Web Framework</em> solve?</li><li>Which line in the example most directly achieves: “Understand Django’s role for building secure web apps quickly.”?</li><li>If you change one value in <code>print(\"Django = models (DB) + views (logic) + templates </code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "# Shell workflow:\n# pip install django\n# django-admin startproject myshop\n# cd myshop\n# python manage.py runserver\n\nprint(\"Django = models (DB) + views (logic) + templates (HTML)\")\nprint(\"Great for: portals, e-commerce, dashboards\")",
+      "objective": "Run a small Django application locally and trace a request through URL routing, a view, and an escaped template.",
+      "why": "Django supplies routing, templates, database tools, and security mechanisms for applications that respond to web requests.",
+      "explanation": "<h4>A server receives requests and returns responses</h4>\n<p>A browser sends an HTTP request containing a method, path, headers, and sometimes a body. Django finds a matching route, calls its view with a request object, and returns the response to the browser. A view is usually a Python function or class; it does not mean a screenshot. HttpResponse holds the response body and status. A successful page commonly returns 200, while an unknown URL returns 404. Printing text in a terminal is different from returning an HTTP response.</p>\n\n<h4>Create a real local project</h4>\n<p>This lesson uses a minimal single-file Django project so all configuration is visible. Create an empty directory, create a virtual environment with python -m venv .venv, activate it using your platform&#x27;s activation command, and run python -m pip install django. Save the complete example as lesson.py. Running python lesson.py executes actual Django test-client requests. Running python lesson.py --serve starts Django&#x27;s development server at http://127.0.0.1:8000/. Open that address in a browser, then stop the server with Ctrl+C. The browser playground cannot host this local server.</p>\n\n<h4>Settings and URL configuration have separate jobs</h4>\n<p>settings.configure supplies the project configuration before django.setup initializes the framework. ROOT_URLCONF points to this module, where urlpatterns is a list of path patterns. The empty pattern matches the root URL. ALLOWED_HOSTS accepts the three explicitly named hosts used for local browsing and tests; it is not a list of permitted visitors. The test client uses testserver. Middleware wraps request processing with shared behavior such as security headers and CSRF checks. Larger projects normally separate settings, urls, views, templates, and manage.py using django-admin startproject.</p>\n\n<h4>Render data through a template</h4>\n<p>request.GET is a mapping of query-string parameters. The home view reads name, falling back to learner when the parameter is absent. A Django template renders {{ name }} with HTML escaping enabled, so an input such as &lt;Ada&gt; is displayed as text rather than interpreted as a tag. The returned content contains &amp;lt; and &amp;gt; entities. Do not bypass escaping with safe for untrusted values. CSRF protection matters for state-changing browser forms; this example only reads with GET and does not change a database.</p>\n\n<h4>Test behavior and understand the boundary</h4>\n<p>Client exercises Django routing and middleware without opening a network port. Its response exposes status_code and bytes in content, which decode converts to text. The worked example proves both escaped output and a missing-route 404. These are useful application tests, but they do not test a reverse proxy or production deployment. The hard-coded secret is only a local teaching value, and runserver is only a development server. A production application requires its own secret, deployment settings, HTTPS, and a suitable server; adding a database later also introduces models and migrations.</p>\n",
+      "codeExample": "import sys\nfrom django.conf import settings\nsettings.configure(\n    DEBUG=False,\n    SECRET_KEY=\"local-teaching-key-do-not-deploy\",\n    ROOT_URLCONF=__name__,\n    ALLOWED_HOSTS=[\"localhost\", \"127.0.0.1\", \"testserver\"],\n    MIDDLEWARE=[\"django.middleware.security.SecurityMiddleware\", \"django.middleware.common.CommonMiddleware\", \"django.middleware.csrf.CsrfViewMiddleware\"],\n    TEMPLATES=[{\"BACKEND\": \"django.template.backends.django.DjangoTemplates\"}],\n)\nimport django\ndjango.setup()\nfrom django.http import HttpResponse, JsonResponse\nfrom django.template import engines\nfrom django.urls import path\nfrom django.test import Client\ndef home(request):\n    name = request.GET.get(\"name\", \"learner\")\n    template = engines[\"django\"].from_string(\"<h1>Hello, {{ name }}!</h1>\")\n    return HttpResponse(template.render({\"name\": name}))\nurlpatterns = [path(\"\", home, name=\"home\")]\nif \"--serve\" in sys.argv:\n    from django.core.management import execute_from_command_line\n    execute_from_command_line([sys.argv[0], \"runserver\", \"127.0.0.1:8000\", \"--noreload\"])\nelse:\n    client = Client()\n    response = client.get(\"/\", {\"name\": \"<Ada>\"})\n    print(response.status_code)\n    print(response.content.decode())\n    print(client.get(\"/missing/\").status_code)",
       "exercises": [
         {
-          "title": "Name three Django use cases",
-          "instruction": "Print 3 web apps you could build with Django for a local business.",
-          "solution": "print(\"1. Online store with orders\")\nprint(\"2. School results portal\")\nprint(\"3. Clinic appointment booking\")",
+          "title": "Guided: a welcome route",
+          "instruction": "Build a /welcome/ route returning <h1>Welcome</h1> and verify status 200 plus the body. Save the solution as lesson.py to serve it locally.",
+          "hint": "The path pattern has no leading slash.",
+          "solution": "import sys\nfrom django.conf import settings\nsettings.configure(\n    DEBUG=False,\n    SECRET_KEY=\"local-teaching-key-do-not-deploy\",\n    ROOT_URLCONF=__name__,\n    ALLOWED_HOSTS=[\"localhost\", \"127.0.0.1\", \"testserver\"],\n    MIDDLEWARE=[\"django.middleware.security.SecurityMiddleware\", \"django.middleware.common.CommonMiddleware\", \"django.middleware.csrf.CsrfViewMiddleware\"],\n    TEMPLATES=[{\"BACKEND\": \"django.template.backends.django.DjangoTemplates\"}],\n)\nimport django\ndjango.setup()\nfrom django.http import HttpResponse, JsonResponse\nfrom django.template import engines\nfrom django.urls import path\nfrom django.test import Client\ndef welcome(request):\n    return HttpResponse(\"<h1>Welcome</h1>\")\nurlpatterns = [path(\"welcome/\", welcome)]\nif \"--serve\" in sys.argv:\n    from django.core.management import execute_from_command_line\n    execute_from_command_line([sys.argv[0], \"runserver\", \"127.0.0.1:8000\", \"--noreload\"])\nelse:\n    client = Client()\n    r = client.get(\"/welcome/\")\n    print(r.status_code)\n    print(r.content.decode())",
+          "expectedOutput": "200\n<h1>Welcome</h1>",
+          "solutionExplanation": "The route matches /welcome/ and returns a real response. The leading slash belongs to the request URL, not the path pattern.",
+          "successCriteria": [
+            "Status 200.",
+            "Body is the welcome heading."
+          ],
           "level": "easy",
-          "hint": "Start from the lesson example. Goal: Print 3 web apps you could build with Django for a local business. Change names/values first; only then restructure."
+          "validation": {
+            "runtime": "python-django",
+            "requirements": [
+              "django"
+            ]
+          }
+        },
+        {
+          "title": "Repair: request the registered path",
+          "instruction": "Register /health/ and demonstrate that /healthy/ receives 404 while /health/ receives 200. Explain why restarting Python cannot repair a spelling mismatch.",
+          "hint": "URL matching uses the registered path exactly.",
+          "solution": "import sys\nfrom django.conf import settings\nsettings.configure(\n    DEBUG=False,\n    SECRET_KEY=\"local-teaching-key-do-not-deploy\",\n    ROOT_URLCONF=__name__,\n    ALLOWED_HOSTS=[\"localhost\", \"127.0.0.1\", \"testserver\"],\n    MIDDLEWARE=[\"django.middleware.security.SecurityMiddleware\", \"django.middleware.common.CommonMiddleware\", \"django.middleware.csrf.CsrfViewMiddleware\"],\n    TEMPLATES=[{\"BACKEND\": \"django.template.backends.django.DjangoTemplates\"}],\n)\nimport django\ndjango.setup()\nfrom django.http import HttpResponse, JsonResponse\nfrom django.template import engines\nfrom django.urls import path\nfrom django.test import Client\ndef health(request):\n    return JsonResponse({\"ready\": True})\nurlpatterns = [path(\"health/\", health)]\nif \"--serve\" in sys.argv:\n    from django.core.management import execute_from_command_line\n    execute_from_command_line([sys.argv[0], \"runserver\", \"127.0.0.1:8000\", \"--noreload\"])\nelse:\n    client = Client()\n    print(client.get(\"/healthy/\").status_code)\n    print(client.get(\"/health/\").status_code)",
+          "expectedOutput": "404\n200",
+          "solutionExplanation": "Only the registered spelling matches. The server is operating correctly when it returns 404 for a missing route.",
+          "successCriteria": [
+            "Print 404 then 200.",
+            "Explain route matching."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-django",
+            "requirements": [
+              "django"
+            ]
+          }
+        },
+        {
+          "title": "Transfer: an escaped greeting",
+          "instruction": "Create /greet/ with a name query parameter, default Guest, and demonstrate that <b>Pat</b> becomes escaped text in a paragraph.",
+          "hint": "Pass the value in a template context rather than using an f-string of HTML.",
+          "solution": "import sys\nfrom django.conf import settings\nsettings.configure(\n    DEBUG=False,\n    SECRET_KEY=\"local-teaching-key-do-not-deploy\",\n    ROOT_URLCONF=__name__,\n    ALLOWED_HOSTS=[\"localhost\", \"127.0.0.1\", \"testserver\"],\n    MIDDLEWARE=[\"django.middleware.security.SecurityMiddleware\", \"django.middleware.common.CommonMiddleware\", \"django.middleware.csrf.CsrfViewMiddleware\"],\n    TEMPLATES=[{\"BACKEND\": \"django.template.backends.django.DjangoTemplates\"}],\n)\nimport django\ndjango.setup()\nfrom django.http import HttpResponse, JsonResponse\nfrom django.template import engines\nfrom django.urls import path\nfrom django.test import Client\ndef greet(request):\n    template = engines[\"django\"].from_string(\"<p>{{ name }}</p>\")\n    return HttpResponse(template.render({\"name\": request.GET.get(\"name\", \"Guest\")}))\nurlpatterns = [path(\"greet/\", greet)]\nif \"--serve\" in sys.argv:\n    from django.core.management import execute_from_command_line\n    execute_from_command_line([sys.argv[0], \"runserver\", \"127.0.0.1:8000\", \"--noreload\"])\nelse:\n    client = Client()\n    print(client.get(\"/greet/\").content.decode())\n    print(client.get(\"/greet/\", {\"name\": \"<b>Pat</b>\"}).content.decode())",
+          "expectedOutput": "<p>Guest</p>\n<p>&lt;b&gt;Pat&lt;/b&gt;</p>",
+          "solutionExplanation": "Django treats the context value as data. Default escaping prevents the supplied tag from turning into markup.",
+          "successCriteria": [
+            "Default body contains Guest.",
+            "Untrusted angle brackets become HTML entities.",
+            "Use template context."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-django",
+            "requirements": [
+              "django"
+            ]
+          }
         }
       ],
       "quiz": [
         {
-          "q": "Django is primarily a:",
+          "q": "What connects / to home?",
           "options": [
-            "Game engine",
-            "Web framework",
-            "Phone OS",
-            "Spreadsheet"
+            "ALLOWED_HOSTS",
+            "urlpatterns with path",
+            "The print function"
           ],
           "correct": 1,
-          "explanation": "Django is a high-level Python web framework."
+          "explanation": "URL patterns dispatch a matching request path to its view."
         },
         {
-          "q": "When would you use “Python Web Framework” in a real project?",
+          "q": "Why does <Ada> appear escaped in the body?",
           "options": [
-            "Only when the computer restarts",
-            "When you need to: Understand Django’s role for building secure web apps quickly.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Templates escape context data by default",
+            "Django removes every query parameter",
+            "Client changes every response"
           ],
-          "correct": 1,
-          "explanation": "This lesson’s skill is practical: Understand Django’s role for building secure web apps quickly."
+          "correct": 0,
+          "explanation": "Escaping keeps the supplied value as text in HTML."
+        },
+        {
+          "q": "What does Client test here?",
+          "options": [
+            "Django request handling without a listening socket",
+            "Production TLS certificates",
+            "Every browser rendering engine"
+          ],
+          "correct": 0,
+          "explanation": "The test client runs application processing in-process."
+        },
+        {
+          "q": "Which server is appropriate for this lesson?",
+          "options": [
+            "runserver on localhost for development",
+            "runserver as a complete production deployment",
+            "The browser Python playground hosting HTTP"
+          ],
+          "correct": 0,
+          "explanation": "The development server is appropriate for local study; production serving is a separate task."
         }
       ],
       "path": "data",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "DisallowedHost response The requested host is absent from ALLOWED_HOSTS. Use the listed localhost address or explicitly add the intended development host. A view exists but its URL returns 404 No matching pattern references the view. Check urlpatterns, spelling, and trailing slash. User input turns into HTML Raw input was interpolated directly into a response or marked safe. Render untrusted values through normal template context escaping.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.12, functions, imports, dictionaries, and terminal basics.",
+          "Install Django in a local virtual environment; this example runs as lesson.py and uses no database."
+        ],
+        "outcomes": [
+          "Run a small Django application locally and trace a request through URL routing, a view, and an escaped template.",
+          "Predict and explain the worked example and its variation.",
+          "Diagnose the listed failures and solve the transfer task."
+        ],
+        "expectedOutput": "200\n<h1>Hello, &lt;Ada&gt;!</h1>\n404",
+        "walkthrough": [
+          {
+            "code": "settings.configure(...), django.setup()",
+            "explanation": "Initialize an actual Django project with explicit local hosts, URL module, template engine, and middleware."
+          },
+          {
+            "code": "home(request)",
+            "explanation": "Read a query parameter and render it through Django's escaping template engine."
+          },
+          {
+            "code": "urlpatterns = [path(\"\", home, name=\"home\")]",
+            "explanation": "Associate the root URL with the function. An unmatched path receives 404."
+          },
+          {
+            "code": "Client().get(...)",
+            "explanation": "Execute requests through Django and print the actual status and body. The --serve branch runs the same project as a local HTTP server."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Return structured JSON",
+            "code": "import sys\nfrom django.conf import settings\nsettings.configure(\n    DEBUG=False,\n    SECRET_KEY=\"local-teaching-key-do-not-deploy\",\n    ROOT_URLCONF=__name__,\n    ALLOWED_HOSTS=[\"localhost\", \"127.0.0.1\", \"testserver\"],\n    MIDDLEWARE=[\"django.middleware.security.SecurityMiddleware\", \"django.middleware.common.CommonMiddleware\", \"django.middleware.csrf.CsrfViewMiddleware\"],\n    TEMPLATES=[{\"BACKEND\": \"django.template.backends.django.DjangoTemplates\"}],\n)\nimport django\ndjango.setup()\nfrom django.http import HttpResponse, JsonResponse\nfrom django.template import engines\nfrom django.urls import path\nfrom django.test import Client\ndef health(request):\n    return JsonResponse({\"status\": \"ok\"})\nurlpatterns = [path(\"health/\", health)]\nif \"--serve\" in sys.argv:\n    from django.core.management import execute_from_command_line\n    execute_from_command_line([sys.argv[0], \"runserver\", \"127.0.0.1:8000\", \"--noreload\"])\nelse:\n    client = Client()\n    r = client.get(\"/health/\")\n    print(r.status_code)\n    print(r.json())\n    print(r[\"Content-Type\"])",
+            "expectedOutput": "200\n{'status': 'ok'}\napplication/json",
+            "explanation": "JsonResponse serializes a dictionary and sets application/json. API clients can parse this representation without extracting values from HTML.",
+            "validation": {
+              "runtime": "python-django",
+              "requirements": [
+                "django"
+              ]
+            }
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "DisallowedHost response",
+            "cause": "The requested host is absent from ALLOWED_HOSTS.",
+            "fix": "Use the listed localhost address or explicitly add the intended development host."
+          },
+          {
+            "symptom": "A view exists but its URL returns 404",
+            "cause": "No matching pattern references the view.",
+            "fix": "Check urlpatterns, spelling, and trailing slash."
+          },
+          {
+            "symptom": "User input turns into HTML",
+            "cause": "Raw input was interpolated directly into a response or marked safe.",
+            "fix": "Render untrusted values through normal template context escaping."
+          }
+        ],
+        "summary": [
+          "A Django request passes through configuration, routing, a view, and response handling.",
+          "The provided project runs locally and tests real HTTP-style application behavior.",
+          "Models and migrations are the next step when the application needs persistent records."
+        ],
+        "references": [
+          {
+            "title": "Django first application tutorial",
+            "url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/"
+          },
+          {
+            "title": "Django testing tools",
+            "url": "https://docs.djangoproject.com/en/stable/topics/testing/tools/"
+          }
+        ],
+        "validation": {
+          "runtime": "python-django",
+          "requirements": [
+            "django"
+          ]
+        }
+      }
     },
     {
       "id": "py-mp-03",
@@ -2842,33 +5936,192 @@ window.PYTHON_COURSE = {
       "module": "Data Libraries",
       "path": "data",
       "project": true,
-      "objective": "Summarize a small sales table with Pandas.",
-      "why": "Managers ask: total by product and city — Pandas answers in seconds.",
-      "explanation": "<p><strong>What you will learn.</strong> Summarize a small sales table with Pandas. By the end you should explain <em>Pandas Sales Summary</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Managers ask: total by product and city — Pandas answers in seconds. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Projects glue skills together. You combine inputs, decisions, collections, and functions into one useful tool someone could actually use.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Create a DataFrame, filter, groupby sum. This is the core of business analytics.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Summarize a small sales table with Pandas.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>import pandas as pd</code> — sets up a name, type, import, or definition you will use next.</li><li><code>df = pd.DataFrame({</code> — stores or updates a value.</li><li><code>\"product\": [\"Rice\", \"Beans\", \"Rice\", \"Oil\"],</code> — does a step in the overall recipe.</li><li><code>\"city\": [\"Lagos\", \"Lagos\", \"Abuja\", \"Lagos\"],</code> — does a step in the overall recipe.</li><li><code>\"amount\": [45000, 9000, 40000, 12000]</code> — does a step in the overall recipe.</li><li><code>})</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Pandas Sales Summary</em> solve?</li><li>Which line in the example most directly achieves: “Summarize a small sales table with Pandas.”?</li><li>If you change one value in <code>import pandas as pd</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Shape mismatches and missing values silently ruin results. Inspect data before modeling.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "import pandas as pd\ndf = pd.DataFrame({\n    \"product\": [\"Rice\", \"Beans\", \"Rice\", \"Oil\"],\n    \"city\": [\"Lagos\", \"Lagos\", \"Abuja\", \"Lagos\"],\n    \"amount\": [45000, 9000, 40000, 12000]\n})\nprint(df.groupby(\"product\")[\"amount\"].sum())\nprint(\"Lagos total:\", df[df.city==\"Lagos\"][\"amount\"].sum())",
-      "pitfalls": "Shape mismatches and missing values silently ruin results. Inspect data before modeling.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.",
+      "objective": "Build a validated sales summary with row-level revenue and reconciled product totals.",
+      "why": "A useful report must explain excluded rows and prove that grouped amounts reconcile to the source.",
+      "explanation": "<h4>Define the reporting contract</h4>\n<p>The project summarizes three completed sales in one currency. Each row is an order line with a unique line_id, product, quantity, and unit price in integer cents. Quantity is a count; price is an amount per unit; revenue is their product. This fixture does not include tax, refunds, shipping, or discounts. State that scope before calling its sum revenue. Integer cents avoid avoidable binary floating-point rounding in simple currency arithmetic; real accounting systems also need explicit currency and rounding rules.</p>\n\n<h4>Validate before transforming</h4>\n<p>Read the CSV and verify required columns exist. Check missing identifiers, duplicate line identifiers, and numeric constraints before calculating. Duplicate products are valid because customers can buy the same product on multiple lines; duplicate line identifiers violate the stated grain. The example rejects negative quantities and prices because this project models completed positive sales, not returns. A real returns workflow would need a separate documented rule. Raising an error makes the report stop visibly instead of quietly publishing incomplete or corrupt totals.</p>\n\n<h4>Derive revenue at the correct grain</h4>\n<p>Calculate line_revenue_cents by multiplying each quantity by its corresponding unit_price_cents. Do this while those two values are still paired in the same row. Multiplying a sum of quantities by an average of unit prices can give the wrong answer when prices vary. Keep the derived column beside the raw values so another person can audit it. The fixture yields Rice line revenues 1000 and 1200, and Beans revenue 600, giving an overall total of 2800 cents.</p>\n\n<h4>Aggregate and reconcile</h4>\n<p>Group by product and aggregate both quantities and revenue. Sort the result explicitly for reproducible output. Reconciliation compares the sum of grouped revenue against the sum of row revenue. Equality does not prove the source was correct, but it detects losses introduced by grouping or filtering. Report the number of accepted lines and the total alongside the summary. When rejected rows exist, report their count and reasons separately; silently dropping them makes a clean-looking table appear more complete than it actually is.</p>\n\n<h4>Deliver a report another person can check</h4>\n<p>Install pandas locally and run the self-contained CSV example. The printout uses integer cents and a stable table layout so its units and ordering are clear. The variation demonstrates how a duplicate line is identified before aggregation, while the exercises add filtering and weighted-price reasoning. To extend the project to a real file, replace StringIO with its path, preserve the validation assertions, and add a source date and currency. A date filter should apply before totals and appear in the report title or metadata.</p>\n",
+      "codeExample": "from io import StringIO\nimport pandas as pd\ncsv = \"line_id,product,qty,unit_price_cents\\n1,Rice,2,500\\n2,Beans,3,200\\n3,Rice,2,600\\n\"\nsales = pd.read_csv(StringIO(csv))\nrequired = {\"line_id\", \"product\", \"qty\", \"unit_price_cents\"}\nassert required <= set(sales.columns)\nassert not sales[list(required)].isna().any().any()\nassert sales[\"line_id\"].is_unique\nassert (sales[[\"qty\", \"unit_price_cents\"]] >= 0).all().all()\nsales[\"revenue_cents\"] = sales[\"qty\"] * sales[\"unit_price_cents\"]\nsummary = sales.groupby(\"product\", sort=True).agg(units=(\"qty\", \"sum\"), revenue_cents=(\"revenue_cents\", \"sum\"))\nassert summary[\"revenue_cents\"].sum() == sales[\"revenue_cents\"].sum()\nprint(summary.to_string())\nprint(\"accepted lines:\", len(sales))\nprint(\"total cents:\", int(sales[\"revenue_cents\"].sum()))",
+      "pitfalls": "Revenue changes when grouping Missing category keys or an unintended filter removed lines. Compare grouped totals to the same accepted source population. Average selling price looks too low Unit prices were averaged across unequal line quantities. Divide total revenue by total units. Repeated products are removed Products were mistaken for unique order-line identifiers. Validate the declared line_id grain instead.",
       "exercises": [
         {
-          "title": "City summary",
-          "instruction": "groupby city sum amount.",
-          "hint": "groupby(\"city\")",
+          "title": "Guided: line revenue",
+          "instruction": "Build rows qty=[2,3], price_cents=[125,200]; print line revenue and overall revenue.",
+          "hint": "Multiply columns and then sum.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"qty\": [2, 3], \"price_cents\": [125, 200]})\ndf[\"revenue_cents\"] = df[\"qty\"] * df[\"price_cents\"]\nprint(df[\"revenue_cents\"].tolist())\nprint(int(df[\"revenue_cents\"].sum()))",
+          "expectedOutput": "[250, 600]\n850",
+          "solutionExplanation": "Pairwise products are 250 and 600, totalling 850 cents.",
+          "successCriteria": [
+            "Line amounts [250, 600].",
+            "Total 850 cents."
+          ],
+          "level": "easy",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
+        },
+        {
+          "title": "Repair: weighted unit price",
+          "instruction": "Two lines sell 1 unit at 100 cents and 9 units at 200 cents. Replace the unweighted mean price with total revenue divided by total units.",
+          "hint": "The denominator is sold units, not line count.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"qty\": [1, 9], \"price\": [100, 200]})\nweighted = (df[\"qty\"] * df[\"price\"]).sum() / df[\"qty\"].sum()\nprint(float(weighted))",
+          "expectedOutput": "190.0",
+          "solutionExplanation": "The weighted price is 190 cents; 150 would give each order line equal weight instead of each unit.",
+          "successCriteria": [
+            "Print 190.0.",
+            "Explain the denominator."
+          ],
           "level": "medium",
-          "solution": "import pandas as pd\ndf = pd.DataFrame({\"product\":[\"Rice\",\"Beans\",\"Rice\"],\"city\":[\"Lagos\",\"Lagos\",\"Abuja\"],\"amount\":[45000,9000,40000]})\nprint(df.groupby(\"city\")[\"amount\"].sum())"
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
+        },
+        {
+          "title": "Transfer: city report",
+          "instruction": "Summarize revenue for Lagos only from city=[Lagos,Abuja,Lagos], product=[A,A,B], cents=[100,500,200], and reconcile the filtered total.",
+          "hint": "Filter before grouping; compare with the filtered source.",
+          "solution": "import pandas as pd\ndf = pd.DataFrame({\"city\": [\"Lagos\", \"Abuja\", \"Lagos\"], \"product\": [\"A\", \"A\", \"B\"], \"cents\": [100, 500, 200]})\nselected = df.loc[df[\"city\"] == \"Lagos\"]\ntotals = selected.groupby(\"product\")[\"cents\"].sum()\nassert totals.sum() == selected[\"cents\"].sum()\nprint(\"Lagos:\", totals.to_dict())\nprint(\"total cents:\", int(totals.sum()))",
+          "expectedOutput": "Lagos: {'A': 100, 'B': 200}\ntotal cents: 300",
+          "solutionExplanation": "Both sides of reconciliation use the same reporting population; the Abuja sale is outside scope.",
+          "successCriteria": [
+            "Product totals A=100, B=200.",
+            "Filtered total 300.",
+            "Scope is labelled Lagos."
+          ],
+          "level": "medium",
+          "validation": {
+            "runtime": "python-data",
+            "requirements": [
+              "pandas"
+            ]
+          }
         }
       ],
       "quiz": [
         {
-          "q": "groupby is for?",
+          "q": "Which duplicate violates this project grain?",
           "options": [
-            "Plot only",
-            "Split-apply-combine aggregations",
-            "Deleting CSV",
-            "Installing pip"
+            "Repeated product",
+            "Repeated line_id",
+            "Repeated price"
           ],
           "correct": 1,
-          "explanation": "Classic aggregate pattern."
+          "explanation": "Products and prices may repeat legitimately, but each order-line ID must be unique."
+        },
+        {
+          "q": "When should revenue be calculated?",
+          "options": [
+            "Before grouping, per line",
+            "After averaging all prices",
+            "After discarding quantities"
+          ],
+          "correct": 0,
+          "explanation": "Price and quantity must stay paired at the line grain."
+        },
+        {
+          "q": "What does reconciliation establish?",
+          "options": [
+            "Source accuracy is guaranteed",
+            "Aggregation preserved accepted amounts",
+            "No tax rules are needed"
+          ],
+          "correct": 1,
+          "explanation": "It checks transformation consistency, not all source errors."
+        },
+        {
+          "q": "Why use integer cents here?",
+          "options": [
+            "They make currency conversion automatic",
+            "They keep this simple arithmetic exact",
+            "They remove the need to label currency"
+          ],
+          "correct": 1,
+          "explanation": "Integer arithmetic is exact within available integer range, but currency and rounding policies remain necessary."
         }
-      ]
+      ],
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.12 with lists, loops, functions, and imports.",
+          "Local virtual environment with the packages named in the setup section."
+        ],
+        "outcomes": [
+          "Build a validated sales summary with row-level revenue and reconciled product totals.",
+          "Predict and explain the worked example and its variation.",
+          "Diagnose the listed failures and solve the transfer task."
+        ],
+        "expectedOutput": "         units  revenue_cents\nproduct                      \nBeans        3            600\nRice         4           2200\naccepted lines: 3\ntotal cents: 2800",
+        "walkthrough": [
+          {
+            "code": "required and assertions",
+            "explanation": "Validate the schema, missing values, unique line identifiers, and nonnegative measurements for this contract."
+          },
+          {
+            "code": "sales[\"revenue_cents\"]",
+            "explanation": "Multiply paired row-level quantities and prices before grouping."
+          },
+          {
+            "code": "groupby(...).agg(...)",
+            "explanation": "Create named measures for product units and revenue."
+          },
+          {
+            "code": "reconciliation and print",
+            "explanation": "Verify grouped amounts preserve the accepted total and display units, line count, and overall revenue."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Detect a duplicate before reporting",
+            "code": "import pandas as pd\nsales = pd.DataFrame({\"line_id\": [1, 2, 2], \"revenue_cents\": [100, 200, 200]})\nduplicates = sales.loc[sales[\"line_id\"].duplicated(keep=False), \"line_id\"]\nprint(\"duplicate IDs:\", sorted(duplicates.unique().tolist()))",
+            "expectedOutput": "duplicate IDs: [2]",
+            "explanation": "keep=False marks every occurrence of a repeated identifier. Investigate the source rather than assuming every repeated line is safe to delete.",
+            "validation": {
+              "runtime": "python-data",
+              "requirements": [
+                "pandas"
+              ]
+            }
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Revenue changes when grouping",
+            "cause": "Missing category keys or an unintended filter removed lines.",
+            "fix": "Compare grouped totals to the same accepted source population."
+          },
+          {
+            "symptom": "Average selling price looks too low",
+            "cause": "Unit prices were averaged across unequal line quantities.",
+            "fix": "Divide total revenue by total units."
+          },
+          {
+            "symptom": "Repeated products are removed",
+            "cause": "Products were mistaken for unique order-line identifiers.",
+            "fix": "Validate the declared line_id grain instead."
+          }
+        ],
+        "summary": [
+          "Validate grain and units before calculating.",
+          "Derive amounts per line, then group and reconcile.",
+          "The next plotting lessons turn trustworthy summaries into readable figures."
+        ],
+        "references": [
+          {
+            "title": "Pandas introductory tutorials",
+            "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html"
+          }
+        ],
+        "validation": {
+          "runtime": "python-data",
+          "requirements": [
+            "pandas"
+          ]
+        }
+      }
     },
     {
       "id": "py-62",
@@ -4494,496 +7747,1860 @@ window.PYTHON_COURSE = {
       "id": "py-98",
       "title": "14.1 DSA Intro",
       "module": "DSA",
-      "objective": "Know why DSA matters and Big-O at a glance.",
-      "why": "Apps must stay fast as users grow — data structures & algorithms make that possible.",
-      "explanation": "<p><strong>What you will learn.</strong> Know why DSA matters and Big-O at a glance. By the end you should explain <em>DSA Intro</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Apps must stay fast as users grow — data structures &amp; algorithms make that possible. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Choose structures for speed/memory tradeoffs. Big-O describes growth of time/space.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Know why DSA matters and Big-O at a glance.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"O(1) constant  O(n) linear  O(n log n) sort-like  O(n^2) neste…</code> — shows output so you can verify the result.</li><li><code>print(\"Right structure = faster apps at scale\")</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>DSA Intro</em> solve?</li><li>Which line in the example most directly achieves: “Know why DSA matters and Big-O at a glance.”?</li><li>If you change one value in <code>print(\"O(1) constant  O(n) linear  O(n log n) sort-like </code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "print(\"O(1) constant  O(n) linear  O(n log n) sort-like  O(n^2) nested loops\")\nprint(\"Right structure = faster apps at scale\")",
+      "objective": "Count work and compare a sequential search with a reusable hash index.",
+      "why": "Repeated address-book queries have different costs from a single lookup.",
+      "explanation": "<h4>Start with the result contract</h4><p>A data structure organizes values; an algorithm is a procedure operating on them. For customer identifiers, “is this present?” differs from “where is its first occurrence?” Our procedure returns the first matching index and a comparison count. It returns -1 for absence. Duplicates are allowed, so a faster representation must preserve first-occurrence semantics. Correct behavior comes before optimization. A dictionary built by ordinary assignment retains the last duplicate position, which would answer a different question.</p>\n<h4>Count operations rather than milliseconds</h4><p>The input size n is the number of entries. Sequential search can inspect one entry, all n entries, or zero for empty input. Worst-case time is O(n), meaning its growth has a linear upper bound under the stated model. O(1) means work bounded independently of n, not one processor instruction or instant completion. Big-O suppresses constant factors; two algorithms with the same growth rate can have different actual durations. A stopwatch on four values cannot establish an asymptotic claim.</p>\n<h4>Justify the loop with an invariant</h4><p>Before each iteration, all earlier positions have been inspected and do not match. That statement is the loop invariant. If the current position matches, it must be the first match. If iteration finishes, every candidate has been ruled out. Incrementing checks immediately before equality testing makes the count meaningful. Empty input performs no tests and returns (-1, 0). A duplicate after the first match is never inspected, because the required answer is already known.</p>\n<h4>Include the price of an index</h4><p>Mapping each value to its first position takes O(n) average construction time and O(n) extra memory. setdefault preserves an existing earliest position. Subsequent dictionary lookup is O(1) on average for ordinary hashable keys, but can be O(n) in pathological collision cases. For one lookup, building the index may do more total work than scanning. For many lookups on unchanged data, preparation can pay off. Insertions or deletions in the source can make stored positions stale.</p>\n<h4>Compare workloads, not slogans</h4><p>The worked search finds 90 at index three after four checks; searching for 7 also needs four checks but returns -1. The variation indexes duplicate 40 values and still returns zero. The independent task counts ordered position pairs: n choices in each of two nested loops create n² combinations. Doubling n doubles linear work but quadruples this pair count. Space must be analyzed separately: a nested loop may use only a few counters even while performing quadratic work.</p>",
+      "codeExample": "def locate(items, target):\n    checks = 0\n    for index, value in enumerate(items):\n        checks += 1\n        if value == target:\n            return index, checks\n    return -1, checks\nprint(locate([40, 20, 40, 90], 90))\nprint(locate([40, 20, 40, 90], 7))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "print(\"O(1) constant  O(n) linear  O(n log n) sort-like  O(n^2) nested loops\")\nprint(\"Right structure = faster apps at scale\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: absent target",
+          "instruction": "Search [3,8,1] for 4 and explain the count.",
+          "hint": "Every candidate must be rejected.",
+          "solution": "def locate(items, target):\n    checks = 0\n    for index, value in enumerate(items):\n        checks += 1\n        if value == target:\n            return index, checks\n    return -1, checks\nprint(locate([3, 8, 1], 4))",
+          "expectedOutput": "(-1, 3)",
+          "solutionExplanation": "All three comparisons fail.",
+          "successCriteria": [
+            "Return (-1, 3).",
+            "Explain why early exit is impossible."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: duplicate policy",
+          "instruction": "Keep the earliest index of 8 in [8,5,8].",
+          "hint": "Do not overwrite an existing key.",
+          "solution": "first = {}\nfor i, value in enumerate([8, 5, 8]):\n    first.setdefault(value, i)\nprint(first[8])",
+          "expectedOutput": "0",
+          "solutionExplanation": "The first insertion survives the repeated value.",
+          "successCriteria": [
+            "Print 0.",
+            "Preserve source order."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: pair growth",
+          "instruction": "Count all ordered pairs for sizes 0,3,6 using loops.",
+          "hint": "Each loop visits n positions.",
+          "solution": "for n in [0, 3, 6]:\n    count = 0\n    for i in range(n):\n        for j in range(n):\n            count += 1\n    print(n, count)",
+          "expectedOutput": "0 0\n3 9\n6 36",
+          "solutionExplanation": "The counts 0,9,36 demonstrate n² combinations.",
+          "successCriteria": [
+            "Print 0 0, 3 9, 6 36.",
+            "Explain quadratic time and constant counter space."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “DSA Intro”?",
+          "q": "How many checks does a failed search of n entries make?",
           "options": [
-            "Know why DSA matters and Big-O at a glance.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “DSA Intro” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Know why DSA matters and Big-O at a glance.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "1",
+            "n",
+            "log₂ n",
+            "n²"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Know why DSA matters and Big-O at a glance."
+          "explanation": "Every entry must be rejected."
+        },
+        {
+          "q": "What is the loop invariant?",
+          "options": [
+            "The input is sorted",
+            "Earlier positions do not match",
+            "The target is unique",
+            "Later positions do not match"
+          ],
+          "correct": 1,
+          "explanation": "It proves the first-match result."
+        },
+        {
+          "q": "Why include index construction?",
+          "options": [
+            "Dictionary reads always scan",
+            "It takes time and memory",
+            "Lists prohibit duplicates",
+            "Big-O predicts milliseconds"
+          ],
+          "correct": 1,
+          "explanation": "Preparation contributes to the complete workload."
+        },
+        {
+          "q": "What does an empty search return?",
+          "options": [
+            "(0, 0)",
+            "(-1, 0)",
+            "(-1, 1)",
+            "IndexError"
+          ],
+          "correct": 1,
+          "explanation": "No iteration runs."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Duplicates return the last position: Assignment overwrites existing entries. Use setdefault for a first-position index. O(1) is described as instant: Growth was confused with latency. State the input size and cost assumptions. The index reports stale positions: The list was edited after indexing. Rebuild or update the index after structural changes.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and return values."
+        ],
+        "outcomes": [
+          "Specify first-match behavior.",
+          "Use an invariant to justify a search.",
+          "Include preparation and memory in a complexity comparison."
+        ],
+        "expectedOutput": "(3, 4)\n(-1, 4)",
+        "walkthrough": [
+          {
+            "code": "checks = 0",
+            "explanation": "Count equality tests, not time."
+          },
+          {
+            "code": "enumerate(items)",
+            "explanation": "Visit positions in increasing order."
+          },
+          {
+            "code": "return index, checks",
+            "explanation": "The invariant proves this is the first match."
+          },
+          {
+            "code": "return -1, checks",
+            "explanation": "Exhaustion proves absence."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Index repeated questions",
+            "code": "def locate(items, target):\n    checks = 0\n    for index, value in enumerate(items):\n        checks += 1\n        if value == target:\n            return index, checks\n    return -1, checks\nfirst = {}\nfor i, value in enumerate([40, 20, 40, 90]):\n    first.setdefault(value, i)\nprint(first.get(40, -1))\nprint(first.get(7, -1))",
+            "expectedOutput": "0\n-1",
+            "explanation": "Building an index spends memory once and preserves the first duplicate."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Duplicates return the last position",
+            "cause": "Assignment overwrites existing entries.",
+            "fix": "Use setdefault for a first-position index."
+          },
+          {
+            "symptom": "O(1) is described as instant",
+            "cause": "Growth was confused with latency.",
+            "fix": "State the input size and cost assumptions."
+          },
+          {
+            "symptom": "The index reports stale positions",
+            "cause": "The list was edited after indexing.",
+            "fix": "Rebuild or update the index after structural changes."
+          }
+        ],
+        "summary": [
+          "Define the result before choosing the structure.",
+          "State average and worst-case assumptions.",
+          "Next, examine individual list operations."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-99",
       "title": "14.2 Lists & Arrays in DSA",
       "module": "DSA",
-      "objective": "Use list operations with complexity awareness.",
-      "why": "Random access to the 1000th order is O(1) with arrays/lists.",
-      "explanation": "<p><strong>What you will learn.</strong> Use list operations with complexity awareness. By the end you should explain <em>Lists &amp; Arrays in DSA</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Random access to the 1000th order is O(1) with arrays/lists. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Index O(1), append amortized O(1), insert front O(n).</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use list operations with complexity awareness.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>4</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>orders = [101, 102, 103]</code> — stores or updates a value.</li><li><code>orders.append(104)      # end</code> — changes a collection.</li><li><code>orders.insert(0, 100)   # front slower</code> — changes a collection.</li><li><code>print(orders[2])</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Lists &amp; Arrays in DSA</em> solve?</li><li>Which line in the example most directly achieves: “Use list operations with complexity awareness.”?</li><li>If you change one value in <code>orders = [101, 102, 103]</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "orders = [101, 102, 103]\norders.append(104)      # end\norders.insert(0, 100)   # front slower\nprint(orders[2])",
+      "objective": "Trace list operations and explain indexing, shifting, copying, and amortized append.",
+      "why": "A task list can provide quick positional access while becoming slow under repeated front insertion.",
+      "explanation": "<h4>A list stores ordered references</h4><p>A Python list is an ordered sequence with indexes zero through length minus one. In CPython its storage is a resizable array of references to objects; the objects themselves need not be adjacent. Reading an existing index is O(1). Searching for a value is different: membership normally compares successive elements and is O(n) in the worst case. Equal values can occupy different positions, so a list does not enforce uniqueness. Negative indexes count backward from the right end.</p>\n<h4>Changing a value differs from shifting entries</h4><p>Assigning items[1] replaces one reference without changing length. append adds at the right edge in amortized O(1) time: most appends are inexpensive, but occasional resizing copies references. Inserting at zero moves existing references one position right, taking O(n). Removing from the left shifts them back. These costs matter for repeated operations; short syntax does not imply cheap execution. A deque is a better fit for a queue, while a list remains convenient for direct indexed access.</p>\n<h4>Preserve the caller’s sequence</h4><p>The worked schedule function starts with orders[:], which creates a new outer list. Appending an ordinary order and inserting a priority order then changes only that copy. This is shallow copying: nested dictionaries would still be shared objects between the two lists. Here identifiers are integers, avoiding nested mutation. After insertion, the priority item is first and all previously present items keep their relative order shifted one index to the right. That positional invariant explains the printed index.</p>\n<h4>Add costs correctly</h4><p>Copying n references costs O(n) time and O(n) space. Front insertion is another O(n) operation, and append contributes amortized O(1), so the overall schedule function is O(n), not O(n²). Two sequential linear operations add; nested repetition multiplies. The output has n+2 entries. Empty input and duplicate order IDs remain valid. Enforcing unique identifiers is a separate business requirement, and silently removing duplicates would change both length and positional meaning.</p>\n<h4>Make boundary behavior explicit</h4><p>Indexing an empty list and popping its last element raise IndexError. The variation checks emptiness before removal and returns None when no item exists. This sentinel is unambiguous for integer IDs but would need reconsideration if None were valid data. The independent exercise extracts alternating readings with a slice. That concise expression allocates a new list proportional to its result size. Selecting every second item is still linear growth, even though it produces about half as many references.</p>",
+      "codeExample": "def schedule(orders, ordinary, priority):\n    result = orders[:]\n    result.append(ordinary)\n    result.insert(0, priority)\n    return result\noriginal = [101, 102, 102]\nresult = schedule(original, 103, 100)\nprint(original)\nprint(result)\nprint(result[2])",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "orders = [101, 102, 103]\norders.append(104)      # end\norders.insert(0, 100)   # front slower\nprint(orders[2])",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: copy and insert",
+          "instruction": "Add 3 first and 6 last to a copy of [4,5].",
+          "hint": "Slice first.",
+          "solution": "original = [4, 5]\nresult = original[:]\nresult.insert(0, 3)\nresult.append(6)\nprint(original)\nprint(result)",
+          "expectedOutput": "[4, 5]\n[3, 4, 5, 6]",
+          "solutionExplanation": "Only the new outer list changes.",
+          "successCriteria": [
+            "Keep [4,5] unchanged.",
+            "Produce [3,4,5,6]."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: empty peek",
+          "instruction": "Return the final value or None without crashing on [].",
+          "hint": "Guard the container, not the final value.",
+          "solution": "def last(items):\n    return items[-1] if items else None\nprint(last([]))\nprint(last([0, 0]))",
+          "expectedOutput": "None\n0",
+          "solutionExplanation": "Zero remains valid data.",
+          "successCriteria": [
+            "Print None then 0.",
+            "Do not mutate input."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: alternate samples",
+          "instruction": "Return positions 0,2,4 from five readings and handle empty input.",
+          "hint": "Use a slice step.",
+          "solution": "def alternate(items):\n    return items[::2]\nvalues = [10, 11, 12, 13, 14]\nprint(alternate(values))\nprint(alternate([]))\nprint(values)",
+          "expectedOutput": "[10, 12, 14]\n[]\n[10, 11, 12, 13, 14]",
+          "solutionExplanation": "A step-two slice allocates the chosen references in order.",
+          "successCriteria": [
+            "Return [10,12,14] and [].",
+            "Explain O(n) time and output space."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Lists & Arrays in DSA”?",
+          "q": "Which operation shifts every entry?",
           "options": [
-            "Use list operations with complexity awareness.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Lists & Arrays in DSA” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Use list operations with complexity awareness.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "items[0]",
+            "insert(0, value)",
+            "len(items)",
+            "Every append"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use list operations with complexity awareness."
+          "explanation": "Front insertion opens a position by shifting references."
+        },
+        {
+          "q": "What does amortized append mean?",
+          "options": [
+            "Exactly one instruction each time",
+            "Constant average work over many appends",
+            "No memory allocation",
+            "Linear average time"
+          ],
+          "correct": 1,
+          "explanation": "Resizing costs are spread over a sequence."
+        },
+        {
+          "q": "Does slicing deeply copy nested dictionaries?",
+          "options": [
+            "Always",
+            "No",
+            "Only for small lists",
+            "Only with a positive step"
+          ],
+          "correct": 1,
+          "explanation": "The references are copied, not nested objects."
+        },
+        {
+          "q": "Old index 2 becomes what after insertion at zero?",
+          "options": [
+            "2",
+            "3",
+            "1",
+            "Deleted"
+          ],
+          "correct": 1,
+          "explanation": "Each old position shifts right once."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "The input changed: A second name aliased the same list. Copy before modifying when the contract requires preservation. An old index selects a different order: Front insertion shifted positions. Use stable IDs or update positions after insertion. A queue slows down: Repeated pop(0) shifts every remainder. Use deque for repeated left removal.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and return values."
+        ],
+        "outcomes": [
+          "Trace changed indexes after insertion.",
+          "Distinguish copy from aliasing.",
+          "Explain time and space for common list operations."
+        ],
+        "expectedOutput": "[101, 102, 102]\n[100, 101, 102, 102, 103]\n102",
+        "walkthrough": [
+          {
+            "code": "orders[:]",
+            "explanation": "Copy the outer list."
+          },
+          {
+            "code": "append(ordinary)",
+            "explanation": "Add an ordinary order at the right."
+          },
+          {
+            "code": "insert(0, priority)",
+            "explanation": "Shift existing entries one position."
+          },
+          {
+            "code": "result[2]",
+            "explanation": "Read the item formerly at index one."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Safe end removal",
+            "code": "def schedule(orders, ordinary, priority):\n    result = orders[:]\n    result.append(ordinary)\n    result.insert(0, priority)\n    return result\ndef take_last(items):\n    return items.pop() if items else None\nitems = [5, 5]\nprint(take_last(items))\nprint(items)\nprint(take_last([]))",
+            "expectedOutput": "5\n[5]\nNone",
+            "explanation": "One duplicate is removed; emptiness has an explicit result."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "The input changed",
+            "cause": "A second name aliased the same list.",
+            "fix": "Copy before modifying when the contract requires preservation."
+          },
+          {
+            "symptom": "An old index selects a different order",
+            "cause": "Front insertion shifted positions.",
+            "fix": "Use stable IDs or update positions after insertion."
+          },
+          {
+            "symptom": "A queue slows down",
+            "cause": "Repeated pop(0) shifts every remainder.",
+            "fix": "Use deque for repeated left removal."
+          }
+        ],
+        "summary": [
+          "Lists provide direct indexing and amortized efficient append.",
+          "Copying and front operations are linear.",
+          "Stacks use the efficient right edge."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-100",
       "title": "14.3 Stacks — LIFO",
       "module": "DSA",
-      "objective": "Implement a stack with a list.",
-      "why": "Undo buttons and browser back use stacks (last in, first out).",
-      "explanation": "<p><strong>What you will learn.</strong> Implement a stack with a list. By the end you should explain <em>LIFO</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Undo buttons and browser back use stacks (last in, first out). Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>push=append, pop=pop(), peek=[-1]</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Implement a stack with a list.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>5</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>stack = []</code> — stores or updates a value.</li><li><code>stack.append(\"page1\")</code> — changes a collection.</li><li><code>stack.append(\"page2\")</code> — changes a collection.</li><li><code>print(stack.pop())  # page2</code> — shows output so you can verify the result.</li><li><code>print(stack[-1])    # page1</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>LIFO</em> solve?</li><li>Which line in the example most directly achieves: “Implement a stack with a list.”?</li><li>If you change one value in <code>stack = []</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "stack = []\nstack.append(\"page1\")\nstack.append(\"page2\")\nprint(stack.pop())  # page2\nprint(stack[-1])    # page1",
+      "objective": "Implement a list stack and use its LIFO invariant to model undo and nested parentheses.",
+      "why": "Undo must reverse the most recent action before older actions.",
+      "explanation": "<h4>The newest item leaves first</h4><p>A stack is an abstract data type defined by last in, first out, or LIFO. A pile of plates illustrates the rule: remove the top plate before reaching older plates below it. An editor’s undo history similarly removes the most recent reversible action. A Python list represents the top at its right edge. append pushes, pop removes and returns, and indexing [-1] peeks without removal. The interface rule matters more than the particular storage implementation.</p>\n<h4>Preserve pending history</h4><p>The stack contains exactly the actions pushed but not yet undone, in arrival order. After pushing type A then type B, the top is type B. Undoing returns type B and leaves type A. Duplicate action labels are separate events and must not be deduplicated. Removing an arbitrary older action from the middle might be valid for another application, but it no longer follows this simple stack contract. Trace the list after each operation to verify the invariant.</p>\n<h4>Specify empty behavior</h4><p>Calling pop or reading [-1] on an empty list raises IndexError. Our undo helper returns None instead. That sentinel is appropriate because valid actions are strings; if None were valid data, the result would be ambiguous. Another API might raise a custom exception or return a success flag alongside the value. The example peeks only after pushing actions and then undoes until empty. A safe empty result is a documented behavior, not an excuse to suppress unrelated errors.</p>\n<h4>Separate interface cost from display cost</h4><p>Right-end append and pop have amortized O(1) cost in the conventional dynamic-array model. Keeping n pending actions occupies O(n) storage. Displaying the complete history or copying it costs O(n), so those demonstration operations should not be included when claiming the cost of one push or pop. The helper mutates the caller’s actual list; returning an action does not create a new history. An undo system also needs enough information to reverse changes, which a label alone does not provide.</p>\n<h4>Use LIFO to recognize nesting</h4><p>Parentheses close in reverse opening order. Push an opening marker; on a closing parenthesis, require and remove the newest marker. A close with no marker is invalid immediately. Leftover markers after reading the text mean unclosed groups. Empty text is balanced. Each character is processed once, giving O(n) time; an all-opening input stores O(n) markers. This example checks syntax shape only: it does not evaluate arithmetic, validate quotes, or handle multiple delimiter kinds without extending the rule.</p>",
+      "codeExample": "def undo(history):\n    return history.pop() if history else None\nhistory = []\nhistory.append(\"type A\")\nhistory.append(\"type B\")\nprint(history[-1], len(history))\nprint(undo(history))\nprint(undo(history))\nprint(undo(history))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "stack = []\nstack.append(\"page1\")\nstack.append(\"page2\")\nprint(stack.pop())  # page2\nprint(stack[-1])    # page1",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: reverse arrivals",
+          "instruction": "Push 2,4,6 then print every popped value.",
+          "hint": "Drain while nonempty.",
+          "solution": "s = []\nfor value in [2, 4, 6]:\n    s.append(value)\nwhile s:\n    print(s.pop())",
+          "expectedOutput": "6\n4\n2",
+          "solutionExplanation": "Every pop removes the latest remaining arrival.",
+          "successCriteria": [
+            "Print 6,4,2 on separate lines.",
+            "Finish empty."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: peek should not remove",
+          "instruction": "Implement safe peek and demonstrate an unchanged stack.",
+          "hint": "Use indexing after an empty check.",
+          "solution": "def peek(s):\n    return s[-1] if s else None\ns = [\"draft\", \"review\"]\nprint(peek(s))\nprint(s)\nprint(peek([]))",
+          "expectedOutput": "review\n['draft', 'review']\nNone",
+          "solutionExplanation": "Reading a reference does not shorten the list.",
+          "successCriteria": [
+            "Print review, the two-item list, then None.",
+            "Preserve stack length."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: balanced groups",
+          "instruction": "Recognize (()), ((), )(, and empty text. Ignore other characters.",
+          "hint": "Reject extra closing markers and leftover opening markers.",
+          "solution": "def balanced(text):\n    stack = []\n    for char in text:\n        if char == \"(\":\n            stack.append(char)\n        elif char == \")\":\n            if not stack:\n                return False\n            stack.pop()\n    return not stack\nfor text in [\"(())\", \"(()\", \")(\", \"\"]:\n    print(balanced(text))",
+          "expectedOutput": "True\nFalse\nFalse\nTrue",
+          "solutionExplanation": "The two empty checks distinguish extra closes from unclosed opens.",
+          "successCriteria": [
+            "Return True,False,False,True.",
+            "Explain linear time and worst-case linear space."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Stacks — LIFO”?",
+          "q": "Push A, push B, pop: what remains?",
           "options": [
-            "Implement a stack with a list.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “LIFO” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Implement a stack with a list.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "[B]",
+            "[A]",
+            "[]",
+            "[A,B]"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Implement a stack with a list."
+          "explanation": "B arrived last."
+        },
+        {
+          "q": "Which operation peeks?",
+          "options": [
+            "pop()",
+            "Guarded stack[-1]",
+            "append()",
+            "pop(0)"
+          ],
+          "correct": 1,
+          "explanation": "Indexing does not remove."
+        },
+        {
+          "q": "When is None an ambiguous empty result?",
+          "options": [
+            "When actions repeat",
+            "When None is valid data",
+            "When the stack is large",
+            "When using strings"
+          ],
+          "correct": 1,
+          "explanation": "A sentinel must be distinguishable from valid values."
+        },
+        {
+          "q": "Why is (() invalid?",
+          "options": [
+            "It starts with an opening",
+            "An opening remains unmatched",
+            "It has a nested group",
+            "It contains no letters"
+          ],
+          "correct": 1,
+          "explanation": "The stack is nonempty at the end."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Oldest action is undone: pop(0) removes from the left. Use pop() for LIFO. Empty peek crashes: [-1] requires an item. Check the container first. Undo always returns None: The removed value was discarded. Return pop’s result; append itself returns None.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and return values."
+        ],
+        "outcomes": [
+          "Push, pop, and peek safely.",
+          "Explain empty-stack behavior.",
+          "Use a stack for nested-delimiter checking."
+        ],
+        "expectedOutput": "type B 2\ntype B\ntype A\nNone",
+        "walkthrough": [
+          {
+            "code": "append",
+            "explanation": "Push new actions at the right."
+          },
+          {
+            "code": "history[-1]",
+            "explanation": "Peek without shortening history."
+          },
+          {
+            "code": "if history",
+            "explanation": "Check length before removal."
+          },
+          {
+            "code": "pop()",
+            "explanation": "Return and remove the newest action."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Duplicate actions",
+            "code": "def undo(history):\n    return history.pop() if history else None\nhistory = [\"save\", \"save\"]\nprint(undo(history))\nprint(history)",
+            "expectedOutput": "save\n['save']",
+            "explanation": "Only the latest occurrence is removed."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Oldest action is undone",
+            "cause": "pop(0) removes from the left.",
+            "fix": "Use pop() for LIFO."
+          },
+          {
+            "symptom": "Empty peek crashes",
+            "cause": "[-1] requires an item.",
+            "fix": "Check the container first."
+          },
+          {
+            "symptom": "Undo always returns None",
+            "cause": "The removed value was discarded.",
+            "fix": "Return pop’s result; append itself returns None."
+          }
+        ],
+        "summary": [
+          "LIFO exposes the newest pending item.",
+          "Document mutation and empty outcomes.",
+          "Queues next remove the oldest arrival."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-101",
       "title": "14.4 Queues — FIFO",
       "module": "DSA",
-      "objective": "Implement a queue with collections.deque.",
-      "why": "Print jobs and customer service lines are queues (first in, first out).",
-      "explanation": "<p><strong>What you will learn.</strong> Implement a queue with collections.deque. By the end you should explain <em>FIFO</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Print jobs and customer service lines are queues (first in, first out). Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>enqueue right, dequeue left — deque is efficient.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Implement a queue with collections.deque.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>5</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>from collections import deque</code> — sets up a name, type, import, or definition you will use next.</li><li><code>q = deque()</code> — stores or updates a value.</li><li><code>q.append(\"customer A\")</code> — changes a collection.</li><li><code>q.append(\"customer B\")</code> — changes a collection.</li><li><code>print(q.popleft())  # A first</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>FIFO</em> solve?</li><li>Which line in the example most directly achieves: “Implement a queue with collections.deque.”?</li><li>If you change one value in <code>from collections import deque</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "from collections import deque\nq = deque()\nq.append(\"customer A\")\nq.append(\"customer B\")\nprint(q.popleft())  # A first",
+      "objective": "Implement FIFO service with deque and reason about termination and endpoint costs.",
+      "why": "A request queue should serve arrivals fairly without shifting the entire waiting list.",
+      "explanation": "<h4>Arrival order defines service order</h4><p>A queue follows first in, first out, abbreviated FIFO. A print spooler with equal-priority jobs should take the oldest waiting job before later arrivals. Enqueue means add a job; dequeue means remove the next job. collections.deque supports operations at both ends. We append on the right and remove with popleft on the left. Reading the deque left to right therefore gives the future service order, provided no special priority policy changes it.</p>\n<h4>Maintain the pending-work invariant</h4><p>At each step the deque contains all jobs that arrived but have not been served, ordered by arrival. Start with A and B, serve A, then add C: the remainder is B followed by C. Equal labels still represent separate jobs. Empty queues are valid, and the helper returns None rather than attempting an invalid removal. Valid jobs here are strings, so None can unambiguously mean no job. The helper mutates the supplied queue by removing exactly one item when possible.</p>\n<h4>Match costs to the workload</h4><p>A list can implement FIFO with pop(0), but every removal shifts the remaining references and costs O(n). Deque append and popleft are approximately O(1), avoiding that shift. Middle indexing in a deque is O(n), so this is not a universal replacement for lists. Holding n queued items costs O(n) memory. Processing each job once uses O(n) queue-operation work in total, excluding the time spent performing the actual printing or network operation.</p>\n<h4>Prove the drain loop stops</h4><p>The worked loop tests the container, not its first value. A legitimate zero-valued item would still be served because a nonempty deque is true. Each drain iteration removes one item and adds none, so length strictly decreases until zero. The variation requeues unfinished jobs but decreases their remaining-turn count. Summing remaining turns provides a different decreasing measure. If processing creates unlimited new work, neither length nor total turns necessarily decreases, and an explicit stopping or admission policy is needed.</p>\n<h4>Capacity and concurrency are separate concerns</h4><p>A deque with maxlen discards an opposite-end item when a new arrival exceeds capacity; it does not wait for room. That eviction behavior suits recent-history buffers but can silently lose jobs in a service queue. Likewise, this synchronous demonstration does not coordinate producer and consumer threads. Python queue.Queue provides synchronization and blocking behavior for that separate problem. The independent exercise returns fixed-size batches, preserving every arrival and allowing a final shorter batch rather than discarding remaining work.</p>",
+      "codeExample": "from collections import deque\n\ndef serve(jobs):\n    return jobs.popleft() if jobs else None\njobs = deque([\"A\", \"B\"])\nprint(serve(jobs))\njobs.append(\"C\")\nwhile jobs:\n    print(serve(jobs))\nprint(serve(jobs))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "from collections import deque\nq = deque()\nq.append(\"customer A\")\nq.append(\"customer B\")\nprint(q.popleft())  # A first",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: zeros and duplicates",
+          "instruction": "Drain 9,0,9 in FIFO order.",
+          "hint": "Test the container.",
+          "solution": "from collections import deque\njobs = deque([9, 0, 9])\nwhile jobs:\n    print(jobs.popleft())",
+          "expectedOutput": "9\n0\n9",
+          "solutionExplanation": "Zero is an item, not an empty-queue marker.",
+          "successCriteria": [
+            "Print 9,0,9.",
+            "Keep duplicate arrivals."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: correct the endpoint",
+          "instruction": "Fix a service helper that uses pop; include a third call after A and B.",
+          "hint": "Guard and remove left.",
+          "solution": "from collections import deque\n\ndef serve(jobs):\n    return jobs.popleft() if jobs else None\njobs = deque([\"A\", \"B\"])\nprint(serve(jobs))\nprint(serve(jobs))\nprint(serve(jobs))",
+          "expectedOutput": "A\nB\nNone",
+          "solutionExplanation": "Left removal preserves arrival order and the guard handles exhaustion.",
+          "successCriteria": [
+            "Print A,B,None.",
+            "No IndexError."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: batch jobs",
+          "instruction": "Group five jobs into batches of at most two; reject nonpositive size.",
+          "hint": "Remove up to min(size,len(queue)) per batch.",
+          "solution": "from collections import deque\ndef batches(items, size):\n    if size <= 0:\n        raise ValueError(\"size must be positive\")\n    pending = deque(items)\n    result = []\n    while pending:\n        result.append([pending.popleft() for _ in range(min(size, len(pending)))])\n    return result\nprint(batches([1, 2, 3, 4, 5], 2))\nprint(batches([], 2))",
+          "expectedOutput": "[[1, 2], [3, 4], [5]]\n[]",
+          "solutionExplanation": "Every item appears once, including the final short batch.",
+          "successCriteria": [
+            "Return [[1,2],[3,4],[5]] and [].",
+            "Preserve arrival order."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Queues — FIFO”?",
+          "q": "Append A then B; popleft returns?",
           "options": [
-            "Implement a queue with collections.deque.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “FIFO” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Implement a queue with collections.deque.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "B",
+            "A",
+            "Both",
+            "None"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Implement a queue with collections.deque."
+          "explanation": "A is the oldest arrival."
+        },
+        {
+          "q": "Why use deque for large FIFO workloads?",
+          "options": [
+            "It sorts jobs",
+            "Left removal avoids shifting",
+            "It deduplicates",
+            "All indexing is constant-time"
+          ],
+          "correct": 1,
+          "explanation": "Endpoint operations fit the workload."
+        },
+        {
+          "q": "What does full maxlen append do?",
+          "options": [
+            "Blocks",
+            "Evicts at the opposite end",
+            "Grows capacity",
+            "Rejects duplicates"
+          ],
+          "correct": 1,
+          "explanation": "Bounded deques are eviction buffers."
+        },
+        {
+          "q": "What proves a finite drain loop terminates?",
+          "options": [
+            "Jobs are unique",
+            "Length decreases each iteration",
+            "The queue is sorted",
+            "It uses while"
+          ],
+          "correct": 1,
+          "explanation": "Length is a nonnegative decreasing measure."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Newest job is served first: pop removes from the right. Use popleft with right append. A full queue loses jobs: maxlen evicts opposite-end entries. Use explicit capacity handling or queue.Queue when loss is unacceptable. The worker never finishes: Processing replenishes all consumed work. Establish a finite source or a decreasing remaining-work measure.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and return values."
+        ],
+        "outcomes": [
+          "Trace FIFO arrivals and removals.",
+          "Choose deque for endpoint operations.",
+          "Process fixed batches without losing jobs."
+        ],
+        "expectedOutput": "A\nB\nC\nNone",
+        "walkthrough": [
+          {
+            "code": "deque([\"A\", \"B\"])",
+            "explanation": "Store A as the oldest job."
+          },
+          {
+            "code": "popleft()",
+            "explanation": "Remove from the FIFO end."
+          },
+          {
+            "code": "append(\"C\")",
+            "explanation": "Place C behind B."
+          },
+          {
+            "code": "while jobs",
+            "explanation": "Each iteration shortens the finite queue."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Round-robin turns",
+            "code": "from collections import deque\n\ndef serve(jobs):\n    return jobs.popleft() if jobs else None\njobs = deque([(\"A\", 2), (\"B\", 1)])\nwhile jobs:\n    name, remaining = jobs.popleft()\n    print(name)\n    if remaining > 1:\n        jobs.append((name, remaining - 1))",
+            "expectedOutput": "A\nB\nA",
+            "explanation": "A waits behind B before receiving its second turn."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Newest job is served first",
+            "cause": "pop removes from the right.",
+            "fix": "Use popleft with right append."
+          },
+          {
+            "symptom": "A full queue loses jobs",
+            "cause": "maxlen evicts opposite-end entries.",
+            "fix": "Use explicit capacity handling or queue.Queue when loss is unacceptable."
+          },
+          {
+            "symptom": "The worker never finishes",
+            "cause": "Processing replenishes all consumed work.",
+            "fix": "Establish a finite source or a decreasing remaining-work measure."
+          }
+        ],
+        "summary": [
+          "FIFO combines append with popleft.",
+          "Capacity and concurrency require explicit policies.",
+          "Linked nodes next expose structural references."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-102",
       "title": "14.5 Linked Lists",
       "module": "DSA",
-      "objective": "Build a simple singly linked list node.",
-      "why": "Insert/delete in the middle without shifting a whole array.",
-      "explanation": "<p><strong>What you will learn.</strong> Build a simple singly linked list node. By the end you should explain <em>Linked Lists</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Insert/delete in the middle without shifting a whole array. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Node has value + next pointer.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Build a simple singly linked list node.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>11</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>class Node:</code> — sets up a name, type, import, or definition you will use next.</li><li><code>def __init__(self, value):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>self.value = value</code> — stores or updates a value.</li><li><code>self.next = None</code> — stores or updates a value.</li><li><code>head = Node(1)</code> — stores or updates a value.</li><li><code>head.next = Node(2)</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Linked Lists</em> solve?</li><li>Which line in the example most directly achieves: “Build a simple singly linked list node.”?</li><li>If you change one value in <code>class Node:</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\nhead = Node(1)\nhead.next = Node(2)\nhead.next.next = Node(3)\ncur = head\nwhile cur:\n    print(cur.value)\n    cur = cur.next",
+      "objective": "Build and traverse a singly linked list while preserving its acyclic chain.",
+      "why": "Explicit links reveal how pointer-based structures keep elements connected.",
+      "explanation": "<h4>Nodes store values and successors</h4><p>A singly linked list consists of nodes, each holding a value and a next reference. None marks the end; head refers to the first node, or None for an empty list. Unlike a Python list, there is no direct positional address for the kth element. Reaching it requires following links from the head. The Node constructor accepts the next reference so we can build a chain backward from its tail without assigning every field separately.</p>\n<h4>Equal values are not identical nodes</h4><p>Two nodes may both contain 7 while occupying distinct positions. Their values compare equal but the node objects have different identities. The structural invariant is an acyclic chain whose final next reference is None. A tail pointing back to the head creates a cycle, even when all values are distinct. Our traversal assumes the invariant instead of maintaining a visited set. This is appropriate for a correctly constructed list; arbitrary object graphs require additional cycle handling.</p>\n<h4>Advance a cursor without losing the start</h4><p>current begins at head. Before each iteration, result contains the values of all nodes preceding current. We append current.value, then follow current.next. When current becomes None, every reachable node has been collected in order. Assigning current changes a local reference, not the nodes or the caller’s head. Checking is not None also ensures a zero-valued node is visited; the existence of a node is independent of the truthiness of its value.</p>\n<h4>Prepend preserves the entire previous chain</h4><p>Create a new node whose next is the old head, then return that node as the new head. The caller must assign the returned reference. The old nodes and their links remain intact. Empty input needs no special case because the new node simply points to None. This link update costs O(1) time and space. Appending to a chain without a stored tail takes O(n) to find its end, even though the final pointer assignment is constant time.</p>\n<h4>Account for traversal and allocation</h4><p>Traversing n nodes takes O(n) time. values allocates an O(n) output list, while a traversal that merely counts could use O(1) auxiliary state. Searching by value is linear; deleting a matching node may also require finding its predecessor. “Linked-list insertion is constant-time” is accurate only after the insertion location is already known. In ordinary Python applications, built-in list or deque usually has lower overhead and simpler APIs. Hand-written nodes are useful here for learning representation and invariants, not as a universal performance improvement.</p>",
+      "codeExample": "class Node:\n    def __init__(self, value, next_node=None):\n        self.value = value\n        self.next = next_node\n\ndef values(head):\n    result = []\n    current = head\n    while current is not None:\n        result.append(current.value)\n        current = current.next\n    return result\n\ndef prepend(head, value):\n    return Node(value, head)\nhead = Node(2, Node(3))\nhead = prepend(head, 1)\nprint(values(head))\nprint(values(None))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n\nhead = Node(1)\nhead.next = Node(2)\nhead.next.next = Node(3)\ncur = head\nwhile cur:\n    print(cur.value)\n    cur = cur.next",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: construct three nodes",
+          "instruction": "Build and print 4 → 5 → 6.",
+          "hint": "Construct from the tail backward.",
+          "solution": "class Node:\n    def __init__(self, value, next_node=None):\n        self.value = value\n        self.next = next_node\n\ndef values(head):\n    result = []\n    current = head\n    while current is not None:\n        result.append(current.value)\n        current = current.next\n    return result\n\ndef prepend(head, value):\n    return Node(value, head)\nprint(values(Node(4, Node(5, Node(6)))))",
+          "expectedOutput": "[4, 5, 6]",
+          "solutionExplanation": "Each nested node is the preceding node’s successor.",
+          "successCriteria": [
+            "Print [4,5,6].",
+            "The tail has next=None."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: preserve the head",
+          "instruction": "Traverse nodes 0 and 2, then print the original head value.",
+          "hint": "Advance a separate reference.",
+          "solution": "class Node:\n    def __init__(self, value, next_node=None):\n        self.value = value\n        self.next = next_node\n\ndef values(head):\n    result = []\n    current = head\n    while current is not None:\n        result.append(current.value)\n        current = current.next\n    return result\n\ndef prepend(head, value):\n    return Node(value, head)\nhead = Node(0, Node(2))\nprint(values(head))\nprint(head.value)",
+          "expectedOutput": "[0, 2]\n0",
+          "solutionExplanation": "Only the traversal reference moves.",
+          "successCriteria": [
+            "Print [0,2] then 0.",
+            "Visit the zero-valued node."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: constant-space length",
+          "instruction": "Count nodes without building an output list. Test empty and duplicate-valued chains.",
+          "hint": "Increment once per link.",
+          "solution": "class Node:\n    def __init__(self, value, next_node=None):\n        self.value = value\n        self.next = next_node\n\ndef values(head):\n    result = []\n    current = head\n    while current is not None:\n        result.append(current.value)\n        current = current.next\n    return result\n\ndef prepend(head, value):\n    return Node(value, head)\ndef length(head):\n    count = 0\n    while head is not None:\n        count += 1\n        head = head.next\n    return count\nprint(length(None))\nprint(length(Node(8, Node(8))))",
+          "expectedOutput": "0\n2",
+          "solutionExplanation": "Local reassignment advances without changing links.",
+          "successCriteria": [
+            "Return 0 and 2.",
+            "Use O(1) auxiliary state."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Linked Lists”?",
+          "q": "An empty chain is represented by?",
           "options": [
-            "Build a simple singly linked list node.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Linked Lists” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Build a simple singly linked list node.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Node(0)",
+            "None",
+            "A self-link",
+            "An omitted field"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Build a simple singly linked list node."
+          "explanation": "None is the end sentinel."
+        },
+        {
+          "q": "When is insertion after a node O(1)?",
+          "options": [
+            "When searching by value",
+            "When the node is already known",
+            "Only when sorted",
+            "Never"
+          ],
+          "correct": 1,
+          "explanation": "Finding the location can cost O(n)."
+        },
+        {
+          "q": "What causes endless simple traversal?",
+          "options": [
+            "Duplicate values",
+            "A cycle",
+            "A zero value",
+            "An empty chain"
+          ],
+          "correct": 1,
+          "explanation": "A cycle prevents reaching None."
+        },
+        {
+          "q": "What extra space does values use?",
+          "options": [
+            "O(1)",
+            "O(n)",
+            "O(log n)",
+            "O(n²)"
+          ],
+          "correct": 1,
+          "explanation": "It allocates one result entry per node."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Only the new value survives: The old head was not linked. Point the new node to the previous head. Traversal never stops: A next reference creates a cycle. Maintain the acyclic-chain invariant. Prepending has no visible effect: The returned head was ignored. Assign head = prepend(head, value).",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and classes and None."
+        ],
+        "outcomes": [
+          "Identify head, successor, and tail.",
+          "Prepend without losing the old chain.",
+          "Separate link-update cost from locating a position."
+        ],
+        "expectedOutput": "[1, 2, 3]\n[]",
+        "walkthrough": [
+          {
+            "code": "Node(value, next_node)",
+            "explanation": "Store a value and successor reference."
+          },
+          {
+            "code": "current = head",
+            "explanation": "Keep the starting head unchanged."
+          },
+          {
+            "code": "current = current.next",
+            "explanation": "Follow one link per visit."
+          },
+          {
+            "code": "Node(value, head)",
+            "explanation": "Make the old chain the new node’s successor."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Repeated values",
+            "code": "class Node:\n    def __init__(self, value, next_node=None):\n        self.value = value\n        self.next = next_node\n\ndef values(head):\n    result = []\n    current = head\n    while current is not None:\n        result.append(current.value)\n        current = current.next\n    return result\n\ndef prepend(head, value):\n    return Node(value, head)\nhead = prepend(None, 7)\nhead = prepend(head, 7)\nprint(values(head))\nprint(head is head.next)",
+            "expectedOutput": "[7, 7]\nFalse",
+            "explanation": "Two equal values occupy distinct nodes."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Only the new value survives",
+            "cause": "The old head was not linked.",
+            "fix": "Point the new node to the previous head."
+          },
+          {
+            "symptom": "Traversal never stops",
+            "cause": "A next reference creates a cycle.",
+            "fix": "Maintain the acyclic-chain invariant."
+          },
+          {
+            "symptom": "Prepending has no visible effect",
+            "cause": "The returned head was ignored.",
+            "fix": "Assign head = prepend(head, value)."
+          }
+        ],
+        "summary": [
+          "References connect nodes; None terminates the chain.",
+          "Preserve the previous head and distinguish locating from linking.",
+          "Hash maps next provide keyed access."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-103",
       "title": "14.6 Hash Tables — dict",
       "module": "DSA",
-      "objective": "Use dict as a hash map for O(1) average lookups.",
-      "why": "Instant lookup of customer by phone number.",
-      "explanation": "<p><strong>What you will learn.</strong> Use dict as a hash map for O(1) average lookups. By the end you should explain <em>dict</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Instant lookup of customer by phone number. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> HTML describes structure and meaning (headings, forms, landmarks, links). Clear structure helps browsers, screen readers, and search engines.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Keys must be hashable (str, int, tuple...).</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Use dict as a hash map for O(1) average lookups.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>3</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}</code> — stores or updates a value.</li><li><code>print(phonebook.get(\"Ada\"))</code> — shows output so you can verify the result.</li><li><code>phonebook[\"Chidi\"] = \"0701...\"</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>dict</em> solve?</li><li>Which line in the example most directly achieves: “Use dict as a hash map for O(1) average lookups.”?</li><li>If you change one value in <code>phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Missing keys return errors/undefined — print keys or use safe get/default patterns.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}\nprint(phonebook.get(\"Ada\"))\nphonebook[\"Chidi\"] = \"0701...\"",
+      "objective": "Use dictionary hash maps for aggregation with explicit duplicate and missing-key policies.",
+      "why": "A frequency table avoids rescanning all previous records for every new word.",
+      "explanation": "<h4>A key has one current value</h4><p>A dictionary maps each unique key to one associated value. Assigning the same key again replaces that value, so duplicate inputs need a policy: overwrite, reject, or aggregate. The example aggregates words into counts. Modern Python dictionaries preserve insertion order, but they do not automatically sort keys. A word’s position in the printed dictionary therefore reflects its first insertion, while its associated count reflects every occurrence processed so far.</p>\n<h4>Hashing helps locate entries</h4><p>Python computes a key’s hash to narrow the search, then uses equality to distinguish candidates. Equal keys must have equal hashes, and a key’s hash must remain stable while used in a dictionary. Strings and integers are common keys. Lists are mutable and unhashable; a tuple is hashable only when all its elements are hashable. Collisions are handled internally, so unrelated keys with the same hash do not simply overwrite one another.</p>\n<h4>Maintain prefix frequencies</h4><p>Before each loop iteration, result contains exact frequencies for the already-processed prefix. get(word, 0) supplies zero when the word is new. Adding one accounts for the current occurrence and restores the invariant for the longer prefix. For red, blue, red, the red count progresses from absent to one to two. Empty input returns an empty mapping. The original input sequence is read but not changed, and duplicates contribute separately rather than disappearing.</p>\n<h4>Qualify the complexity claim</h4><p>For ordinary bounded-cost keys, lookup and assignment are O(1) on average, making n-word counting O(n) average time and O(u) extra space for u distinct words. Pathological collisions can make a lookup O(u). Hashing a long string also has a length-dependent cost, although Python may cache its hash. These qualifications explain why “always constant time” is too strong. An index also requires construction and memory, which should be included when comparing it with a one-off list scan.</p>\n<h4>Presence and value are different questions</h4><p>Indexing an absent key raises KeyError; get provides a fallback. A stored zero quantity is still present, so testing the truthiness of get does not reliably answer membership. Use key in mapping when that distinction matters. The variation maps values to all occurrence positions rather than counts, demonstrating that a hash-map value can itself be a list. The independent exercise aggregates shipment quantities, where each row contributes its amount rather than a fixed one.</p>",
+      "codeExample": "def count_words(words):\n    result = {}\n    for word in words:\n        result[word] = result.get(word, 0) + 1\n    return result\nresult = count_words([\"red\", \"blue\", \"red\"])\nprint(result)\nprint(result.get(\"green\", 0))\nprint(count_words([]))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "phonebook = {\"Ada\": \"0803...\", \"Bola\": \"0901...\"}\nprint(phonebook.get(\"Ada\"))\nphonebook[\"Chidi\"] = \"0701...\"",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: tally votes",
+          "instruction": "Count yes,no,yes,yes.",
+          "hint": "Use zero for the first occurrence.",
+          "solution": "def count_words(words):\n    result = {}\n    for word in words:\n        result[word] = result.get(word, 0) + 1\n    return result\nprint(count_words([\"yes\", \"no\", \"yes\", \"yes\"]))",
+          "expectedOutput": "{'yes': 3, 'no': 1}",
+          "solutionExplanation": "Each vote increments its matching key.",
+          "successCriteria": [
+            "yes is 3; no is 1.",
+            "Preserve both keys."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: present zero",
+          "instruction": "Report membership and quantity for A and B in {A:0}.",
+          "hint": "Membership checks keys.",
+          "solution": "inventory = {\"A\": 0}\nfor key in [\"A\", \"B\"]:\n    print(key, key in inventory, inventory.get(key, 0))",
+          "expectedOutput": "A True 0\nB False 0",
+          "solutionExplanation": "Equal displayed fallback quantities do not imply equal membership.",
+          "successCriteria": [
+            "Print A True 0 and B False 0.",
+            "Do not infer presence from quantity."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: shipment totals",
+          "instruction": "Aggregate [(A,2),(B,1),(A,3)] and handle no shipments.",
+          "hint": "Unpack and add the quantity.",
+          "solution": "def totals(rows):\n    result = {}\n    for sku, quantity in rows:\n        result[sku] = result.get(sku, 0) + quantity\n    return result\nprint(totals([(\"A\", 2), (\"B\", 1), (\"A\", 3)]))\nprint(totals([]))",
+          "expectedOutput": "{'A': 5, 'B': 1}\n{}",
+          "solutionExplanation": "The mapping stores totals over the processed prefix.",
+          "successCriteria": [
+            "A is 5 and B is 1.",
+            "Empty input returns {}."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Hash Tables — dict”?",
+          "q": "Assigning the same key again normally does what?",
           "options": [
-            "Use dict as a hash map for O(1) average lookups.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “dict” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Use dict as a hash map for O(1) average lookups.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Creates another key copy",
+            "Replaces its value",
+            "Raises DuplicateKeyError",
+            "Sorts all keys"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Use dict as a hash map for O(1) average lookups."
+          "explanation": "Each key has one current associated value."
+        },
+        {
+          "q": "Which is a valid composite key?",
+          "options": [
+            "[\"A\", 3]",
+            "(\"A\", 3)",
+            "{\"sku\":\"A\"}",
+            "A mutable set"
+          ],
+          "correct": 1,
+          "explanation": "A tuple of hashable members is hashable."
+        },
+        {
+          "q": "Typical lookup complexity?",
+          "options": [
+            "Always O(1)",
+            "O(1) average, O(n) worst case",
+            "Always O(log n)",
+            "O(n²) average"
+          ],
+          "correct": 1,
+          "explanation": "Collisions qualify the average-case claim."
+        },
+        {
+          "q": "What does the count invariant cover?",
+          "options": [
+            "Every possible word",
+            "The processed prefix",
+            "Only the last word",
+            "Sorted positions"
+          ],
+          "correct": 1,
+          "explanation": "Each iteration extends the exact prefix totals."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Missing keys return errors/undefined — print keys or use safe get/default patterns.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "A key raises TypeError: A mutable list was used as a key. Use a stable tuple of hashable components. Every count stays one: Assignment overwrites without reading the old count. Increment the previous value. Zero is treated as absent: Truthiness replaced membership. Use key in mapping.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and return values."
+        ],
+        "outcomes": [
+          "Aggregate repeated keys.",
+          "Explain hashability and average lookup cost.",
+          "Distinguish absent keys from stored zero."
+        ],
+        "expectedOutput": "{'red': 2, 'blue': 1}\n0\n{}",
+        "walkthrough": [
+          {
+            "code": "result = {}",
+            "explanation": "No words have been observed yet."
+          },
+          {
+            "code": "get(word, 0)",
+            "explanation": "Read the previous frequency or zero."
+          },
+          {
+            "code": "+ 1",
+            "explanation": "Include this occurrence exactly once."
+          },
+          {
+            "code": "return result",
+            "explanation": "The prefix invariant now covers all input."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Index all positions",
+            "code": "def count_words(words):\n    result = {}\n    for word in words:\n        result[word] = result.get(word, 0) + 1\n    return result\npositions = {}\nfor i, value in enumerate([5, 2, 5]):\n    positions.setdefault(value, []).append(i)\nprint(positions)",
+            "expectedOutput": "{5: [0, 2], 2: [1]}",
+            "explanation": "Each key maps to a list of occurrences; setdefault supplies the first empty list."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "A key raises TypeError",
+            "cause": "A mutable list was used as a key.",
+            "fix": "Use a stable tuple of hashable components."
+          },
+          {
+            "symptom": "Every count stays one",
+            "cause": "Assignment overwrites without reading the old count.",
+            "fix": "Increment the previous value."
+          },
+          {
+            "symptom": "Zero is treated as absent",
+            "cause": "Truthiness replaced membership.",
+            "fix": "Use key in mapping."
+          }
+        ],
+        "summary": [
+          "Hash maps associate stable keys with current values.",
+          "Document duplicate and missing-key semantics.",
+          "Trees represent hierarchical relationships."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-104",
       "title": "14.7 Trees Intro",
       "module": "DSA",
-      "objective": "Understand root, parent, child, leaf.",
-      "why": "Org charts and folder systems are trees.",
-      "explanation": "<p><strong>What you will learn.</strong> Understand root, parent, child, leaf. By the end you should explain <em>Trees Intro</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Org charts and folder systems are trees. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Hierarchical data beyond flat lists.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Understand root, parent, child, leaf.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>class TreeNode:</code> — sets up a name, type, import, or definition you will use next.</li><li><code>def __init__(self, val):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>self.val = val</code> — stores or updates a value.</li><li><code>self.children = []</code> — stores or updates a value.</li><li><code>root = TreeNode(\"CEO\")</code> — stores or updates a value.</li><li><code>root.children.append(TreeNode(\"CTO\"))</code> — changes a collection.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Trees Intro</em> solve?</li><li>Which line in the example most directly achieves: “Understand root, parent, child, leaf.”?</li><li>If you change one value in <code>class TreeNode:</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.children = []\nroot = TreeNode(\"CEO\")\nroot.children.append(TreeNode(\"CTO\"))\nprint(root.val, [c.val for c in root.children])",
+      "objective": "Represent a rooted tree and explain preorder traversal, depth, leaves, and structural assumptions.",
+      "why": "Folders and organization charts model unique-parent hierarchies.",
+      "explanation": "<h4>A rooted hierarchy has rules</h4><p>A rooted tree has one root. Every other node has exactly one parent, and child links cannot return to an ancestor. A child is directly below its parent; a leaf has no children. Depth counts edges from the root, so root depth is zero. Height counts the greatest number of edges from a node to a leaf. These definitions let us describe a folder hierarchy precisely without confusing levels, nodes, and edges.</p>\n<h4>Give each node its own child list</h4><p>The constructor accepts children=None and allocates a fresh list for each node. A mutable default children=[] would be shared across calls, accidentally coupling unrelated nodes. Copying a supplied list copies the outer container while retaining references to child objects. The worked root is shop; hardware and books are its children, and tools is a child of hardware. The three leaf/parent relationships follow from links, not from words such as shop or tools.</p>\n<h4>Preorder visits the parent first</h4><p>The visitor appends the current node, then recursively visits each child from left to right. Before processing a child, all earlier sibling subtrees have been completely visited, and no later sibling subtree has been visited by this call. The trace is shop, hardware, tools, books. This order respects stored child order; it is not alphabetical sorting. Moving the append after the loop would instead produce postorder, useful when a parent depends on results from all descendants.</p>\n<h4>Use one accumulator to avoid repeated copying</h4><p>Every node appends once to a shared result list, and every tree edge is followed once. This gives O(n) time, O(n) output storage, and O(h) active call-stack space for height h. Returning and concatenating a separate list at every recursive call can repeatedly copy descendants, costing O(n²) on a chain. Recursion depth can also reach Python’s limit on a very deep tree; an explicit stack can avoid interpreter call-depth limits while preserving traversal order.</p>\n<h4>Recognize the limits of the tree model</h4><p>Equal labels are allowed in separate nodes, so duplicate text does not invalidate the tree. Reusing the exact same child object under two parents creates shared graph structure instead. Linking a descendant back to an ancestor creates a cycle and can make this traversal recurse forever. No visited set is used because the contract is an actual tree. None represents an empty tree, and a single node is both root and leaf. The independent exercise counts leaves rather than assuming every child of the root is one.</p>",
+      "codeExample": "class TreeNode:\n    def __init__(self, value, children=None):\n        self.value = value\n        self.children = list(children) if children is not None else []\n\ndef preorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        result.append(node.value)\n        for child in node.children:\n            visit(child)\n    visit(root)\n    return result\nroot = TreeNode(\"shop\", [TreeNode(\"hardware\", [TreeNode(\"tools\")]), TreeNode(\"books\")])\nprint(preorder(root))\nprint(preorder(None))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.children = []\nroot = TreeNode(\"CEO\")\nroot.children.append(TreeNode(\"CTO\"))\nprint(root.val, [c.val for c in root.children])",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: preorder",
+          "instruction": "Build root r with leaves a and b and print preorder.",
+          "hint": "Parent precedes children.",
+          "solution": "class TreeNode:\n    def __init__(self, value, children=None):\n        self.value = value\n        self.children = list(children) if children is not None else []\n\ndef preorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        result.append(node.value)\n        for child in node.children:\n            visit(child)\n    visit(root)\n    return result\nprint(preorder(TreeNode(\"r\", [TreeNode(\"a\"), TreeNode(\"b\")])))",
+          "expectedOutput": "['r', 'a', 'b']",
+          "solutionExplanation": "The root is emitted before both children.",
+          "successCriteria": [
+            "Print [r,a,b].",
+            "Preserve sibling order."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: independent containers",
+          "instruction": "Append a child to node a and prove node b stays childless.",
+          "hint": "Each constructor needs a new list.",
+          "solution": "class TreeNode:\n    def __init__(self, value, children=None):\n        self.value = value\n        self.children = list(children) if children is not None else []\n\ndef preorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        result.append(node.value)\n        for child in node.children:\n            visit(child)\n    visit(root)\n    return result\na = TreeNode(\"a\")\nb = TreeNode(\"b\")\na.children.append(TreeNode(\"x\"))\nprint(len(a.children), len(b.children))",
+          "expectedOutput": "1 0",
+          "solutionExplanation": "Independent list objects prevent shared mutations.",
+          "successCriteria": [
+            "Print 1 0.",
+            "Do not use a mutable default."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: count leaves",
+          "instruction": "Count leaves in r → [a,b → c] and None.",
+          "hint": "A nonempty node with no children contributes one.",
+          "solution": "class TreeNode:\n    def __init__(self, value, children=None):\n        self.value = value\n        self.children = list(children) if children is not None else []\n\ndef preorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        result.append(node.value)\n        for child in node.children:\n            visit(child)\n    visit(root)\n    return result\ndef leaves(node):\n    if node is None:\n        return 0\n    if not node.children:\n        return 1\n    return sum(leaves(child) for child in node.children)\nprint(leaves(TreeNode(\"r\", [TreeNode(\"a\"), TreeNode(\"b\", [TreeNode(\"c\")])])))\nprint(leaves(None))",
+          "expectedOutput": "2\n0",
+          "solutionExplanation": "Only a and c are leaves; empty structure has zero leaves.",
+          "successCriteria": [
+            "Return 2 and 0.",
+            "Do not count internal b as a leaf."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Trees Intro”?",
+          "q": "A nonroot tree node has how many parents?",
           "options": [
-            "Understand root, parent, child, leaf.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Trees Intro” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Understand root, parent, child, leaf.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Zero",
+            "Exactly one",
+            "At least two",
+            "Any number"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Understand root, parent, child, leaf."
+          "explanation": "Unique parenthood is part of the tree contract."
+        },
+        {
+          "q": "Root depth is?",
+          "options": [
+            "1",
+            "0",
+            "Number of leaves",
+            "Tree height"
+          ],
+          "correct": 1,
+          "explanation": "Depth counts root-to-node edges."
+        },
+        {
+          "q": "Preorder visits what first?",
+          "options": [
+            "Every leaf",
+            "The current node",
+            "The last sibling",
+            "The alphabetically first label"
+          ],
+          "correct": 1,
+          "explanation": "Parent precedes descendants."
+        },
+        {
+          "q": "Why use one output accumulator?",
+          "options": [
+            "Sort automatically",
+            "Avoid repeated subtree-list copies",
+            "Detect cycles",
+            "Guarantee constant space"
+          ],
+          "correct": 1,
+          "explanation": "Each value is appended once."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Unrelated nodes share children: A default mutable list was reused. Allocate the list inside each constructor. Traversal loops through ancestors: A child link creates a cycle. Maintain the tree contract or use graph visit tracking. Output is assumed sorted: Hierarchy was confused with key ordering. Specify traversal order independently of label values.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and classes and recursion."
+        ],
+        "outcomes": [
+          "Identify root, parent, child, and leaf.",
+          "Trace preorder in stored child order.",
+          "Explain height-dependent recursion space."
+        ],
+        "expectedOutput": "['shop', 'hardware', 'tools', 'books']\n[]",
+        "walkthrough": [
+          {
+            "code": "children=None",
+            "explanation": "Avoid a shared mutable default."
+          },
+          {
+            "code": "result.append(node.value)",
+            "explanation": "Emit the parent before descendants."
+          },
+          {
+            "code": "for child in node.children",
+            "explanation": "Keep stored sibling order."
+          },
+          {
+            "code": "visit(child)",
+            "explanation": "Complete one subtree before the next."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Duplicate labels",
+            "code": "class TreeNode:\n    def __init__(self, value, children=None):\n        self.value = value\n        self.children = list(children) if children is not None else []\n\ndef preorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        result.append(node.value)\n        for child in node.children:\n            visit(child)\n    visit(root)\n    return result\nroot = TreeNode(\"same\", [TreeNode(\"same\"), TreeNode(\"same\")])\nprint(preorder(root))",
+            "expectedOutput": "['same', 'same', 'same']",
+            "explanation": "Three distinct nodes can share a label and all must be visited."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Unrelated nodes share children",
+            "cause": "A default mutable list was reused.",
+            "fix": "Allocate the list inside each constructor."
+          },
+          {
+            "symptom": "Traversal loops through ancestors",
+            "cause": "A child link creates a cycle.",
+            "fix": "Maintain the tree contract or use graph visit tracking."
+          },
+          {
+            "symptom": "Output is assumed sorted",
+            "cause": "Hierarchy was confused with key ordering.",
+            "fix": "Specify traversal order independently of label values."
+          }
+        ],
+        "summary": [
+          "A tree is an acyclic unique-parent hierarchy.",
+          "Preorder visits parent before child subtrees.",
+          "Binary trees restrict each node to two named child positions."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-105",
       "title": "14.8 Binary Trees",
       "module": "DSA",
-      "objective": "Create a binary tree node with left/right.",
-      "why": "Each node has up to two children — foundation for search trees & heaps.",
-      "explanation": "<p><strong>What you will learn.</strong> Create a binary tree node with left/right. By the end you should explain <em>Binary Trees</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Each node has up to two children — foundation for search trees &amp; heaps. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Traverse: inorder, preorder, postorder.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Create a binary tree node with left/right.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>8</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>class BNode:</code> — sets up a name, type, import, or definition you will use next.</li><li><code>def __init__(self, val):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>self.val = val</code> — stores or updates a value.</li><li><code>self.left = None</code> — stores or updates a value.</li><li><code>self.right = None</code> — stores or updates a value.</li><li><code>root = BNode(10)</code> — stores or updates a value.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Binary Trees</em> solve?</li><li>Which line in the example most directly achieves: “Create a binary tree node with left/right.”?</li><li>If you change one value in <code>class BNode:</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "class BNode:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\nroot = BNode(10)\nroot.left = BNode(5)\nroot.right = BNode(15)",
+      "objective": "Build a binary tree and trace inorder without assuming search-tree ordering.",
+      "why": "Two named branches support decisions and expression trees as well as search structures.",
+      "explanation": "<h4>Two positions do not imply sorted keys</h4><p>A binary tree permits at most two children per node, named left and right. None represents a missing child. These names describe positions, not comparisons: root 10 may legally have left child 20 and right child 5. A binary search tree adds an ordering invariant, which comes in the next lesson. Confusing these concepts can lead to a search discarding the branch that actually contains its target. Shape alone gives no sorted-value guarantee.</p>\n<h4>Sketch the worked shape</h4><p>The root contains 10. Its left child contains 20, with right child 7; the root’s right child contains 5. There are four nodes and three connecting edges. The absent left child of 20 is a normal None position, not an error. Separate nodes may contain equal values, because this representation imposes no uniqueness policy. An empty root represents zero nodes, while a single node has two missing child positions and is a leaf.</p>\n<h4>Read inorder literally</h4><p>Inorder means traverse the left subtree, visit the node, then traverse the right subtree. When a node is appended, its entire left subtree has already been emitted, while its right subtree has not yet been emitted by that call. The example therefore produces 20,7,10,5. That result is structurally inorder even though it is not numerically increasing. Moving append before the first recursive call creates preorder; moving it after both child calls creates postorder.</p>\n<h4>Height controls recursive memory</h4><p>The accumulator appends each of n values exactly once, giving O(n) time and O(n) output storage. Active recursive calls use O(h) space for height h. A balanced shape has logarithmic height, but a chain is a valid binary tree with linear height. Thus binary does not mean balanced, and it does not guarantee logarithmic search or small recursion depth. Deep chains may exceed Python’s recursion limit, motivating explicit stacks or a representation that actively maintains balance.</p>\n<h4>Choose boundary conventions carefully</h4><p>The None base case makes empty, leaf, and one-child behavior follow one recursive rule. Do not test node.value to decide existence: zero is valid data. The variation retains duplicate zero values in a right-only chain. The independent exercise measures the maximum number of nodes along a root-to-leaf path, using zero for empty and one for a leaf. This counts levels rather than edge height. Naming the convention matters because both conventions appear in textbooks and differ by one for nonempty trees.</p>",
+      "codeExample": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\nroot = BNode(10, BNode(20, right=BNode(7)), BNode(5))\nprint(inorder(root))\nprint(inorder(None))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class BNode:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\nroot = BNode(10)\nroot.left = BNode(5)\nroot.right = BNode(15)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: three-node inorder",
+          "instruction": "Build B with left A and right C.",
+          "hint": "Traverse left before parent.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\nprint(inorder(BNode(\"B\", BNode(\"A\"), BNode(\"C\"))))",
+          "expectedOutput": "['A', 'B', 'C']",
+          "solutionExplanation": "This arrangement yields alphabetical output because its values happen to respect that order.",
+          "successCriteria": [
+            "Print [A,B,C].",
+            "Explain parent position."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: count one-child nodes",
+          "instruction": "Count all nodes in a right-only two-node tree and None.",
+          "hint": "Missing positions contribute zero.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\ndef count(node):\n    return 0 if node is None else 1 + count(node.left) + count(node.right)\nprint(count(BNode(1, right=BNode(2))))\nprint(count(None))",
+          "expectedOutput": "2\n0",
+          "solutionExplanation": "The current node contributes one regardless of child count.",
+          "successCriteria": [
+            "Return 2 and 0.",
+            "Do not require paired children."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: measure levels",
+          "instruction": "Measure the longest root-to-leaf path in nodes.",
+          "hint": "Add one to the larger child result.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\ndef levels(node):\n    return 0 if node is None else 1 + max(levels(node.left), levels(node.right))\nprint(levels(BNode(1, BNode(2, BNode(3)), BNode(4))))\nprint(levels(None))",
+          "expectedOutput": "3\n0",
+          "solutionExplanation": "The longest path continues through the taller subtree.",
+          "successCriteria": [
+            "Return 3 and 0.",
+            "State the levels convention."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Binary Trees”?",
+          "q": "Does binary require smaller values on the left?",
           "options": [
-            "Create a binary tree node with left/right.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Binary Trees” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Create a binary tree node with left/right.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Always",
+            "No",
+            "Only at leaves",
+            "Only for integers"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Create a binary tree node with left/right."
+          "explanation": "That is an additional BST invariant."
+        },
+        {
+          "q": "Inorder means?",
+          "options": [
+            "Node,left,right",
+            "Left,node,right",
+            "Left,right,node",
+            "Right,node,left"
+          ],
+          "correct": 1,
+          "explanation": "The parent separates child traversals."
+        },
+        {
+          "q": "Worst-case binary-tree height?",
+          "options": [
+            "Always O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n²)"
+          ],
+          "correct": 1,
+          "explanation": "A chain is valid."
+        },
+        {
+          "q": "What does inorder(None) return?",
+          "options": [
+            "[None]",
+            "[]",
+            "0",
+            "An exception"
+          ],
+          "correct": 1,
+          "explanation": "Missing subtrees contribute no entries."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Inorder is not sorted: No search-order invariant was established. Distinguish ordinary binary trees from BSTs. Zero nodes disappear: Value truthiness was used to detect existence. Check node is None. A chain exceeds recursion depth: Binary shape was assumed balanced. Use an explicit stack for unbounded depth.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and classes and recursion."
+        ],
+        "outcomes": [
+          "Distinguish binary shape from BST ordering.",
+          "Trace left-node-right traversal.",
+          "Handle empty and one-child nodes."
+        ],
+        "expectedOutput": "[20, 7, 10, 5]\n[]",
+        "walkthrough": [
+          {
+            "code": "node is None",
+            "explanation": "Missing children contribute no values."
+          },
+          {
+            "code": "visit(node.left)",
+            "explanation": "Finish the left subtree."
+          },
+          {
+            "code": "result.append(node.value)",
+            "explanation": "Visit the current node once."
+          },
+          {
+            "code": "visit(node.right)",
+            "explanation": "Finish the right subtree."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Right-only duplicate chain",
+            "code": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\nprint(inorder(BNode(0, right=BNode(0, right=BNode(2)))))",
+            "expectedOutput": "[0, 0, 2]",
+            "explanation": "Zero-valued nodes remain present; binary trees can have linear height."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Inorder is not sorted",
+            "cause": "No search-order invariant was established.",
+            "fix": "Distinguish ordinary binary trees from BSTs."
+          },
+          {
+            "symptom": "Zero nodes disappear",
+            "cause": "Value truthiness was used to detect existence.",
+            "fix": "Check node is None."
+          },
+          {
+            "symptom": "A chain exceeds recursion depth",
+            "cause": "Binary shape was assumed balanced.",
+            "fix": "Use an explicit stack for unbounded depth."
+          }
+        ],
+        "summary": [
+          "Binary trees have two named child positions.",
+          "Inorder describes structure and is not automatically sorted.",
+          "BSTs add a global ordering invariant."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-106",
       "title": "14.9 Binary Search Trees",
       "module": "DSA",
-      "objective": "Insert into a BST preserving left < node < right.",
-      "why": "Keep numbers sorted for fast search like a phone directory.",
-      "explanation": "<p><strong>What you will learn.</strong> Insert into a BST preserving left &lt; node &lt; right. By the end you should explain <em>Binary Search Trees</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Keep numbers sorted for fast search like a phone directory. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Average search O(log n) if balanced.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Insert into a BST preserving left &lt; node &lt; right.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>16</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>class BST:</code> — sets up a name, type, import, or definition you will use next.</li><li><code>def __init__(self, val):</code> — sets up a name, type, import, or definition you will use next.</li><li><code>self.val = val</code> — stores or updates a value.</li><li><code>self.left = None</code> — stores or updates a value.</li><li><code>self.right = None</code> — stores or updates a value.</li><li><code>def insert(self, val):</code> — sets up a name, type, import, or definition you will use next.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Binary Search Trees</em> solve?</li><li>Which line in the example most directly achieves: “Insert into a BST preserving left &lt; node &lt; right.”?</li><li>If you change one value in <code>class BST:</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "class BST:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n    def insert(self, val):\n        if val < self.val:\n            if self.left: self.left.insert(val)\n            else: self.left = BST(val)\n        elif val > self.val:\n            if self.right: self.right.insert(val)\n            else: self.right = BST(val)\nroot = BST(10)\nfor v in [5, 15, 2, 7]:\n    root.insert(v)\nprint(root.left.val, root.right.val)",
+      "objective": "Insert and search in a binary search tree while preserving global ordering and a duplicate policy.",
+      "why": "Ordered indexes can discard whole subtrees during lookup when their invariant is maintained.",
+      "explanation": "<h4>Ordering applies to every descendant</h4><p>A binary search tree, or BST, is a binary tree with an additional invariant: every key in a node’s left subtree is smaller and every key in its right subtree is larger. Checking only immediate children is insufficient. A value beneath the right child of a left subtree still must remain smaller than the original root. Our structure stores a set of comparable keys, so repeated insertion of an equal key leaves the tree unchanged rather than adding duplicates.</p>\n<h4>Insertion follows a search path</h4><p>If the current subtree is empty, insertion creates a new node. Otherwise compare the value with the current key and recurse into exactly one child. Assigning the returned subtree back to node.left or node.right is essential because an empty child may have become a new node. Returning node preserves the rest of the tree. The caller similarly assigns root = insert(root, value), which handles insertion into an initially empty tree without a separate special case.</p>\n<h4>Search discards an impossible subtree</h4><p>At the start of each search iteration, the target can occur only in the subtree rooted at node. Equality finishes successfully. A smaller target cannot occur in the right subtree by the invariant, so the search follows left; a larger target follows right. Reaching None proves absence. For keys 10,5,15,2,7, searching for 7 compares against 10, then 5, then 7. Searching for 6 follows the same first two branches but eventually reaches an empty child.</p>\n<h4>Height determines performance</h4><p>Both search and insertion take O(h) time for tree height h. In a balanced tree h is O(log n); in a chain h is O(n). Inserting already-sorted keys into this unbalanced implementation creates a chain, so building n such keys can cost O(n²). Recursive insertion uses O(h) call-stack space; iterative contains uses O(1) auxiliary space. Inorder traversal outputs sorted unique keys in O(n) time, but that does not mean insertion automatically balances the tree.</p>\n<h4>Make data policies observable</h4><p>The worked program inserts a duplicate 5 and prints inorder to show that it is ignored. It also tests a present and absent key. Empty search returns False. Mixed incomparable types, such as integers and strings, can raise TypeError during comparisons, so a consistent key domain is part of the contract. The independent exercise validates global bounds rather than relying on sorted-looking immediate children. Balanced BSTs add rotations and height bookkeeping; the next lesson implements those extra responsibilities.</p>",
+      "codeExample": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\n\ndef insert(node, value):\n    if node is None:\n        return BNode(value)\n    if value < node.value:\n        node.left = insert(node.left, value)\n    elif value > node.value:\n        node.right = insert(node.right, value)\n    return node\n\ndef contains(node, target):\n    while node is not None:\n        if target == node.value:\n            return True\n        node = node.left if target < node.value else node.right\n    return False\nroot = None\nfor value in [10, 5, 15, 2, 7, 5]:\n    root = insert(root, value)\nprint(inorder(root))\nprint(contains(root, 7), contains(root, 6))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "class BST:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n    def insert(self, val):\n        if val < self.val:\n            if self.left: self.left.insert(val)\n            else: self.left = BST(val)\n        elif val > self.val:\n            if self.right: self.right.insert(val)\n            else: self.right = BST(val)\nroot = BST(10)\nfor v in [5, 15, 2, 7]:\n    root.insert(v)\nprint(root.left.val, root.right.val)",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: duplicate insertion",
+          "instruction": "Insert 4,2,6,4 and print sorted unique keys.",
+          "hint": "Equal keys leave the current node unchanged.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\n\ndef insert(node, value):\n    if node is None:\n        return BNode(value)\n    if value < node.value:\n        node.left = insert(node.left, value)\n    elif value > node.value:\n        node.right = insert(node.right, value)\n    return node\n\ndef contains(node, target):\n    while node is not None:\n        if target == node.value:\n            return True\n        node = node.left if target < node.value else node.right\n    return False\nroot = None\nfor value in [4, 2, 6, 4]:\n    root = insert(root, value)\nprint(inorder(root))",
+          "expectedOutput": "[2, 4, 6]",
+          "solutionExplanation": "The duplicate does not allocate a new node.",
+          "successCriteria": [
+            "Print [2,4,6].",
+            "Preserve strict ordering."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: missing target",
+          "instruction": "Search a one-node tree for its value and a missing value; also search None.",
+          "hint": "Stop when the current subtree is empty.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\n\ndef insert(node, value):\n    if node is None:\n        return BNode(value)\n    if value < node.value:\n        node.left = insert(node.left, value)\n    elif value > node.value:\n        node.right = insert(node.right, value)\n    return node\n\ndef contains(node, target):\n    while node is not None:\n        if target == node.value:\n            return True\n        node = node.left if target < node.value else node.right\n    return False\nroot = BNode(0)\nprint(contains(root, 0))\nprint(contains(root, 1))\nprint(contains(None, 0))",
+          "expectedOutput": "True\nFalse\nFalse",
+          "solutionExplanation": "Zero is a valid key and None, not zero, marks an empty subtree.",
+          "successCriteria": [
+            "Return True,False,False.",
+            "No child dereference after None."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: validate global bounds",
+          "instruction": "Reject root10 with left5 whose right child is12; accept 10 with children5 and15.",
+          "hint": "Pass inherited open lower and upper bounds.",
+          "solution": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\ndef valid(node, low=None, high=None):\n    if node is None:\n        return True\n    if low is not None and node.value <= low:\n        return False\n    if high is not None and node.value >= high:\n        return False\n    return valid(node.left, low, node.value) and valid(node.right, node.value, high)\nprint(valid(BNode(10, BNode(5, right=BNode(12)))))\nprint(valid(BNode(10, BNode(5), BNode(15))))",
+          "expectedOutput": "False\nTrue",
+          "solutionExplanation": "12 exceeds its inherited upper bound10 even though it is greater than its immediate parent5.",
+          "successCriteria": [
+            "Print False then True.",
+            "Reject equal keys under the strict set policy."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Binary Search Trees”?",
+          "q": "The BST invariant constrains which nodes?",
           "options": [
-            "Insert into a BST preserving left < node < right.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Binary Search Trees” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Insert into a BST preserving left < node < right.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Only immediate children",
+            "Every descendant in each subtree",
+            "Only leaves",
+            "Only the root"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Insert into a BST preserving left < node < right."
+          "explanation": "Search discards entire subtrees, so the invariant must be global."
+        },
+        {
+          "q": "Insertion of an existing key does what here?",
+          "options": [
+            "Adds a right duplicate",
+            "Leaves the tree unchanged",
+            "Raises automatically",
+            "Rebalances"
+          ],
+          "correct": 1,
+          "explanation": "This implementation chooses set semantics."
+        },
+        {
+          "q": "Worst-case unbalanced search cost?",
+          "options": [
+            "Always O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n²) per lookup"
+          ],
+          "correct": 1,
+          "explanation": "A chain has linear height."
+        },
+        {
+          "q": "Why assign the recursive insertion return?",
+          "options": [
+            "To sort the key",
+            "An empty child may become a new subtree",
+            "To delete duplicates elsewhere",
+            "To copy the whole tree"
+          ],
+          "correct": 1,
+          "explanation": "The new subtree root must be linked back."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "First insertion is lost: The returned root was ignored. Assign the return value at the caller and child links. Search misses a descendant: Only local child ordering was maintained. Require every descendant to satisfy inherited lower and upper bounds. Sorted input causes slow search: The BST has no balance mechanism. Use a balanced tree or another appropriate index when worst-case height matters.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and binary nodes and recursion."
+        ],
+        "outcomes": [
+          "Preserve ordering across whole subtrees.",
+          "Trace search and insertion.",
+          "Explain height-dependent complexity and duplicate rejection."
+        ],
+        "expectedOutput": "[2, 5, 7, 10, 15]\nTrue False",
+        "walkthrough": [
+          {
+            "code": "node is None",
+            "explanation": "Create a leaf at the search-path endpoint."
+          },
+          {
+            "code": "node.left = insert(...)",
+            "explanation": "Retain the newly returned subtree."
+          },
+          {
+            "code": "elif value > node.value",
+            "explanation": "Ignore equal keys under the set policy."
+          },
+          {
+            "code": "node = node.left if ...",
+            "explanation": "Discard the subtree ruled out by global ordering."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Sorted insertion creates a chain",
+            "code": "class BNode:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef inorder(root):\n    result = []\n    def visit(node):\n        if node is None:\n            return\n        visit(node.left)\n        result.append(node.value)\n        visit(node.right)\n    visit(root)\n    return result\n\ndef insert(node, value):\n    if node is None:\n        return BNode(value)\n    if value < node.value:\n        node.left = insert(node.left, value)\n    elif value > node.value:\n        node.right = insert(node.right, value)\n    return node\n\ndef contains(node, target):\n    while node is not None:\n        if target == node.value:\n            return True\n        node = node.left if target < node.value else node.right\n    return False\nroot = None\nfor value in [1, 2, 3, 4]:\n    root = insert(root, value)\nprint(root.value, root.right.value, root.right.right.value)\nprint(contains(None, 2))",
+            "expectedOutput": "1 2 3\nFalse",
+            "explanation": "The tree is valid but skewed, and an empty tree contains no key."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "First insertion is lost",
+            "cause": "The returned root was ignored.",
+            "fix": "Assign the return value at the caller and child links."
+          },
+          {
+            "symptom": "Search misses a descendant",
+            "cause": "Only local child ordering was maintained.",
+            "fix": "Require every descendant to satisfy inherited lower and upper bounds."
+          },
+          {
+            "symptom": "Sorted input causes slow search",
+            "cause": "The BST has no balance mechanism.",
+            "fix": "Use a balanced tree or another appropriate index when worst-case height matters."
+          }
+        ],
+        "summary": [
+          "BST ordering is global and enables branch elimination.",
+          "Time depends on height; ordinary BSTs do not guarantee balance.",
+          "AVL trees maintain a logarithmic-height invariant."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-107",
       "title": "14.10 AVL Trees",
       "module": "DSA",
-      "objective": "Know why AVL balances and what rotations achieve.",
-      "why": "Self-balancing trees keep searches fast even after many inserts.",
-      "explanation": "<p><strong>What you will learn.</strong> Know why AVL balances and what rotations achieve. By the end you should explain <em>AVL Trees</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Self-balancing trees keep searches fast even after many inserts. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Height difference of children at most 1. Used when you need guaranteed log n.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Know why AVL balances and what rotations achieve.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>2</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>print(\"AVL = BST + balance factor check + rotations\")</code> — shows output so you can verify the result.</li><li><code>print(\"Use case: in-memory indexes needing predictable speed\")</code> — shows output so you can verify the result.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>AVL Trees</em> solve?</li><li>Which line in the example most directly achieves: “Know why AVL balances and what rotations achieve.”?</li><li>If you change one value in <code>print(\"AVL = BST + balance factor check + rotations\")</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Type carefully; read error messages from the bottom up; compare with the example line by line.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "print(\"AVL = BST + balance factor check + rotations\")\nprint(\"Use case: in-memory indexes needing predictable speed\")",
+      "objective": "Implement AVL insertion with height maintenance and all four rotation cases.",
+      "why": "A search index needs predictable height even when keys arrive in sorted order.",
+      "explanation": "<h4>AVL adds a second invariant</h4><p>An AVL tree preserves BST ordering and requires the heights of a node’s two child subtrees to differ by at most one at every node. This lesson measures height in nodes: an empty subtree has height zero and a leaf has height one. The balance factor is left height minus right height. A factor of two or minus two after insertion identifies an imbalance. Equal keys are ignored, preserving the same set semantics as the preceding BST lesson.</p>\n<h4>Update from the changed leaf upward</h4><p>Insertion first follows the ordinary BST comparison path. As recursion returns, each ancestor recomputes height from its children. This bottom-up order matters: a parent cannot have an accurate height if a changed child still reports an old one. Most ancestors need only refresh and return. If an ancestor becomes too left-heavy or right-heavy, a rotation changes local links while preserving the sorted inorder sequence. The returned root may therefore differ from the original node.</p>\n<h4>A rotation preserves the middle subtree</h4><p>For a right rotation, the left child becomes the new top. Its former right subtree becomes the old top’s left subtree. Those middle keys are greater than the new top and less than the old top, so this transfer preserves BST ordering. Then the old top becomes the new top’s right child. Refresh the old top before the new top because the new height depends on the old top’s corrected height. A left rotation performs the symmetric transformation.</p>\n<h4>Distinguish outside and inside insertions</h4><p>Inserting 30,20,10 creates a left-left outside imbalance repaired by one right rotation, producing root20 with children10 and30. Inserting 30,10,20 creates a left-right inside imbalance: rotate the left child left, then the ancestor right. Right-right and right-left cases are symmetric. The implementation identifies the case from the inserted key and the heavy child’s key. This logic is for insertion; deletion requires additional case reasoning and is intentionally outside this implementation’s contract.</p>\n<h4>Connect balance to bounds and validation</h4><p>AVL’s local balance restriction implies O(log n) height. Insertion and search therefore take O(log n) worst-case time for comparable bounded-cost keys; each rotation is O(1). Recursive insertion uses O(log n) stack space and n nodes require O(n) storage. A rotation alone is not proof of correctness: test inherited ordering bounds, recomputed heights, and balance at every node. Empty input, duplicate insertion, ascending input, and both inside cases exercise different failure paths. The independent verifier checks stored metadata against actual structure.</p>",
+      "codeExample": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = self.right = None\n        self.height = 1\n\ndef height(node):\n    return node.height if node else 0\n\ndef refresh(node):\n    node.height = 1 + max(height(node.left), height(node.right))\n\ndef rotate_right(top):\n    new_top = top.left\n    middle = new_top.right\n    new_top.right = top\n    top.left = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef rotate_left(top):\n    new_top = top.right\n    middle = new_top.left\n    new_top.left = top\n    top.right = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef insert(node, key):\n    if node is None:\n        return Node(key)\n    if key < node.key:\n        node.left = insert(node.left, key)\n    elif key > node.key:\n        node.right = insert(node.right, key)\n    else:\n        return node\n    refresh(node)\n    balance = height(node.left) - height(node.right)\n    if balance > 1:\n        if key > node.left.key:\n            node.left = rotate_left(node.left)\n        return rotate_right(node)\n    if balance < -1:\n        if key < node.right.key:\n            node.right = rotate_right(node.right)\n        return rotate_left(node)\n    return node\n\ndef inorder(node):\n    result = []\n    def visit(current):\n        if current:\n            visit(current.left)\n            result.append(current.key)\n            visit(current.right)\n    visit(node)\n    return result\nroot = None\nfor key in [30, 20, 10]:\n    root = insert(root, key)\nprint(root.key, root.left.key, root.right.key)\nprint(inorder(root), root.height)",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "print(\"AVL = BST + balance factor check + rotations\")\nprint(\"Use case: in-memory indexes needing predictable speed\")",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: right-right rotation",
+          "instruction": "Insert10,20,30 and show root20 with sorted inorder.",
+          "hint": "This case uses one left rotation.",
+          "solution": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = self.right = None\n        self.height = 1\n\ndef height(node):\n    return node.height if node else 0\n\ndef refresh(node):\n    node.height = 1 + max(height(node.left), height(node.right))\n\ndef rotate_right(top):\n    new_top = top.left\n    middle = new_top.right\n    new_top.right = top\n    top.left = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef rotate_left(top):\n    new_top = top.right\n    middle = new_top.left\n    new_top.left = top\n    top.right = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef insert(node, key):\n    if node is None:\n        return Node(key)\n    if key < node.key:\n        node.left = insert(node.left, key)\n    elif key > node.key:\n        node.right = insert(node.right, key)\n    else:\n        return node\n    refresh(node)\n    balance = height(node.left) - height(node.right)\n    if balance > 1:\n        if key > node.left.key:\n            node.left = rotate_left(node.left)\n        return rotate_right(node)\n    if balance < -1:\n        if key < node.right.key:\n            node.right = rotate_right(node.right)\n        return rotate_left(node)\n    return node\n\ndef inorder(node):\n    result = []\n    def visit(current):\n        if current:\n            visit(current.left)\n            result.append(current.key)\n            visit(current.right)\n    visit(node)\n    return result\nroot = None\nfor key in [10, 20, 30]:\n    root = insert(root, key)\nprint(root.key, inorder(root))",
+          "expectedOutput": "20 [10, 20, 30]",
+          "solutionExplanation": "The middle key becomes the root while ordering is preserved.",
+          "successCriteria": [
+            "Print 20 [10,20,30].",
+            "Height is two."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: right-left case",
+          "instruction": "Insert10,30,20; explain why a single left rotation alone is insufficient.",
+          "hint": "First rotate the heavy right child right.",
+          "solution": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = self.right = None\n        self.height = 1\n\ndef height(node):\n    return node.height if node else 0\n\ndef refresh(node):\n    node.height = 1 + max(height(node.left), height(node.right))\n\ndef rotate_right(top):\n    new_top = top.left\n    middle = new_top.right\n    new_top.right = top\n    top.left = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef rotate_left(top):\n    new_top = top.right\n    middle = new_top.left\n    new_top.left = top\n    top.right = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef insert(node, key):\n    if node is None:\n        return Node(key)\n    if key < node.key:\n        node.left = insert(node.left, key)\n    elif key > node.key:\n        node.right = insert(node.right, key)\n    else:\n        return node\n    refresh(node)\n    balance = height(node.left) - height(node.right)\n    if balance > 1:\n        if key > node.left.key:\n            node.left = rotate_left(node.left)\n        return rotate_right(node)\n    if balance < -1:\n        if key < node.right.key:\n            node.right = rotate_right(node.right)\n        return rotate_left(node)\n    return node\n\ndef inorder(node):\n    result = []\n    def visit(current):\n        if current:\n            visit(current.left)\n            result.append(current.key)\n            visit(current.right)\n    visit(node)\n    return result\nroot = None\nfor key in [10, 30, 20]:\n    root = insert(root, key)\nprint(root.key, root.left.key, root.right.key)",
+          "expectedOutput": "20 10 30",
+          "solutionExplanation": "The inside grandchild must move outward before rotating the ancestor.",
+          "successCriteria": [
+            "Print 20 10 30.",
+            "Identify both rotations."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: verify metadata",
+          "instruction": "Build keys1 through15, verify every stored height and balance, then print height and keys.",
+          "hint": "Recursively compute actual child heights.",
+          "solution": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = self.right = None\n        self.height = 1\n\ndef height(node):\n    return node.height if node else 0\n\ndef refresh(node):\n    node.height = 1 + max(height(node.left), height(node.right))\n\ndef rotate_right(top):\n    new_top = top.left\n    middle = new_top.right\n    new_top.right = top\n    top.left = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef rotate_left(top):\n    new_top = top.right\n    middle = new_top.left\n    new_top.left = top\n    top.right = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef insert(node, key):\n    if node is None:\n        return Node(key)\n    if key < node.key:\n        node.left = insert(node.left, key)\n    elif key > node.key:\n        node.right = insert(node.right, key)\n    else:\n        return node\n    refresh(node)\n    balance = height(node.left) - height(node.right)\n    if balance > 1:\n        if key > node.left.key:\n            node.left = rotate_left(node.left)\n        return rotate_right(node)\n    if balance < -1:\n        if key < node.right.key:\n            node.right = rotate_right(node.right)\n        return rotate_left(node)\n    return node\n\ndef inorder(node):\n    result = []\n    def visit(current):\n        if current:\n            visit(current.left)\n            result.append(current.key)\n            visit(current.right)\n    visit(node)\n    return result\ndef check(node):\n    if node is None:\n        return 0\n    left, right = check(node.left), check(node.right)\n    assert abs(left - right) <= 1\n    assert node.height == 1 + max(left, right)\n    return node.height\nroot = None\nfor key in range(1, 16):\n    root = insert(root, key)\nprint(check(root))\nprint(inorder(root))",
+          "expectedOutput": "4\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]",
+          "solutionExplanation": "The verifier derives heights independently of stored metadata; ascending insertion also stresses rebalancing.",
+          "successCriteria": [
+            "Height is4 and inorder is1 through15.",
+            "All balance and stored-height assertions pass."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “AVL Trees”?",
+          "q": "Leaf height under this convention?",
           "options": [
-            "Know why AVL balances and what rotations achieve.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “AVL Trees” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Know why AVL balances and what rotations achieve.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "0",
+            "1",
+            "-1",
+            "Its key"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Know why AVL balances and what rotations achieve."
+          "explanation": "Empty is zero, so a leaf is one."
+        },
+        {
+          "q": "What must a right rotation preserve?",
+          "options": [
+            "The original root identity",
+            "The middle subtree between its two top keys",
+            "Every original depth",
+            "The insertion order"
+          ],
+          "correct": 1,
+          "explanation": "Transferring the middle subtree preserves sorted order."
+        },
+        {
+          "q": "Which sequence needs an inside rotation?",
+          "options": [
+            "30,20,10",
+            "30,10,20",
+            "10,20,30",
+            "20,10,30"
+          ],
+          "correct": 1,
+          "explanation": "The inserted key is in the heavy child’s inner subtree."
+        },
+        {
+          "q": "AVL insertion worst-case time?",
+          "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n²)",
+            "Always O(n)"
+          ],
+          "correct": 1,
+          "explanation": "Balance bounds height and only one search path is updated."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Type carefully; read error messages from the bottom up; compare with the example line by line.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Inorder loses keys after rotation: The middle subtree was overwritten. Save and reconnect it before finalizing links. Balance decisions use wrong heights: Parent metadata was refreshed before changed children. Refresh bottom-up and refresh the old top before the new one. A rotation appears ineffective: The returned subtree root was ignored. Assign returned roots at every recursive parent and at the top-level caller.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and BST insertion and recursion."
+        ],
+        "outcomes": [
+          "Compute height and balance factor.",
+          "Trace single and double rotations.",
+          "Verify ordering and balance together."
+        ],
+        "expectedOutput": "20 10 30\n[10, 20, 30] 2",
+        "walkthrough": [
+          {
+            "code": "refresh(node)",
+            "explanation": "Compute height after the recursive child change."
+          },
+          {
+            "code": "balance = ...",
+            "explanation": "Detect a difference exceeding one."
+          },
+          {
+            "code": "middle = new_top.right",
+            "explanation": "Save the subtree that must move during right rotation."
+          },
+          {
+            "code": "return rotate_right(node)",
+            "explanation": "Return the new local root for the caller to reconnect."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Inside imbalance and duplicate",
+            "code": "class Node:\n    def __init__(self, key):\n        self.key = key\n        self.left = self.right = None\n        self.height = 1\n\ndef height(node):\n    return node.height if node else 0\n\ndef refresh(node):\n    node.height = 1 + max(height(node.left), height(node.right))\n\ndef rotate_right(top):\n    new_top = top.left\n    middle = new_top.right\n    new_top.right = top\n    top.left = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef rotate_left(top):\n    new_top = top.right\n    middle = new_top.left\n    new_top.left = top\n    top.right = middle\n    refresh(top)\n    refresh(new_top)\n    return new_top\n\ndef insert(node, key):\n    if node is None:\n        return Node(key)\n    if key < node.key:\n        node.left = insert(node.left, key)\n    elif key > node.key:\n        node.right = insert(node.right, key)\n    else:\n        return node\n    refresh(node)\n    balance = height(node.left) - height(node.right)\n    if balance > 1:\n        if key > node.left.key:\n            node.left = rotate_left(node.left)\n        return rotate_right(node)\n    if balance < -1:\n        if key < node.right.key:\n            node.right = rotate_right(node.right)\n        return rotate_left(node)\n    return node\n\ndef inorder(node):\n    result = []\n    def visit(current):\n        if current:\n            visit(current.left)\n            result.append(current.key)\n            visit(current.right)\n    visit(node)\n    return result\nroot = None\nfor key in [30, 10, 20, 20]:\n    root = insert(root, key)\nprint(root.key, inorder(root), root.height)",
+            "expectedOutput": "20 [10, 20, 30] 2",
+            "explanation": "Left-right insertion needs two rotations; the duplicate causes no new node."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Inorder loses keys after rotation",
+            "cause": "The middle subtree was overwritten.",
+            "fix": "Save and reconnect it before finalizing links."
+          },
+          {
+            "symptom": "Balance decisions use wrong heights",
+            "cause": "Parent metadata was refreshed before changed children.",
+            "fix": "Refresh bottom-up and refresh the old top before the new one."
+          },
+          {
+            "symptom": "A rotation appears ineffective",
+            "cause": "The returned subtree root was ignored.",
+            "fix": "Assign returned roots at every recursive parent and at the top-level caller."
+          }
+        ],
+        "summary": [
+          "AVL maintains both ordered keys and bounded height differences.",
+          "Rotations must preserve links and update heights in dependency order.",
+          "Graphs allow relationships beyond unique-parent trees."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-108",
       "title": "14.11 Graphs",
       "module": "DSA",
-      "objective": "Represent a graph with an adjacency list.",
-      "why": "Maps, social networks, and delivery routes are graphs.",
-      "explanation": "<p><strong>What you will learn.</strong> Represent a graph with an adjacency list. By the end you should explain <em>Graphs</em> in your own words and reuse it in a small example without copying blindly.</p>\n<p><strong>Why it matters.</strong> Maps, social networks, and delivery routes are graphs. Keep that picture in mind while you study the code — every line should serve a purpose you can explain to a non-programmer.</p>\n<p><strong>The idea in plain language.</strong> Data structures and algorithms are about organization and speed as data grows. The right structure can turn a slow app into a fast one.</p>\n<div class=\"core-teach\"><p><strong>Core explanation.</strong></p><p>Nodes + edges; directed or undirected.</p><p>Do not rush past this: if any sentence is unclear, re-read it after you run the code once, then connect each sentence to a line in the example.</p></div>\n<p><strong>Break it into smaller pieces.</strong> (1) Restate the objective — “Represent a graph with an adjacency list.” — in simpler words, (2) run the example unchanged, (3) change one input and predict the new result before running, (4) complete the exercise using only this lesson’s ideas.</p>\n<div><p><strong>Walk through the example.</strong></p>The sample has about <strong>7</strong> meaningful line(s). Read top to bottom and narrate each line out loud:<ul><li><code>graph = {</code> — stores or updates a value.</li><li><code>\"Lagos\": [\"Ibadan\", \"Abeokuta\"],</code> — does a step in the overall recipe.</li><li><code>\"Ibadan\": [\"Lagos\", \"Ife\"],</code> — does a step in the overall recipe.</li><li><code>\"Abeokuta\": [\"Lagos\"],</code> — does a step in the overall recipe.</li><li><code>\"Ife\": [\"Ibadan\"],</code> — does a step in the overall recipe.</li><li><code>}</code> — does a step in the overall recipe.</li></ul>After one successful run, break the example on purpose (wrong name, missing quote, bad indent) and read the error slowly — that is how professionals debug.</div>\n<p><strong>How to practice.</strong> Use the in-browser <strong>Python runner</strong> (Pyodide). Run the example unchanged first, then change one value and predict the new output before you run again. Then attempt the exercise. Use the hint only after a real try; open the solution last.</p>\n<p><strong>Check your understanding</strong> (answer before looking at solutions):</p><ol><li>In one sentence, what problem does <em>Graphs</em> solve?</li><li>Which line in the example most directly achieves: “Represent a graph with an adjacency list.”?</li><li>If you change one value in <code>graph = {</code>, what output do you expect and why?</li><li>What is one common mistake here, and how would the error message guide you to fix it?</li></ol>\n<p><strong>Watch out.</strong></p><ul><li>Index out of range happens when index ≥ length. Check length before you index.</li><li>If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run.</li></ul>\n<p><strong>Before you continue.</strong> You are ready for the next lesson when you can: (1) restate the objective without looking, (2) predict the example’s output, (3) complete the exercise, and (4) pass the quiz at ≥70%. If any step fails, loop back to the core explanation and the example.</p>",
-      "codeExample": "graph = {\n  \"Lagos\": [\"Ibadan\", \"Abeokuta\"],\n  \"Ibadan\": [\"Lagos\", \"Ife\"],\n  \"Abeokuta\": [\"Lagos\"],\n  \"Ife\": [\"Ibadan\"],\n}\nprint(graph[\"Lagos\"])",
+      "objective": "Represent a graph with adjacency lists and traverse reachable vertices safely with breadth-first search.",
+      "why": "Routes and dependencies allow cycles, multiple connections, and disconnected components.",
+      "explanation": "<h4>Vertices and edges describe relationships</h4><p>A graph contains vertices and edges between them. A city can be a vertex and a road an edge. Directed edges permit travel only from source to destination; an undirected edge is represented here by listing each endpoint in the other’s neighbor list. Unlike a tree, a graph may contain cycles, multiple paths, and disconnected components. Our dictionary includes every vertex as a key, including vertices with no outgoing edges, so traversal can safely retrieve each visited vertex’s adjacency list.</p>\n<h4>Choose a representation contract</h4><p>Each dictionary value is an ordered list of neighbors. For this lesson, every referenced neighbor must also be a dictionary key. Repeating a neighbor in a list represents a duplicate adjacency entry; the visited set prevents duplicate output, but scanning the extra entry still costs work. Equal vertex labels identify the same dictionary key, so distinct real-world locations need distinct identifiers. An isolated vertex has an empty list. A missing starting key produces an empty result by explicit policy.</p>\n<h4>Breadth-first search expands a frontier</h4><p>The deque contains discovered vertices waiting to be expanded. The seen set contains all discovered vertices, including queued ones. Start by marking the initial vertex before enqueueing it. When removing a vertex, append it to output and inspect its neighbors. Mark each unseen neighbor immediately before enqueueing it. This invariant ensures each vertex is enqueued once, even if two pending vertices both lead to it. FIFO processing visits vertices in nondecreasing edge distance from the start.</p>\n<h4>Trace a cycle and a disconnected vertex</h4><p>For A linked to B and C, and both paths leading toward D, the order is A,B,C,D using the stored neighbor order. A back edge from B to A is ignored because A is already seen. An isolated E never appears because it is unreachable from A. The traversal does not prove all graph vertices were visited; to cover disconnected components, restart from unseen keys. Breadth-first reachability is not the same as finding shortest weighted routes; edge weights require another algorithm.</p>\n<h4>Count vertices and adjacency entries</h4><p>Within the reachable component, each vertex is enqueued once and each listed outgoing edge is inspected once, giving O(V+E) time with average constant-time set operations. An undirected edge is stored twice, which changes a constant factor rather than the growth class. The queue, visited set, and output use O(V) space. Marking vertices only after dequeue can create many duplicate queued entries and complicate these bounds. The independent exercise records parent links to reconstruct a shortest path in number of edges.</p>",
+      "codeExample": "from collections import deque\n\ndef reachable(graph, start):\n    if start not in graph:\n        return []\n    seen = {start}\n    pending = deque([start])\n    order = []\n    while pending:\n        node = pending.popleft()\n        order.append(node)\n        for neighbor in graph[node]:\n            if neighbor not in seen:\n                seen.add(neighbor)\n                pending.append(neighbor)\n    return order\ng = {\"A\": [\"B\", \"C\"], \"B\": [\"A\", \"D\"], \"C\": [\"A\", \"D\"], \"D\": [\"B\", \"C\"], \"E\": []}\nprint(reachable(g, \"A\"))\nprint(reachable(g, \"E\"))\nprint(reachable(g, \"missing\"))",
       "exercises": [
         {
-          "title": "Practice",
-          "instruction": "Run the idea with your own sample data (list of 5–8 items) and print the result.",
-          "solution": "graph = {\n  \"Lagos\": [\"Ibadan\", \"Abeokuta\"],\n  \"Ibadan\": [\"Lagos\", \"Ife\"],\n  \"Abeokuta\": [\"Lagos\"],\n  \"Ife\": [\"Ibadan\"],\n}\nprint(graph[\"Lagos\"])",
-          "level": "easy",
-          "hint": "Start from the lesson example. Goal: Run the idea with your own sample data (list of 5–8 items) and print the result. Change names/values first; only then restructure."
+          "title": "Guided: isolated vertex",
+          "instruction": "Traverse a graph containing only isolated X and an empty graph.",
+          "hint": "The start must be a key.",
+          "solution": "from collections import deque\n\ndef reachable(graph, start):\n    if start not in graph:\n        return []\n    seen = {start}\n    pending = deque([start])\n    order = []\n    while pending:\n        node = pending.popleft()\n        order.append(node)\n        for neighbor in graph[node]:\n            if neighbor not in seen:\n                seen.add(neighbor)\n                pending.append(neighbor)\n    return order\nprint(reachable({\"X\": []}, \"X\"))\nprint(reachable({}, \"X\"))",
+          "expectedOutput": "['X']\n[]",
+          "solutionExplanation": "An isolated vertex reaches itself; a missing start reaches nothing.",
+          "successCriteria": [
+            "Print [X] and [].",
+            "Do not confuse isolation with absence."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Repair: duplicate edges",
+          "instruction": "Traverse A with neighbors B,B and B linking back to A, once per vertex.",
+          "hint": "Mark at enqueue time.",
+          "solution": "from collections import deque\n\ndef reachable(graph, start):\n    if start not in graph:\n        return []\n    seen = {start}\n    pending = deque([start])\n    order = []\n    while pending:\n        node = pending.popleft()\n        order.append(node)\n        for neighbor in graph[node]:\n            if neighbor not in seen:\n                seen.add(neighbor)\n                pending.append(neighbor)\n    return order\nprint(reachable({\"A\": [\"B\", \"B\"], \"B\": [\"A\"]}, \"A\"))",
+          "expectedOutput": "['A', 'B']",
+          "solutionExplanation": "The seen set suppresses the duplicate and the cycle.",
+          "successCriteria": [
+            "Print [A,B].",
+            "Queue B only once."
+          ],
+          "level": "easy"
+        },
+        {
+          "title": "Independent: shortest unweighted path",
+          "instruction": "Return a path from A to D in A→B,C; B→D; C→D; D→none, and [] for an absent goal.",
+          "hint": "Store the discovering parent for each vertex.",
+          "solution": "from collections import deque\ndef path(graph, start, goal):\n    if start not in graph or goal not in graph:\n        return []\n    parents = {start: None}\n    queue = deque([start])\n    while queue:\n        node = queue.popleft()\n        if node == goal:\n            result = []\n            while node is not None:\n                result.append(node)\n                node = parents[node]\n            return result[::-1]\n        for neighbor in graph[node]:\n            if neighbor not in parents:\n                parents[neighbor] = node\n                queue.append(neighbor)\n    return []\ng = {\"A\": [\"B\", \"C\"], \"B\": [\"D\"], \"C\": [\"D\"], \"D\": []}\nprint(path(g, \"A\", \"D\"))\nprint(path(g, \"A\", \"Z\"))",
+          "expectedOutput": "['A', 'B', 'D']\n[]",
+          "solutionExplanation": "First discovery uses a minimum-edge path under FIFO traversal; parent links reconstruct it backward.",
+          "successCriteria": [
+            "Return [A,B,D] and [].",
+            "Explain that equal-length alternatives are also valid with different neighbor order."
+          ],
+          "level": "medium"
         }
       ],
       "quiz": [
         {
-          "q": "What is the main focus of “Graphs”?",
+          "q": "When should a vertex be marked discovered?",
           "options": [
-            "Represent a graph with an adjacency list.",
-            "Only deleting files permanently",
-            "Only designing CSS layouts",
-            "Only configuring DNS records"
-          ],
-          "correct": 0,
-          "explanation": "Match the learning objective for this lesson."
-        },
-        {
-          "q": "When would you use “Graphs” in a real project?",
-          "options": [
-            "Only when the computer restarts",
-            "When you need to: Represent a graph with an adjacency list.",
-            "Never — theory only",
-            "Only for choosing font colors"
+            "Only after all its neighbors",
+            "Before enqueueing",
+            "After printing every path",
+            "Only at the end"
           ],
           "correct": 1,
-          "explanation": "This lesson’s skill is practical: Represent a graph with an adjacency list."
+          "explanation": "Early marking prevents duplicate queued work."
+        },
+        {
+          "q": "How represent an undirected A-B edge?",
+          "options": [
+            "Only A lists B",
+            "A lists B and B lists A",
+            "Use a sorted vertex list",
+            "Duplicate A in one list"
+          ],
+          "correct": 1,
+          "explanation": "Both directions must be represented."
+        },
+        {
+          "q": "What does BFS minimize in an unweighted graph?",
+          "options": [
+            "Total arbitrary weight",
+            "Number of edges",
+            "Alphabetical order",
+            "Memory in every graph"
+          ],
+          "correct": 1,
+          "explanation": "FIFO expands distance layers."
+        },
+        {
+          "q": "Why can an existing vertex be absent from output?",
+          "options": [
+            "Its label repeats",
+            "It is disconnected from the start",
+            "It has no outgoing edges",
+            "It was sorted last"
+          ],
+          "correct": 1,
+          "explanation": "Traversal covers the reachable component only."
         }
       ],
       "path": "dsa",
       "difficulty": "intermediate",
-      "pitfalls": "Index out of range happens when index ≥ length. Check length before you index.; If stuck more than 10 minutes: restate the objective in one sentence, change only one thing, re-run."
+      "pitfalls": "Traversal revisits a cycle endlessly: No discovery set was maintained. Mark each vertex when enqueueing it. A road works in only one direction: Only one adjacency entry was added. Store both directions for an undirected graph. KeyError on a neighbor: The representation omitted a referenced vertex key. Include every vertex, using [] for no outgoing edges.",
+      "guide": {
+        "version": 1,
+        "prerequisites": [
+          "Python 3.11+ or the browser Python runner; functions, loops, lists, comparisons, and sets, dictionaries, and deque."
+        ],
+        "outcomes": [
+          "Distinguish directed and undirected edges.",
+          "Prevent repeated visits in cyclic graphs.",
+          "Explain O(V+E) traversal within the reachable component."
+        ],
+        "expectedOutput": "['A', 'B', 'C', 'D']\n['E']\n[]",
+        "walkthrough": [
+          {
+            "code": "seen = {start}",
+            "explanation": "Mark discovery before queueing."
+          },
+          {
+            "code": "pending.popleft()",
+            "explanation": "Expand vertices in FIFO order."
+          },
+          {
+            "code": "for neighbor in graph[node]",
+            "explanation": "Inspect adjacency entries, including already-seen neighbors."
+          },
+          {
+            "code": "seen.add(neighbor)",
+            "explanation": "Prevent duplicate enqueueing from another path."
+          }
+        ],
+        "variations": [
+          {
+            "title": "Directed reachability",
+            "code": "from collections import deque\n\ndef reachable(graph, start):\n    if start not in graph:\n        return []\n    seen = {start}\n    pending = deque([start])\n    order = []\n    while pending:\n        node = pending.popleft()\n        order.append(node)\n        for neighbor in graph[node]:\n            if neighbor not in seen:\n                seen.add(neighbor)\n                pending.append(neighbor)\n    return order\ng = {\"A\": [\"B\"], \"B\": [], \"C\": [\"A\"]}\nprint(reachable(g, \"A\"))\nprint(reachable(g, \"B\"))",
+            "expectedOutput": "['A', 'B']\n['B']",
+            "explanation": "A directed edge is not automatically reversible."
+          }
+        ],
+        "mistakes": [
+          {
+            "symptom": "Traversal revisits a cycle endlessly",
+            "cause": "No discovery set was maintained.",
+            "fix": "Mark each vertex when enqueueing it."
+          },
+          {
+            "symptom": "A road works in only one direction",
+            "cause": "Only one adjacency entry was added.",
+            "fix": "Store both directions for an undirected graph."
+          },
+          {
+            "symptom": "KeyError on a neighbor",
+            "cause": "The representation omitted a referenced vertex key.",
+            "fix": "Include every vertex, using [] for no outgoing edges."
+          }
+        ],
+        "summary": [
+          "Adjacency lists make direction and isolation explicit.",
+          "Discovery tracking handles cycles and repeated paths.",
+          "Searching sequences next isolates simpler lookup contracts."
+        ],
+        "references": [
+          {
+            "title": "Python data structures",
+            "url": "https://docs.python.org/3/tutorial/datastructures.html"
+          },
+          {
+            "title": "Python operation complexity",
+            "url": "https://wiki.python.org/moin/TimeComplexity"
+          }
+        ]
+      }
     },
     {
       "id": "py-109",
