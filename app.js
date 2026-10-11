@@ -390,8 +390,20 @@
     return `<section aria-label="Worked example explanation" class="mb-8 space-y-5">
       <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-5"><h3 class="font-semibold text-emerald-900 mb-2">Expected result</h3><pre class="whitespace-pre-wrap break-words font-mono text-sm text-emerald-900">${escHtml(guide.expectedOutput)}</pre></div>
       <div><h3 class="font-semibold text-lg mb-3">Walk through the code</h3><ol class="list-decimal pl-6 space-y-4">${guide.walkthrough.map(step => `<li class="pl-1"><code class="block whitespace-pre-wrap break-words bg-slate-100 p-3 rounded-xl text-sm">${escHtml(step.code)}</code><p class="mt-2 text-sm leading-6 text-slate-700">${escHtml(step.explanation)}</p></li>`).join('')}</ol></div>
-      ${guide.variations.map(example => `<article class="border border-slate-200 rounded-2xl p-5"><h3 class="font-semibold text-lg mb-3">${escHtml(example.title)}</h3><pre class="code-block p-4 rounded-xl text-sm overflow-auto"><code>${escHtml(example.code)}</code></pre><h4 class="font-semibold text-sm mt-4 mb-2">Expected result</h4><pre class="whitespace-pre-wrap break-words font-mono text-sm text-slate-700">${escHtml(example.expectedOutput)}</pre><p class="mt-4 text-sm leading-6 text-slate-700">${escHtml(example.explanation)}</p></article>`).join('')}
+      ${guide.variations.map(example => `<article class="border border-slate-200 rounded-2xl p-5"><h3 class="font-semibold text-lg mb-3">${escHtml(example.title)}</h3><pre class="code-block p-4 rounded-xl text-sm overflow-auto"><code>${escHtml(example.code)}</code></pre>${renderSupportingFiles(example.validation)}<h4 class="font-semibold text-sm mt-4 mb-2">Expected result</h4><pre class="whitespace-pre-wrap break-words font-mono text-sm text-slate-700">${escHtml(example.expectedOutput)}</pre><p class="mt-4 text-sm leading-6 text-slate-700">${escHtml(example.explanation)}</p></article>`).join('')}
     </section>`;
+  }
+
+  function renderSupportingFiles(validation) {
+    if (!validation?.files || !Object.keys(validation.files).length) return '';
+    return `<section aria-label="Supporting files" class="my-4 space-y-4"><h4 class="font-semibold">Supporting files</h4><p class="text-sm text-slate-600">Save these files at the paths shown, relative to this example’s project folder.</p>${Object.entries(validation.files).map(([name, content]) => `<div><div class="flex items-center justify-between gap-3 mb-2"><h5 class="font-mono text-sm break-all">${escHtml(name)}</h5><button class="text-xs px-3 py-1 bg-slate-100 rounded-xl" onclick="window.ZeroToCode.copyText(this.parentElement.nextElementSibling.textContent)">Copy file</button></div><pre class="code-block p-4 rounded-xl text-sm overflow-auto"><code>${escHtml(content)}</code></pre></div>`).join('')}</section>`;
+  }
+
+  function lessonRunnerKind(lesson, langId) {
+    const runtime = lesson.guide?.validation?.runtime;
+    if (['python-local', 'python-data', 'python-django', 'python-mysql', 'python-mongodb', 'browser-local', 'javascript-module', 'node'].includes(runtime)) return 'readonly';
+    if (runtime === 'browser') return 'html';
+    return langId === 'python' ? 'python' : langId === 'javascript' || langId === 'web' ? 'web' : 'readonly';
   }
 
   function renderTroubleshooting(lesson) {
@@ -448,7 +460,7 @@
     const container = document.getElementById('lesson-content');
     const isCompleted = (progress[langId] || []).includes(lessonId);
     const passed = hasPassedQuiz(langId, lessonId);
-    const runnerKind = langId === 'python' ? 'python' : langId === 'javascript' || langId === 'web' ? 'web' : 'readonly';
+    const runnerKind = lessonRunnerKind(lesson, langId);
 
     let html = `
       <div class="max-w-3xl">
@@ -495,6 +507,7 @@
         </div>`;
     }
 
+    html += renderSupportingFiles(lesson.guide?.validation);
     html += renderWorkedGuide(lesson.guide);
 
     // Live runner
@@ -504,9 +517,11 @@
     if (lesson.exercises && lesson.exercises.length) {
       html += `<div class="mb-8 mt-8"><h3 class="font-semibold mb-4 text-lg flex items-center gap-x-2"><i aria-hidden="true" class="fa-solid fa-tasks text-emerald-700"></i> Practice Exercises</h3>`;
       window.__solutions = {};
+      window.__solutionInputs = {};
       lesson.exercises.forEach((ex, idx) => {
         const solId = `sol-${lessonId}-${idx}`;
         window.__solutions[solId] = ex.solution || '';
+        window.__solutionInputs[solId] = ex.validation?.stdin || '';
         const level = ex.level || 'easy';
         const levelColor = level === 'easy' ? 'bg-emerald-100 text-emerald-700' : level === 'hard' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-800';
         html += `
@@ -524,9 +539,9 @@
             <div class="flex flex-wrap gap-3">
               <button onclick="window.ZeroToCode.showSolution(this, window.__solutions['${solId}'])" class="px-5 py-2 text-sm font-medium bg-white border border-slate-300 rounded-2xl">Show Solution</button>
               <button onclick="window.ZeroToCode.copyText(window.__solutions['${solId}'])" class="px-5 py-2 text-sm font-medium bg-emerald-700 text-white rounded-2xl">Copy Solution</button>
-              ${runnerKind !== 'readonly' ? `<button onclick="window.ZeroToCode.loadSolutionInRunner(window.__solutions['${solId}'])" class="px-5 py-2 text-sm font-medium bg-slate-800 text-white rounded-2xl">Load solution in editor</button>` : ''}
+              ${runnerKind !== 'readonly' ? `<button onclick="window.ZeroToCode.loadSolutionInRunner(window.__solutions['${solId}'], window.__solutionInputs['${solId}'])" class="px-5 py-2 text-sm font-medium bg-slate-800 text-white rounded-2xl">Load solution in editor</button>` : ''}
             </div>
-            <div class="solution-box hidden mt-4 space-y-3"><pre data-solution-code class="p-4 bg-slate-900 text-emerald-200 text-sm rounded-xl font-mono whitespace-pre-wrap break-words"></pre>${ex.solutionExplanation ? `<p class="text-sm leading-6 text-slate-700"><strong>Why this works:</strong> ${escHtml(ex.solutionExplanation)}</p><h4 class="font-semibold text-sm">Reference solution output</h4><pre class="font-mono text-sm whitespace-pre-wrap break-words bg-slate-50 p-3 rounded-xl">${escHtml(ex.expectedOutput)}</pre>` : ''}</div>
+            <div class="solution-box hidden mt-4 space-y-3"><pre data-solution-code class="p-4 bg-slate-900 text-emerald-200 text-sm rounded-xl font-mono whitespace-pre-wrap break-words"></pre>${renderSupportingFiles(ex.validation)}${ex.solutionExplanation ? `<p class="text-sm leading-6 text-slate-700"><strong>Why this works:</strong> ${escHtml(ex.solutionExplanation)}</p><h4 class="font-semibold text-sm">Reference solution output</h4><pre class="font-mono text-sm whitespace-pre-wrap break-words bg-slate-50 p-3 rounded-xl">${escHtml(ex.expectedOutput)}</pre>` : ''}</div>
           </div>`;
       });
       html += '</div>';
@@ -579,6 +594,8 @@
         ed.dataset.key = quizKey(langId, lessonId);
         ed.value = learnerStore.state.drafts[ed.dataset.key] ?? lesson.codeExample;
         ed.addEventListener('input', saveDraft);
+        const stdin = document.getElementById('runner-stdin');
+        if (stdin) stdin.value = lesson.guide?.validation?.stdin || '';
       }
     }
     renderLessonsSidebar(langId);
@@ -588,9 +605,13 @@
 
   function renderRunner(kind, lesson, langId) {
     if (kind === 'readonly') {
+      const instructions = lesson.guide?.validation?.instructions;
+      const setup = langId === 'go' ? 'Install Go, create a folder, run <code>go mod init practice</code>, and save the example in <code>main.go</code>. Run <code>go run .</code>.'
+        : langId === 'rust' ? 'Install Rust, run <code>cargo new practice</code>, and save the example in <code>practice/src/main.rs</code>. Open the practice folder and run <code>cargo run</code>.'
+        : 'Follow this lesson’s setup instructions, install its required tools, and save the example and any supporting files in your practice folder. This example needs a local environment; the academy playground cannot supply its libraries, server, or browser storage.';
       return `<div id="lesson-practice" class="mb-8 scroll-mt-24 bg-slate-50 border border-slate-200 rounded-2xl p-5 text-sm text-slate-600">
-        <strong class="text-slate-800">Practise on your computer:</strong> ${langId === 'go' ? 'Install Go, create a folder, run <code>go mod init practice</code>, and save the example in <code>main.go</code>. Run <code>go run .</code>.' : 'Install Rust, run <code>cargo new practice</code>, and save the example in <code>practice/src/main.rs</code>. Open the practice folder and run <code>cargo run</code>.'}
-        These tracks require a local development environment.
+        <strong class="text-slate-800">Practise on your computer:</strong> ${instructions ? escHtml(instructions) : setup}
+        <p class="mt-3">Use the worked example, expected result, and exercise criteria to check your local development environment and your solution.</p>
       </div>`;
     }
     const python = kind === 'python';
@@ -598,7 +619,7 @@
       <div class="bg-slate-900 text-slate-200 px-4 py-3 flex justify-between items-center text-sm flex-wrap gap-3">
         <label for="code-runner-editor" class="font-semibold">${python ? 'Python' : 'Web'} playground</label>
         <div class="flex flex-wrap gap-2">
-          ${python ? '<button onclick="window.ZeroToCode.runPython()" class="px-4 py-2 bg-emerald-700 text-white rounded-xl font-semibold text-xs">Run Python ▶</button>' : '<button onclick="window.ZeroToCode.runWeb(false)" class="px-3 py-2 bg-yellow-400 text-slate-900 rounded-xl font-semibold text-xs">Run JS ▶</button><button onclick="window.ZeroToCode.runWeb(true)" class="px-3 py-2 bg-emerald-700 text-white rounded-xl font-semibold text-xs">Preview HTML</button>'}
+          ${python ? '<button onclick="window.ZeroToCode.runPython()" class="px-4 py-2 bg-emerald-700 text-white rounded-xl font-semibold text-xs">Run Python ▶</button>' : `${kind !== 'html' ? '<button onclick="window.ZeroToCode.runWeb(false)" class="px-3 py-2 bg-yellow-400 text-slate-900 rounded-xl font-semibold text-xs">Run JS ▶</button>' : ''}<button onclick="window.ZeroToCode.runWeb(true)" class="px-3 py-2 bg-emerald-700 text-white rounded-xl font-semibold text-xs">Preview HTML</button>`}
           <button id="runner-stop" disabled onclick="LearningRunner.stop('Run stopped. You can edit your code and try again.')" class="px-3 py-2 bg-slate-700 text-white rounded-xl text-xs">Stop</button>
         </div>
       </div>
@@ -615,11 +636,13 @@
   function runPython() { LearningRunner.run('python'); }
   function runWeb(asHtml) { asHtml ? LearningRunner.preview() : LearningRunner.run('javascript'); }
 
-  function loadSolutionInRunner(code) {
+  function loadSolutionInRunner(code, input = '') {
     const ed = document.getElementById('code-runner-editor');
     if (ed) {
       if (ed.value !== code && !confirm('Replace your current draft with this solution?')) return;
       ed.value = code;
+      const stdin = document.getElementById('runner-stdin');
+      if (stdin) stdin.value = input;
       saveDraft();
       ed.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }

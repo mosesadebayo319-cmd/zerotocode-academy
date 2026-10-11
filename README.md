@@ -16,7 +16,9 @@ The priority is detailed, comprehensive teaching in every lesson. This branch im
 | Go | 16 | Local Go setup |
 | Rust | 14 | Local Rust setup |
 
-Nine lessons have been expanded: the first five Python lessons and the opening lesson of JavaScript, HTML/CSS, Go, and Rust. Each includes prerequisites, outcomes, detailed explanations, a worked example with expected output and a walkthrough, a variation, troubleshooting, three levels of practice with explained solutions, four quiz questions, a recap, and official references. Section links help learners navigate long explanations. **The other 208 lessons still need expansion and review**; catalog-wide structural checks do not certify teaching quality.
+The current audit finds **63 of 217 lessons with the reference structure; 154 remain to be expanded**. These include detailed explanations, worked examples and walkthroughs, variations, troubleshooting, progressive practice with explained solutions, substantive quizzes, recaps, and references. Each lesson still needs an editorial and factual review; the audit measures structure, not teaching quality. See the [per-lesson audit](docs/CURRICULUM-AUDIT.md) for gaps and the [lesson standard](docs/LESSON-STANDARD.md) for what every lesson must meet.
+
+The continuing Python curriculum incorporates independently written practice inspired by the public [`daily-coding-practice`](https://github.com/shaikhtaha258-maker/daily-coding-practice) repository. [Our inspection and topic mapping](docs/PYTHON-PRACTICE-ADAPTATIONS.md) explains the useful exercise patterns, attribution, and correctness issues addressed during adaptation.
 
 - Quiz feedback explains answers, allows retries, and preserves the best score. Lessons with quizzes require at least 70%; lessons without quizzes explicitly use self-review.
 - Completion awards 65 XP once; a passing quiz contributes 15 XP once. Streaks use local calendar days and advance on a newly completed lesson.
@@ -28,7 +30,7 @@ Nine lessons have been expanded: the first five Python lessons and the opening l
 
 ## Run and verify
 
-Requires Node.js 22+ and Python 3 for the local static server. Python 3, Go 1.20+, and Rust are used to execute the corresponding reference examples during tests. A missing toolchain skips that track locally; CI requires all three.
+Requires Node.js 22+ and Python 3 for the local static server. Tests execute Python and JavaScript examples by default; Go and Rust examples run when their toolchains are installed. Optional package-based Python examples require the setup in [curriculum validation](docs/CURRICULUM-VALIDATION.md).
 
 ```bash
 npm ci

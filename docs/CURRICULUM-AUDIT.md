@@ -2,16 +2,16 @@
 
 Generated from the course files by `npm run audit:curriculum`. The [lesson standard](LESSON-STANDARD.md) applies to every lesson. This report measures authoring components, not factual accuracy or learning effectiveness.
 
-**9 of 217 lessons have the reference structure; 208 remain in the expansion backlog.** Structural completion is not editorial sign-off.
+**63 of 217 lessons have the reference structure; 154 remain in the expansion backlog.** Structural completion is not editorial sign-off.
 
 Reference lessons were written individually for their topics. Explanation word counts below are diagnostic only; no word-count threshold earns a pass. An older lesson can be lengthy yet still lack a walkthrough, meaningful practice, or topic-specific feedback.
 
 | Track | Lessons | Reference structure | Needs expansion |
 |---|---:|---:|---:|
-| Python | 144 | 5 | 139 |
-| JavaScript | 25 | 1 | 24 |
-| HTML & CSS | 18 | 1 | 17 |
-| Go (Golang) | 16 | 1 | 15 |
+| Python | 144 | 37 | 107 |
+| JavaScript | 25 | 11 | 14 |
+| HTML & CSS | 18 | 6 | 12 |
+| Go (Golang) | 16 | 8 | 8 |
 | Rust | 14 | 1 | 13 |
 
 ## Every lesson
@@ -31,22 +31,22 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | py-07 | 2.2 Data Types — What Kind of Value Is It? | 531 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-08 | 2.3 Numbers — int, float & Everyday Math | 506 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-09 | 2.4 Casting — Convert Types Safely | 516 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-10 | 3.1 Strings — Working with Text | 511 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-11 | 3.2 Slicing Strings — Cut Out Pieces | 531 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-12 | 3.3 Modify Strings — upper, lower, strip, replace | 522 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-13 | 3.4 Concatenate Strings — Join Text Together | 492 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-14 | 3.5 Format Strings — f-strings & Placeholders | 509 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-15 | 3.6 Escape Characters — Special Symbols in Text | 505 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-16 | 3.7 String Methods — find, split, startswith & More | 525 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-17 | 3.8 String Exercises — Mini Text Toolkit | 476 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-18 | 3.9 Code Challenge — Customer Message Builder | 501 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-19 | 4.1 Booleans — True, False & Truthiness | 511 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-20 | 4.2 Operators — Math, Compare & Logic | 502 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-21 | 5.1 Lists — Ordered Shopping Lists | 501 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-22 | 5.2 Tuples — Fixed Records | 488 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-23 | 5.3 Sets — Unique Items Only | 513 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-24 | 5.4 Dictionaries — Key → Value Maps | 510 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-mp-01 | 5.5 Mini Project — Contact Book | 512 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| py-10 | 3.1 Strings — Working with Text | 348 | Reference structure present; editorial review still applies |
+| py-11 | 3.2 Slicing Strings — Cut Out Pieces | 348 | Reference structure present; editorial review still applies |
+| py-12 | 3.3 Modify Strings — upper, lower, strip, replace | 335 | Reference structure present; editorial review still applies |
+| py-13 | 3.4 Concatenate Strings — Join Text Together | 360 | Reference structure present; editorial review still applies |
+| py-14 | 3.5 Format Strings — f-strings & Placeholders | 350 | Reference structure present; editorial review still applies |
+| py-15 | 3.6 Escape Characters — Special Symbols in Text | 396 | Reference structure present; editorial review still applies |
+| py-16 | 3.7 String Methods — find, split, startswith & More | 359 | Reference structure present; editorial review still applies |
+| py-17 | 3.8 String Exercises — Mini Text Toolkit | 375 | Reference structure present; editorial review still applies |
+| py-18 | 3.9 Code Challenge — Customer Message Builder | 398 | Reference structure present; editorial review still applies |
+| py-19 | 4.1 Booleans — True, False & Truthiness | 382 | Reference structure present; editorial review still applies |
+| py-20 | 4.2 Operators — Math, Compare & Logic | 385 | Reference structure present; editorial review still applies |
+| py-21 | 5.1 Lists — Ordered Shopping Lists | 374 | Reference structure present; editorial review still applies |
+| py-22 | 5.2 Tuples — Fixed Records | 369 | Reference structure present; editorial review still applies |
+| py-23 | 5.3 Sets — Unique Items Only | 369 | Reference structure present; editorial review still applies |
+| py-24 | 5.4 Dictionaries — Key → Value Maps | 377 | Reference structure present; editorial review still applies |
+| py-mp-01 | 5.5 Mini Project — Contact Book | 404 | Reference structure present; editorial review still applies |
 | py-25 | 6.1 If...Else — Decisions in Code | 490 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-26 | 6.2 Match — Structural Pattern Matching | 499 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-27 | 6.3 While Loops — Repeat Until Done | 503 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
@@ -81,11 +81,11 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | py-56 | 10.3 Write & Create Files | 467 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-57 | 10.4 Delete Files — os.remove | 461 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-mp-02 | 10.5 Mini Project — Daily Sales Log | 508 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-58 | 11.1 NumPy — Fast Numerical Arrays | 520 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-59 | 11.2 Pandas — Tables for Real Data | 501 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-60 | 11.3 SciPy — Scientific Computing Toolkit | 494 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-61 | 11.4 Django Intro — Python Web Framework | 480 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-mp-03 | 11.5 Mini Project — Pandas Sales Summary | 496 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| py-58 | 11.1 NumPy — Fast Numerical Arrays | 427 | Reference structure present; editorial review still applies |
+| py-59 | 11.2 Pandas — Tables for Real Data | 431 | Reference structure present; editorial review still applies |
+| py-60 | 11.3 SciPy — Scientific Computing Toolkit | 427 | Reference structure present; editorial review still applies |
+| py-61 | 11.4 Django Intro — Python Web Framework | 451 | Reference structure present; editorial review still applies |
+| py-mp-03 | 11.5 Mini Project — Pandas Sales Summary | 427 | Reference structure present; editorial review still applies |
 | py-62 | 12.1 Matplotlib Intro | 477 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-63 | 12.2 Get Started — First Plot | 491 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-64 | 12.3 Pyplot Basics | 465 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
@@ -122,17 +122,17 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | py-95 | 13.21 Cross Validation | 510 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-96 | 13.22 AUC - ROC Curve | 464 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-97 | 13.23 K-Nearest Neighbors | 460 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-98 | 14.1 DSA Intro | 474 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-99 | 14.2 Lists & Arrays in DSA | 461 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-100 | 14.3 Stacks — LIFO | 453 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-101 | 14.4 Queues — FIFO | 467 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-102 | 14.5 Linked Lists | 482 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-103 | 14.6 Hash Tables — dict | 448 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-104 | 14.7 Trees Intro | 471 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-105 | 14.8 Binary Trees | 487 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-106 | 14.9 Binary Search Trees | 503 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-107 | 14.10 AVL Trees | 469 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| py-108 | 14.11 Graphs | 473 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| py-98 | 14.1 DSA Intro | 407 | Reference structure present; editorial review still applies |
+| py-99 | 14.2 Lists & Arrays in DSA | 402 | Reference structure present; editorial review still applies |
+| py-100 | 14.3 Stacks — LIFO | 409 | Reference structure present; editorial review still applies |
+| py-101 | 14.4 Queues — FIFO | 405 | Reference structure present; editorial review still applies |
+| py-102 | 14.5 Linked Lists | 412 | Reference structure present; editorial review still applies |
+| py-103 | 14.6 Hash Tables — dict | 386 | Reference structure present; editorial review still applies |
+| py-104 | 14.7 Trees Intro | 412 | Reference structure present; editorial review still applies |
+| py-105 | 14.8 Binary Trees | 398 | Reference structure present; editorial review still applies |
+| py-106 | 14.9 Binary Search Trees | 403 | Reference structure present; editorial review still applies |
+| py-107 | 14.10 AVL Trees | 408 | Reference structure present; editorial review still applies |
+| py-108 | 14.11 Graphs | 422 | Reference structure present; editorial review still applies |
 | py-109 | 14.12 Linear Search | 486 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-110 | 14.13 Binary Search | 498 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | py-111 | 14.14 Bubble Sort | 514 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
@@ -172,16 +172,16 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | ID | Lesson | Explanation words | Coverage / remaining work |
 |---|---|---:|---|
 | js-01 | 1.1 What is JavaScript? | 631 | Reference structure present; editorial review still applies |
-| js-02 | 1.2 Variables: let, const, var | 494 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-03 | 1.3 Data Types & typeof | 537 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-04 | 1.4 Operators & Comparisons | 538 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-05 | 1.5 Strings & Template Literals | 492 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-06 | 1.6 Conditionals if / else | 508 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-07 | 1.7 Loops: for & while | 517 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-08 | 2.1 Arrays | 523 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-09 | 2.2 Objects | 504 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-10 | 2.3 Functions & Arrow Functions | 499 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| js-11 | 2.4 Array Methods Deep Dive | 532 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| js-02 | 1.2 Variables: let, const, var | 436 | Reference structure present; editorial review still applies |
+| js-03 | 1.3 Data Types & typeof | 430 | Reference structure present; editorial review still applies |
+| js-04 | 1.4 Operators & Comparisons | 437 | Reference structure present; editorial review still applies |
+| js-05 | 1.5 Strings & Template Literals | 418 | Reference structure present; editorial review still applies |
+| js-06 | 1.6 Conditionals if / else | 432 | Reference structure present; editorial review still applies |
+| js-07 | 1.7 Loops: for & while | 445 | Reference structure present; editorial review still applies |
+| js-08 | 2.1 Arrays | 440 | Reference structure present; editorial review still applies |
+| js-09 | 2.2 Objects | 449 | Reference structure present; editorial review still applies |
+| js-10 | 2.3 Functions & Arrow Functions | 457 | Reference structure present; editorial review still applies |
+| js-11 | 2.4 Array Methods Deep Dive | 438 | Reference structure present; editorial review still applies |
 | js-12 | 3.1 DOM Selection | 461 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | js-13 | 3.2 Change the Page (text, HTML, styles) | 486 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | js-14 | 3.3 Events: click, input, submit | 486 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
@@ -202,11 +202,11 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | ID | Lesson | Explanation words | Coverage / remaining work |
 |---|---|---:|---|
 | web-01 | 1.1 How the Web Works | 666 | Reference structure present; editorial review still applies |
-| web-02 | 1.2 Document Structure | 472 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| web-03 | 1.3 Text, Headings, Paragraphs, Lists | 493 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| web-04 | 1.4 Links & Images | 459 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| web-05 | 1.5 Semantic Layout Tags | 488 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| web-06 | 1.6 Forms & Inputs | 485 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| web-02 | 1.2 Document Structure | 625 | Reference structure present; editorial review still applies |
+| web-03 | 1.3 Text, Headings, Paragraphs, Lists | 616 | Reference structure present; editorial review still applies |
+| web-04 | 1.4 Links & Images | 627 | Reference structure present; editorial review still applies |
+| web-05 | 1.5 Semantic Layout Tags | 601 | Reference structure present; editorial review still applies |
+| web-06 | 1.6 Forms & Inputs | 598 | Reference structure present; editorial review still applies |
 | web-07 | 2.1 CSS Selectors & Units | 469 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | web-08 | 2.2 Colors, Typography, Box Model | 484 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | web-09 | 2.3 Specificity & Cascade | 450 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
@@ -225,13 +225,13 @@ Missing components identify gaps in structured coverage, not a judgment that all
 | ID | Lesson | Explanation words | Coverage / remaining work |
 |---|---|---:|---|
 | go-01 | 1.1 Why Go & Hello World | 652 | Reference structure present; editorial review still applies |
-| go-02 | 1.2 go mod & Project Layout | 488 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-03 | 1.3 Variables & Types | 518 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-04 | 1.4 Constants & Conversion | 503 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-05 | 1.5 Control Flow | 495 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-06 | 2.1 Functions & Multiple Returns | 502 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-07 | 2.2 Packages & Imports | 493 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
-| go-08 | 2.3 Error Handling Patterns | 498 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
+| go-02 | 1.2 go mod & Project Layout | 482 | Reference structure present; editorial review still applies |
+| go-03 | 1.3 Variables & Types | 485 | Reference structure present; editorial review still applies |
+| go-04 | 1.4 Constants & Conversion | 479 | Reference structure present; editorial review still applies |
+| go-05 | 1.5 Control Flow | 483 | Reference structure present; editorial review still applies |
+| go-06 | 2.1 Functions & Multiple Returns | 486 | Reference structure present; editorial review still applies |
+| go-07 | 2.2 Packages & Imports | 484 | Reference structure present; editorial review still applies |
+| go-08 | 2.3 Error Handling Patterns | 500 | Reference structure present; editorial review still applies |
 | go-09 | 3.1 Structs & Methods | 513 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | go-10 | 3.2 Slices | 490 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |
 | go-11 | 3.3 Maps | 487 | preparation and outcomes; organised explanation; output and walkthrough; worked variation; specific troubleshooting; progressive explained practice; substantive quiz structure; recap and references |

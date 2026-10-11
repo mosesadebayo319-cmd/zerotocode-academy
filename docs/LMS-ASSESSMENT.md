@@ -1,6 +1,6 @@
 # ZeroToCode Academy: assessment and product roadmap
 
-Assessment date: 9 October 2026. Baseline: commit `5357993` on `main`. Direction confirmed by the owner: **complete beginners**, **self-paced courses**, **practical projects**, with **detailed, comprehensive content in every lesson** as the primary product requirement.
+Assessment started 9 October 2026; branch status updated 11 October 2026. Baseline: commit `5357993` on `main`. Direction confirmed by the owner: **complete beginners**, **self-paced courses**, **practical projects**, with **detailed, comprehensive content in every lesson** as the primary product requirement.
 
 ## Product judgment
 
@@ -10,9 +10,11 @@ The strongest product teaches each topic thoroughly enough for learners to under
 
 ## Scope and evidence
 
-The platform code, HTML shell, hosting configuration, and curriculum structure across all five files were inspected. Nine reference lessons were expanded: `py-01`–`py-05`, `js-01`, `web-01`, `go-01`, and `rs-01`. They include prerequisites, outcomes, sectioned explanations, worked examples, expected results, walkthroughs, variations, troubleshooting, progressive practice with explained solutions, four questions, recaps, and official references. The interface makes this material readable and navigable.
+The platform code, HTML shell, hosting configuration, and curriculum structure across all five tracks were inspected. The current branch includes 63 lessons with the reference structure across Python, JavaScript, HTML/CSS, Go, and Rust. They include prerequisites, outcomes, sectioned explanations, worked examples, expected results, walkthroughs, variations, troubleshooting, progressive practice with explained solutions, quizzes, recaps, and official references. The interface makes this material readable and navigable.
 
-The [lesson standard](LESSON-STANDARD.md) defines the requirement for every lesson. The [catalog audit](CURRICULUM-AUDIT.md) records structural coverage for all 217 lessons: nine have the reference structure and **208 remain in the expansion backlog**. Automated curriculum validation checks identifiers, required content, exercises, quiz option indexes, and guide structure. It does not establish the instructional quality of every lesson or certify learner mastery.
+The [lesson standard](LESSON-STANDARD.md) defines the requirement for every lesson. The [catalog audit](CURRICULUM-AUDIT.md) records structural coverage for all 217 lessons: 63 have the reference structure and **154 remain in the expansion backlog**. Automated curriculum validation checks identifiers, required content, exercises, quiz option indexes, and guide structure. It does not establish the instructional quality of every lesson or certify learner mastery.
+
+The public repository [`daily-coding-practice`](https://github.com/shaikhtaha258-maker/daily-coding-practice) was inspected as an exercise-pattern reference. Its prompts on strings, collections, decisions, loops, functions, and files inform independently authored Python practice. [The source inspection and adaptation notes](PYTHON-PRACTICE-ADAPTATIONS.md) document useful patterns and answer issues to guard against.
 
 The original HTML preview failure was reproduced in Chromium: the sandboxed iframe's `contentDocument` was null, so `doc.open()` threw. The styling CDN also failed in the test browser, exposing the dependency on an external script for basic layout and visibility. This does not establish that the public production site experienced the same outage.
 
@@ -41,7 +43,7 @@ Python paths contain 60 beginner, 41 data, 23 backend, and 20 DSA lessons. Most 
 | High | Unguarded JSON parsing crashes on corrupt storage; there is no saved code or progress backup. | Validate and migrate state, show storage failures, save drafts, and support export/merge-restore. Storage remains browser-only. |
 | High | Refresh loses the lesson; completion has no implemented next-step control. | Add lesson URLs, browser history, resume, previous/next, and clear completion feedback. |
 | High | Early Python lessons mix installation, conditionals, and advanced examples before basic concepts. Repetitive filler obscures explanations. | Rewrite `py-01`–`py-05`, retaining stable IDs. Each now has focused practice and four substantive questions. |
-| High | The catalog lacks a consistent standard for comprehensive teaching; brief examples and sparse assessments leave learners to fill gaps. | Define the standard for every track, audit every lesson, expand nine reference lessons, and add walkthroughs, troubleshooting, solution explanations, and a contents list. The remaining 208 still need expansion. |
+| High | The catalog lacks a consistent standard for comprehensive teaching; brief examples and sparse assessments leave learners to fill gaps. | Define the standard for every track, audit every lesson, expand 63 lessons, and add walkthroughs, troubleshooting, solution explanations, and a contents list. The remaining 154 still need expansion. |
 | Medium | Main navigation disappears on mobile, the long sidebar precedes the lesson, and many actions are pointer-only. | Add mobile navigation, collapsible outline, keyboard actions, focus styles, labels, feedback announcements, and reduced-motion support. |
 | Medium | Critical styling needs an external script; no build or regression checks exist. | Compile local CSS, package runtime files into `dist/`, and add state, curriculum, browser, and CI checks. |
 | Medium | Streaks use UTC dates; certificates imply completion without independent verification. | Use local calendar days and identify certificates as personal learning records. |
@@ -56,7 +58,7 @@ This milestone establishes a working learning loop; it does not make all 217 les
 
 ### 2. Comprehensive lessons across every track — current priority
 
-Expand the remaining 208 lessons module by module, using the [lesson standard](LESSON-STANDARD.md) and recording progress in the [catalog audit](CURRICULUM-AUDIT.md). Prerequisite order determines the sequence of work; it does not reduce the scope to Python or beginner introductions. Explain terminology, syntax, mental models, limitations, and every meaningful step in a worked example. Include different cases, expected output, specific debugging guidance, and practice that progresses from guided work to independent application. Use as much explanation as the topic needs, without generic padding or an arbitrary word target. Declare prerequisites, outcomes, study-time estimates, and execution requirements; validate timing with learners.
+Expand the remaining 154 lessons module by module, using the [lesson standard](LESSON-STANDARD.md) and recording progress in the [catalog audit](CURRICULUM-AUDIT.md). Prerequisite order determines the sequence of work; it does not reduce the scope to Python or beginner introductions. Explain terminology, syntax, mental models, limitations, and every meaningful step in a worked example. Include different cases, expected output, specific debugging guidance, and practice that progresses from guided work to independent application. Use as much explanation as the topic needs, without generic padding or an arbitrary word target. Declare prerequisites, outcomes, study-time estimates, and execution requirements; validate timing with learners.
 
 Introduce projects after coherent groups of lessons. A suitable first project is a receipt or budget calculator: accept quantities and prices, calculate a total, and handle invalid input. Provide starter code, examples, a rubric, and multiple valid solutions. Check observable behavior against several cases rather than matching source text. Copying a solution should not be treated as mastery.
 
@@ -94,12 +96,11 @@ The site still loads the whole catalog eagerly. Measure the introductory experie
 
 ## Verification and release handoff
 
-- Current revision: 16 state/curriculum/reference-example tests and 14 Chromium browser scenarios passed locally, including the real Python runtime check. The nine expanded lessons include 40 console/compiled examples and solutions checked against expected output, plus five HTML documents checked in the browser. Desktop and 390px mobile views were visually reviewed.
-- Build: local CSS and 11 runtime files in `dist/`; syntax and whitespace checks.
-- State/curriculum: tests cover migration, invalid/blocked storage, backup merge/rejection, malformed state, local-day streaks, reset, five course schemas, expanded guide coverage, and audit freshness.
-- Reference content: execute the expanded Python, JavaScript, Go, and Rust examples, variations, and exercise solutions against their documented output when the local toolchains are available. Browser checks render every expanded HTML example and solution, including its CSS variation. Missing toolchains skip their local check; CI requires them.
-- Core browser: fail/retry/pass and best-score retention; completion counted once; async JS and newline output; timeout recovery; stop/navigation cleanup; HTML rendering, DOM interaction, and source-checked messages; deep links/draft reload/history/resume; mobile outline and overflow; backup restore in a fresh browser; operation without external styling. Detailed-lesson checks cover all five guide renderers, legacy lesson compatibility, section navigation without route changes, solution feedback, and narrow-screen reading.
-- Python: real Pyodide 0.26.4 fetched using verified HTTPS. Tested `input()`, output, syntax errors, infinite-loop timeout, and a successful subsequent run. Locally cached files were used because Chromium did not trust the environment's proxy certificate.
-- CI: build, committed-style freshness, state/curriculum tests, and core browser checks. Local success does not imply remote CI has run; check the pull request status.
+- Current revision: `npm test` passed with all 315 worked examples, variations, and exercise solutions checked against their expected output across Python, package-based Python, JavaScript, Go, and Rust. This run enabled the optional Python dependencies and used installed Go/Rust toolchains.
+- Browser: 13 Chromium scenarios passed, including all five track renderers, mobile reading, legacy lesson compatibility, and every expanded HTML example and exercise. The optional real-Pyodide test was skipped because `PYODIDE_ASSET_DIR` was not configured in this run.
+- Build: `npm run build` produced local CSS and 11 files in `dist/`. Curriculum audit regenerated at 63/217. `git diff --check` passed.
+- State/curriculum coverage includes migration, invalid/blocked storage, backup merge/rejection, malformed state, local-day streaks, reset, five course schemas, expanded guide coverage, and audit freshness.
+- The source repository `daily-coding-practice` supplied exercise patterns, not copied lesson content. Adaptations and repository attribution are documented in [the Python practice notes](PYTHON-PRACTICE-ADAPTATIONS.md).
+- No remote workflow run has yet been observed for this revision. Check the pull request status after pushing; optional runtime coverage in GitHub Actions depends on installed toolchains and curriculum packages.
 
 Review the branch preview before merging. The existing Git integration may publish production on a main-branch merge. No production release is part of this assessment milestone.
